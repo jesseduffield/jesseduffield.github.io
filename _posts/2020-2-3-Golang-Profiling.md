@@ -3,7 +3,7 @@ layout: post
 title: Adventures in Profiling with Go
 ---
 
-![](https://i.imgur.com/8njoa31.png)
+![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/1.png)
 
 I spend a lot of my time working on my main pet project: lazygit. This year I'm hoping to get the app to a state worthy of the title Lazygit 1.0, but the last few problems are often the hardest to solve.
 
@@ -113,13 +113,13 @@ Entering interactive mode (type "help" for commands, "o" for options)
 (pprof) web
 ```
 
-![](https://i.imgur.com/ZX3guRg.png)
+![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/2.png)
 
 I had solved the issue of CPU increasing from switching repos, but a new issue arose. A heap of time was being spent in this `runtime pthread_cond_timedwait_relative_np` function (which I believe was an OS-specific function and not something from go). Worse still, the CPU rate actually was climbing gradually, which had not been the case before my changes.
 
 I wanted to know what part of _my_ code was invoking that timedwait function (I had actually made several changes as part of the initial fix), but I couldn't find a way for pprof to tell me where. I tried using the Instruments OSX app but it was equally unhelpful:
 
-![](https://i.imgur.com/g0dem2G.png)
+![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/3.png)
 
 So I did some more searching and found another program: [Stack Impact](https://stackimpact.com/blog/profiling-cpu-usage-in-golang/), which had support for monitoring blocking operations:
 
@@ -139,13 +139,13 @@ func main() {
 	...
 ```
 
-![](https://i.imgur.com/rb8LLnJ.png)
+![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/4.png)
 
 Viewing the Time tab, I could now see that there were two main culprits: the select of my goEvery function and my loaderTick function which was used for animating loader characters.
 
 Now I just needed to find out what was so bad about them. I removed the inner function call from goEvery to verify that the cpu increase was literally just a result of waiting around in that select, and lo and behold it was. I looked up the docs for tickers and realised I had made a grave error:
 
-![](https://i.imgur.com/qAJjviv.png)
+![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/5.png)
 
 I had never considered the fact that tickers might need to be manually stopped, or that they would tick forever. To make matters worse, I was actually initializing a new ticker on every iteration of the loop!
 

@@ -99,11 +99,11 @@ _I'm wrapping many of these examples in an outer function because behaviour diff
 
 If you open up your browser dev tools (`cmd+shift+i` in Chrome), you'll see our local scope at the first `debugger` breakpoint:
 
-![](https://i.imgur.com/0KVyCux.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/1.png)
 
 And here it is at the second breakpoint:
 
-![](https://i.imgur.com/2Vak1sN.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/2.png)
 
 Though the term 'hoist' typically refers to declarations, we see here that `bar` (a function declaration) has both its declaration _and_ its initialisation hoisted to the top of `outer`'s scope, whereas `foo` (a variable bound to a function expression) only gets its declaration hoisted, meaning it is undefined until it's explicitly initialised.
 
@@ -125,11 +125,11 @@ outer();
 
 At the first breakpoint:
 
-![](https://i.imgur.com/cLguLvr.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/3.png)
 
 At the second breakpoint
 
-![](https://i.imgur.com/64CDv7K.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/4.png)
 
 In this case, we have `a`, `b`, and `c` all being declared at the start of the function call, with a value of `undefined`. It's only later that they are given their 'initial' values.
 
@@ -139,7 +139,7 @@ Hoisting functions makes sense, as we've seen with the example of our recursive 
 
 Brendan Eich, creator of Javascript, [says](https://twitter.com/BrendanEich/status/522394590301933568):
 
-![](https://i.imgur.com/I2gveXU.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/5.png)
 
 `let` may help with what?
 
@@ -209,7 +209,7 @@ function outer() {
 outer();
 ```
 
-![](https://i.imgur.com/zSKdDju.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/6.png)
 
 ## Execution Contexts
 
@@ -221,7 +221,7 @@ let bbb = 2;
 debugger;
 ```
 
-![](https://i.imgur.com/rbdbu0s.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/7.png)
 
 `bbb` is scoped to the script (which literally means the script tag in your html) and aaa is scoped to the global object (which will be `window` if you're in a browser).
 
@@ -253,7 +253,7 @@ function outer() {
 outer();
 ```
 
-![](https://i.imgur.com/3TkbMu7.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/8.png)
 
 Alright so what's happening in this diagram? On the right we've got a stack of execution contexts. What are they? An execution context is analogous to a stack frame on a call stack. When we call and enter a function a new execution context is created on the call stack to keep track of our state as we execute the function's code.
 
@@ -307,7 +307,7 @@ Unlike our analogous javascript program above, this bash script will echo 2 beca
 
 Bash doesn't have a concept of a lexical environment or an environment record, but if it did, it would follow the path for dynamic scoping like so:
 
-![](https://i.imgur.com/5pPreel.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/9.png)
 
 Dynamic scoping leads to all kinds of crazy edge cases, where you can accidentally mutate variables defined several functions up the call stack. It also makes it hard to reason about what's in scope just by looking at the page lexically, because you can't know which outer functions are going to call the inner function, and what permutations of stack frames there could be.
 
@@ -340,11 +340,11 @@ foo();
 
 Here, the `inner` function is defined inside the `outer` function. The first thing to note is that now we'll be console logging `x` with a value of 2, not 1, because the `x` from the `outer` function appears first lexically as we zoom out from the `inner` function. But the more important thing is that by the time we call `outer` and we've assigned our `inner` function to `foo`, `outer`'s execution context (stack frame) can no longer live on the stack because we're now outside that function completely. So how can `foo` know to output 2 when we reach `console.log(x)`?
 
-![](https://i.imgur.com/AWVnVYR.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/10.png)
 
 This brings us to closures. A closure is simply a function paired with a reference to its parent environment. When a function makes reference to an outer function's variables, it's said to capture those variables, or 'close over' those variables (hence the term 'closure'). In this case when we create our `inner` function we actually create a closure consisting of the `inner` function and a reference to the lexical environment of the `outer` function. In the debugger we can get a rough idea of how this is stored:
 
-![](https://i.imgur.com/1rfDHNd.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/11.png)
 
 When `inner` is created, it stores an internal `[[Scopes]]` property which captures the lexical environment of the `outer` function. Then, when we call `foo` we use the `[[Scopes]]` property to traverse the scope chain and find the value of `x`.
 
@@ -393,7 +393,7 @@ const foo = outer();
 foo();
 ```
 
-![](https://i.imgur.com/c61l5ZZ.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/12.png)
 
 When our debugger hits the breakpoint in our inner function, we see in the 'scope' section that there is a 'Closure' (i.e. a V8 Context) that contains `x` and `HUGE`. `y` is not captured by either of `bar` or `inner` so it stays on the stack. `x` is captured by `inner` and `HUGE` is captured by `bar`, so both of those get added to the Context. The interesting thing is that despite bar being short-lived (and indeed not even being called), the fact that `inner` still references the Context means that our `HUGE` object hangs around until our `foo` variable is no longer in scope. Vyacheslav Egorov goes into more detail in his blog post [here](https://mrale.ph/blog/2012/09/23/grokking-v8-closures-for-fun.html), but it's interesting to think about how the ECMAScript can differ from its implementation.
 
@@ -544,17 +544,17 @@ outer()();
 
 `bar` captures `barStr` from `outer`'s scope, as well as `blockStr` from a local block scope that we've created with curly braces (an uncommonly used feature but it's allowed by the language). `inner` captures `innerStr` from `outer`'s scope. That means `uncapturedStr` is left uncaptured. We can create a heap snapshot at each breakpoint and compare adjacent snapshots to see which objects were created in the heap. If we compare the heap snapshot right before we enter `outer` and right after we enter, we see that it has already created the Context object and it contains `barStr` and `innerStr` (and notably does _not_ contain `uncapturedStr`.
 
-![](https://i.imgur.com/IZqsWRH.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/13.png)
 
 So clearly the contents of `inner` and `bar` have been inspected ahead of time to see which variables they capture from `outer`'s scope.
 
 We can likewise see a context has been created upon entering the block that contains `bar`
 
-![](https://i.imgur.com/8jixKNP.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/14.png)
 
 Notably here it's not obvious that our `blockStr` is included in the context. I'm actually not sure what explains the difference here. If we look at which objects were created by the final snapshot:
 
-![](https://i.imgur.com/SKrFUDF.png)
+![]({{ site.baseurl }}/images/posts/2020-7-25-Everything-I-Wish-I-Knew-About-JS-Scoping-A-Week-Ago/15.png)
 
 So now we see that we've assigned the context from the previous snapshot (`@663253`) to this function, and it contains a reference to `blockStr` (though still notably no variable name shown for some reason) as well as a reference to the `previous` (i.e. parent) context (`@663067`) which itself contains `barStr` and `innerStr`. So looking at these snapshots we learn a few things:
 

@@ -3,7 +3,7 @@ layout: post
 title: Array Functions and the Rule of Least Power
 ---
 
-![](https://i.imgur.com/e8JqZPe.png)
+![]({{ site.baseurl }}/images/posts/2020-7-9-Array-Functions-And-Rule-Of-Least-Power/1.png)
 
 ## The Rule of Least Power
 
@@ -33,7 +33,7 @@ But I want to bring your attention to how the power of these functions when cons
 
 Here is a diagram I whipped up that crudely orders the common javascript array functions, going from the most powerful (a for-loop) to the least powerful (`.some`/`.every`).
 
-![](https://i.imgur.com/EvOGL7B.png)
+![]({{ site.baseurl }}/images/posts/2020-7-9-Array-Functions-And-Rule-Of-Least-Power/2.png)
 
 ### Array Function Recap
 
@@ -445,6 +445,6 @@ I whipped up these benchmarks without putting too much effort in, so don't take 
 
 \*There are edge cases, for example `.find` doesn't quite implement `.some` given the case that there are undefined values in the array. But this post is more about asking the question of, whether for a given case, you can pick the less powerful tool. Also, Examples are purely illustrative. Here is the actual pseudocode for `.reduce` from the 2020 [ECMAScript language spec](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) (pretty gnarly)
 
-![](https://i.imgur.com/hqvgJRz.png)
+![]({{ site.baseurl }}/images/posts/2020-7-9-Array-Functions-And-Rule-Of-Least-Power/3.png)
 
 \*\* exception being if we reference the array itself inside the callback, or any other variable outside the scope of the callback. Which would beg the question of why we're using a `.map` in the first place.

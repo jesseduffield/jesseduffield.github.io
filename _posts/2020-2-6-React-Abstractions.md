@@ -7,7 +7,7 @@ As a software developer I like to think of myself as intelligent and discerning,
 
 To illustrate what I'm talking about, let's start with a simple app that has a counter (original, I know) and some buttons to modify the counter.
 
-![](https://i.imgur.com/oQNvk9R.png)
+![]({{ site.baseurl }}/images/posts/2020-2-6-React-Abstractions/1.png)
 
 There's only really a couple of files here. Our App.js:
 
@@ -198,7 +198,7 @@ export default CounterSection;
 
 We happily dust off our hands, but then another requirement appears! We need to allow the user to type a number into an input and then press a button to add that number to our counter.
 
-![](https://i.imgur.com/PsdJKqm.png)
+![]({{ site.baseurl }}/images/posts/2020-2-6-React-Abstractions/2.png)
 
 This is an easy one. We'll add a metadata field on our action and then add an 'ADD' action to the reducer:
 

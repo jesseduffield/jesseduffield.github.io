@@ -3,7 +3,7 @@ layout: post
 title: LSD and the Wrong Abstraction
 ---
 
-![](https://i.imgur.com/7fsUko5.png)
+![]({{ site.baseurl }}/images/posts/2020-10-3-LSD-And-The-Wrong-Abstraction/1.png)
 
 The world of software development has no shortage of smart cookies weighing in on what you _should_ do. How to write tests, how to approach solving problems, how to structure things. So whenever I build intuition for a useful concept in my programmer life, I wonder whether that concept still has legs when imported into my human life. The idea of focusing efforts towards an MVP, a Minimum Viable Product as opposed to whatever grand plans you have for a project in the long term, is a concept I've found to be just as useful in diet and exercise as I have in developing a software product. Yes, in the long run you want to look like Brad Pitt in Troy, but given your history of abandoning projects out of fear let's start by patting yourself on the back whenever you muster the courage to rock up to the gym in the first place.
 
@@ -23,15 +23,15 @@ Let's put aside the societal-level question here and focus on the individual lev
 
 The 'we are all one' crowd, whether acid-loving or not, can be identified by a tranquil, relaxed facial expression. An expression that to me almost suggests that though we are all one, some people are more one than others.
 
-![](https://i.imgur.com/4i1qVTU.jpg)
+![]({{ site.baseurl }}/images/posts/2020-10-3-LSD-And-The-Wrong-Abstraction/2.png)
 
 Compare that to the expression people wear when trying to look cool. Is it any surprise that when somebody wants to look cool for a photo they contort their brow as if to say 'something is not right here, something is different, and I'm the one who noticed'.
 
-![](https://i.imgur.com/3QDf1vS.jpg)
+![]({{ site.baseurl }}/images/posts/2020-10-3-LSD-And-The-Wrong-Abstraction/3.png)
 
 The contrast between these two presentations of people feels fundamental. [Prometheus Rising](http://sixcrows.org/library/PromethiusRisingByRobertAntonWilson.pdf), a book I've read just enough of to reference here, divides people into four categories based on two booleans: whether you're okay, and whether the other person is okay.
 
-![](https://i.imgur.com/HlUp1Gv.png)
+![]({{ site.baseurl }}/images/posts/2020-10-3-LSD-And-The-Wrong-Abstraction/4.png)
 
 Sanguinary is likened to a lion, and Bilius to an eagle. It's the [medieval Tetramorph](https://en.wikipedia.org/wiki/Tetramorph). It's Griffindoor vs Slytherin. Humanity has been slicing people up like this since antiquity. As somebody cautious of bad abstractions, one must be wary about generalisations like this, but I've found it insightful to realise that many of my friends fall squarely into one of these categories. The Lion is confident, friendly, and focuses on similarities. The Eagle is also confident, but is proud, and focuses on differences.
 

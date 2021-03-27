@@ -3,7 +3,7 @@ layout: post
 title: Golang Gotcha of the Day
 ---
 
-![](https://i.imgur.com/ROe5zJ8.png)
+![]({{ site.baseurl }}/images/posts/2020-2-26-Golang-Gotcha-Of-The-Day/1.png)
 
 This one has bitten me in the ass probably three times in the last month. The most recent bite occured just last night as I was debugging the rebase logic in lazygit. I had noticed that after selecting the 'abort' option in my rebase menu the rebase was not aborting, but instead moved along a couple of commits and then got stuck at some more conflicts.
 

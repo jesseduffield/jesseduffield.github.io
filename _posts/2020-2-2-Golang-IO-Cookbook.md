@@ -23,7 +23,7 @@ func main() {
 
 Super fast when the file is small. Super slow when the file is 1GB. So I needed to encrypt the source file without loading the whole thing into memory. Here's where io.Reader and io.Writer come in.
 
-![](https://i.imgur.com/kpIFNir.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/1.png)
 
 io.Writer and io.Reader are complementary interfaces for streaming information. An io.Reader's job is to take data from some source and write it to a transfer buffer. An io.Writer's job is to take a transfer buffer and write its contents to some destination.
 
@@ -288,7 +288,7 @@ What if we wanted to uppercase and bangify the text along the way? We could wrap
 
 First approach:
 
-![](https://i.imgur.com/jwDGigG.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/2.png)
 
 ```go
 func main() {
@@ -305,7 +305,7 @@ func main() {
 
 Second approach:
 
-![](https://i.imgur.com/d3NzTwQ.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/3.png)
 
 ```go
 func main() {
@@ -374,7 +374,7 @@ func main() {
 
 This is a little complicated but let's use a diagram to explain
 
-![](https://i.imgur.com/xpZIJsC.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/4.png)
 
 So to send data from red to blue we need to use io.Copy, and to send data from blue to red we need to use a pipe. Because io.Copy is a synchronous function, we need to wrap one of them in a goroutine so that they can both simultaneously run.
 
@@ -402,13 +402,13 @@ func main() {
 }
 ```
 
-![](https://i.imgur.com/HNBRZPZ.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/5.png)
 
 ## Complex example
 
 Okay time for a super contrived example: lets say the only augment functions we have available are UpcaseWriter and EncryptReader, and we want to show the original text to the terminal upcased, and we want to store the encrypted content in a file. We'll need to use our tee reader and we'll need to use a pipe. I'll need to do the diagram first this time around if I'm to have any chance of wrapping my head around the problem:
 
-![](https://i.imgur.com/MGv6bZj.png)
+![]({{ site.baseurl }}/images/posts/2020-2-2-Golang-IO-Cookbook/6.png)
 
 ```go
 func main() {

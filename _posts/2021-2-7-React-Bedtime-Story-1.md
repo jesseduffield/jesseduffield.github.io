@@ -273,7 +273,7 @@ Of course we would!
 
 'It's simple,' he begins while stroking the orb atop his staff, 'you have some general code, in this case your Form component, which has knowledge about specific code, in this case the tabs that it renders, and their validation logic. Because the form depends on them, it needs to change every time a new tab is added, by adding that new tab to a switch statement. But if we come up with an interface that expresses the common behaviour of our various tabs, we can slice that annoying dependency in half' (the Wizard theatrically slices the air with his staff), 'such that the Form knows about the interface and the tabs know about the interface, but the Form and the tabs know nothing about eachother.'
 
-![](https://i.imgur.com/njIyFNp.png)
+![]({{ site.baseurl }}/images/posts/2021-2-7-React-Bedtime-Story-1/1.png)
 
 'The spell is named "POLYMORPHISM". Poly means many, and morph means variant, which is to say that we will introduce an interface to handle many variants of the same thing'.
 
@@ -1173,7 +1173,7 @@ The Witch cackles. 'Last time I checked that cute polymorphism experiment wasn't
 
 The Wizard goes to speak but is cut off again by the Witch: 'With the polymorphic approach, we were trying to call specific code from a general place through an interface, which causes all kinds of headaches as the Serpent Of Typescript's Lacking Type Inference no doubt explained. With this new approach, we're scrapping the interface, splitting the general code into a slim top-level Form component and a useTabState hook, which the specific (tab) code can call without any Typescript difficulties because the specific code knows what ValueType to pass to the hook. I hereby call this approach the Generic Sandwich'
 
-![](https://i.imgur.com/UFa8YDk.png)
+![]({{ site.baseurl }}/images/posts/2021-2-7-React-Bedtime-Story-1/2.png)
 
 The Wizard now interjects: 'Give me a break. We all know that the Serpent of Typescript's Lacking Type Inference was twice as large this time last year, and he continues to shrink even as we speak. Why should our type system influence whether we cast polymorphism spells or invert control from specific components to generic components?'
 
