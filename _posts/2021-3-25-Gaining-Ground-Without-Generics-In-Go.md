@@ -7,11 +7,11 @@ title: Gaining Ground Without Generics In Go
 
 Recently I've been working on a feature in my open-source pride and joy, Lazygit, that allows viewing your modified files as a tree rather than a flat list. This allows you to get a better feel for which areas of the codebase have been changed, and has some perks like easy navigation with folder collapsing, and the ability to stage/unstage whole directories.
 
-<img src="https://jesseduffield.com/wp-content/uploads/2021/03/before-and-after-1.png" alt="" class="aligncenter"/>
+![](https://jesseduffield.com/wp-content/uploads/2021/03/before-and-after-1.png)
 
 I got it all working for the 'Files' panel, which shows files in your working tree, but not in the 'Commit-Files' panel, which shows the changed files in a selected commit. In both cases I want the same logic when it comes to traversing the three, expanding/collapsing folders, etc, but the files themselves need to be rendered differently (in your working tree you want to see both staged and unstaged changes, whereas in the commit-files panel you just want to know whether the file was added, modified, or deleted).
 
-<img src="https://jesseduffield.com/wp-content/uploads/2021/03/Screenshot-at-Mar-25-22-19-14.png" alt="" class="aligncenter"/>
+![](https://jesseduffield.com/wp-content/uploads/2021/03/Screenshot-at-Mar-25-22-19-14.png)
 
 This begs the question: how do we actually do this in Go? What I have is a Node struct which contains a key, a slice of Node children, and a pointer to a File which is non-nil when the Node is a leaf in the tree:
 
