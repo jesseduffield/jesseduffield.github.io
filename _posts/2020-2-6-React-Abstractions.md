@@ -225,6 +225,7 @@ function counter(state = 0, action) {
 As for our `CounterSection` component, we'll add an inputValue state variable and let that be controlled by the input, and then we can add an extra 'metadata' prop to `CounterButton` to take the value and give it to the action if it's present.
 
 ```jsx
+{% raw %}
 // CounterSection.js
 import React, { Component, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -278,6 +279,7 @@ const CounterSection = () => {
 };
 
 export default CounterSection;
+{% endraw %}
 ```
 
 What can't this `CounterButton` do?! We have really hit the nail on the head in encapsulating this complex counter update logic and preventing our `CounterSection` from having to understand the implementation details.
