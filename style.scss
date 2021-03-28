@@ -131,6 +131,7 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  margin-bottom: 20px;
 }
 
 // Specify the color of the selection
@@ -298,9 +299,24 @@ footer {
 
 // /* To center images */
 .center-images img,
-.center-images iframe {
+.center-images {
   margin: auto;
   display: block;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  width: 100%;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
