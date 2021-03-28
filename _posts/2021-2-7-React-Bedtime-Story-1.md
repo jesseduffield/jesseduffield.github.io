@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'React Bedtime Stories Episode 1: The Form Of Death'
+redirect_from: /bedtime-react-stories-episode-1-the-form-of-death/
 ---
 
 What you are about to hear is a tale full of danger, excitement, and personal growth. You will come across the evil Dragon Of New Requirements, and the Serpent Of Typescript's Lacking Type Inference. Polymorphism spells will be cast, Abstractions will rise and fall, and chests of various colours will explode. Although this tale requires no advanced knowledge, it will require courage and persistence, because it is a terrifying tale of twists and turns that, in real life, spanned weeks.

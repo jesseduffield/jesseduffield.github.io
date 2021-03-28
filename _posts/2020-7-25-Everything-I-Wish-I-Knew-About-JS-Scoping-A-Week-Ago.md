@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Everything I Wish I Knew About Javascript Scoping A Week Ago
+redirect_from: /everything-i-wish-i-knew-about-javascript-scoping-a-week-ago/
 ---
 
 The second half of this blog post now lives in video form [here](https://www.youtube.com/watch?v=bqBMPHFEHKg)

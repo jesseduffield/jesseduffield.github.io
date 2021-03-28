@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How Not to Develop a Ruby Gem
+redirect_from: /how-not-to-develop-a-ruby-gem/
 ---
 
 Over the last couple of days I've been working on [LazyMigrate](https://github.com/jesseduffield/lazy_migrate), a gem which provides a little UI for handling migrations in rails. Because it's a gem that depends on your Rails app's code, it can't really be tested in isolation (unless I went and mocked out a heap of stuff which would erode my confidence that things were working correctly). I was vaguely aware that I could have made a Rails [plugin](https://guides.rubyonrails.org/plugins.html), which sets you up with a mock rails app for testing, but I wanted to be able to run the gem from outside rails as well.

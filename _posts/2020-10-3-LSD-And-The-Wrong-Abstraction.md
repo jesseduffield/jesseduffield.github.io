@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LSD and the Wrong Abstraction
+redirect_from: /lsd-and-the-wrong-abstraction/
 ---
 
 ![]({{ site.baseurl }}/images/posts/2020-10-3-LSD-And-The-Wrong-Abstraction/1.png)

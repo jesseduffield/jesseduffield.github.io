@@ -1,6 +1,7 @@
 ---
 layout: post
 title: In React, The Wrong Abstraction Kills Efficiency
+redirect_from: /in-react-the-wrong-abstraction-kills-efficiency/
 ---
 
 As a software developer I like to think of myself as intelligent and discerning, but if I'm being completely honest with myself most of the decisions I make around code structure are governed by fairly low-resolution heuristics like 'Don't Repeat Yourself' and 'Keep It Simple, Stupid'. My stylistic intuitions all too often get priority over intuitions about long term maintenance and extensibility, in part because there are always arguments available that sound very serious and programmery but really just cover for the stylistic bias.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Beginner's Guide To Abstraction
+redirect_from: /beginners-guide-to-abstraction
 ---
 
 In _The Pragmatic Programmer_, Andrew Hunt and David Thomas introduced the DRY (Don't Repeat Yourself) principle. The rationale being that if you see the same code copy+pasted 10 times you should probably factor that code into its own method/class.

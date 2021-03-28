@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gaining Ground Without Generics In Go
+redirect_from: /generically-frustrated-with-go/
 ---
 
 Recently I've been working on a feature in my open-source pride and joy, Lazygit, that allows viewing your modified files as a tree rather than a flat list. This allows you to get a better feel for which areas of the codebase have been changed, and has some perks like easy navigation with folder collapsing, and the ability to stage/unstage whole directories.

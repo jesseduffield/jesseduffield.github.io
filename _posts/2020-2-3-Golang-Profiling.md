@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adventures in Profiling with Go
+redirect_from: /adventures-in-profiling-with-go/
 ---
 
 ![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/1.png)
