@@ -73,7 +73,7 @@ And then another new language comes along to restart the cycle again.
 
 The above section summarises the dark feedback loop as uncharitably as possible for the sake of simplicity, but the reality is murkier. Maybe the light loop of just using a language because it solves your problem accounts for 99% of language adoption, and the dark loop accounts for 1%. But I can say with confidence that the Dark process is more than zero percent. How do I know that? Because I've participated in it myself! I saw Go rise in popularity, made some side projects in it, and blogged about it. On paper, I was making those side projects to better understand the language, because my company had already decided we were going to start using Go in upcoming work. I also genuinely enjoy blogging and find it helps me better understand concepts. I don't intend to kill those side projects or stop that blogging. But I would be lying if I said I wasn't aware of the signal being sent. I've become disillusioned with Go after spending so much time in it, but there's no shortage of companies hiring for Go talent.
 
-This is not to say I'm disavowing Go, I've had just as much trouble working in Rust. I'm just a grumpy bastard with unreasonable expectations of my languages. Even now as I type this I'm aware that public cricitism of a language might hurt my chances with a future company using Go whose cause resonates with me. But it would be hypocritical to omit in a post explaining how the dark feedback loop functions.
+This is not to say I'm disavowing Go, I've had [just](https://www.youtube.com/watch?v=92R0YfKwqsk&ab_channel=JesseDuffield) [as](https://www.youtube.com/watch?v=Mzh6PsdOd4I&ab_channel=JesseDuffield) [much](https://www.youtube.com/watch?v=NsixVJHUgK8&ab_channel=JesseDuffield) trouble working in Rust. I'm just a grumpy bastard with unreasonable expectations of my languages. Even now as I type this I'm aware that public cricitism of a language might hurt my prospects down the line. But it would be hypocritical to omit in a post explaining how the dark feedback loop functions.
 
 ## Who cares?
 
@@ -85,7 +85,7 @@ But the downsides must be recognised: much time has been wasted by companies add
 
 ## Will it ever end?
 
-Despite the incentives created by the dark feedback loop, I predict that things will settle down eventually. Many languages are converging on what's considered good practice, for example, removing implicit nullability, the so-called _Billion Dollar Mistake_. Graydon Hoare, author of Rust, disagrees, saying we have a [long way to go](https://graydon2.dreamwidth.org/253769.html). There are some interesting languages still maturing, like [Gleam](https://gleam.run/) for example, but on the whole, I don't think we're going to see another heavy hitter like Rust coming along in quite some time. But if it does, you'll probably catch me blogging about it ;)
+Despite the incentives created by the dark feedback loop, I predict that things will settle down eventually. Many languages are converging on what's considered good practice, for example, removing implicit nullability, the so-called _Billion Dollar Mistake_. Graydon Hoare, author of Rust, disagrees, saying we have a [long way to go](https://graydon2.dreamwidth.org/253769.html). There are some interesting languages still maturing, like [Gleam](https://gleam.run/) for example, but on the whole, I don't think we're going to see another heavy hitter like Rust coming along in quite some time. But if it does, you'll probably catch me blogging about it!
 
 ---
 
