@@ -2,6 +2,7 @@
 layout: post
 title: 'Fragmentation: What Drives It, And Why It Matters'
 image: /images/posts/2021-6-20-Fragmentation/dffl-og.png
+redirect_from: /2021-6-20-Fragmentation2
 ---
 
 _Disclaimer: highly speculative post, but in my opinion highly interesting_
