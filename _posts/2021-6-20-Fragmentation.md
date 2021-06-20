@@ -77,7 +77,7 @@ This is not to say I'm disavowing Go, I've had [just](https://www.youtube.com/wa
 
 ## Who cares?
 
-Does it actually matter if the dark feedback loop is a real thing? Companies get to hire talent, devs are incentivised to get outside their comfort zone and learn something new, and progress is made! That doesn't so so dark at all.
+Does it actually matter if the dark feedback loop is a real thing? Companies get to hire talent, devs are incentivised to get outside their comfort zone and learn something new, and progress is made! That doesn't sound so dark at all.
 
 I don't think fragmentation is actually bad on the whole: it's the engine through which we experiment with new ideas and make progress as a field. [Like the balkanisation of Western Europe](https://en.wikipedia.org/wiki/Great_Divergence#Political_fragmentation), devs can jump ship from one language to the next, incentivising language designers to compete and respond to the needs of their users. We've seen functional language features gradually introduced in traditionally object-oriented languages, to much fanfare. If we were all content with our existing tech we'd still be writing assembly.
 
