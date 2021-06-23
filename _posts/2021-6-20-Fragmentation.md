@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Fragmentation: What Drives It, And Why It Matters'
+title: 'Why Is Tech So Fragmented?'
 image: /images/posts/2021-6-20-Fragmentation/dffl-og2.png
 redirect_from: /Fragmentation2
 ---
