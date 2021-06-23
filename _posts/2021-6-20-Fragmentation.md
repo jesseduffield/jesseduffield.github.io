@@ -5,8 +5,6 @@ image: /images/posts/2021-6-20-Fragmentation/dffl-og2.png
 redirect_from: /Fragmentation2
 ---
 
-_Disclaimer: highly speculative post, but in my opinion highly interesting_
-
 ![]({{ site.baseurl }}/images/posts/2021-6-20-Fragmentation/dffl-og2.png)
 
 ## My First Encounter With Fragmentation
