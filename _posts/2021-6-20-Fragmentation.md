@@ -93,4 +93,4 @@ My friend recently told me about how his company rewrote a ruby class as a Go se
 
 > Have you not listened to anything Rob Pike says about concurrency? You're supposed to share state by communicating, not communicate with shared state! of course you failed with the Go approach, you were doing it wrong!
 
-Fair point, fellow Gopher. If they did their research, maybe Go wouldn't have been so bad. But that same research might make a company decide against Go in the first place. The issue is that companies have limited time and limited information to make decisions.
+Fair point, fellow Gopher. If they did their research, maybe Go wouldn't have been so bad. But if they _really_ did their research in the first place, they wouldn't have needed to reach for a new language! In general, we should work very hard to avoid adding unnecessary complexity to our tech stack, and adding a new language is the easiest way to add complexity.
