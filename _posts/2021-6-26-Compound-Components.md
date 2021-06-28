@@ -36,7 +36,7 @@ Here we're exposing the `isActive` and `onToggle` props through the render prop 
 
 ### Type safety
 
-Fairly type safe: no hoop-jumping required. One shortcoming is that we can't enforce the render prop function to return AccordionSection elements. We can get close by typing it as `React.ReactElement<AccordianSectionProps>` but then we wouldn't be able to return a fragment, we'd have to return an actual array of JSX. And we care less about the props and more about the actual element type. Alas, typescript can't help us here.
+Fairly type safe: no hoop-jumping required. One shortcoming is that we can't enforce the render prop function to return AccordionSection elements. We can get close by typing it as `React.ReactElement<AccordionSectionProps>` but then we wouldn't be able to return a fragment, we'd have to return an actual array of JSX. And we care less about the props and more about the actual element type. Alas, typescript can't help us here.
 
 ### Aesthetics
 
@@ -141,7 +141,7 @@ Here instead of passing JSX children to Accordion, we pass plain old javascript 
 
 ### Type safety
 
-100% type safe. Now that AccordianSection is an interface rather than a component, we have complete control over it. It is not possible to pass the wrong children to Accordion because Accordion no longer takes children.
+100% type safe. Now that AccordionSection is an interface rather than a component, we have complete control over it. It is not possible to pass the wrong children to Accordion because Accordion no longer takes children.
 
 ### Aesthetics
 
@@ -153,7 +153,7 @@ Well-encapsulated for the same reason as the others.
 
 ### Explicitness
 
-Fairly explicit. The only thing lacking is that it's not clear on the call site how our accordian sections will be handled. The default assumption is that they'll be converted to JSX inside Accordion, but it's not communicated in the interface. Where the cloneElement and Context approaches misinform the reader (coordination between Accordion and AccordionSection not obvious from call site), the POJO approach avoids the assumptions that come with JSX, meaning there's less risk of confusion.
+Fairly explicit. The only thing lacking is that it's not clear on the call site how our accordion sections will be handled. The default assumption is that they'll be converted to JSX inside Accordion, but it's not communicated in the interface. Where the cloneElement and Context approaches misinform the reader (coordination between Accordion and AccordionSection not obvious from call site), the POJO approach avoids the assumptions that come with JSX, meaning there's less risk of confusion.
 
 ### Grade
 
