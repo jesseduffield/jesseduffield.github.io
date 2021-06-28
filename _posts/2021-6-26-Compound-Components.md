@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ranking the Four Approaches to Compound Components, from Worst to Best
+title: Four Approaches to Implicit State in Compound Components, Ranked
 image: ''
 ---
 
