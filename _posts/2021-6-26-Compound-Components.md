@@ -124,7 +124,7 @@ More explicit than the cloneElement approach: you can look at either Accordion o
 
 **A**. A step-up from cloneElement that patches the type issues and has a more discoverable implementation.
 
-## Config Objects
+## POJOs
 
 <!-- wp:html -->
 <html>
@@ -137,7 +137,7 @@ More explicit than the cloneElement approach: you can look at either Accordion o
 </html>
 <!-- /wp:html -->
 
-Here instead of passing JSX children to Accordion, we pass config objects.
+Here instead of passing JSX children to Accordion, we pass plain old javascript objects (POJOs). This technically means that we're no longer actually creating a compound component, but the end result is the same in terms of behaviour.
 
 ### Type safety
 
@@ -153,7 +153,7 @@ Well-encapsulated for the same reason as the others.
 
 ### Explicitness
 
-Fairly explicit. The only thing lacking is that it's not clear on the call site how our accordian sections will be handled. The default assumption is that they'll be converted to JSX inside Accordion, but it's not communicated in the interface. Where the cloneElement and Context approaches misinform the reader (coordination between Accordion and AccordionSection not obvious from call site), the config objects approach avoids the assumptions that come with JSX, meaning there's less risk of confusion.
+Fairly explicit. The only thing lacking is that it's not clear on the call site how our accordian sections will be handled. The default assumption is that they'll be converted to JSX inside Accordion, but it's not communicated in the interface. Where the cloneElement and Context approaches misinform the reader (coordination between Accordion and AccordionSection not obvious from call site), the POJO approach avoids the assumptions that come with JSX, meaning there's less risk of confusion.
 
 ### Grade
 
@@ -161,7 +161,7 @@ Fairly explicit. The only thing lacking is that it's not clear on the call site 
 
 ## Conclusion
 
-It ends up being a close contest between using Context and using config objects. In the case of an accordion, the config objects approach wins, but in other cases I can see Context winning e.g. when we want more flexibility around which children can be passed (e.g. sprinkling your own random elements among the children that the component doesn't know or care about). The Render Prop pattern works well when we expect the client to do something unique with the render prop's args, but when the client is just handling the coordination logic itself by threading through boilerplate props, it's not a great fit. React.cloneElement is better than the Render Prop approach, but still pretty average, specifically when you take the type safety into consideration.
+It ends up being a close contest between using Context and using POJOs. In the case of an accordion, the POJO approach wins, but in other cases I can see Context winning e.g. when we want more flexibility around which children can be passed (e.g. sprinkling your own random elements among the children that the component doesn't know or care about). The Render Prop pattern works well when we expect the client to do something unique with the render prop's args, but when the client is just handling the coordination logic itself by threading through boilerplate props, it's not a great fit. React.cloneElement is better than the Render Prop approach, but still pretty average, specifically when you take the type safety into consideration.
 
 What do you think? Have I failed to consider something in these ratings? Let me know!
 
@@ -169,4 +169,4 @@ What do you think? Have I failed to consider something in these ratings? Let me 
 
 ## Addendum:
 
-I'm pretty cautious about config objects in general, seeing how they've caused issues in the past when it made more sense to pass direct JSX. They're happen to be the right fit for an accordion, but like all abstractions, you need to use them with care. If you see yourself needing to add additional JSX between the children of your compound component (e.g. help buttons, tooltips, separators) and don't want your compound component being dependent on those, ditching the config objects and using direct JSX may be the better approach. Note however that if you do that, you'll still need a way to distinguish between those children and the expected children. This can be done using a single Context provider that supplies (in this case) the `isActive` and `onToggle` functions and using the titles of accordion sections as keys rather than their indexes.
+I'm pretty cautious about substituting JSX for POJOs in general, seeing how they've caused issues in the past when it made more sense to pass direct JSX. They happen to be the right fit for an accordion, but like all abstractions, you need to use them with care. If you see yourself needing to add additional JSX between the children of your compound component (e.g. help buttons, tooltips, separators) and don't want your compound component being dependent on those, switching to JSX may be the better approach. Note however that if you do that, you'll still need a way to distinguish between those children and the expected children. This can be done using a single Context provider that supplies (in this case) the `isActive` and `onToggle` functions and using the titles of accordion sections as keys rather than their indexes.
