@@ -67,13 +67,9 @@ const forEach = (array, callback) => {
   }
 };
 
-forEach([1, 2, 3], a => console.log(a)) >
-  1 >
-  2 >
-  (3)[(1, 2, 3)].forEach(a => console.log(a)) >
-  1 >
-  2 >
-  3;
+forEach([1, 2, 3], a => console.log(a)); // prints: 1,2,3
+
+[(1, 2, 3)].forEach(a => console.log(a)); // prints: 1,2,3
 ```
 
 So no matter what `.forEach` can do, a for-loop can do more.
@@ -91,9 +87,9 @@ const reduce = (array, callback, initialValue) => {
   return result;
 };
 
-reduce([1, 2, 3], (acc, curr) => acc + curr, 0) >
-  (6)[(1, 2, 3)].reduce((acc, curr) => acc + curr, 0) >
-  6;
+reduce([1, 2, 3], (acc, curr) => acc + curr, 0); // equals 6
+
+[(1, 2, 3)].reduce((acc, curr) => acc + curr, 0); // equals 6
 ```
 
 And so on, and so on, all the way to the bottom:
@@ -121,14 +117,15 @@ The least powerful tool for the job that can _still do the job_ is the one that 
 const myArray = [1, 2, 3];
 
 // with `.map`
-resultWithMap = myArray.map(item => item * 2) > [2, 4, 6];
+resultWithMap = myArray.map(item => item * 2); // equals: [2, 4, 6]
 
 // with a for-loop
 let resultWithLoop = [];
 for (i = 0; i < myArray.length - 1; i++) {
   resultWithLoop.push(array[i] * 2);
 }
-resultWithLoop > [2, 4];
+
+resultWithLoop; // equals: [2, 4]
 ```
 
 Hey, what the hell? Why is my `resultWithLoop` missing an item? I started my index at zero, I only incremented one at a time, and I'm ensuring I don't have an out of bounds error by ensuring I don't include the element at index `myArray.length`.
@@ -154,13 +151,11 @@ Likewise, say I have an array of fruits and I want to know if it contains any ap
 ```javascript
 const fruits = ['orange', 'pear', 'apple', 'apple', 'peach'];
 
-const hasAppleViaFilter =
-  fruits.filter(fruit => fruit === 'apple').length > 0 > true;
+const hasAppleViaFilter = fruits.filter(fruit => fruit === 'apple').length > 0; // equals: true
 
-const hasAppleViaFind =
-  fruits.find(fruit => fruit === 'apple') !== undefined > true;
+const hasAppleViaFind = fruits.find(fruit => fruit === 'apple') !== undefined; // equals: true
 
-const hasAppleViaSome = fruits.some(fruit => fruit === 'apple') > true;
+const hasAppleViaSome = fruits.some(fruit => fruit === 'apple'); // equals: true
 ```
 
 Each approach is ordered by decreasing power. Notice that `.some` is the easiest on the eyes? As soon as you see `.some` you know that `hasAppleViaSome` will be assigned a boolean value, based on the callback `fruit => fruit === 'apple'`. In the filter approach, you need to mentally store the fact that we're creating an array with a subset of the original array's fruits, and then we're checking the length of it, and comparing with zero. Only once you parse all of that do you realise the actual implicit intention, which happens to be the same as the _explicit_ intention of the `.some` method.
@@ -230,9 +225,9 @@ const hasApple = fruits.some((fruit, index) => {
   return false;
 });
 
-hasApple > true;
+hasApple; // equals: true
 
-orangeIndexes > [0];
+orangeIndexes; // equals: [0]
 ```
 
 No. This is _really_ bad. By mutating a variable inside our `.some` call, we're misleading the reader into thinking that the callback conforms to the expected behaviour of simply returning true or false based on the fruit, when in fact it's directly messing with variables outside the scope of the callback. At best this proves momentarily confusing, at worst it weakens the reader's trust that the next 'low-power' function they encounter will be true to its name.
@@ -273,9 +268,9 @@ fruits.forEach((fruit, index) => {
   }
 });
 
-hasApple > true;
+hasApple; // equals: true
 
-orangeIndexes > [0];
+orangeIndexes; // equals: [0]
 ```
 
 At least now the reader enters the forEach callback knowing what they're in for.
@@ -288,11 +283,9 @@ const orangeIndexes = fruits.reduce(
   (acc, curr, index) => (curr === 'orange' ? acc.concat(index) : acc),
   []
 );
-const hasApple = fruits.some(fruit => fruit === 'apple');
+const hasApple = fruits.some(fruit => fruit === 'apple'); // equals: true
 
-hasApple > true;
-
-orangeIndexes > [0];
+orangeIndexes; // equals: [0];
 ```
 
 I'm not saying option 2 is better than option 1. Sometimes, for all its correctness, a functional solution can simply be much harder to read than a mutative alternative, particularly in non-typed languages.
