@@ -319,8 +319,8 @@ private Booking hiddenBookImpl(Customer aCustomer, boolean isPremium) {...}
 
 By encapsulating the type key, we ensure that future changes (for example adding a new booking type) won't affect any client code.
 
-## Conclusion
+## Moral of the Story
 
-Moral of the story? If you _can_ get rid of type keys, you _should_. If you _can't_ (without harming the code in some other way) you should hide them from the public API. Type keys are guilty until proven innocent, so if you're writing or reviewing code that introduces a type key, spend the time thinking through how to satisfy the requirements without it, because, unchecked, type keys will bloat out your code and slow your development speed to a crawl.
+If you _can_ get rid of type keys, you _should_. If you _can't_ (without harming the code in some other way) you should hide them from the public API. Type keys are guilty until proven innocent, so if you're writing or reviewing code that introduces a type key, spend the time thinking through how to satisfy the requirements without it, because, unchecked, type keys will bloat out your code and slow your development speed to a crawl.
 
 Until next time!
