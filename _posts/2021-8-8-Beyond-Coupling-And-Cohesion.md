@@ -3,6 +3,8 @@ layout: post
 title: 'Beyond Coupling and Cohesion: Strategies For Un-F*cking Yourself'
 ---
 
+_This post belongs in the 'highly speculative' category. It contains ideas that I've yet to flesh out and properly pin down. Reader beware!_
+
 The terms _Loose Coupling_ and _High Cohesion_ seem to go hand in hand: the two concepts were coined together and if you're talking about one, the other will typically come up as well. Similarly, the concepts of _DRY_ (Don't Repeat Yourself) and _Wrong Abstraction_ go hand in hand: for example one person says we should _DRY_ this code up and the other says they considered it but they don't want to create the _Wrong Abstraction_. I rarely hear these two sets of concepts in the same conversation, which surprises me because they are really talking about the same thing.
 
 Allow me to explain. This is a box:
