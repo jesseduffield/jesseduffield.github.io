@@ -267,10 +267,10 @@ public Booking book (Customer aCustomer, afterDolor, afterConsectetur) {
 }
 
 // equivalent of isPremium: true
-booking.book(aCustomer, sitAmet, () => adipiscing().elit())
+booking = book(aCustomer, sitAmet, () => adipiscing().elit())
 
 // equivalent of isPremium: false
-booking.book(aCustomer, () => null, () => {
+booking = book(aCustomer, () => null, () => {
   aenean();
   vitaeTortor().mauris();
 })
