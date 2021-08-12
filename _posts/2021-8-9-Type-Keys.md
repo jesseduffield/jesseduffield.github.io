@@ -223,7 +223,7 @@ Note that instead of using callbacks we could have subclassed User to AdminUser 
 
 ## Is It Always So Simple?
 
-I originally titled this post 'Anti-pattern of the Day: Type Keys' and asked readers to suggest counter-examples. As you can tell by the name change, some readers obliged! No matter how many heuristics and strategies you keep in your mental toolbox, there will always be situations that Just Suck for which there is no easy answer. Let's take a look at one such example:
+I originally titled this post _Anti-pattern of the Day: Type Keys_ and asked readers to suggest counter-examples. As you can tell by the name change, some readers obliged! No matter how many heuristics and strategies you keep in your mental toolbox, there will always be situations that Just Suck for which there is no easy answer. Let's take a look at one such example:
 
 Flag arguments tacked onto the end of a function are a classic example of a type key (the only difference being that they're capped to two possible values). Given their status as type keys, they should be eyed with suspicion, however Martin Fowler gives an [example](https://martinfowler.com/bliki/FlagArgument.html) where there's no obvious alternative:
 
