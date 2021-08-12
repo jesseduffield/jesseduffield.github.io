@@ -219,7 +219,7 @@ The little people represent reasons for change: perhaps all the changes to the `
 
 Isn't this nicer? There are fewer arrows flying around thanks to having `userType` out of the picture, but the important thing is that our `createUser` function is not dependent on our specific use cases, meaning that when changing a use case or adding a new use case (e.g. adding a 'vendor' user type) we don't need to touch our `createUser` function. This is the basis of the Open-Close Principle: entities should be open for extention but closed for modification. This principle can _only_ be satisfied when specific entities depend on general entities, not the other way around.
 
-Note that instead of using callbacks we could have chosen to subclass User to AdminUser and RegularUser, with each subclass overriding the `onCreate` function, and we'd end up with an identical diagram. The dependencies you end up with matter more than the particular path you took to get them.
+Note that instead of using callbacks we could have subclassed User to AdminUser and RegularUser, with each overriding the `onCreate` function. Regardless of which approach you take, you'll get an identical dependency diagram!
 
 ## Is It Always So Simple?
 
