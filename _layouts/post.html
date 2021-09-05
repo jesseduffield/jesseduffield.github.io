@@ -3,6 +3,7 @@ layout: default
 ---
 
 <article class="post">
+  {% if page.series %}{% include series.html %}{% endif %}
   <h1>{{ page.title }}</h1>
   <div class="date">Written on {{ page.date | date: '%B %e, %Y' }}</div>
 
@@ -10,6 +11,11 @@ layout: default
     {{ content }}
   </div>
 
+  <br />
+
+  {% if page.series %}{% include series-pager.html %}{% endif %}
+
+  <hr />
   <br />
 
   {%- if site.commentbox.id -%} {%- include
