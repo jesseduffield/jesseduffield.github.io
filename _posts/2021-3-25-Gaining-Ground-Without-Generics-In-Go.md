@@ -209,7 +209,7 @@ func (n *Node) GetChildren() []INode {
 }
 ```
 
-Alright, no we can move on to... hang on, looks like we have a compiler error:
+Alright, now we can move on to... hang on, looks like we have a compiler error:
 
 ```
 cannot use n.children (variable of type []*Node) as []INode value in return statement
