@@ -93,7 +93,7 @@ In all these examples, we start with a strange phenomenon, which we assume is ba
 
 The more you think about selection bias, the more you learn about how the world functions. Why are there so many anti-wrinkle ads in those taboola links? Why are hidden sugars in food so common? Are localised crime stories by commercial news channels representative? By thinking about the underlying selection pressures at play, you can answer all these questions.
 
-Of course, your answers may be _wrong_ and you should verify them empirically. Maybe the COVID super-spreaders just had a busy day by coincidence. Maybe cats really do have an optimum falling height to allow for proper landing orientation. The point of considering selection bias is to produce more hypotheses to test, leading to deeper insight.
+Of course, your answers may be _wrong_ and you should verify them empirically. Maybe the COVID super-spreaders just had a busy day by coincidence. Maybe cats really do have an optimum falling height to allow for proper landing orientation. The point of considering selection bias is to generate more hypotheses to test, leading to deeper insight.
 
 Psychologically speaking, trying to explain everything with selection bias might give you a fatalistic impression that nobody improves, nothing changes, and everything you see is just concealed selection. I'm probably in that boat myself and need to move the needle in the other direction. But I suspect that the average person is on the other side of the spectrum, and that the world would be improved if more people recognised selection bias in the wild.
 
