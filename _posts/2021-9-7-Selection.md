@@ -17,7 +17,7 @@ You might think that the reason for these schools' success is all the resources 
 
 > We find that almost all of the selective school advantage in GCSE can be explained by family SES, achievement, ability and EduYears GPS. After controlling for these factors, going to a grammar vs. a state non-selective school is associated with a mean GCSE grade increase of just 0.026 of a standard deviation and for private schools, 0.070 of a standard deviation. Furthermore, the variance in GCSE that school type explains falls from 7% to <1%.
 
-The reason selective-entry schools produce such good grads is because they select for smart students, with supportive home-environments. You could take all the students in a selective-entry school, swap them with all the students in a public school, and you will barely see a change in outcomes.
+The reason selective-entry schools produce such good grads is because they select for smart students, with supportive home-environments. You could take all the students in a selective-entry school, swap them with all the students in a public school, and on average you will barely see a change in outcome for a given student.
 
 This has policy implications for charter schools, which are all the rage right now, but which themselves apply strong [selection pressure](https://freddiedeboer.substack.com/p/why-selection-bias-is-the-most-powerful-force-in-education).
 
