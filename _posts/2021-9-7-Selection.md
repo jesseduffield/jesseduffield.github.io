@@ -53,6 +53,8 @@ Compare this to Twitter where:
 
 You could have the exact same thread of comments in the two platforms and you would perceive Reddit's thread as being far more civil just because of how those comments are presented. The difference in comment landscape is further exacerbated by a second-order effect selecting for the _users_ in each platform: users who love conflict will gravitate towards Twitter and users who want more civility and consensus will gravitate towards Reddit.
 
+Whether you're reading through a comment thread in Reddit or Twitter, you won't be seeing conversation that's representative of the real world, given that about [1%](https://en.wikipedia.org/wiki/1%25_rule_%28Internet_culture%29) of users will actually post something whereas the other 99% just lurk. The 1% who do post are far more likely to be opinionated and stubborn (like myself) than the average person, and failing to recognise that selection effect might make you think we're on the brink of a civil war.
+
 ### Display Pictures
 
 Anybody who's used dating apps long enough realises that, excluding private parts, if somebody is hiding some feature, it's probably unappealing. For example, I don't have the best teeth, so you won't catch me smiling in many photos. Bald guys might conveniently crop off the photo below their scalp or just wear a hat and overweight people stick to close-up shots. People with a lazy eye angle their face away from the camera, and facial blemishes are concealed with makeup. You can gain quite a lot of information about somebody just by taking note of what they _don't_ show.
