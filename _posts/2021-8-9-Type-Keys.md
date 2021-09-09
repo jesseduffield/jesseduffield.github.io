@@ -3,6 +3,8 @@ layout: post
 title: 'Code Smell of the Day: Type Keys'
 ---
 
+_Warning: Hackernews recently [crucified](https://news.ycombinator.com/item?id=28325563) this post, so I'll need to come back and fix some things up when I find the time. Have a read through those comments to see some counter-arguments_
+
 Say we have a function which creates a user, and handles some specific setup depending on whether that user is an admin or a customer:
 
 ```ts
