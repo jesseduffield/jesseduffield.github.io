@@ -5,7 +5,7 @@ title: Seeing Selection
 
 A couple times somebody has told me about the latest COVID super-spreader and then asked the question 'how come it's always somebody who visits 5 different places in a single day. Who the hell are these people?'. Recent examples [aren't hard to find](https://www.theage.com.au/national/victoria/primary-close-contacts-top-15-000-as-super-spreaders-spark-new-stadium-cases-20210719-p58b3h.html): so-called super-spreaders do get around. But when you think about it, this question has an obvious answer: highly mobile people are more likely to contract COVID in the first place. If they happen to also be mobile on the day they infect a bunch of other people, their super-spreading isn't super-surprising.
 
-Many 'what are the odds?' questions have similar answers: when something happens that seems unlikely, our first instinct is to assume there was only a random chance of the event occurring, however hidden selection effects can _bias_ an outcome (such as mobility in people resulting in greater chance of contracting and spreading COVID). In this post I want to convince you that _selection bias_ explains far more than you might think.
+Many 'what are the odds?' questions have similar answers: when something happens that seems unlikely, our first instinct is to assume there was only a random chance of the event occurring, however hidden selection effects can _bias_ an outcome (such as increased mobility resulting in an increased chance of contracting and spreading COVID). In this post I want to convince you that _selection bias_ explains far more than you might think.
 
 ## Education
 
@@ -46,14 +46,14 @@ Sure, there are still stupid and rude comments, but those are downvoted 'to obli
 
 Compare this to Twitter where:
 
-- comments are shown in chronological order, meaning first-in-first served
+- comments are shown in chronological order, meaning first-in-first-served
 - moderation is globally-applied, and weaker
 - there is no downvote button
 - short character limit
 
 You could have the exact same thread of comments in the two platforms and you would perceive Reddit's thread as being far more civil just because of how those comments are presented. The difference in comment landscape is further exacerbated by a second-order effect selecting for the _users_ in each platform: users who love conflict will gravitate towards Twitter and users who want more civility and consensus will gravitate towards Reddit.
 
-Whether you're reading through a comment thread in Reddit or Twitter, you won't be seeing conversation that's representative of the real world, given that about [1%](https://en.wikipedia.org/wiki/1%25_rule_%28Internet_culture%29) of users will actually post something whereas the other 99% just lurk. The 1% who do post are far more likely to be opinionated and stubborn (like myself) than the average person, and failing to recognise that selection effect might make you think we're on the brink of a civil war.
+Whether you're reading through a comment thread in Reddit or Twitter, you won't be seeing conversation that's representative of the real world, given that about [1%](https://en.wikipedia.org/wiki/1%25_rule_%28Internet_culture%29) of users will actually post something whereas the other 99% just lurk. The 1% who do post (like myself) are far more likely to be more opinionated and stubborn than the average person, and failing to recognise that selection effect might make you think we're on the brink of a civil war.
 
 ### Display Pictures
 
@@ -65,9 +65,9 @@ Of course, we all know that what's on the inside is what really matters, but thi
 
 ### Cats Falling From Tall Buildings
 
-Back when I was a kid I was told that cats were better off falling from over six stories than under six stories given how long it takes for them to twist their bodies around in order to land on their feet. Sounds perfectly plausible, except that the original study that posited the theory was only considering the injuries of cats who had _survived_ the fall. This is an example of _survivorship bias_, a subset of selection bias.
+Back when I was a kid I was told that cats were better off falling from over six stories than under six stories given how long it takes for them to twist their bodies around in order to land on their feet. Sounds perfectly plausible, except that the original study that posited the theory was only considering the injuries of cats who had _survived_ the fall. This is an example of _survivorship bias_, a specific kind of selection bias.
 
-What about a [study](https://pubmed.ncbi.nlm.nih.gov/15363762/) that does corrects the selection bias by also considering cats who died?
+What about a [study](https://pubmed.ncbi.nlm.nih.gov/15363762/) that does correct for the selection bias by also considering cats who died?
 
 > Falls from the seventh or higher stories, are associated with more severe injuries
 
@@ -85,9 +85,11 @@ Being successful is not just a matter of believing in yourself, it's a matter of
 
 Death is terrifying! We're pretty comfortable being alive and having a self, but who knows what happens after death? Perhaps we just cease to exist. At any rate, the fact that any animal without an in-built fear of death would likely die without leaving offspring, it should be no surprise that the vast majority of humans have evolved to fear death. This should actually make us suspicious of our fear of death: if the fear is just a means to an end for our genes to continue propagating, perhaps we should take it with a grain of salt.
 
+In fact, all arguments based on evolution are themselves arguments based on selection bias: natural selection is just another form of selection.
+
 ### Anthropic Principle
 
-What are the odds that we live on a planet which supports sentient life? Pretty damn high given we're sentient! Any planet which can't support sentient life won't have sentient beings asking themselves anything about the planet. This is known as the _Anthropic Principle_, which relates to selection of the actual observer (i.e. us). Maybe the fact our planet supports life isn't that surprising to you given our universe, but the fact that our _universe_ supports life is surprising. If you believe there are infinitely many universes each with their own unique parameters, this becomes a whole lot less surprising: the universes which can't support life don't have any sentient beings pondering about their own universe, and the universes which can (such as our own) end up with everybody asking 'how crazy is it that our universe supports life?'. Not crazy at all, so long as you're on board with the multiverse theory of course.
+What are the odds our universe supports sentient life? Pretty damn high given we're sentient! Any universe which can't support sentient life won't have sentient beings asking themselves anything about the universe. This is known as the [_Anthropic Principle_](https://en.wikipedia.org/wiki/Anthropic_principle), which relates to selection of the actual observer (i.e. us). Given that slightly tweaking a fundamental property of our universe, like the mass of a proton, would almost certainly prevent life from arising, it seems that our universe is _suspiciously_ fine-tuned for the purposes of supporting life. But if you believe there are infinitely many universes each with their own uniquely tuned fundamental properties, this becomes a whole lot less surprising: the universes which can't support life don't have any sentient beings pondering about their own universe, and the universes which can (such as our own) end up with everybody asking 'how crazy is it that our universe supports life?'. Not crazy at all, so long as you're on board with the multiverse theory of course.
 
 ## So What?
 
@@ -95,8 +97,8 @@ In all these examples, we start with a strange phenomenon, which we assume is ba
 
 The more you think about selection bias, the more you learn about how the world functions. Why are there so many anti-wrinkle ads in those taboola links? Why are hidden sugars in food so common? Are localised crime stories by commercial news channels representative? By thinking about the underlying selection pressures at play, you can answer all these questions.
 
-Of course, your answers may be _wrong_ and you should verify them empirically. Maybe the COVID super-spreaders just had a busy day by coincidence. Maybe cats really do have an optimum falling height to allow for proper landing orientation. The point of considering selection bias is to generate more hypotheses to test, leading to deeper insight.
+Of course, your answers may be _wrong_ and you should verify them empirically. Maybe the COVID super-spreaders just had a busy day by coincidence. Maybe cats really do have an optimum falling height to allow for proper landing orientation. The power of considering selection bias is that you can generate new hypotheses, some of which will prove correct (or at least account for a slice of the full explanation).
 
-Psychologically speaking, trying to explain everything with selection bias might give you a fatalistic impression that nobody improves, nothing changes, and everything you see is just concealed selection. I'm probably in that boat myself and need to move the needle in the other direction. But I suspect that the average person is on the other side of the spectrum, and that the world would be improved if more people recognised selection bias in the wild.
+Psychologically speaking, trying to explain everything with selection bias might give you a fatalistic impression that nobody improves, nothing changes, and everything you see is just concealed selection. I'm probably in that boat myself and need to move the needle in the other direction. But I suspect that the average person is on the other side of the spectrum, and that the world would be improved if more people learnt to spot selection bias in the wild.
 
 Thanks for reading, until next time!
