@@ -292,3 +292,5 @@ Here the question mark tells us that if the function returns an error, we should
 What happens when you mix error values, an inability to shadow variable declarations, and a lack of an error-specific control flow mechanism? We get a mess of dependencies where one small change will have you tweaking the boilerplate in a bunch of unrelated lines. Given how nearly every function returns an error, and most functions call multiple other functions, you're left with obscenely bloated code that's hard to change.
 
 In the next post we'll talk about Go's awkward approach to privacy.
+
+Also, be sure to check out my own programming language, [_OK?_](https://github.com/jesseduffield/ok), where I take some of my gripes with Go and turn them up to 11.
