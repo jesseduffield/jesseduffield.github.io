@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Backpedal of the Day: Type Keys'
+hidden: true
 ---
 
 Recently I wrote a post on [type keys]({{ site.baseurl }}/Type-Keys) which a reader of the blog posted to Reddit where it was generally [well-received](https://www.reddit.com/r/programming/comments/p17jpu/antipattern_of_the_day_type_keys/), but garnered enough feedback for me to promote type keys from 'anti-pattern' to 'code-smell', and include a counter-example where type keys were the lesser of all evils. The post to Hacker News gained [no traction](https://news.ycombinator.com/item?id=28120542) but I was satisfied enough with the feedback from Reddit.
