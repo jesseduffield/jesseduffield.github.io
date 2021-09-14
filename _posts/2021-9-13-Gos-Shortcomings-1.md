@@ -15,6 +15,8 @@ This post is about Go's error handling.
 
 ## Error handling
 
+_Based on some feedback from Hacker News, let me preface this by saying that we will not show any error wrapping here. Please assume that the error is wrapped at the source, and these functions are just bubbling up the error to a function responsible for handling it (e.g. retrying after a period)._
+
 How does Go handle errors? Ignoring unrecoverable errors for which the program will crash and print a stacktrace, errors in Go are just regular values. People still argue about whether error values are better than exceptions, but even if Programming God came down and decreed that error values were indeed superior, he would still take the time to scorn Go's particular implementation of error values before ascending back into the heavens.
 
 For every function that might return an error, there will be three lines of boilerplate:
