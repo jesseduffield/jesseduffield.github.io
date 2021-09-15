@@ -145,9 +145,9 @@ s.myField, err = bam() // no error
 
 You can get around this by writing to a temp variable instead but damn, that's a lot of permutations to keep in mind.
 
-The reason for this fragile system of order-dependent declarations is that, by design, error values really are just like any other values, and unless you want to name your error variables `err1`, `err2`, `err3`,... (which is itself order dependent), you're subject to the exact same rules that apply to the declarations of other variables. Because it's your job to read and bubble-up these errors, you're charged with solving the Rubik's Cube of declarations.
+The reason for this fragile system of order-dependent declarations is that, by design, error values really are just like any other value, and unless you want to name your error variables `err1`, `err2`, `err3`,... (which is itself order dependent), you're subject to the exact same rules that apply to the declarations of other variables. Because it's your job to read and bubble-up these errors, you're charged with solving the Rubik's Cube of declarations.
 
-You could fix this by permitting variable re-declaration in the same scope, but I'd prefer to not even have to treat errors as variables in the first place.
+As a user you can also go `var err error` at the top of all your functions, but nobody currently does this and it feels like additional boilerplate. The language itself could the order-dependence problem by permitting variable re-declaration in the same scope, but I'd prefer to not even have to treat errors as variables in the first place.
 
 ## Trailing Returns
 
@@ -295,4 +295,4 @@ What happens when you mix error values, an inability to shadow variable declarat
 
 In the next post we'll talk about Go's awkward approach to privacy.
 
-Also, be sure to check out my own programming language, [_OK?_](https://github.com/jesseduffield/ok), where I take some of my gripes with Go and turn them up to 11.
+_Given how negative all the posts in this series are, I finish each one with a link to my own joke programming language, [\_OK?_](https://github.com/jesseduffield/ok), which puts a comedic spin on some of my gripes with Go and contains quite a few easter eggs for those intimately familiar with Go's history.\_
