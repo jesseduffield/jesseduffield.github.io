@@ -121,7 +121,7 @@ func startCar() {
 }
 ```
 
-It is not merely that privacy modifiers are ignored for the current file, they are ignored for the current _directory_, i.e. the current 'package'. Any other file in this directory is allowed to create a `car` and do whatever sick, twisted things it wants with its ostensibly private fields.
+It is not merely that privacy modifiers are ignored for the current file, they are ignored for the current _directory_, i.e. the current package. Any other file in this directory is allowed to create a `car` and do whatever sick, twisted things it wants with its ostensibly private fields.
 
 We can fix this by giving each struct its own package i.e. one file per package:
 
