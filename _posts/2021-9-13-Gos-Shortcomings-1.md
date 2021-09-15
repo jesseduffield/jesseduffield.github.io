@@ -231,7 +231,7 @@ func myFunc() (int, error) {
 }
 ```
 
-This creates a dependency between our return sites and the signature of our function. If we now want to also return a string from our function we'll need to visit each return site and explicitly return the zero value for a string (`""`)
+This creates a dependency between the non-error return values in our function signature and our error return sites which is completely unnecessary. If we now want to also return a string from our function we'll need to visit each return site and explicitly return the zero value for a string (`""`)
 
 ```go
 func myFunc() (int, string, error) {
@@ -252,7 +252,7 @@ func myFunc() (int, string, error) {
 }
 ```
 
-This sucks.
+This sucks, and would be resolved if Go supported discriminated unions. In Rust, functions can return a Result type (a discriminated union) which contains either an error or some payload of values, meaning returning an error is as simple as `return Err("my error")`, and returning a non-error looks like `return Ok(my_data)`. In a world where Go has a Result type, we can change the type and number of 'ok' return values without needing to go and update all the places we return an error.
 
 ## Named return values
 
@@ -295,4 +295,4 @@ What happens when you mix error values, an inability to shadow variable declarat
 
 In the next post we'll talk about Go's awkward approach to privacy.
 
-_After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs_
+_After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs._
