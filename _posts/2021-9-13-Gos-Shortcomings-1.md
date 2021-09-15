@@ -295,4 +295,4 @@ What happens when you mix error values, an inability to shadow variable declarat
 
 In the next post we'll talk about Go's awkward approach to privacy.
 
-_Given how negative all the posts in this series are, I finish each one with a link to my own joke programming language, [\_OK?_](https://github.com/jesseduffield/ok), which puts a comedic spin on some of my gripes with Go and contains quite a few easter eggs for those intimately familiar with Go's history.\_
+_Given how negative all the posts in this series are, I finish each one with a link to my own joke programming language, [OK?](https://github.com/jesseduffield/ok), which puts a comedic spin on some of my gripes with Go and contains quite a few easter eggs for those intimately familiar with Go's history._
