@@ -180,7 +180,7 @@ Suffice it to say I'm not a huge fan of how Go handles enums. And once again, re
 
 ## Conclusion
 
-This peculiar set of language design choices frustrate me: I find package level visibility leads to a polluted scope, with struct invariants being harder to ensure, and the obvious workaround (putting everything in its own package) is both awkward and un-idiomatic. The lack of a `private` or `public` keyword similarly complicates things for no obvious benefit.
+This peculiar set of language design choices frustrates me: I find package level visibility leads to a polluted scope, with struct invariants being harder to ensure, and the obvious workaround (putting everything in its own package) is both awkward and un-idiomatic. The lack of a `private` or `public` keyword similarly complicates things for no obvious benefit.
 
 Up next we're going to talk about interfaces.
 

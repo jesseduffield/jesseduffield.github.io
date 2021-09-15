@@ -74,7 +74,7 @@ if err != nil {
 }
 ```
 
-This order-dependence problem is a pain in the ass. Although you may not often need to reorder the existing function calls, it is common to add a new one into the mix, and that produces the same problem.
+This order-dependence problem is a pain in the ass. Although you may not often need to reorder the existing function calls, it is common to add a new one to the beginning/end, and that produces the same problem.
 
 Luckily Go allows us to merge our assignments into if-statements like so:
 
