@@ -83,7 +83,7 @@ func main() {
 }
 ```
 
-By declaring a `car` variable we're shadowing the `car` type meaning we can't use re-use it to instantiate a second car. This sucks. Yes, you could just call the instance `myCar` or something, but I don't find this easy to read:
+By declaring a `car` variable we're shadowing the `car` type meaning we can't use re-use it to instantiate a second car. I find this annoying. Yes, you could just call the instance `myCar` or something, but I don't find this easy to read:
 
 ```go
 myCar := &car{}
