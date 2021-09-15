@@ -142,7 +142,7 @@ In my experience (admittedly limited to open source), most people just lump a bu
 
 You might argue that nobody is forcing me to use private fields outside their struct, but if people had the self discipline to only use fields when appropriate we wouldn't need privacy modifiers in the first place. If I'm programing at 2AM I do not trust myself to honour implicit privacy restrictions, I'd much rather my language do that for me. Furthermore, if I'm trying to understand somebody _else's_ project, I cant know whether a struct's private fields are mutated outside the struct without checking the entire package.
 
-Even though I meant it as a joke, I would actually prefer the _OK?_ language's [approach](https://github.com/jesseduffield/ok#all-fields-are-private) to privacy.
+Even though I meant it as a joke, I would actually prefer the _OK?_ language's [approach](https://github.com/jesseduffield/ok#all-fields-are-private) to struct-level privacy.
 
 ## Too Many Things In Scope
 
