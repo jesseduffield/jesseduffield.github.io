@@ -136,11 +136,13 @@ pkg/
     driver.go
 ```
 
-For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/). I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a structs fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields. And I haven't found any value in the outside access of private fields except for the sake of testing, which other languages like Rust handles with a more [nuanced](https://doc.rust-lang.org/reference/visibility-and-privacy.html) privacy model.
+For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/). I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a struct's fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields. And I haven't found any value in the outside access of private fields except for the sake of testing, which other languages like Rust handles with a more [nuanced](https://doc.rust-lang.org/reference/visibility-and-privacy.html) privacy model.
 
 In my experience (admittedly limited to open source), most people just lump a bunch of vaguely related files into the one top-level directory. And remembering that privacy is scoped to the package, the larger the package, the less meaningful those privacy modifiers are.
 
-You might argue that nobody is forcing me to use private fields outside their struct, but if people had the self discipline to only use fields when appropriate we wouldn't need privacy modifiers in the first place. If I'm programing at 2AM I do not trust myself to honour implicit privacy restrictions, I'd much rather my language do that for me.
+You might argue that nobody is forcing me to use private fields outside their struct, but if people had the self discipline to only use fields when appropriate we wouldn't need privacy modifiers in the first place. If I'm programing at 2AM I do not trust myself to honour implicit privacy restrictions, I'd much rather my language do that for me. Furthermore, if I'm trying to understand somebody _else's_ project, I cant know whether a struct's private fields are mutated outside the struct without checking the entire package.
+
+Even though I meant it as a joke, I would actually prefer the _OK?_ language's [approach](https://github.com/jesseduffield/ok#all-fields-are-private) to privacy.
 
 ## Too Many Things In Scope
 
