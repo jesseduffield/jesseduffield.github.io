@@ -218,4 +218,4 @@ _After writing this blog series, I decided I needed to balance out all the negat
 
 ## Footnotes
 
-1. That talk bundled a few different concepts together when deeming the many-packages approach an anti-pattern, so it's hard to say how much the one-struct-per-package part alone is actually frowned upon. But I'm fairly confident the community does indeed frown upon trying to break up packages into heaps of subpackages for the sake of restricting privacy scopes. And even if that were not the case, the fact you need to go and create separate packages is burdensome.
+1. That talk bundled a few different concepts together when deeming the many-packages approach an anti-pattern, so it's hard to say how much the one-struct-per-package part alone is actually frowned upon. But I'm fairly confident the community does indeed frown upon trying to break up packages into heaps of tiny subpackages for the sake of restricting privacy scopes. And even if that were not the case, the fact you need to go and create separate directories to do it is burdensome.
