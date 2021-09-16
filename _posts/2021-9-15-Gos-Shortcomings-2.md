@@ -95,7 +95,7 @@ myCar2.sound = "broom broom"
 
 I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct's public interface, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
 
-To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything¹. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
+To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
 
 Oh well, at least we still _have_ privacy right?
 
@@ -164,7 +164,7 @@ pkg/
     driver.go
 ```
 
-For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/). I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a struct's fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields.
+For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/)¹. I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a struct's fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields.
 
 In my experience (admittedly limited to open source), most people just lump a bunch of vaguely related files into the one top-level directory. And remembering that privacy is scoped to the package, the larger the package, the less meaningful those privacy modifiers are.
 
