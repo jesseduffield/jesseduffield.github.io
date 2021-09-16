@@ -93,7 +93,7 @@ myCar2 := &car{}
 myCar2.sound = "broom broom"
 ```
 
-I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct from the outside, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
+I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct's public interface, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
 
 To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
 
@@ -124,7 +124,7 @@ func startCar() {
 
 It is not merely that privacy modifiers are scoped to the current file, they are scoped to the current _directory_, i.e. the current package. Any other file in this directory is allowed to create a `car` and do whatever sick, twisted things it wants with its ostensibly private fields.
 
-Contrast this to most languages which scope privacy to within a class, or within a file. Rust scopes privacy to a _module_ (analagous to a Go package) but allows you to create modules wherever you want within a file so that you can clearly confine the scope of a private field.
+Contrast this to most languages which scope privacy to within a class, or within a file. Rust scopes privacy to a _module_ (analagous to a Go package) but allows you to decide the scope of a module (multiple files, one file, part of a file) so that you can clearly confine the scope of a private field.
 
 ```rs
 mod foo {
