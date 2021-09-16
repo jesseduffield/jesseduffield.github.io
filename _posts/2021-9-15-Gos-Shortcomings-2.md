@@ -95,7 +95,7 @@ myCar2.sound = "broom broom"
 
 I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct's public interface, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
 
-To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
+To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything<sup>1</sup>. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
 
 Oh well, at least we still _have_ privacy right?
 
@@ -215,3 +215,7 @@ Go could resolve the privacy scoping issue by allowing something like Rust's `mo
 Up next we're going to talk about interfaces.
 
 _After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs_
+
+## Footnotes
+
+1. That talk bundled a few different concepts together when deeming the many-packages approach an anti-pattern, so it's hard to say how much the one-struct-per-package part alone is actually frowned upon. But I'm fairly confident the community does indeed frown upon trying to break up packages into heaps of subpackages for the sake of restricting privacy scopes. And even if that were not the case, the fact you need to go and create separate packages is burdensome.
