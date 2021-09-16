@@ -5,7 +5,7 @@ series: going-insane
 series-title: 'Part Two: Partial Privacy'
 ---
 
-Before we start, let me make something clear on the back of the [comments](https://news.ycombinator.com/item?id=28522269) from the first post: this series is my attempt to put absolutely everything on the table that frustrates me when using Go. As such, I'll be doing some extreme nitpicking, much of which people will consider overblown or shortsighted. But my goal is not to do a take-down of the language (as others have already done), I really just want to get a feel for how many Go devs there are who share my grievances. If none of my grievances bother you, that's fine: we probably differ on values (or I'm wrong).
+Before we start, let me make something clear on the back of the [comments](https://news.ycombinator.com/item?id=28522269) from the first post: this series is my attempt to put absolutely everything on the table that frustrates me when using Go. As such, I'll be doing some extreme nitpicking, much of which people will consider overblown or shortsighted. But my goal is not to do a take-down of the language (I'm stuck writing in it for now anyway), I really just want to get a feel for how many Go devs there are who share my grievances. If none of my grievances bother you, that's fine: we probably differ on values (or I've missed something obvious).
 
 In the last post we talked through Go's error handling issues. In this post I'm going to talk through an issue that is more subtle than error handling, but in my opinion, worse for code structure.
 
@@ -93,7 +93,7 @@ myCar2 := &car{}
 myCar2.sound = "broom broom"
 ```
 
-I would much rather use capitalisation to distinguish between types and variables than between private-anything and public-anything, given that if a struct's field is private and I'm using that struct from the outside, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
+I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct from the outside, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
 
 To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
 
@@ -113,17 +113,45 @@ func (c *car) Start() {
 	fmt.Println(c.sound)
 }
 
+// in another file of the same directory
 func startCar() {
 	c := &car{}
-	// WTF? Why am I allowed to write to this private field from the outside?
+	// WTF? I'm allowed to write to this private field from the outside?
 	c.sound = "broom"
-	fmt.Println(c.sound) // Why am I allowed to read from it?
+	fmt.Println(c.sound) // I'm allowed to read from it?
 }
 ```
 
-It is not merely that privacy modifiers are ignored for the current file, they are ignored for the current _directory_, i.e. the current package. Any other file in this directory is allowed to create a `car` and do whatever sick, twisted things it wants with its ostensibly private fields.
+It is not merely that privacy modifiers are scoped to the current file, they are scoped to the current _directory_, i.e. the current package. Any other file in this directory is allowed to create a `car` and do whatever sick, twisted things it wants with its ostensibly private fields.
 
-We can fix this by giving each struct its own package i.e. one file per package:
+Contrast this to most languages which scope privacy to within a class, or within a file. Rust scopes privacy to a _module_ (analagous to a Go package) but allows you to create modules wherever you want within a file so that you can clearly confine the scope of a private field.
+
+```rs
+mod foo {
+    pub struct Car {
+        // this is a private field, so can't be accessed outside the foo module
+        sound: String
+    }
+
+    impl Car {
+        pub fn start(self) {
+            println!("{}", self.sound)
+        }
+
+        pub fn new(sound: String) -> Self {
+            Car{sound: sound}
+        }
+    }
+}
+
+fn main() {
+    let car = foo::Car::new(String::from("broom"));
+    car.start(); // prints 'broom'
+    car.sound // ERROR: private field
+}
+```
+
+Back in the land of Go, our only means of tightening up our privacy scopes is to give each struct its own package i.e. one file per package:
 
 ```
 pkg/
@@ -136,17 +164,17 @@ pkg/
     driver.go
 ```
 
-For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/). I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a struct's fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields. And I haven't found any value in the outside access of private fields except for the sake of testing, which other languages like Rust handles with a more [nuanced](https://doc.rust-lang.org/reference/visibility-and-privacy.html) privacy model.
+For whatever reason this approach is [frowned upon](https://about.sourcegraph.com/go/idiomatic-go/). I appreciate the argument that privacy is about locking certain behaviour in place for the sake of clients, and through that lens who cares if a whole package has access to a struct's fields, given that you the author have control over that whole package? Well, I care. I don't want to worry about other files in the same package inadvertently accessing a struct's private fields.
 
 In my experience (admittedly limited to open source), most people just lump a bunch of vaguely related files into the one top-level directory. And remembering that privacy is scoped to the package, the larger the package, the less meaningful those privacy modifiers are.
 
-You might argue that nobody is forcing me to use private fields outside their struct, but if people had the self discipline to only use fields when appropriate we wouldn't need privacy modifiers in the first place. If I'm programing at 2AM I do not trust myself to honour implicit privacy restrictions, I'd much rather my language do that for me. Furthermore, if I'm trying to understand somebody _else's_ project, I cant know whether a struct's private fields are mutated outside the struct without checking the entire package.
+You might argue that nobody is forcing me to use private fields in some random package file, but if people had the self discipline to only use fields where appropriate we wouldn't need privacy modifiers in the first place. If I'm programing at 2AM I do not trust myself to honour implicit privacy restrictions, I'd much rather my language do that for me. Furthermore, if I'm trying to understand somebody _else's_ project, I can't know where a struct's private fields are mutated without checking the entire package.
 
 Even though I meant it as a joke, I would actually prefer the _OK?_ language's [approach](https://github.com/jesseduffield/ok#all-fields-are-private) to struct-level privacy.
 
 ## Too Many Things In Scope
 
-Package-level visibility increases the chance of name collisions and means that at any point in time you will have a bunch of crap in scope that you don't care about. Enums are a prime example.
+Package-level visibility increases the chance of name collisions and means that at any point in time you may have a bunch of crap in scope that you don't care about. Enums are a prime example.
 
 Enums are constructed like so:
 
@@ -165,7 +193,7 @@ func main() {
 }
 ```
 
-Notice that to print `stopped` I don't actually need to qualify it with `status`, I can just use the value directly. This is because enums are really just a collection of constants that happen to share a type and happen to be assigned mutually exclusive values. They're a hack around the lack of a first-class enum type. And because everything in Go is scoped to the package, this means that if in another file you want to create another enum with a value of the same name, you'll get an error:
+Notice that to print `stopped` I don't actually need to qualify it with `status`, I can just use the value directly. This is because enums are really just a collection of constants that happen to share a type and happen to be assigned mutually exclusive values. And because everything in Go is scoped to the package, this means that if in another file you want to create another enum with a value of the same name, you'll get an error:
 
 ```go
 type otherStatus int
@@ -181,6 +209,8 @@ Suffice it to say I'm not a huge fan of how Go handles enums. And once again, re
 ## Conclusion
 
 This peculiar set of language design choices frustrates me: I find package level visibility leads to a polluted scope, with struct invariants being harder to ensure, and the obvious workaround (putting everything in its own package) is both awkward and un-idiomatic. The lack of a `private` or `public` keyword similarly complicates things for no obvious benefit.
+
+Go could resolve the privacy scoping issue by allowing something like Rust's `mod` keyword. But of course, Go's forte is simplicity and I don't expect such a change to ever be accepted.
 
 Up next we're going to talk about interfaces.
 
