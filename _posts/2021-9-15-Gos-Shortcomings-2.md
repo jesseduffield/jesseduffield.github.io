@@ -95,7 +95,7 @@ myCar2.sound = "broom broom"
 
 I would much rather use capitalisation to distinguish between types and variables than between private and public, given that if a struct's field is private and I'm using that struct's public interface, I don't even want to know about its private fields, and if I'm _inside_ the struct, I don't need reminders of what is/isn't private because I can modify them all the same and I can easily scroll up to check privacy.
 
-To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything<sup>1</sup>. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
+To resolve the ambiguity, I've seen people default to capitalising their structs, and it must be a common enough practice for [talks to have been given](https://about.sourcegraph.com/go/idiomatic-go/) telling people to stop exporting everything¹. From my experience, this isn't a widespread issue in languages with a `public` or `export` keyword in place of capitalisation-based privacy.
 
 Oh well, at least we still _have_ privacy right?
 
