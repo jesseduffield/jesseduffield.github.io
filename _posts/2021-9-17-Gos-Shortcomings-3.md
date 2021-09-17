@@ -86,18 +86,6 @@ As you may have judged from the previous post about privacy, I like being explic
 
 These two structs (the original and the mock) now live purely for the sake of satisfying that interface, yet that isn't obvious from looking at the code. And if either struct is missing a method, you won't get an error on the struct itself, you'll get an error in some random part of the codebase where the struct is being assigned to that interface. I find this annoying, almost as annoying as the fact that a proposal for explicit implementation has already been [rejected](https://github.com/golang/go/issues/34996).
 
-You could be even more explicit about what's going on by defining a _derived interface_:
-
-```go
-derive type ICar interface from *Car // hypothetical Go syntax
-```
-
-This means you don't need to waste time manually keeping `ICar` and `*Car` in-sync, and it signals to the reader that `ICar` only exists for the sake of testing.
-
-Readable? ✓ Reasonable? ✓ [Rejected? ✓](https://github.com/golang/go/issues/34996)
-
-I know, Inversion Of Control says concrete things should depend on abstract things and not the other way around, so such a proposal might not be such a good idea, but I still reserve the right to angrily shake my fist from the Ivory Tower of Nitpickery.
-
 ## Slices of interface values
 
 Interface values are fat pointers, meaning under the hood, they [comprise](https://tour.golang.org/methods/11) a tuple of a concrete value and a concrete type.
@@ -268,3 +256,13 @@ These shortcomings feel more like the result of poorly-conceived design choices 
 Next up: Mandatory Mutation.
 
 _After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs_
+
+## Addendum
+
+In the context of testing, something I'd like to see is the ability to derive an interface from a struct like so.
+
+```go
+derive type ICar interface from *Car // hypothetical Go syntax
+```
+
+This means you don't need to waste time manually keeping `ICar` and `*Car` in-sync, and it signals to the reader that `ICar` only exists for the sake of testing via a mock. A proposal for this has been [rejected](https://github.com/golang/go/issues/34996) and understandably: Inversion Of Control says concrete things should depend on abstract things and not vice-versa. But damn, does anybody else wish this was a feature? Right now I'm using the code generation tool [ifacemaker](https://github.com/vburenin/ifacemaker) to generate the interface from the original struct, which then feeds into another code generation tool for making the mock, [counterfeiter](https://github.com/maxbrunsfeld/counterfeiter). It would be nice to remove one step from that process, especially given that ifacemaker has some bugs at the moment.
