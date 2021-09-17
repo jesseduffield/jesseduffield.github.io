@@ -296,3 +296,7 @@ What happens when you mix error values, an inability to shadow variable declarat
 In the next post we'll talk about Go's awkward approach to privacy.
 
 _After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs._
+
+## Addendum
+
+Check out the [follow-up]({{ site.baseurl }}/Questionable-Questionmarks) to this post where I address arguments against importing Rust's '?' operator into Go.
