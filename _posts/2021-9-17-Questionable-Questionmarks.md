@@ -108,7 +108,8 @@ func addFifty(numberStr string) (string, error) {
 		return "", errors.New("blank number")
 	}
 
-	// the intention of the code here is _much_ easier to grasp
+	// forgive the syntax highlighting on these question marks: it's not legal Go
+	// syntax.
 	result := newNumber(numberStr)?.add(50)?.toString()
 
 	return result, nil
