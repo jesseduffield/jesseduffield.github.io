@@ -245,6 +245,8 @@ Not ideal: extracting a concrete-typed function from an interface-typed function
 
 Maybe there's some pattern to get around this problem that I'm not aware of, but the fact it can catch newbies by surprise runs contrary to the language's emphasis on being newbie-friendly.
 
+There are a couple of ways you could solve this: you could have `== nil` handle fat pointers with nil concrete values, or you could have functions which return an interface type use a fat pointer when returning `nil` explicitly, so that at least you have consistency.
+
 ## Conclusion
 
 What do all of these examples have in common? They all show that introducing an interface where previously you only dealt with concrete values is not as simple as find-and-replace. Implicit implementation is not possible in the case of chainable methods, chunks of boilerplate must be added when dealing with slices, and subtle bugs appear when `nil` values are involved.
