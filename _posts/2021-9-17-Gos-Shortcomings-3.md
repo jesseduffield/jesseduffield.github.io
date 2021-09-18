@@ -86,6 +86,18 @@ As you may have judged from the previous post about privacy, I like being explic
 
 These two structs (the original and the mock) now live purely for the sake of satisfying that interface, yet that isn't obvious from looking at the code. And if either struct is missing a method, you won't get an error on the struct itself, you'll get an error in some random part of the codebase where the struct is being assigned to that interface. I find this annoying, almost as annoying as the fact that a proposal for explicit implementation has already been [rejected](https://github.com/golang/go/issues/34996).
 
+However, as a commenter stated, there is a workaround for this:
+
+```go
+var _ ICar = (*Car)(nil)
+```
+
+This introduces a compile-time check that `*Car` implements `ICar`, without introducing any real runtime cost. Curiously, [Effective Go](https://golang.org/doc/effective_go#blank_implements) states that we should only use this in the absence of other compile-time checks:
+
+> Don't do this for every type that satisfies an interface, though. By convention, such declarations are only used when there are no static conversions already present in the code, which is a rare event.
+
+First of all, shame on me for not having properly read Effective Go in advance. At any rate, companies like [Uber](https://github.com/uber-go/guide/issues/25) share my perspective that sometimes being explicit about which interfaces are implemented at the point the struct is defined makes the code more expressive and easier to maintain, regardless of whether other compile-time checks exist in the code.
+
 ## Slices of interface values
 
 Interface values are fat pointers, meaning under the hood, they [comprise](https://tour.golang.org/methods/11) a tuple of a concrete value and a concrete type.
