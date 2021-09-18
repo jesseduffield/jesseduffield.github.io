@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part Four: Mandatory Mutation"
 series: going-insane
 series-title: 'Part Four: Mandatory Mutation'
+published: false
 ---
 
 _Standard caveats apply: these things bother me, they may not bother you, prepare for nitpicking, etc._
@@ -141,7 +142,7 @@ From my perspective, Go's simplicity stands in opposition to expressiveness: I l
 
 A post about mutation in Go would be remiss not to mention the current lack of generics. I've [talked about this](https://jesseduffield.com/Gaining-Ground-Without-Generics-In-Go/) in the past so I'm not going to beat a dead horse here, other to say that a lack of generics leads to mutative boilerplate which is error-prone and hard to read.
 
-I've [written before]({{ site.baseurl }}/Array-Functions-And-Rule-Of-Least-Power) about using the least powerful tool for the job in the context of collection functions (map, filter reduce, etc), and how your code becomes more readable when you use, say, a map instead of a for loop. In the diagram I used for that post, Go only really provides the for loop and `forEach` in the form of the `range` operator:
+I've [written before]({{ site.baseurl }}/Array-Functions-And-Rule-Of-Least-Power) about using the least powerful tool for the job in the context of collection functions (map, filter reduce, etc), and how your code becomes more readable when you use, say, a map instead of a for loop. In the diagram I used for that post, Go only really provides the for loop and `forEach` in the form of the `range` operator, meaning everything else is off the cards:
 
 ![]({{ site.baseurl }}/images/posts/2020-7-9-Array-Functions-And-Rule-Of-Least-Power/2.png)
 
@@ -183,7 +184,7 @@ for i, user := range users {
 
 Which looks fine but would actually give me a completely incorrect result.
 
-Yes, generics are on their way, but as I said at the beginning of this series, I'm voicing my grievances about _today's_ Go, not tomorrow's.Generics were originally set for release in August, and now I doubt they'll be out by the end of the year.
+Yes, generics are on their way, but as I said at the beginning of this series, I'm voicing my grievances about _today's_ Go, not tomorrow's. Generics were originally set for release in August, and now I doubt they'll be out by the end of the year.
 
 ## Conclusion
 
