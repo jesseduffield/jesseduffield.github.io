@@ -5,6 +5,8 @@ series: going-insane
 series-title: 'Part Four: Mandatory Mutation'
 ---
 
+_Standard caveats apply: these things bother me, they may not bother you, prepare for nitpicking, etc._
+
 When in Rome we do as the Romans do, and when in Go we do as the Gophers do, which means mutation _everywhere_.
 
 ## Mutation in Javascript
