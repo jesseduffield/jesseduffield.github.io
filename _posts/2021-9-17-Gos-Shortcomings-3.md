@@ -146,7 +146,7 @@ func getCars() []*Car {
 
 func foo() []ICar {
 	cars := getCars()
-	icars := make([]ICar, len(cars)) // 1
+	icars := make([]ICar, 0, len(cars)) // 1
 	for _, car := range cars { // 2
 		icars = append(icars, ICar(car)) // 3
 	} // 4
