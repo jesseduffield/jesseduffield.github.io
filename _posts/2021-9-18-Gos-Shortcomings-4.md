@@ -167,7 +167,7 @@ Note that options 1 and 2 read the same from left to right: _if isProd is true, 
 
 Option 4's flow is backwards. As the reader follows the code they think: _So env's value is "dev"... oh wait no we'll change that value to "prod" if `isProd` is true_. The _oh wait_ part of that process is exactly what we want to avoid when writing code: we should be minimising surprise whenever possible.
 
-Why am I bothering to evaluate the fourth option, given that the Go team didn't advise it and it's the least-clear alternative? Because it's the option I see the most, likely because it requires the fewest keypresses! In a world with ternaries or if-statements that constitute expressions, lazy developers like me can save themselves keystrokes without sacrificing clarity. But Gophers do not live in that world, so clarity suffers as a result.
+Why am I bothering to evaluate the fourth option, given that the Go team didn't advise it and it's the least-clear alternative? Because it's the option I see the most, likely because it requires the fewest keypresses, but also because many consider it [idiomatic](https://github.com/golang/go/issues/33171#issuecomment-513457680). In a world with ternaries or if-statements that constitute expressions, lazy developers like me can save themselves keystrokes without sacrificing clarity. But Gophers do not live in that world, so clarity suffers as a result.
 
 From my perspective, Go's simplicity stands in opposition to expressiveness: I lack the tools required to communicate what a developer can expect as they read my code (e.g. this variable will never be assigned to again) which makes it harder to glean what's going on as the reader. Better support for immutable variables and conditional expressions would solve this.
 
