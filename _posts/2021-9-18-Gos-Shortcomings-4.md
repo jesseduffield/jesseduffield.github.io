@@ -12,7 +12,7 @@ First off, let's get the standard caveats out of the way:
 - I'm not an authority on Go, I just use it in open-source projects
 - On average these posts contain at least one embarrassing error. If you're reading near the time of publication, you may spot such an error
 - Many Gophers value simplicity over richness, some believing simplicity actually affords more expressiveness than richer languages. I disagree but understand
-- This series do not attempt to be balanced. There are many good things about Go (fast compile times, compatibility, etc), but there are plenty of other posts talking about those. Do not let this series alone determine your perspective on Go
+- This series does not attempt to be balanced. There are many good things about Go (fast compile times, compatibility, etc), but there are plenty of other posts talking about those. Do not let this series alone determine your perspective on Go
 
 With that out of the way, let's begin.
 
