@@ -19,7 +19,7 @@ When in Rome we do as the Romans do, and when in Go we do as the Gophers do, whi
 
 ## Mutation in Javascript
 
-At my day job I'm a bit of an anti-mutation nazi. If I'm reviewing code and see something like this in javascript:
+At my day job I share John Carmack's self-identification as as a [const-nazi](https://kotaku.com/the-exceptional-beauty-of-doom-3s-source-code-5975610). If I'm reviewing code and see something like this in javascript:
 
 ```js
 let env = 'dev';
@@ -29,7 +29,7 @@ if (isProd) {
 // (env is never assigned to again)
 ```
 
-I'll request that we use `const` instead like so:
+I'll suggest that we use `const` instead like so:
 
 ```js
 const env = isProd ? 'prod' : 'dev';
