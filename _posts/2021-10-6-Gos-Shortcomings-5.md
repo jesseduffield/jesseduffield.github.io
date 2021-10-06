@@ -151,6 +151,8 @@ print(foo.bar()) # prints 'test'
 print(Foo.bar(foo)) # prints 'test'
 ```
 
+For those who know about _method values_, Python has those too.
+
 #### 3) You can call methods on nil struct values
 
 This is the one feature I've found that actually appears to be unique to Go. As we saw in the post on interfaces, the following program will print 'test':
