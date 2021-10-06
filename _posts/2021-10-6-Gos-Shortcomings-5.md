@@ -139,7 +139,7 @@ Rust uses `self` whether you're dealing with a reference or a copied value, and 
 
 #### 2) A struct's method can be called with some other receiver passed in explicitly
 
-In Go, `Foo.Bar(foo)` is the same as `foo.Bar()` (where `foo` is of type `Foo`). I don't see this pattern very often, and I still don't see how it makes `self` suddenly inappropriate. Neither do Rust, nor Python which both have the same feature and which both use `self`. Here's how it looks in Python:
+In Go, `Foo.bar(foo)` is the same as `foo.bar()` (where `foo` is of type `Foo`). `Foo.bar` is known as a _method expression_. I don't see this pattern very often, and I still don't see how it makes `self` suddenly inappropriate. Neither do Rust, nor Python which both have method expressions and which both use `self`. Here's how it looks in Python:
 
 ```python
 class Foo:
