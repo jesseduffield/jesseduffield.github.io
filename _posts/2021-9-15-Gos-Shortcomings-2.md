@@ -216,6 +216,46 @@ Up next we're going to talk about interfaces.
 
 _After writing this blog series, I decided I needed to balance out all the negativity of the posts with something positive, so I made a joke programming language to air my grievances with a comedic spin. Feel free to check it out: [OK?](https://github.com/jesseduffield/ok). If you're intimately familiar with Go's history you might spot some easter eggs_
 
+## Addendum
+
+I wrote this post a while ago now, but something I forgot to mention at the time, and which I've just encountered again today, is issues with embedding structs caused by Go's capitalisation-based privacy. If I have a struct exported from another package called Foo, and I want to embed it in my struct Bar so that I can call Foo's methods directly like `Foo.MyMethod()` without needing to say `Foo.bar.MyMethod()`, that would look like this:
+
+```go
+// in another package
+type Foo struct {
+	MyMethod func()
+	MyOtherMethod func()
+	myPrivatemethod func()
+}
+
+...
+
+// in my package
+type Bar struct {
+	*Foo
+
+	blah func()
+	baz func()
+}
+```
+
+But what if I want to make Foo's methods private to my Bar struct (or at least my Bar struct's package)? I actually [can't](https://stackoverflow.com/questions/33908672/private-embedded-struct-when-importing-a-struct-from-another-package) without defining a private wrapper like so:
+
+```go
+type privateFoo struct {
+	*Foo
+}
+
+type Bar struct {
+	*privateFoo
+
+	blah func()
+	baz func()
+}
+```
+
+To my knowledge there is no good reason for this and it appears to be a direct result of having a field's name determine whether it's public, given that in the case of embedded structs, the field name _is_ the struct's name. Just because a struct is public in some package doesn't mean I want its methods to be public when embedded into another struct.
+
 ## Footnotes
 
 1. That talk bundled a few different concepts together when deeming the many-packages approach an anti-pattern, so it's hard to say how much the one-struct-per-package part alone is actually frowned upon. But I'm fairly confident the community does indeed frown upon trying to break up packages into heaps of tiny subpackages for the sake of restricting privacy scopes. And even if that were not the case, the fact you need to go and create separate directories to do it is burdensome.
