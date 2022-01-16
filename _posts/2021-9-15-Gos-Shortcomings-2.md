@@ -239,7 +239,7 @@ type Bar struct {
 }
 ```
 
-But what if I want to make Foo's methods private to my Bar struct (or at least my Bar struct's package)? I actually [can't](https://stackoverflow.com/questions/33908672/private-embedded-struct-when-importing-a-struct-from-another-package) without defining a private wrapper like so:
+But what if I want to make Foo's methods private to my Bar struct (or at least my Bar struct's package)? I actually can't. Even if I wrap the public Foo in a privateFoo wrapper:
 
 ```go
 type privateFoo struct {
@@ -254,7 +254,9 @@ type Bar struct {
 }
 ```
 
-To my knowledge there is no good reason for this and it appears to be a direct result of having a field's name determine whether it's public, given that in the case of embedded structs, the field name _is_ the struct's name. Just because a struct is public in some package doesn't mean I want its methods to be public when embedded into another struct.
+I can still call `bar.MyMethod()` from outside Bar's package.
+
+If I have a bundle of things I need in a set of structs (e.g. logging, access to i18n strings, config info), I want to be able to bundle those into a struct/interface that I store in each of my structs, and I want to be able to invoke them directly, given how ubiquitous they are. Struct embedding is a good fit for this use-case, but if this struct/interface is defined in another package and therefore exported with all fields/methods being public, I can't embed them without cluttering the public interface of the embedding struct. Damn.
 
 ## Footnotes
 
