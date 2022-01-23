@@ -102,15 +102,11 @@ type Greeter interface {
 
 That is, I want to find a way to have both `SimpleNamedPerson` and `ComplexNamedPerson` implement the `Greeter` interface.
 
-We could introduce a couple of greeter functions like so:
+We could introduce a greeter function like so:
 
 ```go
 func GreetInEnglish(p HasName)  {
 	fmt.Printf("Hello %s\n", p.GetName())
-}
-
-func GreetInFrench(p HasName) {
-	fmt.Printf("Bonjour %s\n", p.GetName())
 }
 ```
 
@@ -122,28 +118,11 @@ func (p *SimpleNamedPerson) Greet() {
 }
 
 func (p *ComplexNamedPerson) Greet() {
-	GreetInFrench(p)
+	GreetInEnglish(p)
 }
 ```
 
-But now we're hardcoding the language of our person. Who says all complex-named people speak French? We could pass in a `greetFn` when creating our person instance:
-
-```go
-type SimpleNamedPerson struct {
-	name    string
-	greetFn func(HasName)
-}
-
-func NewSimpleNamedPerson(name string, greetFn func(HasName)) *SimpleNamedPerson {
-	return &SimpleNamedPerson{name: name, greetFn: greetFn}
-}
-
-func (p *SimpleNamedPerson) Greet() {
-	self.greetFn(p)
-}
-```
-
-But this isn't very flexible: if we want to promote our 'Greeter' interface to 'Speaker' and add a `SayGoodbye` method we'd need to explicitly add a `sayGoodByeFn` to each struct and call it from a `SayGoodBye` function:
+But this isn't very extensible. If we promote our 'Greeter' interface to 'Speaker' and add more methods to it (e.g. `SayGoodbye()`), we'll need to go and add boilerplate to each of our structs to call the `SayGoodbyeInEnglish()` method).
 
 ```go
 type Speaker interface {
@@ -151,28 +130,18 @@ type Speaker interface {
 	SayGoodbye()
 }
 
-type SimpleNamedPerson struct {
-	name    string
-	greetFn func(HasName)
-	sayGoodbyeFn func(HasName)
-}
-
 ...
 
-func NewSimpleNamedPerson(
-	name string,
-	greetFn func(HasName),
-	sayGoodByeFn func(HasName),
-) *SimpleNamedPerson {
-	return &SimpleNamedPerson{name: name, greetFn: greetFn, sayGoodByeFn: sayGoodbyeFn}
+func (p *SimpleNamedPerson) SayGoodbye() {
+	SayGoodbyeInEnglish(p)
 }
 
-func (p *SimpleNamedPerson) SayGoodbye() {
-	self.sayGoodbyeFn(p)
+func (p *ComplexNamedPerson) SayGoodbye() {
+	SayGoodbyeInEnglish(p)
 }
 ```
 
-Can struct embedding save us? It actually can, with a little extra effort. Let's create some 'speaker' structs which themselves embed an instance of the `HasName` interface.
+Can struct embedding save us? It actually can, with a little extra effort. Let's create an 'EnglishSpeaker' struct which itself embeds an instance of the `HasName` interface.
 
 ```go
 type EnglishSpeaker struct {
@@ -190,19 +159,9 @@ func (s *EnglishSpeaker) SayGoodbye() {
 func NewEnglishSpeaker(person HasName) Speaker {
 	return &EnglishSpeaker{HasName: person}
 }
-
-type FrenchSpeaker struct {
-	HasName
-}
-
-func (s *FrenchSpeaker) Greet() {
-	return fmt.Printf("Bonjour %s\n", s.GetName())
-}
-
-...
 ```
 
-And then we tweak our person struct to now embed a speaker, and pass in the speaker in the constructor.
+And then we tweak our person struct to now embed the EnglishSpeaker.
 
 ```go
 type SimpleNamedPerson struct {
@@ -210,18 +169,36 @@ type SimpleNamedPerson struct {
 	Speaker
 }
 
-func NewSimpleNamedPerson(name string, makeSpeaker func(HasName) Speaker) *SimpleNamedPerson {
+func NewSimpleNamedPerson(name string) *SimpleNamedPerson {
 	p := &SimpleNamedPerson{name: name}
-	p.Speaker = makeSpeaker(p)
+	p.Speaker = NewEnglishSpeaker(p)
+
+	return p
+}
+
+type ComplexNamedPerson struct {
+	firstname string
+	lastname  string
+	Speaker
+}
+
+func NewComplexNamedPerson(firstname string, lastname string) *ComplexNamedPerson {
+	p := &ComplexNamedPerson{firstname: firstname, lastname: lastname}
+	p.Speaker = NewEnglishSpeaker(p)
 
 	return p
 }
 
 func main() {
-	person := NewSimpleNamedPerson("Jesse Duffield", NewEnglishSpeaker)
+	person := NewSimpleNamedPerson("Jesse Duffield")
 	fmt.Println(person.GetName()) // prints "Jesse Duffield"
 	person.Greet() // prints "Hello Jesse Duffield"
 	person.SayGoodbye() // prints "Goodbye Jesse Duffield"
+
+	otherPerson := NewComplexNamedPerson("Jesse", "Duffield")
+	fmt.Println(otherPerson.GetName()) // prints "Jesse Duffield"
+	otherPerson.Greet() // prints "Hello Jesse Duffield"
+	otherPerson.SayGoodbye() // prints "Goodbye Jesse Duffield"
 }
 ```
 
@@ -229,7 +206,51 @@ Here's a diagram of what's happening:
 
 ![]({{ site.baseurl }}/images/posts/go-traits/sequence.png)
 
-Mission accomplished: You can add new methods to our Speaker interface, using our `person` structs' methods in new ways, without needing to update the `person` structs themselves! This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, in the same way that a single standalone function enables code-reuse. But when somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
+Pretty cool! But what if we don't just have English speakers? We can create a `FrenchSpeaker` struct that satisfies the `Speaker` interface
+
+```go
+type FrenchSpeaker struct {
+	HasName
+}
+
+func (s *FrenchSpeaker) Greet() {
+	fmt.Printf("Bonjour %s\n", s.GetName())
+}
+
+func (s *FrenchSpeaker) SayGoodbye() {
+	fmt.Printf("Au revoir %s\n", s.GetName())
+}
+
+func NewFrenchSpeaker(person HasName) Speaker {
+	return &FrenchSpeaker{HasName: person}
+}
+```
+
+We can inject our speaker into our person constructor like so:
+
+```go
+func NewSimpleNamedPerson(name string, getSpeaker func(HasName) Speaker) *simpleNamedPerson {
+	p := &simpleNamedPerson{name: name}
+	p.Speaker = getSpeaker(p)
+
+	return p
+}
+
+...
+
+person := NewSimpleNamedPerson("Jesse Duffield", NewFrenchSpeaker)
+fmt.Println(person.GetName()) // prints "Jesse Duffield"
+person.Greet() // prints "Bonjour Jesse Duffield"
+person.SayGoodbye() // prints "Au revoir Jesse Duffield"
+```
+
+Mission accomplished: You can now:
+
+- add a new struct implementing the `Speaker` interface to support a new language
+- add a new method to the `Speaker` interface, and implement it in each language struct, to have it automatically come through in our person structs
+- add a new person struct implementing `HasName` and give it speaking abilities by embedding a `Speaker`
+
+This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, in the same way that a single standalone function enables code-reuse. But when somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
 
 I haven't come across any online posts talking about this pattern in Go (I'm sure they exist) so until somebody tells me the real name, I'm calling this the Go Trait Pattern. Adding 'delegation' to the name wouldn't suit given how most people conflate delegation with forwarding, and given how closely our embedded struct in this pattern resemble's Rust's traits, I think the name fits. If your trait contains its own state, you could call it a mixin, but that's up to you. With this pattern, the trait (i.e. the embedded struct: `EnglishSpeaker` and `FrenchSpeaker`) defines an interface that the embedder (`SimpleNamedPerson`, `ComplexNamedPerson`) must satisfy, and the deal is that if the embedding struct can satisfy that interface, the trait will reward it with extra functionality. Unlike with forwarding, here the embedded struct can actually make use of logic defined in the embedding struct.
 
