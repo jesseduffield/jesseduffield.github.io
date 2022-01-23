@@ -12,7 +12,7 @@ If you google 'Code Reuse In Go' and read through the first two pages of results
 
 We can all agree that class inheritance is problematic because it can lead to rigid class hierarchies and often it makes more sense to model relationships between objects as _has-a_ (composition) rather than _is-a_ (inheritance). So it's suspicious that the Gang Of Four whose design patterns book popularised the phrase 'Favour composition over class inheritance' went on to fill that book with design patterns that almost all involved class inheritance.
 
-What's the special sauce in class inheritance that makes its absence so jarring for newcomers to Go?? Turns out it has nothing to do with class hierarchies.
+Something's going on. I feel a discussion on what's so bad about class inheritance could benefit from spending more time asking: what's so _good_ about class inheritance, such that its absence can feel so stunting to Go newcomers? Turns out it has nothing to do with class hierarchies.
 
 Reading through the typical blog post on the topic, you'll be told that the closest relative to class inheritance in Go is struct embedding. The idea is that you can wrap an interface in your struct and in doing so, you can forward method calls to that embedded struct. To give a classic (and infamous) example, your car struct can embed an engine to handle engine-ey stuff:
 
@@ -216,6 +216,10 @@ func main() {
 }
 ```
 
+Here's a diagram of what's happening:
+
+![]({{ site.baseurl }}/images/posts/go-traits/sequence.png)
+
 Mission accomplished: You can add new methods to our Speaker interface, using our `person` structs' methods in new ways, without needing to update the `person` structs themselves! This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, in the same way that a single standalone function enables code-reuse. But when somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
 
 I haven't come across any online posts talking about this pattern in Go (I'm sure they exist) so until somebody tells me the real name, I'm calling this the Go Trait Pattern. Adding 'delegation' to the name wouldn't suit given how most people conflate delegation with forwarding, and given how closely our embedded struct in this pattern resemble's Rust's traits, I think the name fits. If your trait contains its own state, you could call it a mixin, but that's up to you. With this pattern, the trait (i.e. the embedded struct: `EnglishSpeaker` and FrenchSpeaker`) defines an interface that the embedder (`SimpleNamedPerson`, `ComplexNamedPerson`) must satisfy, and the deal is that if the embedding struct can satisfy that interface, the trait will reward it with extra functionality. Unlike with forwarding, here the embedded struct can actually make use of logic defined in the embedding struct.
@@ -228,7 +232,7 @@ You might be thinking: doesn't this just re-introduce the fragile base-class pro
 
 The ability for method invocations to go in both directions is the secret sauce that most Go newcomers are looking for when they ask about inheritance, and struct embedding with basic forwarding does not fill the void, but the trait pattern can.
 
-There are some things worth keeping in mind. Firstly, Go lacks contravariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that.
+There are some things worth keeping in mind. Firstly, Go lacks contravariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. Don't forget that we don't always need to inject the trait into the constructor: If we're only dealing with english speakers, we could directory use `p.Speaker = NewEnglishSpeaker(p)`
 
 Another thing to note is that our person constructor is a little weird:
 
@@ -241,7 +245,7 @@ func NewSimpleNamedPerson(name string, makeSpeaker func(HasName) Speaker) *Simpl
 }
 ```
 
-We need to first partially build the struct, then assign the speaker field to finish it off. In any other context I'd consider this a red flag, but it seems to be our only option with the trait pattern, and I don't consider it dangerous.
+We need to first partially build the struct, then assign the speaker field to finish it off. In any other context I'd consider this a red flag because it demonstrates they're a circular dependency, but it seems to be our only option with the trait pattern, and I don't consider it dangerous. Go uses a mark and sweep garbage collector so it handles circular dependencies fine.
 
 One final implication of this approach is that when I call `person.Greet()` we're using dynamic dispatch twice: that is, we call `Greet()` on our trait interface which in turn calls `GetName()` on our embedding struct, also through an interface. This means we have to traverse a couple of pointers to get the functions we want. But, in my opinion, it's worth the cost, and Go provides no alternative that I know of.
 
@@ -263,3 +267,5 @@ https://www.toptal.com/go/golang-oop-tutorial
 https://developpaper.com/golang-interfaces-are-nested-to-realize-the-operation-of-reuse/
 https://dev.to/makalaaneesh/golang-for-object-oriented-people-l7h
 https://medium.com/applike/how-to-using-composition-over-inheritance-6681ed1b78e4
+
+In this post I've contended that the good thing about inheritance is two-way method invocation, but if you want to learn much more about it's various features, and how they can be ported in a non-inheritancey way, read [this](https://pling.jondgoodwin.com/post/delegated-inheritance/).
