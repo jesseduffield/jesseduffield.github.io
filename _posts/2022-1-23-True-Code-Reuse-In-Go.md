@@ -256,16 +256,27 @@ So there you have it, the trait pattern. Do you need to use it? No? But you migh
 Here are the posts I read through in the first two pages of googling 'Code Reuse in Go':
 
 https://tinystruggles.com/2015/08/29/golang-code-reuse.html
+
 https://yourbasic.org/golang/inheritance-object-oriented/
+
 http://jmoiron.net/blog/idiomatic-code-reuse-in-go/
+
 https://cdmana.com/2021/08/20210831152245884I.html
+
 https://medium.com/swlh/what-is-the-extension-interface-pattern-in-golang-ce852dcecaec
+
 https://blog.birost.com/a?ID=01100-f026fb15-5faf-4e5c-95d2-c8cf675f18e0
+
 https://go.dev/doc/effective_go#embedding
+
 https://www.jawahar.tech/blog/golang-inheritance-vs-composition
+
 https://www.toptal.com/go/golang-oop-tutorial
+
 https://developpaper.com/golang-interfaces-are-nested-to-realize-the-operation-of-reuse/
+
 https://dev.to/makalaaneesh/golang-for-object-oriented-people-l7h
+
 https://medium.com/applike/how-to-using-composition-over-inheritance-6681ed1b78e4
 
 In this post I've contended that the good thing about inheritance is two-way method invocation, but if you want to learn much more about it's various features, and how they can be ported in a non-inheritancey way, read [this](https://pling.jondgoodwin.com/post/delegated-inheritance/).
