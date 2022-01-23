@@ -14,21 +14,21 @@ We can all agree that class inheritance is problematic because it can lead to ri
 
 Something's going on. I feel a discussion on what's so bad about class inheritance could benefit from spending more time asking: what's so _good_ about class inheritance, such that its absence can feel so stunting to Go newcomers? Turns out it has nothing to do with class hierarchies.
 
-Reading through the typical blog post on the topic, you'll be told that the closest relative to class inheritance in Go is struct embedding. The idea is that you can wrap an interface in your struct and in doing so, you can forward method calls to that embedded struct. To give a classic (and infamous) example, your car struct can embed an engine to handle engine-ey stuff:
+Reading through the typical blog post on the topic, you'll be told that the closest relative to class inheritance in Go is struct embedding. The idea is that you can wrap an interface in your struct and in doing so, you can forward method calls to that embedded struct. To give a classic (and infamous) example, your car struct can embed an Engine to handle engine-ey stuff:
 
 ```go
-type mycar struct {
-	*engine
+type MyCar struct {
+	*Engine
 }
 
-type engine struct{}
+type Engine struct{}
 
-func (e *engine) start() {
+func (e *Engine) start() {
 	fmt.Print("broom")
 }
 
 func main() {
-	car := mycar{engine: &engine{}}
+	car := MyCar{Engine: &Engine{}}
 	car.start() // prints 'broom'
 }
 ```
@@ -39,28 +39,34 @@ As stated in [Effective Go](https://go.dev/doc/effective_go#embedding):
 
 > There's an important way in which embedding differs from subclassing. When we embed a type, the methods of that type become methods of the outer type, but when they are invoked the receiver of the method is the inner type, not the outer one.
 
-Our engine has no access to the other fields in our car: it only has access to its own fields. When you call `car.start()` it's just syntactic sugar for `car.engine.start()`. So, if I add a `startSound` field to my `mycar` struct, I can't make use of that in my `engine` struct:
+Our engine has no access to the other fields in our car: it only has access to its own fields. When you call `car.start()` it's just syntactic sugar for `car.Engine.start()`.
+
+Here's a diagram to demonstrate. Note that the only way our engine can communicate with our car is by returning from a method call: it can't invoke any methods on our car. That is, method-call arrows can only go forward in one direction (hence the name forwarding).
+
+![]({{ site.baseurl }}/images/posts/go-traits/forwarding-sequence.png)
+
+So, if I add a `startSound` field to my `MyCar` struct, I can't make use of that in my `Engine` struct:
 
 ```go
-type mycar struct {
-	*engine
+type MyCar struct {
+	*Engine
 	startSound string
 }
 
-type engine struct{}
+type Engine struct{}
 
-func (e *engine) start() {
-	// ERROR: e.startSound undefined (type *engine has no field or method startSound)
+func (e *Engine) start() {
+	// ERROR: e.startSound undefined (type *Engine has no field or method startSound)
 	fmt.Print(e.startSound)
 }
 
 func main() {
-	car := mycar{engine: &engine{}}
+	car := MyCar{Engine: &Engine{}}
 	car.start()
 }
 ```
 
-Damn! With delegation, the receiver in our embedded struct `engine` could actually point to the embedding struct `mycar`. Let's look at an example where delegation is called for.
+Damn! With delegation, the receiver in our embedded struct `Engine` could actually point to the embedding struct `MyCar`. Let's look at an example where delegation is called for.
 
 Say I had various structs representing people, each with a `GetName()` method. I want a way to allow these people to greet you in their native language.
 
@@ -222,7 +228,7 @@ Here's a diagram of what's happening:
 
 Mission accomplished: You can add new methods to our Speaker interface, using our `person` structs' methods in new ways, without needing to update the `person` structs themselves! This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, in the same way that a single standalone function enables code-reuse. But when somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
 
-I haven't come across any online posts talking about this pattern in Go (I'm sure they exist) so until somebody tells me the real name, I'm calling this the Go Trait Pattern. Adding 'delegation' to the name wouldn't suit given how most people conflate delegation with forwarding, and given how closely our embedded struct in this pattern resemble's Rust's traits, I think the name fits. If your trait contains its own state, you could call it a mixin, but that's up to you. With this pattern, the trait (i.e. the embedded struct: `EnglishSpeaker` and FrenchSpeaker`) defines an interface that the embedder (`SimpleNamedPerson`, `ComplexNamedPerson`) must satisfy, and the deal is that if the embedding struct can satisfy that interface, the trait will reward it with extra functionality. Unlike with forwarding, here the embedded struct can actually make use of logic defined in the embedding struct.
+I haven't come across any online posts talking about this pattern in Go (I'm sure they exist) so until somebody tells me the real name, I'm calling this the Go Trait Pattern. Adding 'delegation' to the name wouldn't suit given how most people conflate delegation with forwarding, and given how closely our embedded struct in this pattern resemble's Rust's traits, I think the name fits. If your trait contains its own state, you could call it a mixin, but that's up to you. With this pattern, the trait (i.e. the embedded struct: `EnglishSpeaker` and `FrenchSpeaker`) defines an interface that the embedder (`SimpleNamedPerson`, `ComplexNamedPerson`) must satisfy, and the deal is that if the embedding struct can satisfy that interface, the trait will reward it with extra functionality. Unlike with forwarding, here the embedded struct can actually make use of logic defined in the embedding struct.
 
 In the broader context of programming, this pattern is nothing new. It's just classic delegation. In 1994, Grady Brooch defined delegation like so:
 
@@ -253,30 +259,6 @@ So there you have it, the trait pattern. Do you need to use it? No? But you migh
 
 ## Addendum
 
-Here are the posts I read through in the first two pages of googling 'Code Reuse in Go':
-
-https://tinystruggles.com/2015/08/29/golang-code-reuse.html
-
-https://yourbasic.org/golang/inheritance-object-oriented/
-
-http://jmoiron.net/blog/idiomatic-code-reuse-in-go/
-
-https://cdmana.com/2021/08/20210831152245884I.html
-
-https://medium.com/swlh/what-is-the-extension-interface-pattern-in-golang-ce852dcecaec
-
-https://blog.birost.com/a?ID=01100-f026fb15-5faf-4e5c-95d2-c8cf675f18e0
-
-https://go.dev/doc/effective_go#embedding
-
-https://www.jawahar.tech/blog/golang-inheritance-vs-composition
-
-https://www.toptal.com/go/golang-oop-tutorial
-
-https://developpaper.com/golang-interfaces-are-nested-to-realize-the-operation-of-reuse/
-
-https://dev.to/makalaaneesh/golang-for-object-oriented-people-l7h
-
-https://medium.com/applike/how-to-using-composition-over-inheritance-6681ed1b78e4
+Here are the posts I read through in the first two pages of googling 'Code Reuse in Go': [1](https://tinystruggles.com/2015/08/29/golang-code-reuse.html), [2](https://yourbasic.org/golang/inheritance-object-oriented/), [3](http://jmoiron.net/blog/idiomatic-code-reuse-in-go/), [4](https://cdmana.com/2021/08/20210831152245884I.html), [5](https://medium.com/swlh/what-is-the-extension-interface-pattern-in-golang-ce852dcecaec), [6](https://blog.birost.com/a?ID=01100-f026fb15-5faf-4e5c-95d2-c8cf675f18e0), [7](https://go.dev/doc/effective_go#embedding), [8](https://www.jawahar.tech/blog/golang-inheritance-vs-composition), [9](https://www.toptal.com/go/golang-oop-tutorial), [10](https://developpaper.com/golang-interfaces-are-nested-to-realize-the-operation-of-reuse/), [11](https://dev.to/makalaaneesh/golang-for-object-oriented-people-l7h), [12](https://medium.com/applike/how-to-using-composition-over-inheritance-6681ed1b78e4)
 
 In this post I've contended that the good thing about inheritance is two-way method invocation, but if you want to learn much more about it's various features, and how they can be ported in a non-inheritancey way, read [this](https://pling.jondgoodwin.com/post/delegated-inheritance/).
