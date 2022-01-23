@@ -45,19 +45,22 @@ Here's a diagram to demonstrate. Note that the only way our engine can communica
 
 ![]({{ site.baseurl }}/images/posts/go-traits/forwarding-sequence.png)
 
-So, if I add a `startSound` field to my `MyCar` struct, I can't make use of that in my `Engine` struct:
+So, if I add a `StartSound()` method to my `MyCar` struct, I can't make use of that in my `Engine` struct:
 
 ```go
 type MyCar struct {
 	*Engine
-	startSound string
 }
 
 type Engine struct{}
 
+func (c *MyCar) StartSound() string {
+	return "broom"
+}
+
 func (e *Engine) start() {
-	// ERROR: e.startSound undefined (type *Engine has no field or method startSound)
-	fmt.Print(e.startSound)
+	// ERROR: e.StartSound undefined (type *Engine has no field or method StartSound)
+	fmt.Print(e.StartSound())
 }
 
 func main() {
