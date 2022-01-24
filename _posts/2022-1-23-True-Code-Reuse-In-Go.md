@@ -285,7 +285,7 @@ We need to first partially build the struct, then assign the speaker field to fi
 
 One final implication of the trait pattern is that when I call `person.Greet()` we're using dynamic dispatch twice: that is, we call `Greet()` on our trait interface which in turn calls `GetName()` on our embedding struct, also through an interface. This means we have to traverse a couple of pointers to get the functions we want. But, in my opinion, it's worth the cost, and Go provides no alternative that I know of.
 
-So there you have it, the trait pattern. There are some hairy parts due to the language's lack of first-class traits, but it enables richer polymorphism. Do you need to use it? No? Will it cause more problems than it solves? I have no idea: I only just thought of it and plan to start battle-testing it in my own Go side-projects. But you might come across a situation where it proves useful. My typical post contains some embarrassing oversight or error, so I look forward to finding out what it is this time. At any rate, see you in the next post!
+So there you have it, the trait pattern. There are some hairy parts due to the language's lack of first-class traits, but it enables richer polymorphism. Do you need to use it? No. Will it cause more problems than it solves? I have no idea: I only just thought of it and plan to start battle-testing it in my own Go side-projects. But you might come across a situation where it proves useful. My typical post contains some embarrassing oversight or error, so I look forward to finding out what it is this time. At any rate, see you in the next post!
 
 ## Addendum
 
