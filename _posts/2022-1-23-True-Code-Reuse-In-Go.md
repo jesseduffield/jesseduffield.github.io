@@ -266,7 +266,7 @@ You might be thinking: doesn't this just re-introduce the fragile base-class pro
 
 The ability for method invocations to go in both directions is the secret sauce that most Go newcomers are looking for when they ask about inheritance, and struct embedding with basic forwarding does not fill the void, but the trait pattern can.
 
-## Implications
+## Considerations
 
 There are some things worth keeping in mind. Firstly, Go lacks covariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. This assumes you actually need to inject the trait can't can't invoke it directly.
 
