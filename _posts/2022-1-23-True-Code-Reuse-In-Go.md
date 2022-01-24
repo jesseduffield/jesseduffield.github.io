@@ -23,13 +23,13 @@ type MyCar struct {
 
 type Engine struct{}
 
-func (e *Engine) start() {
+func (e *Engine) Start() {
 	fmt.Print("broom")
 }
 
 func main() {
 	car := MyCar{Engine: &Engine{}}
-	car.start() // prints 'broom'
+	car.Start() // prints 'broom'
 }
 ```
 
@@ -39,7 +39,7 @@ As stated in [Effective Go](https://go.dev/doc/effective_go#embedding):
 
 > There's an important way in which embedding differs from subclassing. When we embed a type, the methods of that type become methods of the outer type, but when they are invoked the receiver of the method is the inner type, not the outer one.
 
-Our engine has no access to the other fields in our car: it only has access to its own fields. When you call `car.start()` it's just syntactic sugar for `car.Engine.start()`.
+Our engine has no access to the other fields in our car: it only has access to its own fields. When you call `car.Start()` it's just syntactic sugar for `car.Engine.Start()`.
 
 Here's a diagram to demonstrate. Note that the only way our engine can communicate with our car is by returning from a method call: it can't invoke any methods on our car. That is, method-call arrows can only go forward in one direction (hence the name forwarding).
 
@@ -58,20 +58,20 @@ func (c *MyCar) StartSound() string {
 	return "broom"
 }
 
-func (e *Engine) start() {
+func (e *Engine) Start() {
 	// ERROR: e.StartSound undefined (type *Engine has no field or method StartSound)
 	fmt.Print(e.StartSound())
 }
 
 func main() {
 	car := MyCar{Engine: &Engine{}}
-	car.start()
+	car.Start()
 }
 ```
 
-Damn! With delegation, the receiver in our embedded struct `Engine` could actually point to the embedding struct `MyCar`. Let's look at an example where delegation is called for.
+Damn! With delegation, the receiver in our embedded struct `Engine` could actually point to the embedding struct `MyCar`. Let's look at a similarly contrived example where delegation is called for.
 
-Say I had various structs representing people, each with a `GetName()` method. I want a way to allow these people to greet you in their native language.
+Say I had various structs representing people, each with a `GetName()` method:
 
 ```go
 type HasName interface {
@@ -94,13 +94,15 @@ type ComplexNamedPerson struct {
 func (p *ComplexNamedPerson) GetName() string {
 	return fmt.Sprintf("%s %s", p.firstname, p.lastname)
 }
+```
 
+I want to be able to greet these people by calling `.Greet()` on them. That is, I want to find a way to have both `SimpleNamedPerson` and `ComplexNamedPerson` implement the `Greeter` interface.
+
+```go
 type Greeter interface {
 	Greet()
 }
 ```
-
-That is, I want to find a way to have both `SimpleNamedPerson` and `ComplexNamedPerson` implement the `Greeter` interface.
 
 We could introduce a greeter function like so:
 
@@ -206,7 +208,7 @@ Here's a diagram of what's happening:
 
 ![]({{ site.baseurl }}/images/posts/go-traits/sequence.png)
 
-Pretty cool! But what if we don't just have English speakers? We can create a `FrenchSpeaker` struct that satisfies the `Speaker` interface
+Pretty cool! But what if we don't just have English speakers? We can create a `FrenchSpeaker` struct that satisfies the `Speaker` interface.
 
 ```go
 type FrenchSpeaker struct {
@@ -226,7 +228,7 @@ func NewFrenchSpeaker(person HasName) Speaker {
 }
 ```
 
-We can inject our speaker into our person constructor like so:
+And we can inject our speaker into our person constructor like so:
 
 ```go
 func NewSimpleNamedPerson(name string, getSpeaker func(HasName) Speaker) *simpleNamedPerson {
@@ -250,7 +252,7 @@ Mission accomplished: You can now:
 - add a new method to the `Speaker` interface, and implement it in each language struct, to have it automatically come through in our person structs
 - add a new person struct implementing `HasName` and give it speaking abilities by embedding a `Speaker`
 
-This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, in the same way that a single standalone function enables code-reuse. But when somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
+This is the kind of code-reuse I was looking for when I started using Go. Yes, using vanilla interfaces and struct embedding is technically a form of code reuse, but so is the existence of functions themselves. When somebody googles code reuse mechanisms, they typically have something more powerful in mind, and I'd say this pattern hits the spot.
 
 ## The Go Trait Pattern
 
@@ -266,7 +268,7 @@ The ability for method invocations to go in both directions is the secret sauce 
 
 ## Implications
 
-There are some things worth keeping in mind. Firstly, Go lacks covariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. Don't forget that we don't always need to inject the trait into the constructor: If we're only dealing with english speakers, we could directory use `p.Speaker = NewEnglishSpeaker(p)`
+There are some things worth keeping in mind. Firstly, Go lacks covariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. This assumes you actually need to inject the trait can't can't invoke it directly.
 
 Another thing to note is that our person constructor is a little weird:
 
@@ -279,9 +281,9 @@ func NewSimpleNamedPerson(name string, makeSpeaker func(HasName) Speaker) *Simpl
 }
 ```
 
-We need to first partially build the struct, then assign the speaker field to finish it off. In any other context I'd consider this a red flag because it demonstrates they're a circular dependency, but it seems to be our only option with the trait pattern, and I don't consider it dangerous. Go uses a mark and sweep garbage collector so it handles circular dependencies fine.
+We need to first partially build the struct, then assign the speaker field to finish it off. Whenever you see this kind of code, it means there's a circular dependency. This isn't a problem for the garbage collector: Go uses a mark-and-sweep algorithm so it handles circular dependencies just fine. But it does mean you need to ensure not to call `.Greet()` or `.SayGoodBye()` from within `GetName()`, as doing so will result in an infinite loop. If this concerns you, you could forget about the double-embed approach and instead embed your person struct inside the Speaker and call it a day, but that will lock you in to the `HasName` and `Speaker` interface: you won't have access to any other methods defined on your person struct.
 
-One final implication of this approach is that when I call `person.Greet()` we're using dynamic dispatch twice: that is, we call `Greet()` on our trait interface which in turn calls `GetName()` on our embedding struct, also through an interface. This means we have to traverse a couple of pointers to get the functions we want. But, in my opinion, it's worth the cost, and Go provides no alternative that I know of.
+One final implication of the trait pattern is that when I call `person.Greet()` we're using dynamic dispatch twice: that is, we call `Greet()` on our trait interface which in turn calls `GetName()` on our embedding struct, also through an interface. This means we have to traverse a couple of pointers to get the functions we want. But, in my opinion, it's worth the cost, and Go provides no alternative that I know of.
 
 So there you have it, the trait pattern. Do you need to use it? No? But you might come across a situation where it proves useful. My typical post contains some embarrassing oversight or error, so I look forward to finding out what it is this time. At any rate, see you in the next post!
 
