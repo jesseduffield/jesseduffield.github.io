@@ -266,7 +266,7 @@ The ability for method invocations to go in both directions is the secret sauce 
 
 ## Implications
 
-There are some things worth keeping in mind. Firstly, Go lacks contravariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. Don't forget that we don't always need to inject the trait into the constructor: If we're only dealing with english speakers, we could directory use `p.Speaker = NewEnglishSpeaker(p)`
+There are some things worth keeping in mind. Firstly, Go lacks covariance, meaning the general rule that functions should accept interface values and return concrete types doesn't work here. `NewEnglishSpeaker` needs to return `Speaker` if it is to be passed as the `makeSpeaker` argument. This isn't a huge deal: you can always just make a separate function for that. Don't forget that we don't always need to inject the trait into the constructor: If we're only dealing with english speakers, we could directory use `p.Speaker = NewEnglishSpeaker(p)`
 
 Another thing to note is that our person constructor is a little weird:
 
