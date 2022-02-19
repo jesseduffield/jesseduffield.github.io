@@ -5,7 +5,7 @@ date: '2022-02-19 04:50:16 +00:00'
 tags: thinking-out-loud
 ---
 
-_I categorise this under 'thinking out loud'. I haven't done a whole lot of research into the metaverse and how different people envision it_
+_My own confidence in this post: 70%_
 
 Recently a friend lent me his copy of Neal Stephenson's 1992 novel, Snow Crash, and upon reading I discovered the novel coined the term _Metaverse_. Given that in the novel, the Metaverse exists against a dystopian backdrop, I was surprised that Facebook, a company that should be doing everything in its power to convince people it hasn't _already_ created a dystopia, is rebranding itself around the concept.
 
