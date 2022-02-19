@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Seeing Selection
+tags: thinking-out-loud
 ---
 
 A couple times somebody has told me about the latest COVID super-spreader and then asked the question 'how come it's always somebody who visits 5 different places in a single day. Who the hell are these people?'. Recent examples [aren't hard to find](https://www.theage.com.au/national/victoria/primary-close-contacts-top-15-000-as-super-spreaders-spark-new-stadium-cases-20210719-p58b3h.html): so-called super-spreaders do get around. But when you think about it, this question has an obvious answer: highly mobile people are more likely to contract COVID in the first place. If they happen to also be mobile on the day they infect a bunch of other people, their super-spreading isn't super-surprising.

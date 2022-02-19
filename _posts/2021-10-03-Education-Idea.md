@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Climbing Towards Correctness
+tags: thinking-out-loud
 ---
 
 Here's an idea I'd like to see in the education system: when teaching a new concept, before introducing a formula or equation that models some phenomenon, make the case for some simpler, but incorrect, alternatives first.

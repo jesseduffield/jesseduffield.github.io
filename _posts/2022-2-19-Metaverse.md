@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 'No Place for the Metaverse'
+date: '2022-02-19 04:50:16 +00:00'
+tags: thinking-out-loud
 ---
 
 _I categorise this under 'thinking out loud'. I haven't done a whole lot of research into the metaverse and how different people envision it_
@@ -39,5 +41,7 @@ No matter where you are on the spectrum, you have an identity. In WoW you've got
 In his Awakening From The Meaning Crisis lecture series John Vervaeke talks about the [agent-arena relationship](https://www.youtube.com/watch?v=yy47YzvGniQ&t=1765s&ab_channel=JohnVervaeke) and how a consonance between the agent and the arena (e.g. the WoW character and the server) leads to a sense of meaning, whereas a lack of that consonance feels 'absurd'. When you play WoW, that consonance is deep because the whole world has been designed around the character and their spells, skills, etc. I created a Second Life account to get a feel for it so that I get a sense of what the metaverse might be, and I can safely say the entire experience felt _absurd_, and predictably I have not felt the urge to play it again. I suspect my experience is typical and that only a fraction of new Second Life players find the consonance that keeps them engaged. When you play a steam game, you may feel a strong consonance between your character and the particular game, but you won't feel much consonance between your _steam profile_ and the game given how little role your steam profile plays beyond easily joining a multiplayer lobby with friends. It seems to me that in order for the Metaverse to _be_ a Metaverse, you need to simultaneously exhibit a wild variety of worlds without sacrificing the consonance between your Metaverse identity and any given world.
 
 It should be no surprise then that VR/AR is always bundled into the pitch: the hope is that more immersive hardware can inject that consonance that is otherwise lacking. I don't buy it. Let's say that immersive technology advances so much that I can directly plug my brain into an immersion machine. Would I even be interested in the Metaverse then? No: I'd probably want to go and inhabit an identity that makes sense within a particular world. But now we're back to WoW (or some Steam game), just with a pleasure machine thown in.
+
+## Conclusion
 
 So in conclusion, I see the Metaverse as an ill-conceived project. We already have great worlds we can inhabit that exist in isolation from other worlds. We already have networks of worlds with a shallow identity that can be carried between them. I do believe that more immersive technology is going to revolutionise how we live our lives, but even then, I don't see a meaningful place for the Metaverse. I'm interested to see if Facebook can throw enough money at the problem to produce something people actually want to experience, but as far as I can see, the Metaverse itself is an agent that does not fit the arena, and in Vervaeke's terms, I consider the concept _absurd_.
