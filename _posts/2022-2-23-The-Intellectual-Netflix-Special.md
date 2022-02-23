@@ -7,7 +7,7 @@ A while back I was listening to a podcast where a couple of comedians discussed 
 
 The problem is that as soon as you release your Netflix special you are knocked straight back to square one. Your live audiences have now watched the special and aren't interested in you regurgitating jokes that made them laugh in front of the TV not long ago. It's a tough life: other creatives have a much easier time: it doesn't matter how many times I listen to an band's music on Spotify; seeing the band live is a completely new experience and one that I'll happily pay money for. It doesn't matter if a visual artist's work is one google search away, people will still line up in droves to see their exhibition. Unfortunately, if your creative output involves surprise on a cerebral level, it gets old fast.
 
-So you need to start working on a new hour. How long does that take? It could take a year, or more. You need to make keen observations that nobody else notices and connect dots that others are oblivious to. If you're good at your job, soon enough you're back up to scratch and can fill seats once again.
+So you need to start working on a new hour. How long does that take? It could take a year, or more. You need to make keen observations connect dots that others are oblivious to. If you're good at your job, soon enough you're back up to scratch and can fill seats once again.
 
 Life's not easy for a comedian. But there's a similar occupation whose quest for novelty is far more dire: the public intellectual.
 
