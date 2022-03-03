@@ -270,6 +270,8 @@ circle.area
 
 Just because squares and circles each have an area and a perimeter doesn't mean they should be the same class when there is literally zero overlap in how we obtain those two things. Likewise the `diameter` method only applies to circles, not squares. In a typed language, we may want to define a Shape interface containing the area/perimeter methods but there is no good reason to combine the classes.
 
+Note that we could also approach this in the other direction using multi-methods. The important thing is that enmeshing variant-specific code with behaviour-specific code makes for a bad abstraction.
+
 #### Example: React Notice components
 
 ##### Option 1
