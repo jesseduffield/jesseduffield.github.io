@@ -25,7 +25,11 @@ This viewpoint is not so much an attack on testing private methods as it is an a
 
 ## Viewpoint 2: Always Test Private Methods
 
-Although this is an unpopular viewpoint, there are still [some](https://oli.me.uk/test-private-methods/) proponents out there. The idea is that when doing Test Driven Development (TDD) you need to write the test before you write the code, so you may as well do that on a per-method basis, regardless of whether your method is public or private. Furthermore, by testing each method in isolation (regardless of access modifiers) you make it clear to the reader the expected behaviour of each individual method so that they can then better appreciate the roles each method plays in the larger picture.
+Although this is an unpopular viewpoint, there are still [some](https://oli.me.uk/test-private-methods/) proponents out there. There are three main arguments:
+
+- When doing Test Driven Development (TDD) you need to write the test before you write the code, so you may as well do that on a per-method basis, regardless of whether your method is public or private.
+- By testing each method in isolation (regardless of access modifiers) you make it clear to the reader the expected behaviour of each individual method so that they can then better appreciate the roles each method plays in the larger picture.
+- The obvious alternative to testing private methods directly is to test them via public methods, but this requires setup code in the test which takes longer to write, and may result in tests that take longer to run. If your priority is to save dev time, and you believe that the up-front cost of writing public method tests is higher than the ongoing costs of rewriting private method tests when refactoring, then it makes sense to just write private method tests in the first place and deal with the ongoing costs when they arise.
 
 Some languages facilitate testing private methods better than others. If your language makes you jump through hoops to test a private method, you are probably not on board with this viewpoint.
 
@@ -37,7 +41,7 @@ That's the philosophical argument, but the practical argument is an easier sell:
 
 Conversely, if the class's tests depend on private methods and your refactor deletes or changes the signature of any of those methods, you'll need to rewrite those tests to handle the new internal structure, but now you've lost confidence in your tests because the test rewrite is just as likely to be error prone as the code rewrite in the first place!
 
-Secondary to this is the fact that even if you could rewrite tests with sufficient care that the exact same behaviour is captured as before, it's still a laborious, time-consuming process, and therefore deters refactors that could improve the health of the codebase.
+Secondary to this is the fact that even if you could rewrite tests with sufficient care that the exact same behaviour is captured as before, it's still a laborious, time-consuming process, and therefore deters refactors that could improve the health of the codebase. Where the prior viewpoint places more emphasis on the up-front costs of testing private methods via public methods, this viewpoint cares more about the ongoing costs of refactors.
 
 ## Viewpoint 4: Test Private Methods Sometimes
 
