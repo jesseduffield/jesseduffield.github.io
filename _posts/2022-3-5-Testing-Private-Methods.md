@@ -96,7 +96,7 @@ I'm struggling to reconcile this conundrum: SRP violations are problematic, but 
 
 Here's the approach I propose: I try to have as slim a public interface as possible in your classes, by defaulting every method to private. If you find yourself wanting to test a set of private methods directly, seriously consider extracting a class (or standalone function), but only if it makes sense independent of your testing desires. If you want to test a single private method and don't see the point in extracting it out of the class, convert it into a pure function (no references to instance variables) and test that method. That way, if later on you decide to move the function somewhere else, moving the tests is as simple as copy+paste.
 
-Have I missed or misrepresented any perspectives in this debate? Do you disagree with my proposal? Let me know. Till next time!
+Have I missed or misrepresented any perspectives in this debate? Do you disagree with my proposal? Am I over-generalising? Let me know. Till next time!
 
 ## Links
 
