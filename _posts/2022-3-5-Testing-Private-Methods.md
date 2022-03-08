@@ -49,7 +49,7 @@ Secondary to this is the fact that even if you could rewrite tests with sufficie
 
 The prior viewpoint cares a great deal about the 'public interface', but this new viewpoint calls into question what is truly public, and what is truly a unit. If you're writing an application (where a binary is run) as opposed to a library (where code is exported for use in other codebases) there is only one truly public interface and that's the interface to the application itself, for example consisting of a user's keypresses and mouse clicks. If you wanted to maximise refactor-ability as the prior viewpoint advocates, the best approach is to have every single test open up the application and imitate a user's clicks and keypresses. That way there is zero dependence on any internal code, and you can confidently refactor the code without having to rewrite any of the tests.
 
-Of course, writing tens of thousands of integration tests that virtually imitate a real user is absurd: there are several reasons why an integration-only test suite is problematic:
+Of course, writing tens of thousands of integration tests that virtually imitate a real user is absurd\*: there are several reasons why an integration-only test suite is problematic:
 
 - it takes too long to run a given test
 - it takes too long to write a given test
@@ -105,3 +105,5 @@ Have I missed or misrepresented any perspectives in this debate? Do you disagree
 - [Testing private methods (don't do it)](https://fishbowl.pastiche.org/2003/03/28/testing_private_methods_dont_do_it) - Charles Miller
 - [Test private methods](https://oli.me.uk/test-private-methods/) - Oliver Caldwell
 - [The case against private methods](https://osoco.es/thoughts/2018/10/the-case-against-private-methods/) - José san leandro
+
+\* One commenter mentioned they actually have created a system with tens of thousands of integrations tests to the exclusion of unit tests, but I believe the broader point stands: testing at higher levels of encapsulation is expensive and I can't think of any cases where you would need to do this unless you ancitipate all lower forms of encapsulation to be completely refactored.
