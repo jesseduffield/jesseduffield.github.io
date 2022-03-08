@@ -15,7 +15,7 @@ There are five prevailing viewpoints on the topic of testing private methods:
 - Test Private Methods Sometimes
 - Extract Private Methods Into A Separate Class
 
-In this post I'm going to talk through each viewpoint and then synthesise them into my own rule of thumb, that hopefully most people can agree on.
+In this post I'm going to talk through each viewpoint and then synthesise them into my own rule of thumb, that hopefully most people can agree on. Note that we'll be talking in terms of classes and methods, but the same viewpoints are equally applicable to plain old functions in a functional language.
 
 ## Viewpoint 1: Don't Use Private Methods In The First Place
 
@@ -76,7 +76,9 @@ In _Working With Legacy Code_, author Michael Feathers states:
 
 In _Practical Object Oriented Design in Ruby_, Sandi Metz also suggests that private methods yearning to be tested are a code smell for SRP violations.
 
-The idea is that by extracting a private method into a separate class, we can now test that class via its public interface, and we have the bonus benefit of injecting the new class as a dependency into the original class, allowing us to easily mock out the new class's behaviour so that both the code and the tests maintain the separation of responsibilities.
+Where the previous viewpoint argues that the choice of a 'unit' is arbitrary, this viewpoint disagrees. If you want to test some private code, that suggests you've stumbled across an abstraction boundary that has not been made explicit in the code. Perhaps you want to test some algorithm that directly maps onto the problem domain, in which case it deserves to be promoted into its own abstraction.
+
+By extracting a private method into a separate class, we can now test that class via its public interface, and we have the bonus benefit of injecting the new class as a dependency into the original class, allowing us to easily mock out the new class's behaviour so that both the code and the tests maintain the separation of responsibilities.
 
 If wrapping a single function in a class feels a little extreme, and your language allows functions to live outside of a class, then presumably this viewpoint has no problem with extracting the private method out into its own stand-alone function, provided you can sever its dependencies on any instance variables.
 
@@ -90,11 +92,11 @@ Then the fourth viewpoint comes along and throws a spanner in the works by propo
 
 A proponent of Viewpoint 3 which emphasises sticking to the class's public API might say the following about Viewpoint 5: Hang on! So far we've been arguing about refactoring and encapsulation, but you've moved the goalposts to focus on the SRP! Moving a private method into a private class does nothing to reduce the burden when refactoring: we're just as likely to need to trash/change the private class as we were the private method, meaning in either case, tests will still need to be rewritten. And this assumes your language supports private classes because if not you've just expanded your public API to include a class that you don't actually want clients using! And does it really make sense to take a private method that's a pure function and move it into a completely separate file when it's only used by the one class? How does that aid readability?
 
-I'm struggling to reconcile this conundrum: SRP violations are problematic, but I've also seen plenty of problems arise from an obsession with the SRP. I don't feel great about the idea of moving a method that's tightly related to a class into a separate utility class in another file just because it resolves the code smell. I feel much better about moving a private method out of the class but remaining in the same file as a pure standalone function.
+A proponent of Viewpoint 5 could argue back saying that the desire to test a private method is evidence that there is an independent abstraction you've failed to recognise and that the abstraction is less likely to need refactoring than some random private method that you don't feel the need to directly test.
 
 ## My Proposal
 
-Here's the approach I propose: I try to have as slim a public interface as possible in your classes, by defaulting every method to private. If you find yourself wanting to test a set of private methods directly, seriously consider extracting a class (or standalone function), but only if it makes sense independent of your testing desires. If you want to test a single private method and don't see the point in extracting it out of the class, convert it into a pure function (no references to instance variables) and test that method. That way, if later on you decide to move the function somewhere else, moving the tests is as simple as copy+paste.
+Here's the approach I propose: try to have as slim a public interface as possible in your classes, by defaulting every method to private. If you find yourself wanting to test a set of private methods directly, seriously consider extracting a class (or standalone function), but only if it makes sense independent of your testing desires. If you want to test a single private method and don't see the point in extracting it out of the class, convert it into a pure function (no references to instance variables) and test that method. That way, if later on you decide to move the function somewhere else, moving the tests is as simple as copy+paste.
 
 Have I missed or misrepresented any perspectives in this debate? Do you disagree with my proposal? Am I over-generalising? Let me know. Till next time!
 
