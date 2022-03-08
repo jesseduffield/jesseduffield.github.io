@@ -19,9 +19,11 @@ In this post I'm going to talk through each viewpoint and then synthesise them i
 
 ## Viewpoint 1: Don't Use Private Methods In The First Place
 
-I'll get this viewpoint out of the way first because if correct it completely invalidates the rest of the debate!
+I'll get this viewpoint out of the way because most people intuitively find it a little extreme and if correct it completely invalidates the rest of the debate!
 
 This viewpoint is not so much an attack on testing private methods as it is an attack on trying to predict the future. The idea is that when writing library code you couldn't possibly know what method your clients will want to use ahead of time, and defaulting to private methods will cause more problems for you and your clients than defaulting to public (or protected). This strain of thought appears to be unique to library developers (see [here](https://osoco.es/thoughts/2018/10/the-case-against-private-methods/), [here](https://stackoverflow.com/questions/8353272/private-vs-protected-visibility-good-practice-concern)), given that application developers can easily make methods public with a few keypresses whereas clients of libraries either need to fork the library or raise an issue and wait for a response.
+
+This viewpoint has downsides: promoting a private method to public is easy, but demoting from public to private is a breaking change. Furthermore, your public API communicates to clients how you expect them to use your libary. By bloating your public API with would-be private methods for the sake of hypothetical use cases, you're making life harder for all your clients who just want to know how to satisfy known use cases. These downsides are entwined: clients mistakenly use the wrong methods to interact with your library which in turn makes refactoring harder.
 
 ## Viewpoint 2: Always Test Private Methods
 
@@ -80,7 +82,7 @@ If wrapping a single function in a class feels a little extreme, and your langua
 
 ## Discussion
 
-We started with a viewpoint making the radical proposition that no methods should be private in the first place. Certainly simplifies thing, but I imagine there are plenty of application developers and library developers alike who find this take a little extreme.
+We started with a viewpoint making the radical proposition that no methods should be private in the first place. Certainly simplifies the testing process, but the lack of encapsulation can make life miserable.
 
 We then considered two completely contradictory viewpoints, one wanting no testing of private methods, the other wanting testing of all methods both public and private. Then the third viewpoint came along and proposed that no matter where you are on the spectrum of encapsulation, there are pros and cons to testing at a higher (e.g. class) or lower (e.g. private method) level, and that if the pros outweigh the cons, there's no shame in writing the test.
 
