@@ -103,16 +103,7 @@ func main() {
 	...
 ```
 
-Here I'm just creating a file named 'cpu.prof' for the profiler to write to, and then starting profiling before doing anything else. To view the output graphically I needed to install graphvis via `brew install graphvis` and run `go tool pprof cpu.prof` then enter 'web' in the program to get a web view (although this opened in an app called Gapplin instead of a browser which I don't quite understand).
-
-```
-▶ go tool pprof cpu.prof
-Type: cpu
-Time: Feb 2, 2020 at 12:03pm (AEDT)
-Duration: 2.92s, Total samples = 200ms ( 6.85%)
-Entering interactive mode (type "help" for commands, "o" for options)
-(pprof) web
-```
+Here I'm just creating a file named 'cpu.prof' for the profiler to write to, and then starting profiling before doing anything else. To view the output graphically I needed to install graphvis via `brew install graphvis` and run `go tool pprof -web cpu.prof`.
 
 ![]({{ site.baseurl }}/images/posts/2020-2-3-Golang-Profiling/2.png)
 
