@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Guide to Reviewing Pull Requests
+series: github-reviews
+series-title: 'Guide to Reviewing'
 ---
 
 _I am not an authority on this topic: what follows is advice that works for me and for others who have taken the advice on board._

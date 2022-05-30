@@ -2,3 +2,7 @@
   title: Go'ing Insane
   description:
     An extended meditation on why Go drives me crazy.
+- id: github-reviews
+  title: Pull Requests
+  description:
+    Some guides on pull requests
