@@ -43,9 +43,13 @@ Who gave GPT access to my private messages??
 
 > No, it is not the best approach to interpreting the Constitution.
 
+Not sure who to trust more, Scalia or GPT.
+
 **Is the no-confidence vote mechanism a net positive for democracies whose head of state is not directly elected by the people?**
 
 > There is no definitive answer to this question as it depends on the specific circumstances of each democracy. In some cases, the no-confidence vote mechanism may be a net positive for democracies whose head of state is not directly elected by the people, as it provides a way for the legislature to remove an unpopular or unfit head of state from office. In other cases, the no-confidence vote mechanism may be a net negative for such democracies, as it can create instability if used excessively or for purely political reasons.
+
+Pretty happy with this one.
 
 **Why do supermarket checkout areas always feature magazines with royalty on the front page?**
 
