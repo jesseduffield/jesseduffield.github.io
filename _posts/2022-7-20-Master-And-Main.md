@@ -4,7 +4,7 @@ title: Master vs Main
 unlisted: false
 ---
 
-_The following is a fictional conversation between two developers of different political persuasions._
+_The following is a fictional conversation between two developers of different political persuasions, which in no way reflects my own opinions._
 
 R: So, remember how GitHub changed the default branch name from master to main?
 
