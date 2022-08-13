@@ -261,7 +261,7 @@ Here's how the package is arranged now:
 
 ![]({{ site.baseurl }}/images/posts/integration_tests/integration_tests4.jpg)
 
-## Testing My Tests
+## Would You Like A Test With That Test?
 
 I almost didn't bother to do this, but I thought I may as well add some unit tests for my integration tests to ensure they don't always give false positives. Here's an example:
 
