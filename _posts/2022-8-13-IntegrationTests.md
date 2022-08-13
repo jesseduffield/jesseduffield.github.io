@@ -210,13 +210,17 @@ And I've scrapped the original IntegrationTest interface because I wasn't using 
 
 In the original testing approach, when invoking lazygit in test mode we would pass it a LAZYGIT_RECORDING_PATH environment variable which would tell lazygit where to find the recording JSON to replay. In the new approach we instead need to pass the name of a test for lazygit to load, which it does by iterating through all the tests until it finds a match. This introduces a new problem: if lazygit depends on our tests, and our tests depend on lazygit, then we have a cyclic dependency between packages. Go disallows this (with an error message that could be a little more detailed in my opinion) and with good reason: cyclic dependencies cause all kinds of problems. One particular problem in our case is that we don't want to be shipping a binary with a bunch of test code baked in, which is what happens when you have your code depend on your tests.
 
-To resolve this I used some good old-fashioned dependency injection so that the entrypoint of my code actually receives an integration test as an argument (which may be nil if we're just running lazygit normally). Unfortunately, when you want to exercise dependency injection at the level of a program², you either need to resort to conditional compilation, or just have a separate main.go which you invoke when running an integration test, which itself has the dependency on the tests. I went with the latter.
+To resolve this I used some good old-fashioned dependency injection so that the entrypoint of my code³ actually receives an integration test interface as an argument (which may be nil if we're just running lazygit normally). Unfortunately, when you want to exercise dependency injection at the level of a program², you either need to resort to conditional compilation, or just have a separate main.go which you invoke when running an integration test, which itself has the dependency on the tests. I went with the latter.
 
 So here's my (abridged) root-level `main.go` file:
 
 ```go
+import (
+	"github.com/jesseduffield/lazygit/pkg/gui"
+)
+
 func main() {
-	app.Start(nil)
+	gui.Start(nil)
 }
 ```
 
@@ -227,7 +231,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jesseduffield/lazygit/pkg/app"
+	"github.com/jesseduffield/lazygit/pkg/gui"
 	"github.com/jesseduffield/lazygit/pkg/integration"
 	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
 )
@@ -235,7 +239,7 @@ import (
 func main() {
 	integrationTest := getIntegrationTest()
 
-	app.Start(integrationTest)
+	gui.Start(integrationTest)
 }
 
 func getIntegrationTest() integrationTypes.IntegrationTest {
@@ -251,7 +255,7 @@ func getIntegrationTest() integrationTypes.IntegrationTest {
 }
 ```
 
-Notice that I'm importing both an `integration` package and an `integrationTypes` package. The reason for splitting those is so that the rest of the lazygit code can depend on the `IntegrationTest` and `GuiDriver` types without actually needing to depend on all the other integration test code. It's only in this injector file that isn't part of the final lazygit binary where we depend on the actual tests.
+Notice that I'm importing both an `integration` package and an `integrationTypes` package. The reason for splitting those is so that the rest of the lazygit code can depend on the `IntegrationTest` and `GuiDriver` interfaces without actually needing to depend on all the other integration test code. It's only in this injector file that isn't part of the final lazygit binary where we depend on the actual tests.
 
 ## More Import Cycles
 
@@ -259,7 +263,7 @@ Go makes it very tempting to just lump everything into one big package for the s
 
 Here's how the package is arranged now:
 
-![]({{ site.baseurl }}/images/posts/integration_tests/integration_tests5.jpg)
+![]({{ site.baseurl }}/images/posts/integration_tests/6.jpg)
 
 I'd be interested to see if I can clean this up even more (perhaps by extracting the types out to some common place, but that would mean less cohesion). At any rate, no cyclic dependencies!
 
@@ -340,3 +344,5 @@ Funnily, the 'code smell' argument actually did apply to my InputImpl struct bec
 
 1. I've got a couple of package-level variables in lazygit, for the sake of caching some deterministic values. I plan to fix that, but even if I do, I'll still have vendor packages with their own package level variables, and I don't want one lazygit run to influence the next.
 2. I've got a small terminal UI (TUI) program for running tests in a convenient manner, and if that runs the lazygit code directly, I'll need to quit and re-enter the TUI whenever I make a code change and want to re-test.
+
+³In the real code we've got more than just the `gui` package (we also have the `app` package) but I'm omitting that here for simplicity
