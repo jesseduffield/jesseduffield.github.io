@@ -259,7 +259,7 @@ Go makes it very tempting to just lump everything into one big package for the s
 
 Here's how the package is arranged now:
 
-![]({{ site.baseurl }}/images/posts/integration_tests/integration_tests4.jpg)
+![]({{ site.baseurl }}/images/posts/integration_tests/integration_tests5.jpg)
 
 ## Would You Like A Test With That Test?
 
