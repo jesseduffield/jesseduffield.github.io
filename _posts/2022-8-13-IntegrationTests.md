@@ -257,6 +257,10 @@ Notice that I'm importing both an `integration` package and an `integrationTypes
 
 Go makes it very tempting to just lump everything into one big package for the sake of avoiding cyclic import errors. Nonetheless, it felt appropriate to have my actual integration tests in their own directory (and to even have subdirectories for different test categories). When you have hundreds of test files, you don't want them mixed in with more general code. My integration package depends on my tests because it needs to re-export them, so my tests couldn't depend on the integration package where the IntegrationTest, Input, Assert, and Shell structs lived. So I moved those out into a `components` sub-package.
 
+Here's how the package is arranged now:
+
+![]({{ site.baseurl }}/images/posts/integration_tests/integration_tests3.jpg)
+
 ## Testing My Tests
 
 I almost didn't bother to do this, but I thought I may as well add some unit tests for my integration tests to ensure they don't always give false positives. Here's an example:
