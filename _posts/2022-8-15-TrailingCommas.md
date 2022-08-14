@@ -3,7 +3,7 @@ layout: post
 title: Trailing Commas Are Just The Beginning
 ---
 
-Trailing commas, also known as dangling commas, are a formatting strategy that's grown in popularity over time. Only 2 years ago did Prettier (a javascript formatter) start enforcing trailing commas by default, and if you read the associated GitHub [issue](https://github.com/prettier/prettier/issues/68) you'll see how hard-fought the change was. In this post I'm going to explain why trailing commas fix the problem of position-depedence and how position-dependence gets in our way in a bunch of other contexts too.
+Trailing commas, also known as dangling commas, are a formatting strategy that's grown in popularity over time. Only 2 years ago did Prettier (a javascript formatter) start enforcing trailing commas by default, and if you read the associated GitHub [issue](https://github.com/prettier/prettier/issues/68) you'll see how hard-fought the change was. In this post I'm going to explain why trailing commas fix the problem of order-depedence and how order-dependence gets in our way in a bunch of other contexts too.
 
 Firstly, what's the point of trailing commas?
 
@@ -63,7 +63,7 @@ Except this is no longer valid code: I need to add a comma to `bam` and if my or
 
 ## The crux of the matter
 
-The trailing comma pattern is not some quirk of formatting. At it's core, it's about position-dependence. When a given line only has a comma based on its position in some list, then we need to fiddle with commas whenever a new item is added or when the list is reordered.
+The trailing comma pattern is not some quirk of formatting. At it's core, it's about order-dependence. When a given line only has a comma based on its position in some list, then we need to fiddle with commas whenever a new item is added or when the list is reordered.
 
 Sometimes, things are in specific positions for good reason. For example, you wouldn't want to reorder these two lines:
 
@@ -74,9 +74,9 @@ console.log(a)
 
 But much of the time, re-ordering lines leads to cleaner code: related things can be closer together, and variables that live for too long can have their live-time reduced by shifting them down closer to where they're actually used in a function.
 
-The kind of position dependence I care about is the _unnecessary_ kind where you need to pollute your diffs and fiddle with formatting whenever you want to do something as simple as add an item to a list or move an item.
+The kind of order dependence I care about is the _unnecessary_ kind where you need to pollute your diffs and fiddle with formatting whenever you want to do something as simple as add an item to a list or move an item.
 
-So, what other language constructs create position dependence?
+So, what other language constructs create order dependence?
 
 ## Javascript: Multi-line const declarations
 
@@ -105,7 +105,7 @@ Check out the eslint [lint](https://eslint.org/docs/latest/rules/one-var-declara
 
 ## Go: errors
 
-Let me preface this by saying that for all its flaws, Go actually does enforce trailing commas on arrays, structs, and even function arguments, when spread across multiple lines. So kudos to Go for that. Nonetheless there's plenty more position dependence to go around within the language.
+Let me preface this by saying that for all its flaws, Go actually does enforce trailing commas on arrays, structs, and even function arguments, when spread across multiple lines. So kudos to Go for that. Nonetheless there's plenty more order dependence to go around within the language.
 
 Here we want to call three things in sequence where each may return an error.
 
@@ -143,7 +143,7 @@ func blah() error {
 }
 ```
 
-This is why you'll often see this seemigly redundant boilerplate in a function to avoid the position dependence:
+This is why you'll often see this seemigly redundant boilerplate in a function to avoid the order dependence:
 
 ```go
 func blah() error {
@@ -257,6 +257,6 @@ This is not something I _commonly_ come across and it should be obvious the abov
 
 ## What else?
 
-If you know of a similar example of unnecessary position dependence in your language of choice let me know and I'll add it to this list.
+If you know of a similar example of unnecessary order dependence in your language of choice let me know and I'll add it to this list.
 
 Thanks for reading!
