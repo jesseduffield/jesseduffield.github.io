@@ -232,7 +232,7 @@ import (
 	"os"
 
 	"github.com/jesseduffield/lazygit/pkg/gui"
-	"github.com/jesseduffield/lazygit/pkg/integration"
+	integrationTests "github.com/jesseduffield/lazygit/pkg/integration/tests"
 	integrationTypes "github.com/jesseduffield/lazygit/pkg/integration/types"
 )
 
@@ -243,9 +243,9 @@ func main() {
 }
 
 func getIntegrationTest() integrationTypes.IntegrationTest {
-	integrationTestName := os.Getenv(integration.LAZYGIT_TEST_NAME_ENV_VAR)
+	integrationTestName := os.Getenv("LAZYGIT_TEST_NAME")
 
-	for _, candidateTest := range integration.Tests {
+	for _, candidateTest := range integrationTests.Tests {
 		if candidateTest.Name() == integrationTestName {
 			return candidateTest
 		}
@@ -255,17 +255,37 @@ func getIntegrationTest() integrationTypes.IntegrationTest {
 }
 ```
 
-Notice that I'm importing both an `integration` package and an `integrationTypes` package. The reason for splitting those is so that the rest of the lazygit code can depend on the `IntegrationTest` and `GuiDriver` interfaces without actually needing to depend on all the other integration test code. It's only in this injector file that isn't part of the final lazygit binary where we depend on the actual tests.
-
-## More Import Cycles
-
-Go makes it very tempting to just lump everything into one big package for the sake of avoiding cyclic import errors. Nonetheless, it felt appropriate to have my actual integration tests in their own directory (and to even have subdirectories for different test categories). When you have hundreds of test files, you don't want them mixed in with more general code. My integration package depends on my tests because it needs to re-export them, so my tests couldn't depend on the integration package where the IntegrationTest, Input, Assert, and Shell structs lived. So I moved those out into a `components` sub-package.
+Notice that I'm importing both an `integrationTests` package and an `integrationTypes` package. The reason for splitting those is so that the rest of the lazygit code can depend on the `IntegrationTest` and `GuiDriver` interfaces without actually needing to depend on all the other integration test code. It's only in this injector file that isn't part of the final lazygit binary where we depend on the actual tests.
 
 Here's how the package is arranged now:
 
-![]({{ site.baseurl }}/images/posts/integration_tests/6.jpg)
+![]({{ site.baseurl }}/images/posts/integration_tests/new.png)
 
-I'd be interested to see if I can clean this up even more (perhaps by extracting the types out to some common place, but that would mean less cohesion). At any rate, no cyclic dependencies!
+That yellow arrow bothers me because I feel that all arrows from one folder to the next should go in the same direction (even though Go is satisfied because there's no cycles among the packages themselves). There are a few things I could do:
+
+### Create a new top-level types package
+
+![]({{ site.baseurl }}/images/posts/integration_tests/types-folder.png)
+
+This would be simple enough, but it would woefully reduce the cohesion of the codebase: for any given package that would otherwise define its own types package you need to go and look it up in the far-away top-level types package. I'm willing to be persuaded that this is actually a good pattern but I'm not yet convinced.
+
+### Duplicate the integration folder's types into the gui folder's types
+
+![]({{ site.baseurl }}/images/posts/integration_tests/dupe.png)
+
+Given that interfaces can be implicitly implemented, Go happily allows you to duplicate them. The integration package has its definition and the gui package has its definition and if they get out of sync we'll get a compile error. The problem with this is that I actually prefer to explicitly implement interfaces both for the sake of documentation/discoverability, and so that when the interface isn't implemented I get an error situated in the actual struct definition rather than a random call site. There's also the fact that you can't easily substitute a slice of one interface type with another.
+
+I also don't like the idea of having to change two places every time I want to change the interface.
+
+### Merge the integration folder's types with the gui folder's types
+
+![]({{ site.baseurl }}/images/posts/integration_tests/merge.png)
+
+This will certainly simplify things, but does it make conceptual sense? The only reason that our gui package defines a GuiDriver implementation is because we have integration tests. If we were to delete the integration test package tomorrow we would also delete the gui driver. So our integration package is the one that sets the rules and the gui package needs to obey.
+
+Or is it the other way around? Is the gui package the one saying 'I will allow any integration test framework to pass me a test so long as it conforms to my test interface that itself takes my GuiDriver interface.
+
+One thing is for sure, the only reason we would ever change the GuiDriver interface is for the sake of writing tests, which has me leaning towards keeping the types in the integration folder. But I'm conflicted.
 
 ## Would You Like A Test With That Test?
 
