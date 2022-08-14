@@ -326,7 +326,7 @@ Keeping GuiDriver as its own interface, rather than just directly depending on t
 - The GuiDriver interface and implementation are both named GuiDriver. See the appendix below
 - Hiding the uncommon test args like Skip and ExtraCmdArgs makes them less discoverable for when somebody needs to use them. I might include them in the callsites unconditionally.
 - My `Input` internally holds an instance of `Assert`, suggesting perhaps they should just be combined into one
-- It's idiomatic to have all `main.go` files in a `cmd` directory at the root level, but I've currently got my test-specific stuff within the integration package for the sake of co-location. I might change this even just by adding some stub `main.go` files which directly invoke code in the integration package.
+- It's idiomatic to have all `main.go` files in a `cmd` directory at the root level, but I've currently got my test-specific stuff within the integration package for the sake of co-location. I might change this even just by adding some stub `main.go` files which directly invoke code in the integration package. _EDIT: I've now made this change_
 
 ## Conclusion
 
