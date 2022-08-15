@@ -36,7 +36,7 @@ Comments that elucidate the intention behind the code belong in the code base. C
 
 There is nothing worse for a reviewer than reading and comprehending a huge block of code only to find that as you scroll down through a PR's changes, that huge block was simply cut and pasted from another file. If GitHub is displaying the addition before the removal, give the reviewer a heads up. If the removal comes first, and the addition is more than a flick of the scrollbar away, leave a comment saying you're just moving that code.
 
-The far darker side of this coin is that if rather than cut and paste you _copy_ and paste a huge chunk of code, you'd better make that clear to the reviewer, because unlike with a cut-paste where the cut code is visible, the reviewer will only know that the code was copied by channeling their inner psychic powers. If you have copied a huge chunk of code without many modifications, that is a sign you need to DRY things up. If you are too lazy to do that, at least tell your colleagues that you're too lazy so that they can berate you for it on the review.
+The far darker side of this coin is that if rather than cut and paste you _copy_ and paste a huge chunk of code, you'd better make that clear to the reviewer, because unlike with a cut-paste where the cut code is visible, the reviewer will only know that the code was copied by channeling their inner psychic powers. If you have copied a huge chunk of code without many modifications, that is a sign you need to DRY things up. If you are too lazy to do that, at least tell your colleagues that you're too lazy so that they can berate you for it on the review, or if there is a good reason why you don't want to DRY things up, make that clear.
 
 ### Guide the reviewer through the code
 
