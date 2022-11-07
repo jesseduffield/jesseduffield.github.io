@@ -162,7 +162,7 @@ The constructor handles missing args by using defaults, and complains at runtime
 
 ## Unstable Interfaces
 
-Initially the `Input` and `Assert` interfaces were implemented in the gui package (where most of the action in lazygit happens). I quickly found that it was a pain in the ass to maintain these, as there are many things you many things you may want to input, and many things you may want to assert. Every new method I added meant updating the implementation struct in the gui package as well as the interface back in the integration package. Interfaces work best when they are stable, and if you find yourself with an interface that has only one implementation, where you're frequently adding new methods, you may have picked the wrong abstraction.
+Initially the `Input` and `Assert` interfaces were implemented in the gui package (where most of the action in lazygit happens). I quickly found that it was a pain in the ass to maintain these, as there are many things you may want to input, and many things you may want to assert. Every new method I added meant updating the implementation struct in the gui package as well as the interface back in the integration package. Interfaces work best when they are stable, and if you find yourself with an interface that has only one implementation, where you're frequently adding new methods, you may have picked the wrong abstraction.
 
 `InputImpl`, my input implementation¹, had a `pressKey` method which actually made use of gui-specific code, but I had all these other convenience methods that were just building on top of that method without needing access to any internals. For example:
 
