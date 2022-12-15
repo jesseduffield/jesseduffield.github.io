@@ -32,6 +32,25 @@ I partially agree: if every language was bound by the principle of least surpris
 
 On the other hand, when you need to switch back and forth between languages each day (e.g. jumping between a Ruby backend and Javascript frontend, as many do) small idiosyncracies in the language can be a pain. Of course, JS and Ruby have so many differences that you could argue that `unless` is the least of your problems, but I see `unless` as having sufficiently little value that removing it helps reduce that friction at a low cost. But this is my personal experience and if you find `unless` to be a great language feature, then the cost won't seem as low to you.
 
+Perhaps more crucially, plenty of people _are_ familiar with the language and still don't like `unless`:
+
+> Just to offer my own $0.02: I've been working with Ruby professionally for ~8 years, through being a Homebrew maintainer for ~12 years and programming professionally (not just using Ruby) for ~14 years and: I find all cases of unless ... || or unless ... && (including the above) hard to mentally parse and, particularly, to accurately and consistent reverse the logic (by turning it into an if).
+_- [github](https://github.com/rubocop/rubocop/issues/5388#issuecomment-756026502)_
+
+> Weirdly, Ruby was one of the first languages I learned early in my career, and at the time I had no problem with `unless`. But after years of experience with other languages, I similarly feel that `if` statements now trigger the fast pattern matching circuits in my brain, while `unless` makes me do a double-take and basically translate it into `if not`
+_- [HN](https://news.ycombinator.com/item?id=33965933)_
+
+> As a ruby dev of 5+ years, I still have an easier time with `if !ruby_dev`. I have to translate `unless` to `if !` every single time to grok something. Almost like an extra step in an algebraic expression being simplified.
+_- [HN](https://news.ycombinator.com/item?id=33985643)_
+
+> 'I've written ruby everyday for the past 5 years. I still cannot read an unless statement and understand it first time. Most of the time i'm translating it to `if !` anyway'
+_- [HN](https://news.ycombinator.com/item?id=33966573)_
+
+> I've been doing Rails for 10+ years and `unless x` absolutely breaks my mind. I have to internally convert it to `if !x` and evaluate it in my head 90% of the time
+_- [HN](https://news.ycombinator.com/item?id=33973885)_
+
+So familiarity is not crux of the issue.
+
 ## All language constructs can be abused, who cares?
 
 There were a couple of comments to this effect:
@@ -56,7 +75,7 @@ delete_all_database_tables || raise "Failed to delete all database tables. Check
 
 That's the kind of code that could make a person fall out of their chair if they didn't notice the if-condition at the end. And yet, I like that I can use a post-if for a one-liner guard clause and save some vertical space. As long as the `if` is in peripheral vision from the start of the line, I'm fine with it.
 
-So I'm not an anti-abuse nazi (oxymoron I know), I just think that unlike post-if conditions, `unless` doesn't have enough of a benefit to justify the costs that I _personally_ perceive (more on that later).
+All of that to say that I'm not an anti-abuse nazi (oxymoron I know). I just think that unlike post-if conditions, `unless` doesn't have enough of a benefit to justify the costs that I _personally_ perceive (more on that later).
 
 Okay, so what if you have a linter rule that says you can't use unless with a negation (e.g. `unless !A`) and you can't use unless with a conjunction (e.g. `unless A || B`). Well then the capacity for abuse goes down dramatically. There are _still_ however, some things that a linter might fail to catch (depending on how sophisticated it is). For example:
 
@@ -73,13 +92,7 @@ Which I find clearer because there's no negation (I'd be interested to know if a
 
 ## How hard is `unless` to read, really?
 
-The more I read through comments and see the arguments put forth, the more I realise there are basically two kinds of people: there are those who concede that unless can be abused but who personally find it to be a good feature, and there are those like me whose brain just breaks whenever they encounter `unless` and who need to waste time translating it to `if !`. Some examples (check the comments threads ([1](https://news.ycombinator.com/item?id=33965933), [2](https://jesseduffield.com/Unless/)) yourself to get a feel for the proportions):
-
-> Just to offer my own $0.02: I've been working with Ruby professionally for ~8 years, through being a Homebrew maintainer for ~12 years and programming professionally (not just using Ruby) for ~14 years and: I find all cases of unless ... || or unless ... && (including the above) hard to mentally parse and, particularly, to accurately and consistent reverse the logic (by turning it into an if).
-_- [github](https://github.com/rubocop/rubocop/issues/5388#issuecomment-756026502)_
-
-> Weirdly, Ruby was one of the first languages I learned early in my career, and at the time I had no problem with `unless`. But after years of experience with other languages, I similarly feel that `if` statements now trigger the fast pattern matching circuits in my brain, while `unless` makes me do a double-take and basically translate it into `if not`
-_- [HN](https://news.ycombinator.com/item?id=33965933)_
+The more I read through comments and see the arguments put forth, the more I realise there are basically two kinds of people: there are those who concede that unless can be abused but who personally find it to be a good feature, and there are those like me whose brain just breaks whenever they encounter `unless` and who need to waste time translating it to `if !`. Some more examples (check the comments threads ([1](https://news.ycombinator.com/item?id=33965933), [2](https://jesseduffield.com/Unless/)) yourself to get a feel for the proportions):
 
 > ...But every time I read "unless" in code it's quite jarring. I have to consciously translate it to "if not", and even then seeing the "unless" keeps tripping me off, perhaps because it's awkward in English to start a sentence out of the blue with "unless".
 _- [HN](https://news.ycombinator.com/item?id=33971759)_
@@ -87,23 +100,26 @@ _- [HN](https://news.ycombinator.com/item?id=33971759)_
 > ...I love Ruby, but the 'if' variation always get immediately parsed by my brain, while the 'unless' variation requires many seconds of thinking.
 _- [HN](https://news.ycombinator.com/item?id=33975421)_
 
-> As a ruby dev of 5+ years, I still have an easier time with `if !ruby_dev`. I have to translate `unless` to `if !` every single time to grok something. Almost like an extra step in an algebraic expression being simplified.
-_- [HN](https://news.ycombinator.com/item?id=33985643)_
-
 > 'if !something' clicks instantly. for 'unless' I have to read out the statement in my head, and draw mental logic lines about what condition this is checking.
 _- [HN](https://news.ycombinator.com/item?id=33965933)_
-
-> 'I've written ruby everyday for the past 5 years. I still cannot read an unless statement and understand it first time. Most of the time i'm translating it to `if !` anyway'
-_- [HN](https://news.ycombinator.com/item?id=33966573)_
-
-> I've been doing Rails for 10+ years and `unless x` absolutely breaks my mind. I have to internally convert it to `if !x` and evaluate it in my head 90% of the time
-_- [HN](https://news.ycombinator.com/item?id=33973885)_
 
 My goal with the original post was to see just how small a minority I was in, and I'm pleasantly surprised to find I'm not as alone as I had thought. But if I had known that from the start, I probably wouldn't have spent so long trying to argue from the perspective of somebody who thinks `unless` helps readability _sometimes_. Instead I would just say 'loads of normal people really struggle with this keyword despite being familiar with it'.
 
 So arguing about whether it can be abused, and by how much, seems to neglect the core of the issue (conveniently for me given that in the above section I concede that linting rules can reduce the risk of abuse). The core of the issue is that some people like `unless` _despite_ the potential for abuse, and some people dislike it _regardless_ of whether it's abused. How do you reconcile that?
 
-Well obviously you just apply some utilitarian ethics and say that the suffering of the cohort who struggle to read `unless` outweighs the joy of those who like it and because you can't argue against lived experience, that means that now everybody has to do as I say! Ha, Take that! But of course you could argue that people like me are just refusing to take `unless` at face value and that our choice to translate it into `if !` is just a result of giving in to the paranoia that we're going to think the condition was `A` when it was actually `!A` and cost our company millions of dollars (I genuinely think that may be what's going on here and I wonder if people with OCD traits are overrepresented in the `unless` detractors). I generally don't like the idea that the self-professed suffering of a small cohort of people gets to take precedence over everybody else (before you cancel me, know that it depends on the kind of suffering!) and so in the original post I say:
+One pro-`unless` commenter acknowledged this conundrum:
+
+> I find the word "unless" helpful when it eliminates double negatives.
+> But there are enough people on this thread who feel differently that it makes me wonder if maybe we're wrong. If code is meant to be read and understood by all, and if "unless" is confusing to a large number of people, maybe those of us who like it should knock it off.
+>
+> I do find it more elegant and easier to read, but maybe you and I can process double negatives easier than the anti-unless crowd are able to process "unless" logic.
+>
+> If that's the case, I'd be willing to sacrifice my preference for "unless" for the greater good.
+> _- [HN](https://news.ycombinator.com/item?id=33969956)_
+
+If we follow utilitarian ethics, then the obvious solution to the conundrum is to say that the suffering of the cohort who struggle to read `unless` outweighs the joy of those who like it and because you can't argue against lived experience, that means that now everybody has to do as I say! Ha, Take that!
+
+But of course you could argue that people like me are just refusing to take `unless` at face value and that our choice to translate it into `if !` is just a result of giving in to the paranoia that we're going to think the condition was `A` when it was actually `!A` and cost our company millions of dollars (I genuinely think that may be what's going on here and I wonder if people with OCD traits are overrepresented in the `unless` detractors). I generally don't like the idea that the self-professed suffering of a small cohort of people gets to take precedence over everybody else (before you cancel me, know that it depends on the kind of suffering!) and so in the original post I say:
 
 > This post is not a call to arms to try and get any style guide to change, because reading through some of the comments on the topic, there are people who find unless more readable compared to if ! in the vast majority of cases. But my experience has been the exact opposite, ... I really just want to see if other people relate to my experience
 
