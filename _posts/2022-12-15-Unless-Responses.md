@@ -12,7 +12,7 @@ In this post I'm going to address some of the themes I saw in the comments. The 
 
 Alright, onto the first topic:
 
-## Who cares if a language readable to people unfamiliar with the language?
+## Who cares if a language is readable to people unfamiliar with the language?
 
 In the post, I say:
 
