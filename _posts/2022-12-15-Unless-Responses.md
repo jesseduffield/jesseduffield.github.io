@@ -21,12 +21,12 @@ In the post, I say:
 One commenter says:
 
 > Personally, I don't think "readable by people that don't know the language" is a reasonable feature to optimize a language around.
-- [HN](https://news.ycombinator.com/item?id=33974501)
+_- [HN](https://news.ycombinator.com/item?id=33974501)_
 
 Another commenter says:
 
 > Matz has a very interesting and famous quote about the principle of least surprise: "it means the principle of least surprise after you learn Ruby very well."
-- [HN](https://news.ycombinator.com/item?id=33978439)
+_- [HN](https://news.ycombinator.com/item?id=33978439)_
 
 I partially agree: if every language was bound by the principle of least surprise to never diverge from other languages, then what's the point of having multiple languages? I firmly believe that every developer should go through an gestation period with a language before making judgements about its readability.
 
@@ -37,10 +37,10 @@ On the other hand, when you need to switch back and forth between languages each
 There were a couple of comments to this effect:
 
 > All language can be abused if you try hard enough
-- [HN](https://news.ycombinator.com/item?id=33969386)
+_- [HN](https://news.ycombinator.com/item?id=33969386)_
 
 > My point is that experienced engineers will use the language as it was intended to and not abuse its features.
-- [HN](https://news.ycombinator.com/item?id=33976764)
+_- [HN](https://news.ycombinator.com/item?id=33976764)_
 
 I'm very sympathetic to this argument, given that I've criticised Go for leaving out constructs that I thought would be useful, even if there was a chance for abuse (e.g. ternaries). In fact, even within ruby there are constructs I find to be often abused that I think nonetheless are elegant enough that I like them. For example, ruby has post-if conditions:
 
@@ -76,28 +76,28 @@ Which I find clearer because there's no negation (I'd be interested to know if a
 The more I read through comments and see the arguments put forth, the more I realise there are basically two kinds of people: there are those who concede that unless can be abused but who personally find it to be a good feature, and there are those like me whose brain just breaks whenever they encounter `unless` and who need to waste time translating it to `if !`. Some examples (check the comments threads ([1](https://news.ycombinator.com/item?id=33965933), [2](https://jesseduffield.com/Unless/)) yourself to get a feel for the proportions):
 
 > Just to offer my own $0.02: I've been working with Ruby professionally for ~8 years, through being a Homebrew maintainer for ~12 years and programming professionally (not just using Ruby) for ~14 years and: I find all cases of unless ... || or unless ... && (including the above) hard to mentally parse and, particularly, to accurately and consistent reverse the logic (by turning it into an if).
-- [github](https://github.com/rubocop/rubocop/issues/5388#issuecomment-756026502)
+_- [github](https://github.com/rubocop/rubocop/issues/5388#issuecomment-756026502)_
 
 > Weirdly, Ruby was one of the first languages I learned early in my career, and at the time I had no problem with `unless`. But after years of experience with other languages, I similarly feel that `if` statements now trigger the fast pattern matching circuits in my brain, while `unless` makes me do a double-take and basically translate it into `if not`
-- [HN](https://news.ycombinator.com/item?id=33965933)
+_- [HN](https://news.ycombinator.com/item?id=33965933)_
 
 > ...But every time I read "unless" in code it's quite jarring. I have to consciously translate it to "if not", and even then seeing the "unless" keeps tripping me off, perhaps because it's awkward in English to start a sentence out of the blue with "unless".
-- [HN](https://news.ycombinator.com/item?id=33971759)
+_- [HN](https://news.ycombinator.com/item?id=33971759)_
 
 > ...I love Ruby, but the 'if' variation always get immediately parsed by my brain, while the 'unless' variation requires many seconds of thinking.
-- [HN](https://news.ycombinator.com/item?id=33975421)
+_- [HN](https://news.ycombinator.com/item?id=33975421)_
 
 > As a ruby dev of 5+ years, I still have an easier time with `if !ruby_dev`. I have to translate `unless` to `if !` every single time to grok something. Almost like an extra step in an algebraic expression being simplified.
-- [HN](https://news.ycombinator.com/item?id=33985643)
+_- [HN](https://news.ycombinator.com/item?id=33985643)_
 
 > 'if !something' clicks instantly. for 'unless' I have to read out the statement in my head, and draw mental logic lines about what condition this is checking.
-- [HN](https://news.ycombinator.com/item?id=33965933)
+_- [HN](https://news.ycombinator.com/item?id=33965933)_
 
 > 'I've written ruby everyday for the past 5 years. I still cannot read an unless statement and understand it first time. Most of the time i'm translating it to `if !` anyway'
-- [HN](https://news.ycombinator.com/item?id=33966573)
+_- [HN](https://news.ycombinator.com/item?id=33966573)_
 
 > I've been doing Rails for 10+ years and `unless x` absolutely breaks my mind. I have to internally convert it to `if !x` and evaluate it in my head 90% of the time
-- [HN](https://news.ycombinator.com/item?id=33973885)
+_- [HN](https://news.ycombinator.com/item?id=33973885)_
 
 My goal with the original post was to see just how small a minority I was in, and I'm pleasantly surprised to find I'm not as alone as I had thought. But if I had known that from the start, I probably wouldn't have spent so long trying to argue from the perspective of somebody who thinks `unless` helps readability _sometimes_. Instead I would just say 'loads of normal people really struggle with this keyword despite being familiar with it'.
 
