@@ -3,7 +3,7 @@ layout: post
 title: Don't Read This Follow-up Post 'Unless' You ARE A Non-Ruby Developer
 ---
 
-My last post on Ruby's `unless` keyword was lucky (or unlucky) enough to get some attention in its own comments and on Hacker News. Thanks to everybody who took the time to read it and comment :)
+My last [post](https://jesseduffield.com/Unless/) on Ruby's `unless` keyword was lucky (or unlucky) enough to get some attention in its own comments and on Hacker News. Thanks to everybody who took the time to read it and comment :)
 
 In this post I'm going to address some of the themes I saw in the comments. The three bigs ones are:
 * Who cares if a language is readable to people unfamiliar with the language?
@@ -117,7 +117,7 @@ One pro-`unless` commenter acknowledged this conundrum:
 > If that's the case, I'd be willing to sacrifice my preference for "unless" for the greater good.
 > _- [HN](https://news.ycombinator.com/item?id=33969956)_
 
-If we follow utilitarian ethics, then the obvious solution to the conundrum is to say that the suffering of the cohort who struggle to read `unless` outweighs the joy of those who like it and because you can't argue against lived experience, that means that now everybody has to do as I say! Ha, Take that!
+Indeed, the greater good! If we follow utilitarian ethics, then the obvious solution to the conundrum is to say that the suffering of the cohort who struggle to read `unless` outweighs the joy of those who like it and because you can't argue against lived experience, that means that now everybody has to do as I say! Ha, Take that!
 
 But of course you could argue that people like me are just refusing to take `unless` at face value and that our choice to translate it into `if !` is just a result of giving in to the paranoia that we're going to think the condition was `A` when it was actually `!A` and cost our company millions of dollars (I genuinely think that may be what's going on here and I wonder if people with OCD traits are overrepresented in the `unless` detractors). I generally don't like the idea that the self-professed suffering of a small cohort of people gets to take precedence over everybody else (before you cancel me, know that it depends on the kind of suffering!) and so in the original post I say:
 
