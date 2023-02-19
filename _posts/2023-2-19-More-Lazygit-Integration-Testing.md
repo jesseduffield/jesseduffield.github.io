@@ -1,6 +1,6 @@
 ---
 layout: post
-title: More Lazygit Integration Testing (Dev Blog Entry)
+title: More Lazygit Integration Testing (Dev Blog)
 ---
 
 It's been a while since I wrote about Lazygit but rest assured things are ticking along in the background. I spent a chunk of my holidays on a PR to refactor some architectury things but that's a long way off being fit for merging. Today I want to give an update on the integration test migration that I kicked off *tugs at collar* a few months ago now. Unfortunately I'm only halfway through (120 integration tests all up, with 60 having been migrated across).
