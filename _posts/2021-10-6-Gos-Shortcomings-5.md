@@ -198,7 +198,7 @@ Consider that there are only three times you're going to have `self` included in
 2. when calling `self.myMethod()`
 3. when passing `self` as an argument to another function
 
-In cases 1 and 2, the fact you're copying that code means there's a good chance you're moving `myField` or `myMethod` into the new struct as well, which means continuing to use `self` is perfectly fine. If you're dealing with public fields/methods then the only risk is that those same fields/methods exist in the destination struct, which I find unlikely. As for case 3, am I the only one who considers passing `self` as an argument a code smell? I hate when people invoke code smells to win an argument so take this with a grain of salt but if a struct passes itself as an argument that tells me it knows too much. If I'm missing a common use case where this practice is completely sensible please let me know.
+In cases 1 and 2, the fact you're copying that code means there's a good chance you're moving `myField` or `myMethod` into the new struct as well, which means continuing to use `self` is perfectly fine. If you're dealing with public fields/methods then the only risk is that those same fields/methods exist in the destination struct, which I find unlikely. I rarely see case 3 given that typically you would define a method rather than have a function take `self` as an argument but even in cases like the Visitor pattern you really do just want to pass `self` on its own without delegating to a field on the struct.
 
 So yes, it is possible that when moving code from one struct to another, you can run into this problem, but I consider the problem too minimal for me to disavow `self`.
 
