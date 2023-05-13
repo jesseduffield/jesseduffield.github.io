@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Master vs Main
+published: false
 ---
 
 _The following is a fictional conversation between two developers of different political persuasions. This is really just my way of thinking out loud about the different perspectives on the topic, and if I've done my job properly, you'll have no idea which of two fictional developers I agree with more. I intend to unlist this post in the future just because of how controversial the topic is._
