@@ -306,7 +306,7 @@ Having said all that, oh my god I cannot wait until Go [introduces generics](htt
 
 If you have the luxury of using a language which does support filter/map/reduce and friends, use them!
 
-If you're in a non-typed language, sometimes a judgement call is required to pick between a mutative approach that exposes the underlying types and a functional approach which is harder to parse (e.g. `.reduce` vs `.forEach`).
+If you're in a dynamically-typed language, sometimes a judgement call is required to pick between a mutative approach that exposes the underlying types and a functional approach which is harder to parse (e.g. `.reduce` vs `.forEach`).
 
 But whether you're writing code or hunting mosquitoes, if there's anything to take away from this post, its to always ask yourself:
 
