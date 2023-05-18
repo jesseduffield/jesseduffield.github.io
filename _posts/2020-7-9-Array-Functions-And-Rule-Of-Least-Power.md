@@ -288,7 +288,7 @@ const hasApple = fruits.some(fruit => fruit === 'apple'); // equals: true
 orangeIndexes; // equals: [0];
 ```
 
-I'm not saying option 2 is better than option 1. Sometimes, for all its correctness, a functional solution can simply be much harder to read than a mutative alternative, particularly in non-typed languages.
+I'm not saying option 2 is better than option 1. Sometimes, for all its correctness, a functional solution can simply be much harder to read than a mutative alternative, particularly in dynamically-typed languages.
 
 What I'm saying is that both option 1 and 2 are vastly superior to the half-functional half-mutative code we started with: the important take away here is that from `.reduce` down to `.some`, side effects in callbacks erode the expressive power of these functions to communicate the writer's intent and make for more difficult reading than that news article about the domestic grenade explosion in mosquito season.
 
