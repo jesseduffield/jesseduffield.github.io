@@ -306,6 +306,8 @@ I'd like to shoutout contributors who've been part of the journey at different s
 
 I want to give a special shoutout to Stefan Haller and Luka Markušić who currently comprise the core team. You've both been invaluable for Lazygit's development, maintenance, and direction. I also hereby publicly award Stefan the prize of 'most arguments won against maintainer' ;)
 
+I also want to shoutout [Appwrite](https://appwrite.io/) who generously sponsored me for a year. It warms my heart when companies donate to open source projects.
+
 As for you, dear reader: if you would like to support Lazygit's development you can join the team by picking up an [issue](https://github.com/jesseduffield/lazygit/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) or expressing your intent to help out in the [discord channel](https://discord.gg/ehwFt2t4wt)
 
 And as always, if you want to support me, please consider [donating](https://github.com/sponsors/jesseduffield) <3
