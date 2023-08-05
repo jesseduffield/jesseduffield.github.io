@@ -147,6 +147,8 @@ var RewordLastCommit = NewIntegrationTest(NewIntegrationTestArgs{
 })
 ```
 
+I wish I had come up with that framework from the get-go: it would have saved me a lot of time fixing bugs and migrating tests from the old framework.
+
 ## What comes next?
 
 If I could flick my wrist and secure funding to go fulltime on Lazygit I'd do it in a heartbeat, but given the limited time available, things move slower than I would like. Here are some things I'm excited for:
