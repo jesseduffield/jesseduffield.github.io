@@ -161,6 +161,8 @@ If I could flick my wrist and secure funding to go fulltime on Lazygit I'd do it
 * More performance improvements
 * A million small enhancements
 
+I've just wrapped up worktree support, and my current focus is on improving documentation.
+
 If you want to be part of what comes next, join the team! There are plenty of [issues](https://github.com/jesseduffield/lazygit/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) to choose from and we're always up to chat in the [discord channel](https://discord.gg/ehwFt2t4wt).
 
 Okay, you've listened to be ramble about me and my project for long enough. Now onto the juicy stuff.
