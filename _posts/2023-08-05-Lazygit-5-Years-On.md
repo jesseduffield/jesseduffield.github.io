@@ -239,7 +239,7 @@ When I create a commit, several things happen:
 
 If you create a commit from the command line, you see none of this. You can query for any of this information after the fact, for example by running `git status`, but it only gives you one piece of information. If you're a beginner using the git CLI, you want to be learning the relationship between the different entities, and it's almost impossible to do that without seeing how these entities are changed as a direct result to your actions. Lazygit has helped some people [better understand git](https://www.reddit.com/r/git/comments/fr7o1p/lazygit_changed_how_i_understand_git/) by providing that visual context.
 
-Okay, so perhaps UIs aren't visually obscuring the _entities_, but they are obscuring the _commands_. Okay, fine, I concede this point. But my caveats in the _Git UIs sometimes do things you didn't expect_ section above still apply.
+Perhaps UIs aren't visually obscuring the _entities_, but they are obscuring the _commands_. Okay, fine, I concede that point. But my caveats in the _Git UIs sometimes do things you didn't expect_ section above still apply.
 
 ### The CLI is faster
 
