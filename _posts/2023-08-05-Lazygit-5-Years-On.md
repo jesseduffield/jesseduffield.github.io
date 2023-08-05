@@ -276,7 +276,7 @@ I want to drive home how easy it is to improve on the design of many CLIs. It's 
 So, I've said my piece about how TUIs can improve upon CLIs, but what about this separate trend of re-imagining web/desktop applications in the terminal?
 
 nsf, the author of the now unmaintained terminal UI framework [termbox](https://github.com/nsf/termbox), says the following at the top of the readme (emphasis mine):
-> This library is no longer maintained. It's pretty small if you have a big project that relies on it, just maintain it yourself. Or look for forks. Or look for alternatives. Or better - _avoid using terminals for UI_
+> This library is no longer maintained. It's pretty small if you have a big project that relies on it, just maintain it yourself. Or look for forks. Or look for alternatives. Or better - *avoid using terminals for UI*
 
 When you think about it, the only thing that separates terminals and standalone applications is that terminals only render text. The need for terminals was obvious when there were literally no alternatives. Now that we have shiny standalone applications for many things that were once confined to the terminal, it's harder to justify extending our terminals beyond CLI programs. But there are some reasons:
 
