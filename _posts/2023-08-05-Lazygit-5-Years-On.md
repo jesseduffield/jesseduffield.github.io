@@ -215,7 +215,7 @@ This is plainly true. Lazygit works around this by logging all the git commands 
 
 ### Git UIs don't cover the full API
 
-This is indeed an issue. However, as a git UI matures, it expands to cover more and more of git's API (until you end up like magit). And the fact you need to fall back to git is not really a point against the UI: when given the choice between using the CLI 100% of the time and using it 1% of the time, I pick the latter. If you forgive the shameless plug (is it really a plug given the topic of the post?) Lazygit also works around this with a pretty cool [custom commands system](https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium) that lets you invoke that bespoke git command from within lazygit; making use of the selection state to spare you from typing everything out yourself.
+This is indeed an issue. However, as a git UI matures, it expands to cover more and more of git's API (until you end up like magit). And the fact you need to fall back to git is not really a point against the UI: when given the choice between using the CLI 100% of the time and using it 1% of the time, I pick the latter. If you forgive the shameless plug (is it really a plug given the topic of the post?) Lazygit also works around this with a pretty cool [custom commands system](https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium) that lets you invoke that bespoke git command from the UI; making use of the selection state to spare you from typing everything out yourself.
 
 ### Git UIs make you vulnerable when you need to use the CLI
 
