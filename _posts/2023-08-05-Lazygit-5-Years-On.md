@@ -171,7 +171,7 @@ Okay, you've listened to me ramble about me and my project for long enough. Now 
 
 I'm not old enough to compare git with its predecessors, and from what I've heard from those who _are_ old enough, it was a big improvement.
 
-There are many who criticize git for being unnecessarily complex, in part due to its original purpose in serving the needs of linux development. [Fossil](https://www.fossil-scm.org/home/doc/trunk/www/fossil-v-git.wiki#history) is a recent git alternative that optimises for simplicity; serving the needs of small, high-trust teams. I disagree with a few of its [design choices](https://www.fossil-scm.org/home/doc/trunk/www/fossil-v-git.wiki#history), but it might be perfect for you!
+There are many who criticize git for being unnecessarily complex, in part due to its original purpose in serving the needs of linux development. [Fossil](https://www.fossil-scm.org/home/doc/trunk/www/fossil-v-git.wiki#history) is a ~~recent~~ (not-recent: released in 2006 as commenter nathell [points out](https://news.ycombinator.com/reply?id=37013854&goto=item%3Fid%3D37009879%2337013854)) git alternative that optimises for simplicity; serving the needs of small, high-trust teams. I disagree with a few of its [design choices](https://www.fossil-scm.org/home/doc/trunk/www/fossil-v-git.wiki#history), but it might be perfect for you!
 
 My beef with git is not so much its complexity (I'm fine dealing with multiple remotes and the worktree/index distinction) but its UX, including:
 * lacking high-level commands
