@@ -230,6 +230,10 @@ The argument perfectly applies to UIs, and is just as misguided. The truth is th
 
 What's especially peculiar is that many complex git commands involve a visual component whether you like it or not: the git CLI by default will open up a text editor to prepare for an interactive rebase which is visual in the sense that you're shown items whose position is meaningful and you can interact with them (e.g. shuffling commits around). The question is whether that interface is easy to use or not, and I find the default behaviour very difficult to use.
 
+For the record, I'm good at helping colleagues fix their git issues, but if I'm in their terminal trying to update their remote URL I have no idea what the command is. Not to worry: I do know how to run `brew install lazygit`.
+
+![Harry potter meme]({{ site.baseurl }}/images/posts/lazygit-5/allowed-a-terminal.png)
+
 ### Git UIs obscure what's really happening
 
 Again, strong disagree. Compared to the CLI, there's nothing to obscure!
