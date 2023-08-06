@@ -319,3 +319,7 @@ And as always, if you want to support me, please consider [donating](https://git
 I now leave you with a gif of our new explosion animation when nuking the worktree.
 
 ![]({{ site.baseurl }}/images/posts/lazygit-5/nuke-gif.gif)
+
+## Discussion links
+
+* [Hacker News](https://news.ycombinator.com/item?id=37009879)
