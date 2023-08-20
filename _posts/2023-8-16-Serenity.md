@@ -5,9 +5,9 @@ title: "The Wisdom To Know The Difference"
 
 I'm not religious but The Serenity Prayer has to be most profound invocation I know. It's so concise that it can't even be summarised without effectively restating it.
 
-> God, grant me the serenity to accept the things I cannot change,
-> the courage to change the things I can,
-> and the wisdom to know the difference.
+> God, grant me the serenity to accept the things I cannot change,  
+> the courage to change the things I can,  
+> and the wisdom to know the difference.  
 
 The Serenity Prayer splits things into two categories: those you can change and those you can't, and encourages you to work out what's what and act accordingly. I've found it fruitful to compare this way of navigating life with other frameworks.
 
