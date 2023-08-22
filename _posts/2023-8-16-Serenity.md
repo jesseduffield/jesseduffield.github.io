@@ -26,3 +26,11 @@ Interestingly, Mindfulness and Manifestation are not simply diametrically oppose
 I'm being very hand-wavey here: obviously 'ego' encapsulates more than your perceived power/abilities, but the parallels are interesting nonetheless. I also suspect both Manifestation and Mindfulness proponents would say I'm failing to properly understand their philosophies, and that's probably true, but I still feel like there's room for a framework that better addresses the facets of The Serenity Prayer. Perhaps the reason there is no straightforward framework for discerning what you can and can't change is that the world is a complicated place and there are countless situations that all require different responses. In fact you could define a piece of wisdom as a response to the question 'what should I do?', and boiling down all human wisdom into a simple framework is an impossible task.
 
 At any rate, I'll continue learning about Mindfulness to see how it can improve my life, but I suspect I'll continue to feel like it's a little incoherent, and I'll continue yearning for some other _simple_ framework which better conforms to The Serenity Prayer. But I'll likely be disappointed, and I hope God grants me the serenity to accept it.
+
+## ChatGPT Chimes In
+
+ChatGPT argues that I've oversimplified the teachings of Mindfulness:
+
+> Mindfulness emphasizes the ability to respond thoughtfully rather than react impulsively. It's not about accepting everything without action but discerning the best course of action. If a coworker's behavior annoys you, a mindful approach might involve recognizing your annoyance, understanding its roots, and choosing an appropriate way to address it rather than reacting out of irritation.
+
+Alright ChatGPT that may be so, but this always strikes me as a footnote on the broader thesis of Mindfulness and what is actually the correct response to a given situation is left as an exercise for the reader. But the correct response is exactly what I want your bloody framework to tell me! Granted, Mindfulness has enough on its plate trying to teach me how to control my impulses and remain clear-headed, but I nonetheless remain disappointed.
