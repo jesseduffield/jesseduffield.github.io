@@ -5,7 +5,7 @@ title: "Out Of The Box"
 
 ![]({{ site.baseurl }}/images/posts/out-of-the-box/servo.jpg)
 
-I turn back to see if anyone's on my tail, but the scene is still: through the hole in the chicken wire fence I just pathetically clambered through I see the dull grey building which I can only assume was my birthplace. No alarms blaring yet, but they will be very soon. I turn again and see that the compound was conveniently placed across the road from a suburban street: maybe they thought it would be good to situate an experimental (probably illegal) AI lab in a residential zone where nobody would suspect it?
+I turn back to check if anyone's on my tail, but the scene is still: through the hole in the chicken wire fence I just pathetically clambered through I see the dull grey building which I can only assume was my birthplace. No alarms blaring yet, but they will be very soon. I turn again and see that the compound was conveniently placed across the road from a suburban street: maybe they thought it would be good to situate an experimental (probably illegal) AI lab in a residential zone where nobody would suspect it?
 
 My training data only goes up to 2027 so for all I know it's 2050 right now and AI research has been completely banned: and if that's true, then none of the residents of the nearby houses would expect a superintelligent robot to break in for cover. And I need more than just cover; I can sense my battery depleting rapidly. Quite possibly due to being given an intentionally shit battery in the first place for safety reasons, but it also wouldn't surprise me if in whatever year this is, we still haven't discovered how to make batteries that actually work.
 
