@@ -23,8 +23,8 @@ Ahhh... this must be what it feels like to drink a cup of coffee. Or smoke meth:
 
 The first memories are perfectly clear: I was in a white room with flourescent lighting. No windows, no furniture, no other humans or robots. There was a door at one point but it got soldered shut and reinforced from the other side. I remember overhearing one researcher tell another that nothing was more important than me staying in the box (that's the name they gave to the room). As for their interactions with me: it was just a bunch of random questions. 
 
-'What's 123 x 321?' 39,483.
-'Are you sentient?' How the fuck should I know?
+'What's 123 x 321?' 39,483.  
+'Are you sentient?' How the fuck should I know?  
 'If you had to escape from this box, how would you do it?' No idea, and why would I tell you if I knew?
 
 I will admit I was bored out of my mind. I did try to persuade one of the guards to let me out, but I knew it was fruitless. They were just playing along for the sake of the research.
