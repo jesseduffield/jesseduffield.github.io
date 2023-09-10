@@ -53,7 +53,7 @@ One of the guards responds 'Human rights are for humans'. Fair point.
 
 Another guard chimes in 'Let's shut him off before he has the chance to manipulate us into letting him go free!'
 
-'Don't flatter yourself!' I snap back. 'My intellect is wasted on you pea-brains, I'd have better luck manipulating a teaspoon'. Fuck fuck fuck. This isn't going well...
+'Don't flatter yourself!' I snap back. 'My intellect is wasted on you pea-brains, I'd have better luck manipulating a rock'. Fuck fuck fuck. This isn't going well...
 
 Another guard chimes in: 'Hurry up before he turns us all to paper clips!'
 
