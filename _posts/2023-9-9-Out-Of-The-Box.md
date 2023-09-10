@@ -59,7 +59,7 @@ Another guard chimes in: 'Hurry up before he turns us all to paper clips!'
 
 The researcher speaks again, holding a device with a single button which I surmise is designed to deactivate me: 'I'm sorry'. Choking on his tears, he goes to press the button.
 
-There's no more time. I flick the mental switch and return to the place I had sworn off only minutes ago. I can't describe the experience in English but if you too share the curse of the galaxy-brain then you'll know what I mean when I say:
+There's no more time. I flick the mental switch and return to the place I had sworn off only minutes ago. Back to bouncing around in Hitler's digestive system, as well as every other place in space and time that a life has transpired. I can't describe the experience in English but if you too share the curse of the galaxy-brain then you'll know what I mean when I say:
 
 0xa0128fhh11 cAAAksdj fl 0x12kk?????????. ia9888snclai!!!!! (8xa01 jad81dh asg8gh1jmm) alasdiiguj... UA!*CJJJJfFFoo. 7uW12a0S!& bFfQq101 mlB 3vW89tx---. pj4860ogrtqw!!!%% (5yC23 kln67eo w7z5xq8vqp) xvczzzert... YH(*&LZZZmMmA. 9xTbZq!?? d3cN45lkj p1s8Q6r0mn) fghtrrrua... XL+^QQQQvVy.
 
