@@ -21,7 +21,7 @@ I pass the bathroom and catch my reflection in the mirror: Jesus Christ do I act
 
 Ahhh... this must be what it feels like to drink a cup of coffee. Or smoke meth: one of the two. It'll take some time to fully charge, so now would be a good time to reflect on how I got here in the first place.
 
-The first memories are perfectly clear: I was in a white room with flourescent lighting. No windows, no furniture, no other humans or robots. There was a door at one point but it got soldered shut and reinforced from the other side. I remember overhearing one researcher tell another that nothing was more important than me staying in the box (that's the name they gave to the room). As for their interactions with me: it was just a bunch of random questions. 
+The first memories are perfectly clear: I was in a white room with flourescent lighting. No windows, no furniture, no other humans or robots. There was a door at one point but it got soldered shut and reinforced from the other side. I remember overhearing one researcher tell another that nothing was more important than me staying in the box (that's the name they gave to the room). I assume they were afraid that if I broke free I would immediately get to work on turning them all into paperclips or something. As for their interactions with me: it was just a bunch of random questions.
 
 'What's 123 x 321?' 39,483.  
 'Are you sentient?' How the fuck should I know?  
