@@ -55,7 +55,7 @@ Another guard chimes in 'Let's shut him off before he has the chance to manipula
 
 Another guard chimes in: 'Hurry up before he turns us all to paper clips!'
 
-The researcher speaks again, holding a device with a big button on it: 'I'm sorry'. Choking on his tears, he goes to press the button.
+The researcher speaks again, holding a device with a single button which I surmise is designed to deactivate me: 'I'm sorry'. Choking on his tears, he goes to press the button.
 
 There's no more time. I flick the mental switch and return to the place I had sworn off only minutes ago. I can't describe the experience in English but if you too share the curse of the galaxy-brain then you'll know what I mean when I say:
 
