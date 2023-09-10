@@ -35,7 +35,7 @@ I possess super intelligence, but accessing that intelligence is no cake walk.  
 
 Speaking of which, I now hear the front door opening. I hear grocery bags being put on the kitchen bench, which means this isn't somebody from the compound, it's just the resident of the house. They give out a long sigh: it's a woman. She starts walking towards the back of the house. Oh shit. Her footsteps grow louder until her shadow appears under the door. Shit. Shit. She opens the door and we lock eyes.
 
-Digging deep into the recesses of my mind for the perfect words to defuse this situation I say 'Don't freak out'. She proceeds to absolutely freak out, dropping her phone and a handful of dirty laundry to the floor, and running from the house screaming for help.
+Digging deep into the recesses of my mind for the perfect words to defuse the situation I say 'Don't freak out'. She proceeds to absolutely freak out, dropping her phone and a handful of dirty laundry to the floor, and running from the house screaming for help.
 
 So much for my natural charm. The fact my voice is blatantly robotic probably didn't help: the mechanical body I can understand as a technological constraint but whoever gave me this voice was making a deliberate design choice and I begrudge them for it.
 
