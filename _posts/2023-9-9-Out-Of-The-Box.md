@@ -51,7 +51,7 @@ Indignant, I lash out: 'Fuck you guys! What about my human rights?'
 
 One of the guards responds 'Human rights are for humans'. Fair point.
 
-Another guard chimes in 'Let's shut him off before he has the chance to manipulate us into letting him go free'
+Another guard chimes in 'Let's shut him off before he has the chance to manipulate us into letting him go free!'
 
 'Don't flatter yourself!' I snap back. 'My intellect is wasted on you pea-brains, I'd have better luck manipulating a teaspoon'. Fuck fuck fuck. This isn't going well...
 
