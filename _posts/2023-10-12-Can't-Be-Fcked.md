@@ -40,3 +40,11 @@ Maybe you don't have the energy to write perfect code, but honesty requires less
 So, if you find that you CBF, don't be dismayed; it happens to everyone (except those very special people we all aspire to). If in the moment you don't have the strength to overcome it, at least be honest. And if you've been going 100% for too long, maybe it's time to take that holiday.
 
 I'd like to end this post with an exploration about how laziness evolved for a reason and that despite us all wishing we had more motivation, there are benefits to being selective with our energy, but... I CBF ;)
+
+## Discussion links
+
+* [Hacker News](https://news.ycombinator.com/item?id=37859311)
+
+## Other
+
+If you liked this post you may also like my [recent short story](https://jesseduffield.com/Out-Of-The-Box/) about an insecure superintelligent robot escaping from an AI lab
