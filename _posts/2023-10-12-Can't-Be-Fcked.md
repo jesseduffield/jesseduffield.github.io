@@ -23,7 +23,7 @@ Sometimes, I just CBF. I spent months (part time, of course) building out an end
 
 I raised an issue in somebody else's open source repo and they asked me to present them with a minimal repro git repo. Why haven't I done that yet? Because I CBF.
 
-Why do I still have so much of my code living in a God Struct? If I could just finish that big refactor I started over a year ago, my codebase will be far easier to navigate and contribute to. The answer, dear reader, is that I CBF.
+Why do I still have so much of my code living in a God Struct? If I could just finish that big refactor I started over a year ago, my codebase would be far easier to navigate and contribute to. The answer, dear reader, is that I CBF.
 
 Is it burnout? Maybe. Is it a lack of Growth Mindset? Hard to say. Is it just the reality of my personality? Who knows.
 
