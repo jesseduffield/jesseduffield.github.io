@@ -12,12 +12,16 @@
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Pursuit of Laziness" />
+    <meta name="twitter:creator" content="Jesse Duffield" />
+
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:title" content="{{ page.title }}" />
     {% endif %}
 
     {% if page.image %}
     <meta property="og:image" content="https://www.jesseduffield.com{{ page.image }}" />
-    <meta property="twitter:image" content="https://www.jesseduffield.com{{ page.image }}" />
+    <meta name="twitter:image" content="https://www.jesseduffield.com{{ page.image }}" />
     {% endif %}
