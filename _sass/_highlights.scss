@@ -15,29 +15,25 @@ code {
 }
 
 /* Adjusting the colors for better visibility and contrast */
-pre.highlight .k { color: #0072b1; } /* Keyword */
-pre.highlight .c, .cm, .cp, .c1, .cs { color: #6a737d; } /* Comment */
-pre.highlight .err { color: #d73a49; background-color: #ffebef; } /* Error */
-pre.highlight .l, .m, .mf, .mh, .mi, .mo, .il { color: #005cc5; } /* Literal & Numbers */
-pre.highlight .n, .nb, .bp, .vc, .vg, .vi { color: #24292e; } /* Name */
-pre.highlight .o { color: #d73a49; } /* Operator */
-pre.highlight .p { color: #24292e; } /* Punctuation */
-pre.highlight .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #032f62; } /* String */
-pre.highlight .na, .nc, .no, .nd, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv { color: #22863a; } /* Name */
-
-/* Specific to Go syntax */
-pre.highlight .kd { color: #d73a49; } /* Keyword.Declaration */
-pre.highlight .kt { color: #22863a; } /* Keyword.Type, for types like int, string */
-pre.highlight .nf { color: #6f42c1; } /* Name.Function, for function names */
-pre.highlight .nn { color: #005cc5; } /* Name.Namespace, for package names */
+pre.highlight .k, .kd { color: #0072b1; } /* Keyword - Blue for clarity */
+pre.highlight .c, .cm, .cp, .c1, .cs { color: #6a737d; } /* Comment - Muted gray */
+pre.highlight .err { color: #d73a49; background-color: #ffebef; } /* Error - Red with light background */
+pre.highlight .l, .m, .mf, .mh, .mi, .mo, .il { color: #d19a66; } /* Literal & Numbers - Orange for numbers */
+pre.highlight .n, .nb, .bp, .vc, .vg, .vi { color: #24292e; } /* Name - Standard black for names */
+pre.highlight .o { color: #d73a49; } /* Operator - Distinct red */
+pre.highlight .p { color: #24292e; } /* Punctuation - Standard black */
+/* String elements */
+pre.highlight .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #22863a; } /* String - Green for strings */
+/* Function and variable names */
+pre.highlight .na, .nc, .no, .nd, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv { color: #6f42c1; } /* Name - Purple for function and variable names */
 
 /* Other specific highlights */
-pre.highlight .ow { color: #d73a49; } /* Operator.Word */
-pre.highlight .w { color: #f8f8f2; } /* Text.Whitespace */
+pre.highlight .ow { color: #98c379; } /* Operator.Word - Light green for word operators */
+pre.highlight .w { color: #f8f8f2; } /* Text.Whitespace - Light color */
 pre.highlight .gh { } /* Generic Heading & Diff Header */
 pre.highlight .gu { color: #545454; } /* Generic.Subheading & Diff Unified/Comment? */
 pre.highlight .gd { color: #d73a49; } /* Generic.Deleted & Diff Deleted */
-pre.highlight .gi { color: #22863a; } /* Generic.Inserted & Diff Inserted */
+pre.highlight .gi { color: #98c379; } /* Generic.Inserted & Diff Inserted */
 
 /* Ensure other styles like italic/bold are preserved */
 pre.highlight .ge { font-style: italic; } /* Generic.Emph */
