@@ -66,7 +66,7 @@ In layman's terms, encapsulation is the act of grouping some things together int
 
 Plenty of people will disagree with this definition, because programmers disagree about everything. If you think 'abstraction' is a more apt word for my above definition, feel free to substitute that throughout the post.
 
-Okay, back to our internationalisation-ising.
+Okay, let's apply this concept to the problem at hand.
 
 ## Encapsulating internationalisation
 
