@@ -20,7 +20,7 @@ html {
 body {
   background: $white;
   // background: #f5f5f5; /* Light grey background */
-  font: 16px/1.6 $openSans; /* Modern font and line height */
+  font: 16px/1.6 $body; /* Modern font and line height */
   color: $darkGray; /* Darker text for better readability */
 }
 
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $helveticaNeue;
+  font-family: $pageHeading;
   color: $darkerGray;
   font-weight: bold;
 
@@ -209,7 +209,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $siteHeading;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -228,7 +228,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $siteHeading;
   font-size: 18px;
 
   @include mobile {
