@@ -176,8 +176,8 @@ container. Encapsulation, as an entity, refers to a package or an
 enclosure that holds (contains, encloses) one or more items. It is
 extremely important to note that nothing is said about "the walls of
 the enclosure." Specifically, they may be "transparent," "translucent,"
-or even "opaque."
-> ...
+or even "opaque." 
+> ... 
 > Programming languages have long supported encapsulation. For example,
 subprograms (e.g., procedures, functions, and subroutines), arrays, and
 record structures are common examples of encapsulation mechanisms
