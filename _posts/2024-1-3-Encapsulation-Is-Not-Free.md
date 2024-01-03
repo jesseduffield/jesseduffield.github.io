@@ -41,7 +41,7 @@ And so, we must _encapsulate_!
 
 ## Encapsulation
 
-The term _encapsulation_ is one that often gets tossed around alongside _abstraction_ and _data hiding_. To get a sense of just how little consensus there among authoritative sources on the difference between these three terms, see [Edward V. Berard's post on the topic](https://www.tonymarston.co.uk/php-mysql/abstraction.txt). The post concludes:
+The term _encapsulation_ is one that often gets tossed around alongside _abstraction_ and _data hiding_. To get a sense of just how little consensus there among authoritative sources on the differences between these three terms, see [Edward V. Berard's post on the topic](https://www.tonymarston.co.uk/php-mysql/abstraction.txt). The post concludes:
 
 > Like abstraction, the word "encapsulation" can be used to describe
 either a process or an entity. As a process, encapsulation means the
@@ -51,7 +51,9 @@ enclosure that holds (contains, encloses) one or more items. It is
 extremely important to note that nothing is said about "the walls of
 the enclosure." Specifically, they may be "transparent," "translucent,"
 or even "opaque." 
+>
 > ... 
+> 
 > Programming languages have long supported encapsulation. For example,
 subprograms (e.g., procedures, functions, and subroutines), arrays, and
 record structures are common examples of encapsulation mechanisms
@@ -136,7 +138,7 @@ In modern times, web apps are typically made as a Single Page Application (SPA) 
 
 But _encapsulation is not free._
 
-In the days before SPAs (ancient times, I know¹), loading a page all happened on the server: you would pull the info you needed from the database and directly build the HTML to return to the browser. Adding a new page was simple.
+In the days before SPAs (ancient times, I know[^1]), loading a page all happened on the server: you would pull the info you needed from the database and directly build the HTML to return to the browser. Adding a new page was simple.
 
 Compare that to now: in order to add a new page to a site, you'll typically design some new routes in your API, implement them, then get the frontend to call those routes and manipulate the data to produce the desired HTML. This typically happens across two different languages meaning two different teams are involved in the one page.
 
@@ -152,9 +154,9 @@ In some statically typed languages, when unit testing, the only way to test a cl
 
 Now you can test your class in isolation!
 
-But _encapsulation is not free²._
+But _encapsulation is not free[^2]._
 
-Now each time you add a method to the dependency class, you need to also update two other places: the interface and the mock class. And each time you try to jump to a method definition in your editor, you'll land in the interface which is useless³. How annoying!
+Now each time you add a method to the dependency class, you need to also update two other places: the interface and the mock class. And each time you try to jump to a method definition in your editor, you'll land in the interface which is useless[^3]. How annoying!
 
 Often, you don't need an oracle to tell you that the dependency class is only ever going to have one implementation, yet the language requires you to introduce the interface anyway.
 
@@ -200,8 +202,8 @@ Unfortunately, you are not an oracle. But with some foresight, you might just sa
 
 ## Footnotes
 
-¹: The backend and frontend may become more unified with the likes of Hotwired, HTMX, and React Server Actions but we're yet to see how much adoption it all gets.
+[^1]: The backend and frontend may become more unified with the likes of Hotwired, HTMX, and React Server Actions but we're yet to see how much adoption it all gets.
 
-²: This example stretches even my own definition of encapsulation: the class is the one doing the encapsulating, and it already has an interface by virtue of having a set of methods. Adding the separate stand-alone interface doesn't really encapsulate things further. Nonetheless, it has the exact same tradeoff as the other examples, so I'm including it. Perhaps the example is so hard to classify  because it's not actually doing anything: the standalone interface is identical to the class's own interface. The only real benefit aside from testability is that you can compile the classes independently.
+[^2]: This example stretches even my own definition of encapsulation: the class is the one doing the encapsulating, and it already has an interface by virtue of having a set of methods. Adding the separate stand-alone interface doesn't really encapsulate things further. Nonetheless, it has the exact same tradeoff as the other examples, so I'm including it. Perhaps the example is so hard to classify  because it's not actually doing anything: the standalone interface is identical to the class's own interface. The only real benefit aside from testability is that you can compile the classes independently.
 
-³: I'm sure there are IDEs out there which fix this problem somehow, but when writing Go in VS Code, the editor is not smart enough to ignore the mock implementation and just take you straight to the concrete implementation.
+[^3]: I'm sure there are IDEs out there which fix this problem somehow, but when writing Go in VS Code, the editor is not smart enough to ignore the mock implementation and just take you straight to the concrete implementation.
