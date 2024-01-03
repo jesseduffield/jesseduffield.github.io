@@ -32,7 +32,7 @@ func foo() {
 
 But this is not going to scale: every place in your code that contains a user-facing message must now have this conditional logic included. That makes it very difficult to add support for a new language, and it obfuscates your business logic.
 
-And so, we must _encapsulate_! Our business logic should not care what language is being used, so we can encapsulate our language-specific code behind an interface¹.
+And so, we must _encapsulate_¹! Our business logic should not care what language is being used, so we can encapsulate our language-specific code behind an interface.
 
 ```go
 // i18n.go
@@ -164,7 +164,28 @@ Unfortunately, you are not an oracle. But with some foresight, you might just sa
 
 ## Footnotes
 
-¹: 'Encapsulation' is a loosely defined term. Many places define it as the grouping of methods and data inside a class, such that the quintessential unit of encapsulation is a class. I'm using a broader definition of putting any logic behind an interface. Every class has an interface in the form of the set of methods on that class. And even a function has an interface in the form of the arguments and return value. Likewise, a struct has an interface in terms of the fields on that struct, independent of their actual values. Of course, a language-level `interface` (i.e. one that just defines a set of methods) is also an interface.
+¹: 'Encapsulation' is a loosely defined term. To get a sense of just how little consensus there among authoritative sources on the difference between abstraction, encapsulation, and information hiding, read [Edward V. Berard's post on the topic](https://www.tonymarston.co.uk/php-mysql/abstraction.txt). The post concludes:
+
+> Like abstraction, the word "encapsulation" can be used to describe
+either a process or an entity. As a process, encapsulation means the
+act of enclosing one or more items within a (physical or logical)
+container. Encapsulation, as an entity, refers to a package or an
+enclosure that holds (contains, encloses) one or more items. It is
+extremely important to note that nothing is said about "the walls of
+the enclosure." Specifically, they may be "transparent," "translucent,"
+or even "opaque."
+> ...
+> Programming languages have long supported encapsulation. For example,
+subprograms (e.g., procedures, functions, and subroutines), arrays, and
+record structures are common examples of encapsulation mechanisms
+supported by most programming languages. Newer programming languages
+support larger encapsulation mechanisms, e.g., "classes" in Simula
+([Birtwistle et al. 1973]), Smalltalk ([Goldberg and Robson, 1983]),
+and C++, "modules" in Modula ([Wirth, 1983]), and "packages" in Ada.
+
+So putting all your strings into an i18n struct is an instance of encapsulation, even if those strings are all completely visible at runtime (and they need to be or the encapsulation would be useless). It's certainly not abstraction or information hiding, because you're not really protecting the client from any details. Wrapping up your backend into a RESTful API is also encapsulation, as is wrapping up functionality inside a microservice. In general, encapsulation creates an explicit interface (not necessarily an `interface` language construct but that is a common example).
+
+The one case from this post that's more dubious is when you start with a class and you put it behind a stand-alone interface for the sake of testing. The class is the one doing the encapsulating, and it already has an interface by virtue of having a set of methods. Adding the separate stand-alone interface doesn't really encapsulate things further, yet doing so shares the exact same consequences as the other examples from this post (extra friction when changing the interface), which tells me that it's worthy of inclusion. Perhaps the example is so hard to talk about because it's not actually doing anything: the standalone interface is identical to the class's own interface. The only real benefit aside from testability is that you can compile the classes independently.
 
 ²: The backend and frontend may become more unified with the likes of Hotwired, HTMX, and React Server Actions but we're yet to see how much adoption it all gets.
 
