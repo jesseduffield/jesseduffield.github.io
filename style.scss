@@ -328,6 +328,13 @@ article td, th {
   border: 1px solid rgb(177, 177, 177);
 }
 
+.footnote {
+  font-size: 12px;
+  color: $blue;
+  vertical-align: super;
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import 'highlights';
