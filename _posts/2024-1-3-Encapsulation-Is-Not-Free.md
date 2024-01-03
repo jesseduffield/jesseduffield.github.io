@@ -1,4 +1,7 @@
-# Encapsulation Is Not Free
+---
+layout: post
+title: "Encapsulation Is Not Free"
+---
 
 So, you've made an open source project that is successful enough to require internationalisation. Where once upon a time you could just write an error message inline, now you need to support that error message in multiple languages:
 
