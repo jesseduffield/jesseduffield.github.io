@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Should Open Source Developers Get Paid?
-published: false
+unlisted: true
 ---
 
 This post is a draft so if by some crazy coincidence you've stumbled upon it please know that it is a work in progress!
