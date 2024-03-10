@@ -47,7 +47,7 @@ Three factors come to mind:
 * Complexity tolerance: Some devs are simply capable of keeping a very complex system in working memory, and others are not. I suspect short-term memory has a lot to do with it. Those with a lower complexity tolerance are more likely to keep things simple and strip out unnecessary complexity, whereas those with a higher complexity tolerance are more able to properly comprehend a complex problem domain and build an appropriate solution for it. Both sides have their own failure modes (over-simplifying vs over-complicating)
 * Mental glitches: The `unless` keyword in Ruby breaks my brain. It also breaks [other people's](https://jesseduffield.com/Unless-Responses/) brains, but most people have no issue with it.
 
-## 6. Incentive to be contrarian
+## 6. Contrarians
 
 Speaking of people being wired differently: some people are wired to be contrarian.
 
