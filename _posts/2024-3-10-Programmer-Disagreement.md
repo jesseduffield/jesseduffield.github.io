@@ -55,7 +55,7 @@ Speaking of people being wired differently: some people are wired to be contrari
 
 Does [Rob Pike](https://groups.google.com/g/golang-nuts/c/hJHCAaiL0so/m/kG3BHV6QFfIJ) really think that syntax highlighting in your code editor is juvenile? I don't know. But I do know that so long as humans walk the Earth, there will be high-status individuals with absolutely wild views (I'd say it to your face, Rob), and those views will enjoy some mind-share.
 
-It doesn't help that for sociological reasons, it pays to be contrarian. There's no such thing as bad publicity, and one easy way to get attention online is to just propose some crazy viewpoint backed by tortured arguments and wait as hoardes of Hacker News commenters rush in to set the story straight.
+It doesn't help that for sociological reasons, it pays to be contrarian. There's no such thing as bad publicity, and one easy way to get attention online is to just propose some crazy viewpoint backed by tortured arguments and wait as hordes of Hacker News commenters rush in to set the story straight.
 
 No matter how absurd the contention, there _will_ be a post online arguing it.
 
