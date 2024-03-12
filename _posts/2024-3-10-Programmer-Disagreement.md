@@ -7,13 +7,14 @@ unlisted: true
 The more you read up on software engineering topics online, the more you appreciate just how little agreement there is within the profession.
 
 Some examples of topics which are (often surprisingly) contentious:
-* [use of a debugger](https://news.ycombinator.com/item?id=37015253)
-* [use of syntax highlighting in IDEs](https://groups.google.com/g/golang-nuts/c/hJHCAaiL0so/m/kG3BHV6QFfIJ)
-* [testing private methods](https://news.ycombinator.com/item?id=30600479)
-* [how many unit tests to write](https://martinfowler.com/articles/2021-test-shapes.html)
-* functional vs object-oriented programming
-* static vs dynamically typed languages
-* hooks in react (compare [Hooks are the best thing to happen to React](https://news.ycombinator.com/item?id=28954450) with [Hooks are the worst thing to ever happen to React](https://news.ycombinator.com/item?id=25453421))
+
+- [use of a debugger](https://news.ycombinator.com/item?id=37015253)
+- [use of syntax highlighting in IDEs](https://groups.google.com/g/golang-nuts/c/hJHCAaiL0so/m/kG3BHV6QFfIJ)
+- [testing private methods](https://news.ycombinator.com/item?id=30600479)
+- [how many unit tests to write](https://martinfowler.com/articles/2021-test-shapes.html)
+- functional vs object-oriented programming
+- static vs dynamically typed languages
+- hooks in react (compare [Hooks are the best thing to happen to React](https://news.ycombinator.com/item?id=28954450) with [Hooks are the worst thing to ever happen to React](https://news.ycombinator.com/item?id=25453421))
 
 Why is this? Some possibilities:
 
@@ -33,7 +34,7 @@ Likewise, if you work in a high-performance environment where abstractions can h
 
 ## 3. People have different experiences
 
-Even within the same company, working on the same tool, two people can differ in their values. One senior dev may have firsthand experience with the perils of under-abstracting (think codebases rife with copy-pasted code and making a small change requires changing 50 files) while another may have firsthand experience of the perils of 
+Even within the same company, working on the same tool, two people can differ in their values. One senior dev may have firsthand experience with the perils of under-abstracting (think codebases rife with copy-pasted code and making a small change requires changing 50 files) while another may have firsthand experience of the perils of
 _over_-abstracting (think huge generalised 'systems' that nobody understands that were built in anticipation of future use cases that never came to pass).
 
 With various strategies, it's hard to find the sweet spot, and if you've only experienced one side of the spectrum, you can over-correct in the opposite direction as someone else.
@@ -43,11 +44,12 @@ With various strategies, it's hard to find the sweet spot, and if you've only ex
 Okay, what if two people grew up in the same town, attended the same university, took the same graduate job, and have worked together side by side until the present moment? They too can have completely different views on various programming topics, simply because their brains are wired differently.
 
 Three factors come to mind:
-* [Openness to experience](https://en.wikipedia.org/wiki/Openness_to_experience): This terribly-named personality trait from the Big Five Personality Traits describes intellectual curiosity, aesthetic sensitivity, and philosophical-...ness. I think many debates between developers revolving around purism vs pragmatism can be explained by this personality trait (for example I suspect the that the typical Haskell developer is higher in openness than the typical Go developer who is content writing for-loops all day.
-* Complexity tolerance: Some devs are simply capable of keeping a very complex system in working memory, and others are not. I suspect short-term memory has a lot to do with it. Those with a lower complexity tolerance are more likely to keep things simple and strip out unnecessary complexity, whereas those with a higher complexity tolerance are more able to properly comprehend a complex problem domain and build an appropriate solution for it. Both sides have their own failure modes (over-simplifying vs over-complicating)
-* Mental glitches: The `unless` keyword in Ruby breaks my brain. It also breaks [other people's](https://jesseduffield.com/Unless-Responses/) brains, but most people have no issue with it.
 
-## 6. Contrarians
+- [Openness to experience](https://en.wikipedia.org/wiki/Openness_to_experience): This terribly-named personality trait from the Big Five Personality Traits describes intellectual curiosity, aesthetic sensitivity, and philosophical-...ness. I think many debates between developers revolving around purism vs pragmatism can be explained by this personality trait (for example I suspect the that the typical Haskell developer is higher in openness than the typical Go developer who is content writing for-loops all day.
+- Complexity tolerance: Some devs are simply capable of keeping a very complex system in working memory, and others are not. I suspect short-term memory has a lot to do with it. Those with a lower complexity tolerance are more likely to keep things simple and strip out unnecessary complexity, whereas those with a higher complexity tolerance are more able to properly comprehend a complex problem domain and build an appropriate solution for it. Both sides have their own failure modes (over-simplifying vs over-complicating)
+- Mental glitches: The `unless` keyword in Ruby breaks my brain. It also breaks [other people's](https://jesseduffield.com/Unless-Responses/) brains, but most people have no issue with it.
+
+## 5. Contrarians
 
 Speaking of people being wired differently: some people are wired to be contrarian.
 
@@ -57,7 +59,7 @@ It doesn't help that for sociological reasons, it pays to be contrarian. There's
 
 No matter how absurd the contention, there _will_ be a post online arguing it.
 
-## 5. It's hard to test hypotheses
+## 6. It's hard to test hypotheses
 
 So, we have programmers with different viewpoints due to a combination of personality and experience, some of whom are cynical contrarians who just want attention. How do we decide who's right on a topic?
 
