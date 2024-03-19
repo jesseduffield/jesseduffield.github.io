@@ -4,8 +4,6 @@ title: Should Open Source Developers Get Paid?
 unlisted: true
 ---
 
-This post is a draft so if by some crazy coincidence you've stumbled upon it please know that it is a work in progress!
-
 Recently, I was lucky enough to be chosen as a Pioneer in [Codacy's Pioneers Program](https://www.codacy.com/pioneers), which offers mentoring and funding for open source developers. During a promotional interview with the Codacy team, I was asked whether I believe open-source developers should be paid for their work.
 
 I would love to say that I had a reasonable and charming answer up my sleeve, but the truth is that I completely botched it. I would give an answer, retract it, think again, then give another answer. I did this a few times.
