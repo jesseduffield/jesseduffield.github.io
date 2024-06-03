@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why Can't Programmers Agree on Anything?"
-unlisted: true
 ---
 
 The more you read up on software engineering topics online, the more you appreciate just how little agreement there is within the profession.
