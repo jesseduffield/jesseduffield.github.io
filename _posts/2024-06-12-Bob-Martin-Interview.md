@@ -42,71 +42,71 @@ Below is the transcript. There's still some filler words in there so please forg
 
 **Bob**: Thank you so much.
 
-**Jesse**: It's great to meet you finally in person, virtually in person. All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized popularized many important principles that are very salient to many programmers today. Author of many books, clean code, clean coder, clean agile, clean architecture, and most recently, Functional Design: Principles, Patterns and Practices.
+**Jesse**: It's great to meet you finally in person (virtually in person). All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized many important principles that are very salient to many programmers today. Author of many books: Clean Code, Clean Coder, clean Agile, Clean Architecture, and most recently, Functional Design: Principles, Patterns and Practices.
 
-I've probably got the order of those three things wrong But I wanted to start a conversation on functional design I'm interested to know yeah you've You've been around in mostly in the object oriented space for a while But you've recently transitioned over to closure and it seems like you've fallen in love with that language From some of your blog posts. I'm keen to know. So what was the impetus behind writing this particular book?
+I've probably got the order of those three things wrong But I wanted to start a conversation on functional design. I'm interested to know: you've been around in mostly in the object oriented space for a while but you've recently transitioned over to Clojure and it seems like you've fallen in love with that language from some of your blog posts. I'm keen to know, what was the impetus behind writing this particular book?
 
 ## Functional Design book
 
 ### Why write a book on functional programming?
 
-**Bob**: Okay, well the impetus for writing that book was the last 12 to 15 years of investigating functional program I started this process a decade and a half ago because somebody told me I should read a book and the title of that book was structure and interpretation of computer programs, which is classical that I had not read.
+**Bob**: Okay, well the impetus for writing that book was the last 12 to 15 years of investigating functional programming. I started this process a decade and a half ago because somebody told me I should read a book and the title of that book was Structure and Interpretation of Computer Programs, which is a classic that I had not read.
 
-And so I found a copy on eBay. It's a well-worn copy that somebody else had dog-eared. And I got it from them. And then it sat on my desk for about six months. And then at some point, I picked it up and I started reading. And I could not put this book down. It was one of those weird events where you read a book and a book is about software. And you know, I've been a software developer for a pretty long time. I didn't expect anything, you know, fundamentally different, but here I am reading this book and it's fun to read and I'm throwing the pages and just agreeing with everything. And we get about, I don't know, 200 and some odd pages in.
+And so I found a copy on eBay. It's a well-worn copy that somebody else had dog-eared. And I got it from there. And then it sat on my desk for about six months. And then at some point, I picked it up and I started reading. And I could not put this book down. It was one of those weird events where you read a book and a book is about software. And you know, I've been a software developer for a pretty long time. I didn't expect anything, you know, fundamentally different, but here I am reading this book and it's fun to read and I'm throwing the pages and just agreeing with everything. And we get about, I don't know, 200 and some odd pages in.
 
 And the authors just slam on the brakes. And they say, now, wait a minute. We're about to introduce something to you that's going to ruin everything that we've just been doing. And what they introduced was an assignment statement. And it just absolutely floored me. I thought, wait a minute. There's been no assignment statement in any of this code that I've been reading for the last 200 pages. And I had to go back and look and check. And there was no assignment statement. And I thought, OK, this book has something to say. And I kept on reading it and kept on reading it and really enjoyed it. The language in the book is Scheme, which is a Lisp derivative.
 
-And so I thought, I need to i need to learn Lisp. I had known about Lisp for 30 years, but it was always in the pejorative sense. Everybody who ever touched Lisp goes, oh, terrible language, too many parentheses, don't use Lisp. So I thought, well, okay, I'm never going to learn Lisp. And here I get this book and I've i've learned a little Lisp now reading this book. And I thought, okay. I've got to play with this. And it just so happened that Closure was kind of new then. And Closure sat on top of the JVM stack, of the Java stack. And I thought, well, that's perfect for me because I spend most of my time doing Java anyway. So I know the libraries and I know the environment. Why not just start playing around with Closure? And I did. I just started playing with Closure and more and more and more. and It is now the language I use. It's my language of preference. I'll use it for anything.
+And so I thought, I need to I need to learn Lisp. I had known about Lisp for 30 years, but it was always in the pejorative sense. Everybody who ever touched Lisp goes, oh, terrible language, too many parentheses, don't use Lisp. So I thought, well, okay, I'm never going to learn Lisp. And here I get this book and I've learned a little Lisp now reading this book. And I thought, okay. I've got to play with this. And it just so happened that Clojure was kind of new then. And Clojure sat on top of the JVM stack (the Java stack). And I thought, well, that's perfect for me because I spend most of my time doing Java anyway. So I know the libraries and I know the environment. Why not just start playing around with Clojure? And I did. I just started playing with Clojure and more and more and more. And it is now the language I use. It's my language of preference. I'll use it for anything.
 
-and Therefore, long story coming to an end, recently I thought, well, you know, I've learned enough about this language and enough about functional programming from an engineering point of view that I think I'm ready to write a book on it. And so I wrote this functional design book as a way to bridge the gap between object-oriented programmers and functional programming and tie everything together into a nice little bow.
+And therefore, long story coming to an end, recently I thought, well, you know, I've learned enough about this language and enough about functional programming from an engineering point of view that I think I'm ready to write a book on it. And so I wrote this functional design book as a way to bridge the gap between object-oriented programmers and functional programming and tie everything together into a nice little bow.
 
 At least that's what I hope.
 
-**Jesse**: Yeah, that is exactly what I took away from it it. It felt very much like you were trying to write the book that could only be written by someone who had all this experience with object-oriented programming in the first place. Because you yeah a lot of people, they just they kind of start off functional and they're like, haha, they're in this ivory tower. And it's like, we know better than the object-oriented guys. All these patterns, like the visitor pattern and the abstract factory, that's all outdated crap. We can just have functions to solve every problem now.
+**Jesse**: Yeah, that is exactly what I took away from it it. It felt very much like you were trying to write the book that could only be written by someone who had all this experience with object-oriented programming in the first place. Because a lot of people, they start off functional and they're like, haha, they're in this ivory tower. And it's like, we know better than the object-oriented guys. All these patterns, like the visitor pattern and the abstract factory, that's all outdated crap. We can just have functions to solve every problem now.
 
 And in this book, you're saying, actually, no, the problems are still there and the solutions are still there. They're just encoded differently. Is that a fair characterization?
 
-**Bob**: That's a very fair characterization, yes. but And you're right. I mean, there has been this attitude amongst certain functional programming tribes. Where it's like, OK, everybody else is wrong. We're the only ones who are right. And those OO guys just got it everything wrong. The OO is just awful. And all this design pattern stuff was nonsense. It was just put in there because they were bad languages. And so forget everything else and just write functions.
+**Bob**: That's a very fair characterization, yes. And you're right. I mean, there has been this attitude amongst certain functional programming tribes. Where it's like, OK, everybody else is wrong. We're the only ones who are right. And those OO guys just got everything wrong. The OO is just awful. And all this design pattern stuff was nonsense. It was just put in there because they were bad languages. And so forget everything else and just write functions.
 
 As if just writing functions isn't what we've been doing the whole time.
 
-All right. So, another question I had was you have some... So, I've read the book. I purchased the book and I read the book. And I highly recommend it to anyone who who's thinking of ah reading a book on functional programming.
+**Jesse**: All right. So, I purchased the book and I read the book and I highly recommend it to anyone who who's thinking of reading a book on functional programming.
 
-**Bob**: thank you
+**Bob**: Thank you
 
 ### Are there domains for which OO is better than FP?
 
-**Jesse**: So, you say that, you know, in mutable languages, behaviours flow through objects. Whereas in functional languages, objects flow through behaviors. And you give some examples in the book of showing side by side, like an honest comparison. Here's the object-oriented approach. Here's the functional programming approach. And there's one example where there's a tie, but in all the other examples, functional programming seems to come out ahead.
+**Jesse**: So, you say that, in mutable languages, behaviours flow through objects. Whereas in functional languages, objects flow through behaviors. And you give some examples in the book of showing side by side, an honest comparison. Here's the object-oriented approach. Here's the functional programming approach. And there's one example where there's a tie, but in all the other examples, functional programming seems to come out ahead.
 
 And I'm wondering, Do you think there are domains for which object oriented programming is the superior a approach or is it that it's actually, it's not really domain specific. You can just pick either option in any case. Cause it seemed like by the end of the book, I was like, it sounds like what Bob Martin is saying is that functional programming is like pretty much just the better option.
 
-**Bob**: what i'm What I'm hoping came through is that functional programming should be one of the tools in your toolkit.
+**Bob**: What I'm hoping came through is that functional programming should be one of the tools in your toolkit.
 
-And it it fits in a part of the of the programming domain, which is pretty high level. So we yeah object-oriented, let's start over at the start, functional, it's been a long day, structured programming, lets us build up functions pretty much in the small. We can build up small little functions that have while loops and if statements and follow the the rules of functional programming. So I like to think of them as the bricks in some kind of a building.
+And it it fits in a part of the of the programming domain, which is pretty high level. Let's start over at the start: structured programming lets us build up functions pretty much in the small. We can build up small little functions that have while loops and if statements and follow the the rules of functional programming. So I like to think of them as the bricks in some kind of a building.
 
 The little functions that are done with structural structured programming that are the bricks in the building.
 
-And then there's the architecture, the superstructure. The superstructure is done mostly with objects. not Not the traditional you know a boat is an object and a car is an object and a house is an object, but instead the the dependency management principles of object-oriented design, where we can create boundaries between architectural components and control the dependencies across those boundaries.
+And then there's the architecture, the superstructure. The superstructure is done mostly with objects. Not the traditional you know a boat is an object and a car is an object and a house is an object, but instead the the dependency management principles of object-oriented design, where we can create boundaries between architectural components and control the dependencies across those boundaries.
 
 That's the real power of object-oriented programming.
 
 The rest of it is all just data structures and functions. But when you can take dependencies and turn them around and make sure that all the dependencies point in the right direction, then you have real architectural control.
 
-And then functional programming is the plumbing that goes through all of that. It's the way the data moves. it the way we Instead of altering data, we flow data through these high level structures that transform the data from high level to low level and then back again. So that's kind of what i the message I was trying to give with the book.
+And then functional programming is the plumbing that goes through all of that. It's the way the data moves. it the way we, instead of altering data, we flow data through these high level structures that transform the data from high level to low level and then back again. So that's the message I was trying to give with the book.
 
-I hope I succeeded in that. i What I don't want to see is anybody saying, well, I'm a functional programmer, so I don't do uh-oh, or I'm an oh-oh programmer, so I don't do functional.
+I hope I succeeded in that. What I don't want to see is anybody saying, well, I'm a functional programmer, so I don't do OO, or I'm an OO programmer, so I don't do functional.
 
 Any good programmer should use all of these techniques all of the time. It's a stew, and we mix the whole stew together. And there are part times when we're doing functional programming and times when we're doing OO programming and times when we're doing procedural structured programming in making a nice mixture of what a good program ought to be, a good system ought to be.
 
 ### Could FP have been popular from the start?
 
-**Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went way heavier on functional programming from the beginning? I know it was popular at the beginning, but it seemed like everyone was doing OO and now it's kind of the pendulum swung back into the direction. Was that contingent on something?
+**Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went way heavier on functional programming from the beginning? I know it was popular at the beginning, but it seemed like everyone was doing OO and now it's kind of the pendulum swung back in the other the direction. Was that contingent on something?
 
 **Bob**: Yes. Yeah, it was definitely contingent. To do functional programming well requires a lot of CPU cycles and a lot of memory. There's no escaping from that.
 
 The functional mechanism is recursive in nature and it requires the ability to not modify data.
 
-Which either means you're making copies or you're doing the clever thing that a lot of functional languages do, which is to create trees that have little branches for this and that and this and that, and you create this illusion of immutability. But but all of the older versions of a data structure still exist.
+Which either means you're making copies or you're doing the clever thing that a lot of functional languages do, which is to create trees that have little branches for this and that, and you create this illusion of immutability. But but all of the older versions of a data structure still exist.
 
 So that requires a lot of memory and it requires a lot of CPU cycles. And in the early days, and by that I mean going all the way up to like the 90s, that was just impractical. You could you could do Lisp, but you wouldn't do it seriously for anything.
 
@@ -440,14 +440,14 @@ And everything he writes is gold.
 
 Um, but that's probably the, the, the most that I have been affected in my pro my programming career.
 
-**Jesse**: Do you think, so presumably you're asking questions specific to closure?
+**Jesse**: Do you think, so presumably you're asking questions specific to Clojure?
 
 I do wonder if the if ah if having a lack of training data there might give it worse answers because I'm writing a lot of Ruby these days and a lot of Go. Actually, Go would be a counter example, wouldn't it? Because there wouldn't be that much Go code compared to other things. Yeah, it's interesting. ah Because I find it very, I find it's changed my process a lot. I'm always pacing stuff in a chat GPT because it just seems to speed things up quite a bit. But it sounds like you are not really seeing the games because it's just, it's not accurate enough, not reliable enough.
 
 **Bob**: Well, so I have used it in cases where I've got some API function from a framework. And it needs an argument. And I'm looking through the documents, and I can't find how what magic argument I have to give it.
 
 There's some bit pattern I've got to put in there. And I can't find it in the docs anywhere. And looking around and going, OK, how do I call this? And I'll pose the question to chat TPT. And then like the answer will come back. And I'll try it, and it'll work. And I think, well, Okay, thanks chat GPT and then I'll ask chat GPT the question the question I really wanted answered Where did you find that information and it won't tell me? I don't know It's just something I know I don't know where I got that information from which I find very frustrating that that's kind of the limit now I've also done a few things like um
-and get ah I'll get a ah function working. In closure, I've done this. I've got a function working.
+and get ah I'll get a ah function working. In Clojure, I've done this. I've got a function working.
 
 Tests are all passing. Then I'll hand it to chat GPT or some other AI and say, refactor this, make it better. And it'll come back.
 
