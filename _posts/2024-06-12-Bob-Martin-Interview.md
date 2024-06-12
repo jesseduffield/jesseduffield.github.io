@@ -5,19 +5,34 @@ title: My interview with 'Uncle' Bob Martin
 
 See the interview on youtube [here](https://www.youtube.com/watch?feature=shared&v=qdcamTUcuAQ).
 
-In this interview I had the chance to ask Bob Martin various things that had been lingering in my mind for a while, including but not limited to:
+In this interview I had the chance to ask Bob Martin various things that had been lingering in my mind for a while.
 
-- Is Functional programming superior to Object-oriented programming?
-- Is the Single Responsibility Principle supposed to be taken literally?
-- Is the Dependency Inversion Principle still useful if you have fast compile times and it's easy to test dependencies without injection
-- Testing private methods: surely sometimes it's okay
-- Is 100% code coverage actually a good goal?
-- How does Bob feel about programmers who just see their job as a job and aren't passionate about it
-- Is a call for professionalism just unproductive gatekeeping?
-- What are the differences between Bob Martin and Martin Fowler's approach to things
-- Does AI threaten programmer jobs
-- Will we have an AI singularity?
-- Would a super-intelligent AI programmer care about modularity?
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Functional Design book](#functional-design-book)
+   - [Why write a book on functional programming?](#why-write-a-book-on-functional-programming)
+   - [Are there domains for which OO is better than FP?](#are-there-domains-for-which-oo-is-better-than-fp)
+   - [Could FP have been popular from the start?](#could-fp-have-been-popular-from-the-start)
+3. [SOLID principles](#solid-principles)
+   - [Is the single responsibility principle supposed to be taken literally?](#is-the-single-responsibility-principle-supposed-to-be-taken-literally)
+   - [Is the dependency inversion principle always useful?](#is-the-dependency-inversion-principle-always-useful)
+   - [What is the most important principle that is not included in SOLID?](#what-is-the-most-important-principle-that-is-not-included-in-solid)
+4. [Testing](#testing)
+   - [Is a 100% test coverage goal a good idea?](#is-a-100-test-coverage-goal-a-good-idea)
+   - [Is it okay to sometimes test private methods directly?](#is-it-okay-to-sometimes-test-private-methods-directly)
+5. [Professionalism](#professionalism)
+   - [Why aren't software engineers interested in becoming a profession?](#why-arent-software-engineers-interested-in-becoming-a-profession)
+   - [What about people who aren't passionate about programming?](#what-about-people-who-arent-passionate-about-programming)
+   - [Are calls for professionalism a form of gatekeeping?](#are-calls-for-professionalism-a-form-of-gatekeeping)
+   - [Does professionalism come from individual choice or structural incentives?](#does-professionalism-come-from-individual-choice-or-structural-incentives)
+6. [Bob Martin vs Martin Fowler](#bob-martin-vs-martin-fowler)
+7. [Artificial Intelligence](#artificial-intelligence)
+   - [Has AI changed how Bob programs?](#has-ai-changed-how-bob-programs)
+   - [Are developer jobs threatened by AI?](#are-developer-jobs-threatened-by-ai)
+   - [Will we achieve super-intelligent AI any time soon?](#will-we-achieve-super-intelligent-ai-any-time-soon)
+   - [Would a super-intelligent AI programmer care about modularity?](#would-a-super-intelligent-ai-programmer-care-about-modularity)
+8. [Wrapping up and what's next for Bob Martin](#wrapping-up-and-whats-next-for-bob-martin)
 
 Below is the transcript. There's still some filler words in there so please forgive that.
 
@@ -32,6 +47,8 @@ Below is the transcript. There's still some filler words in there so please forg
 I've probably got the order of those three things wrong But I wanted to start a conversation on functional design I'm interested to know yeah you've You've been around in mostly in the object oriented space for a while But you've recently transitioned over to closure and it seems like you've fallen in love with that language From some of your blog posts. I'm keen to know. So what was the impetus behind writing this particular book?
 
 ## Functional Design book
+
+### Why write a book on functional programming?
 
 **Bob**: Okay, well the impetus for writing that book was the last 12 to 15 years of investigating functional program I started this process a decade and a half ago because somebody told me I should read a book and the title of that book was structure and interpretation of computer programs, which is classical that I had not read.
 
