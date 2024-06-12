@@ -76,13 +76,13 @@ I hope I succeeded in that. i What I don't want to see is anybody saying, well, 
 
 Any good programmer should use all of these techniques all of the time. It's a stew, and we mix the whole stew together. And there are part times when we're doing functional programming and times when we're doing OO programming and times when we're doing procedural structured programming in making a nice mixture of what a good program ought to be, a good system ought to be.
 
-**Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went, you know, way heavier on functional programming from the beginning? I know it was popular at the beginning, but we had, ah you know, it seemed like everyone was doing OO and now it's kind of the pendulum swung back into the direction. Was that contingent on something?
+**Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went way heavier on functional programming from the beginning? I know it was popular at the beginning, but it seemed like everyone was doing OO and now it's kind of the pendulum swung back into the direction. Was that contingent on something?
 
 **Bob**: Yes. Yeah, it was definitely contingent. To do functional programming well requires a lot of CPU cycles and a lot of memory. There's no escaping from that.
 
-The functional functional mechanism is recursive in nature and it requires the ability to not modify data.
+The functional mechanism is recursive in nature and it requires the ability to not modify data.
 
-which either means you're making copies or you're doing the clever thing that a lot of functional languages do, which is to create trees that have little branches for this and that and this and that, and you create this illusion of immutability. But but all of the older versions of a data structure still exist.
+Which either means you're making copies or you're doing the clever thing that a lot of functional languages do, which is to create trees that have little branches for this and that and this and that, and you create this illusion of immutability. But but all of the older versions of a data structure still exist.
 
 So that requires a lot of memory and it requires a lot of CPU cycles. And in the early days, and by that I mean going all the way up to like the 90s, that was just impractical. You could you could do Lisp, but you wouldn't do it seriously for anything.
 
@@ -92,8 +92,9 @@ It's only really become feasible in a a real engineering, real practical sense, 
 
 **Jesse**: Yep, that makes complete sense. All right. Okay, so now I want to transition to talk about this the solid principles which you've helped to popularize.
 
-So first one is the obviously that probably the most famous the single responsibility principle. And This is the idea that a class should have only one reason to change and you talk about how by reason to change talking about a person or a role who who would be the source of that change and so
-I want to challenge this and I want to want to get your thoughts on this. So I think we can all agree that too many responsibilities is bad, but one is a very small number. And I i sometimes wonder if it would make more sense to be called the like minimize responsibilities principle or be careful about too many responsibilities principle. Because it seems to me like ah if you really try to like truly think about all the possible causes for a change, right, you can think about many possible causes. And one one example to illustrate is like, you know, suppose you've got one guy who's the who's in charge of all the copy in your app. So they get to decide the messages that are rendered to the to the user.
+So first one is probably the most famous, the single responsibility principle. And This is the idea that a class should have only one reason to change and you talk about how by reason to change talking about a person or a role who would be the source of that change.
+
+So, I want to challenge this and I want to want to get your thoughts on this. So I think we can all agree that too many responsibilities is bad, but one is a very small number. And I sometimes wonder if it would make more sense to be called the like minimize responsibilities principle or be careful about too many responsibilities principle. Because it seems to me if you really try to truly think about all the possible causes for a change, right, you can think about many possible causes. And one example to illustrate is, suppose you've got one guy who's in charge of all the copy in your app. So they get to decide the messages that are rendered to the to the user.
 
 Okay, you might decide that because that's one person and that's one reason to change, you should have all the text in your app moved out of the classes into some other file. And so maybe if you're doing internationalization, that's a really good idea.
 
@@ -101,7 +102,7 @@ But if you had a crystal ball and you were like, I'm never going to do internati
 
 **Bob**: Okay, I'm gonna use the old Pirates of the Caribbean thing, you know, they're not really so much rules as guidelines What you what you just described is perfect, right?
 
-You've got to make a decision. You've got a judgment call here and You could look out there and say well, you know if I if I broke this up into literally single responsibilities I'd have a tiny bunch of whole bunch of little things and is that really going to help me?
+You've got to make a decision. You've got a judgment call here and you could look out there and say well, you know if I if I broke this up into literally single responsibilities I'd have a tiny bunch of whole bunch of little things and is that really going to help me?
 
 So then you have to use judgment and say well, okay I know those guys over there are gonna change this a lot.
 
