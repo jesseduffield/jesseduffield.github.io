@@ -24,7 +24,7 @@ Below is the transcript. There's still some filler words in there so please forg
 
 **Jesse**: Okay, Bob Martin, aka Uncle Bob, it's great to have you on the podcast.
 
-**Bob**:Thank you so much.
+**Bob**: Thank you so much.
 
 **Jesse**: It's great to meet you finally in person, virtually in person. All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized popularized many important principles that are very salient to many programmers today. Author of many books, clean code, clean coder, clean agile, clean architecture, and most recently, Functional Design: Principles, Patterns and Practices.
 
@@ -46,19 +46,19 @@ At least that's what I hope.
 
 And in this book, you're saying, actually, no, the problems are still there and the solutions are still there. They're just encoded differently. Is that a fair characterization?
 
-**Bob**:That's a very fair characterization, yes. but And you're right. I mean, there has been this attitude amongst certain functional programming tribes. Where it's like, OK, everybody else is wrong. We're the only ones who are right. And those OO guys just got it everything wrong. The OO is just awful. And all this design pattern stuff was nonsense. It was just put in there because they were bad languages. And so forget everything else and just write functions.
+**Bob**: That's a very fair characterization, yes. but And you're right. I mean, there has been this attitude amongst certain functional programming tribes. Where it's like, OK, everybody else is wrong. We're the only ones who are right. And those OO guys just got it everything wrong. The OO is just awful. And all this design pattern stuff was nonsense. It was just put in there because they were bad languages. And so forget everything else and just write functions.
 
 As if just writing functions isn't what we've been doing the whole time.
 
 All right. So, another question I had was you have some... So, I've read the book. I purchased the book and I read the book. And I highly recommend it to anyone who who's thinking of ah reading a book on functional programming.
 
-**Bob**:thank you
+**Bob**: thank you
 
 **Jesse**: So, you say that, you know, in mutable languages, behaviours flow through objects. Whereas in functional languages, objects flow through behaviors. And you give some examples in the book of showing side by side, like an honest comparison. Here's the object-oriented approach. Here's the functional programming approach. And there's one example where there's a tie, but in all the other examples, functional programming seems to come out ahead.
 
 And I'm wondering, Do you think there are domains for which object oriented programming is the superior a approach or is it that it's actually, it's not really domain specific. You can just pick either option in any case. Cause it seemed like by the end of the book, I was like, it sounds like what Bob Martin is saying is that functional programming is like pretty much just the better option.
 
-**Bob**:what i'm What I'm hoping came through is that functional programming should be one of the tools in your toolkit.
+**Bob**: what i'm What I'm hoping came through is that functional programming should be one of the tools in your toolkit.
 
 And it it fits in a part of the of the programming domain, which is pretty high level. So we yeah object-oriented, let's start over at the start, functional, it's been a long day, structured programming, lets us build up functions pretty much in the small. We can build up small little functions that have while loops and if statements and follow the the rules of functional programming. So I like to think of them as the bricks in some kind of a building.
 
@@ -78,7 +78,7 @@ Any good programmer should use all of these techniques all of the time. It's a s
 
 **Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went, you know, way heavier on functional programming from the beginning? I know it was popular at the beginning, but we had, ah you know, it seemed like everyone was doing OO and now it's kind of the pendulum swung back into the direction. Was that contingent on something?
 
-**Bob**:Yes. Yeah, it was definitely contingent. To do functional programming well requires a lot of CPU cycles and a lot of memory. There's no escaping from that.
+**Bob**: Yes. Yeah, it was definitely contingent. To do functional programming well requires a lot of CPU cycles and a lot of memory. There's no escaping from that.
 
 The functional functional mechanism is recursive in nature and it requires the ability to not modify data.
 
@@ -99,7 +99,7 @@ Okay, you might decide that because that's one person and that's one reason to c
 
 But if you had a crystal ball and you were like, I'm never going to do internationalization because I'm doing some some app that's made for Australian taxes or something like that, that's very ah geographically specific. It seems to me like that's just a lot of friction to add if you want to go and every time you want to make some change to something you've got some separate file that has all the English text and maybe at some point some new guy will come along and want to change all of that and his life will be very easy because it's all in one file but if everyone else's life is really hard because they're constantly having to work across these two files so please please respond to that challenge.
 
-**Bob**:Okay, I'm gonna use the old Pirates of the Caribbean thing, you know, they're not really so much rules as guidelines What you what you just described is perfect, right?
+**Bob**: Okay, I'm gonna use the old Pirates of the Caribbean thing, you know, they're not really so much rules as guidelines What you what you just described is perfect, right?
 
 You've got to make a decision. You've got a judgment call here and You could look out there and say well, you know if I if I broke this up into literally single responsibilities I'd have a tiny bunch of whole bunch of little things and is that really going to help me?
 
@@ -117,7 +117,7 @@ This is the idea that concretions should depend on abstractions and not vice ver
 
 So here's here's my question to you. Say you lived in a world where it's easy to mark out dependencies in tests without needing dependency injection and say the compilation is instantaneous and say that you're working on an application and not a library. So you are God, right? No one's depending on your code, but yourself. Would the principle, like what's left for that principle but when those three things are in play?
 
-**Bob**:So the the principle is about source code dependencies. Which modules can depend on which other modules? And the basic idea of the principle is that high-level modules, modules that capture high-level policy, should not know about any of the details that they eventually end up using.
+**Bob**: So the the principle is about source code dependencies. Which modules can depend on which other modules? And the basic idea of the principle is that high-level modules, modules that capture high-level policy, should not know about any of the details that they eventually end up using.
 
 So we'd like the detailed modules pointing their dependencies at the high-level highlel modules. That's really the whole point. Get the low-level stuff to depend on the high-level stuff. That way, we can change the low-level stuff all we want. It doesn't affect the high-level stuff. High-level stuff can sit there fat and happy. never being bothered by whatever changes are going on at the low-level detail stuff. So if I were absolute power god and I could control everything and the compiles were absolutely instantaneous and there were no no and problems with shipping modules here and there and no network overhead or anything like that, would I still follow that principle?
 
@@ -129,7 +129,7 @@ And that would allow me to understand the problem a lot better, diagnose any pro
 
 **Jesse**: Okay, so I still wonder though, like if you often all have an interface, I'll have applied this principle and I'll have this interface between some high level thing and some low level thing. And I want to get to my high level thing to the implementation because I want to know, okay, how is it how it actually going to work? I jumped to the definition of my editor and I'm i'm stranded in this interface In a random file and it's like okay now what do I do and you're gonna go and find okay? I'll jump from the interface to I'll go and find the actual implementation I think there is some friction that this adds and I'm wondering like how do you adjudicate when the friction is too much?
 
-**Bob**:I think when you feel it, now, you know there are tools that help with this.
+**Bob**: I think when you feel it, now, you know there are tools that help with this.
 
 Like if If you're using an IDE that looks at the whole code base, for example, mine IntelliJ, if I'm looking at an abstract function, it'll it'll have a little widget off to the side that says, here's all the implementers. and I can just click on them and see them right away.
 
@@ -145,7 +145,7 @@ I don't put the interfaces in until I need them.
 
 **Jesse**: Right, you wait until it hurts.
 
-**Bob**:So I look at every problem as a concrete problem. And then if I need the interface, I'm perfectly willing to put it in. But I have to see a reason for it before I put it in.
+**Bob**: So I look at every problem as a concrete problem. And then if I need the interface, I'm perfectly willing to put it in. But I have to see a reason for it before I put it in.
 
 **Jesse**: Yeah, yeah, that's great. That's great. I'm glad to hear this. It means if someone comes comes up to me and says, hey, you know, Uncle Bob says you do this, I'm like, well, actually, I've talked to Uncle Bob and it's it's a bit more nuanced than that.
 
@@ -153,7 +153,7 @@ Okay, so ah my next question is still kind of in in the realm of solid.
 
 I want to know, what do you think is like the most important principle the program the board that you follow, but which is not in that solid mnemonic.
 
-**Bob**:Kent Beck long ago wrote a book called Extreme Programming in that he outlined four values. And the values were simplicity, communication, feedback, and courage.
+**Bob**: Kent Beck long ago wrote a book called Extreme Programming in that he outlined four values. And the values were simplicity, communication, feedback, and courage.
 
 When we're working in software, the most important part is simplicity. The second most is feedback. Make make sure you don't trust what you just did, but but you try it out and then it adjust. And the next one is feedback as is courage, because sometimes it takes a little bit of courage to try the next thing.
 
@@ -171,7 +171,7 @@ What I do want to talk about is test coverage. So you ah have a tweet where you 
 
 But then you also say it's a very bad management metric and it's kind of a, it's a reprehensible release criterion and so on. And I'm trying to understand like the thing about 100% is it's actually really achievable if you just enforce it in CI from day one. And so I don't think, I don't, I don't, I think I share that your intuition that you shouldn't do that. But I also feel that there's a contradiction there that it's like, if the asymptotic goal is achievable, then shouldn't you just try to achieve it?
 
-**Bob**:um my yes yes Clearly, if the goal is achievable, you should try to achieve it. Can you achieve it? Well, okay. For small things, you certainly can. right like If I wrote five lines of code, I could i could cover it all.
+**Bob**: um my yes yes Clearly, if the goal is achievable, you should try to achieve it. Can you achieve it? Well, okay. For small things, you certainly can. right like If I wrote five lines of code, I could i could cover it all.
 
 If I'm writing complicated systems that spawn other processes and communicate over sockets and do all these other things, there are probably stretches of code that I'm going to have a devil of a time covering.
 
@@ -188,7 +188,7 @@ But you get all these benefits because it's now faster, it's less vulnerable to 
 
 And so the same rationale that would make you want to go one step down from the pixels on the screen is the same rationale that in some cases may make you want to go down to the private method. So yeah what do you think about that case?
 
-**Bob**:Okay, so so let me pitch this. I'm going to tell the same story you just told, but I'm going to tell it a little bit differently.
+**Bob**: Okay, so so let me pitch this. I'm going to tell the same story you just told, but I'm going to tell it a little bit differently.
 
 We in the programming world have been convinced that there's only a few levels of encapsulation, public-private protected package, maybe a few others, but mostly our languages define this for us. That's absolute crap.
 
@@ -200,44 +200,44 @@ We'll create a context of code and the things inside that context are private to
 
 **Jesse**: Exactly.
 
-**Bob**:and This will go on like a set of of yeah Russian dolls until ah you finally reach the boundaries of the system. And at every point, there is an encapsulation boundary that we cannot specify with the syntax of our dumb languages.
+**Bob**: and This will go on like a set of of yeah Russian dolls until ah you finally reach the boundaries of the system. And at every point, there is an encapsulation boundary that we cannot specify with the syntax of our dumb languages.
 
 Because our dumb languages say, well, public or private, and that's it. In that case, yes, you will be you will write tests at one level just outside of a context boundary for the internals of that context.
 but You will write that, and you will be calling methods that are public to you, but are private to the next layer out.
 
 **Jesse**: yeah Exactly. yep Yeah. Yeah. So, but but that, I think we're saying the same thing then.
 
-**Bob**:I think we're saying the same thing, yes.
+**Bob**: I think we're saying the same thing, yes.
 
 **Jesse**: So. Right. But by that logic, would you agree that, that sometimes then it is okay to test private methods because you're just going one level down just in the same way you did for any other high level of abstraction.
 
-**Bob**:Yeah, and then the language gets in the way.
+**Bob**: Yeah, and then the language gets in the way.
 
 **Jesse**: Like is there, is there some fundamental difference?
 
-**Bob**:You know, if you're doing Java or C sharp, it's hard to call a private method.
+**Bob**: You know, if you're doing Java or C sharp, it's hard to call a private method.
 
 **Jesse**: Right.
 
-**Bob**:You've got to do some trick.
+**Bob**: You've got to do some trick.
 
 **Jesse**: Right.
 
-**Bob**:So then you kind of elevate it and make it protected instead or package scope instead.
+**Bob**: So then you kind of elevate it and make it protected instead or package scope instead.
 
-**Bob**:And then that lets you call it as long as your test is in the right package, which is fine with me. I don't, I don't mind that, but there are people who would say, Oh, oh heavens no, you've made it package scope and it really should be private. Well, I can't call it if it's private.
+**Bob**: And then that lets you call it as long as your test is in the right package, which is fine with me. I don't, I don't mind that, but there are people who would say, Oh, oh heavens no, you've made it package scope and it really should be private. Well, I can't call it if it's private.
 
 **Jesse**: Right. Yeah.
 
-**Bob**:So, yeah, okay.
+**Bob**: So, yeah, okay.
 
 **Jesse**: Yeah, I agree. Okay, okay, so that's good. All right, so I want to move now to professionalism, which is a completely different topic, and it's it's probably the most fun topic I think we could be talking about here.
 
-**Bob**:OK.
+**Bob**: OK.
 
 **Jesse**: Okay, so why aren't software developers interested in becoming a profession akin to doctors and lawyers? Or do you do you refute the the the assumption of that claim?
 
-**Bob**:I think the older a programmer is, the more interested they are in adopting some kind of professionalism standard. And I think that's true across the board of any industry. When you're very young, all you want to do is get in.
+**Bob**: I think the older a programmer is, the more interested they are in adopting some kind of professionalism standard. And I think that's true across the board of any industry. When you're very young, all you want to do is get in.
 
 And then as you learn more and you learn more, you you start to feel the cost and the weight of responsibility.
 
@@ -251,7 +251,7 @@ like you know young lawyers go to law school and they just have no doubt about i
 
 We're going to follow these rules that we'd be losing out on innovation and experimentation that might be beneficial in the longer term.
 
-**Bob**:Yeah. And there's this funny trade-off, right? Kent Beck used to like to make an X with his arms. Is this a video podcast? Are we going to be able to see this? Kent Beck used to like make his X with his arms.
+**Bob**: Yeah. And there's this funny trade-off, right? Kent Beck used to like to make an X with his arms. Is this a video podcast? Are we going to be able to see this? Kent Beck used to like make his X with his arms.
 
 And he said, you know, when one thing is going down, another thing is going up. And what you're really looking for is the crossover point. So the cost of a discipline, the cost of creating disciplines and standards is that you lose flexibility. right But the cost of of the of not having them, this innovation, eventually causes problems, problems that we really have to have to get our hands around because our entire civilization at this point rests on top of software.
 
@@ -271,15 +271,15 @@ But I think the crazy exponential growth that happened in aviation and happened 
 
 **Jesse**: Do you think that there's a difference between aviation and programming in that? I think this is similar also with doctors where it's like, there's a lot of ways to write code, which is pretty innocuous, right? Like if I'm writing a video game and my friends are going to play that and it's probably not going to be used by millions of people, like is this some way to reconcile the gradations of seriousness with this call for professionalism?
 
-**Bob**:Oh, I'm sure there is. So for for example, that that happens in aviation as well. Like if if you've got a better idea for an airplane, you can you can build that airplane.
+**Bob**: Oh, I'm sure there is. So for for example, that that happens in aviation as well. Like if if you've got a better idea for an airplane, you can you can build that airplane.
 
 **Jesse**: Right.
 
-**Bob**:No reason you can't build it. No one can stop you from building it. They can stop you from flying it. So then you ah then you apply to the FAA and you say to the FAA, hey, I've got this experimental idea.
+**Bob**: No reason you can't build it. No one can stop you from building it. They can stop you from flying it. So then you ah then you apply to the FAA and you say to the FAA, hey, I've got this experimental idea.
 
 **Jesse**: Right.
 
-**Bob**:And they come out and they look at it and think, well, you know if you don't mind killing yourself, sure, we'll give you an experimental certificate. I mean, from our point of view, it looks like you're not going to die right away anyway. And then you can go fly that thing around. And lot a lot of guys do that. They come up with really interesting ideas. And they can even sell the experimental model as long as somebody else is willing to buy an experimental model. And the rules for experimental experimental models are very different. like I own an airplane. It is not an experimental airplane. I am not allowed to change anything in that airplane.
+**Bob**: And they come out and they look at it and think, well, you know if you don't mind killing yourself, sure, we'll give you an experimental certificate. I mean, from our point of view, it looks like you're not going to die right away anyway. And then you can go fly that thing around. And lot a lot of guys do that. They come up with really interesting ideas. And they can even sell the experimental model as long as somebody else is willing to buy an experimental model. And the rules for experimental experimental models are very different. like I own an airplane. It is not an experimental airplane. I am not allowed to change anything in that airplane.
 
 unless I get a special type certificate from the FAA that says, yes, we approve that you can change that knob from blue to red. It's not quite that serious, but it's very, very serious. On the other hand, if you own an experimental aircraft, You can make changes to it. You can go in there and say, well, you know, think ill I think I'll change the way these valves see to me. Let me see if I can get more power out of it. They have a lot more leeway.
 
@@ -291,7 +291,7 @@ So I think that's how it's going to work out. At least I hope so.
 
 **Jesse**: Okay. So another question on professionalism I have is some, so you have said that that to be a professional, you want to be spending maybe 20 hours of your week outside of your day job, just honing the craft. And my question is, what would you say to someone who just sees programming as a job and the They don't hate it, but it's just a job to them. And they, you know, they do their 40 hours. They're doing wholesome, completely unrelated things in their spare time, like baking. like what How do you feel about that person?
 
-**Bob**:but I think that person, there's there's certainly a place for that person. They can be a programmer. That's fine. Programming is not going to be, for them, programming is not going to be the kind of thing where they can climb a ladder and gain greater and greater responsibility and make more and more money and so on. They're not going to go up that ladder.
+**Bob**: but I think that person, there's there's certainly a place for that person. They can be a programmer. That's fine. Programming is not going to be, for them, programming is not going to be the kind of thing where they can climb a ladder and gain greater and greater responsibility and make more and more money and so on. They're not going to go up that ladder.
 
 But they can they can be a programmer for as long as they want to be and have a ah ah moderate and a positive impact on the profession. Nothing wrong with that. Now they're probably not going to write books on the topic. They're probably not going to go out and give talks on the topic. They're probably not going to make some kind of found fundamental change, but they can be a good programmer. Nothing wrong with that. If your goal, however, is to, is to have an impact. If your goal is to move the profession forward, you're going to have to take some time with your career.
 
@@ -312,7 +312,7 @@ Um, but I also wonder about like, uh, the, the, the choice of, of having this la
 
 Let's be professionals. Let's, let's, you know, let's, let's rise as a, as a group. But on the on the other hand, if you don't fit that category, you might feel a bit excluded by that. And what what you just outlined was a kind of dependency injection for goals, where it's like if you want to become a team lead, then you should do XYZ, right? And when you communicate it in that way, it kind of ah makes it a bit less incendiary, but you also lose the inspirational side as well. And I'm wondering like, is that a trade-off that's, that's, that you've made consciously where you've got those two different options. One's going to piss some people off because they're getting mad because you're kind of like, Oh, he's gatekeeping professionalism. But then on the other hand, if you do more, if you do the more, more descriptive way, it's kind of like not as inspirational. You know what I mean?
 
-**Bob**:I think I know what you mean, yeah. So first of all, I don't mind gatekeeping. That's fine. i There's a certain amount of gatekeeping that you have to do.
+**Bob**: I think I know what you mean, yeah. So first of all, I don't mind gatekeeping. That's fine. i There's a certain amount of gatekeeping that you have to do.
 
 I don't mind people getting upset because I'm being exclusive or the whole concept of is is exclusive because frankly it is, right? There are certain behaviors that we're not going to allow it in.
 
@@ -328,7 +328,7 @@ And Kent Beck came up with another one a while ago. It was just test and commit 
 
 **Jesse**: Yeah, that's a crazy idea. Like, I don't know. That's awesome. I've never done it myself, but it's like respect to anyone who does that.
 
-**Bob**:Test-driven development is a very low stress discipline. And TCR is a really high stress discipline. Because you're going to lose it, man. You make one mistake. Revert. So, okay, fine. That might be another, another interesting discipline. And there are probably others that would satisfy just as well. The point is we ought to be looking and we ought to be, we ought to be looking at this category of testing and saying, okay, what are the disciplines that are going to satisfy this, this category?
+**Bob**: Test-driven development is a very low stress discipline. And TCR is a really high stress discipline. Because you're going to lose it, man. You make one mistake. Revert. So, okay, fine. That might be another, another interesting discipline. And there are probably others that would satisfy just as well. The point is we ought to be looking and we ought to be, we ought to be looking at this category of testing and saying, okay, what are the disciplines that are going to satisfy this, this category?
 
 And what are the behaviors that don't? And then, then the exclusives line comes in and say, okay, we're going to say, this is the line below that line. No, sorry. That's below our discipline standard and above the line is above our discipline standard. And we're still not close to that.
 
@@ -336,9 +336,9 @@ And what are the behaviors that don't? And then, then the exclusives line comes 
 
 Does that make sense? Like how much of it's just like you want the individually better versus let's have an actual incentive to kind of in enforce these norms.
 
-**Bob**:Oh, yeah. So i think I think you need both for that. and So for example, doctors do take an oath like that. And of course, they don't recite it every day in in the mirror when they wake up in the morning. But but they do have an oath like that, which I hope the medical profession takes seriously. Sometimes I have my doubts. But OK, I hope they do. And they do have an incentive structure. It's usually punitive. if you If you don't rise to the standards, they'll kick you out. You won't be a doctor anymore.
+**Bob**: Oh, yeah. So i think I think you need both for that. and So for example, doctors do take an oath like that. And of course, they don't recite it every day in in the mirror when they wake up in the morning. But but they do have an oath like that, which I hope the medical profession takes seriously. Sometimes I have my doubts. But OK, I hope they do. And they do have an incentive structure. It's usually punitive. if you If you don't rise to the standards, they'll kick you out. You won't be a doctor anymore.
 
-**Bob**:And usually there are legal consequences when you're a doctor as well. So there are those kinds of incentives. We as an industry have not faced that yet.
+**Bob**: And usually there are legal consequences when you're a doctor as well. So there are those kinds of incentives. We as an industry have not faced that yet.
 Well, not quite. There have been some programmers who have gone to jail for writing lying, cheating code, and that may increase the legal issues may start to increase more and more, as as society depends more and more on software.
 
 So we may see that. And then the other side of it, the the the the definition of the standards will probably follow as a result of it.
@@ -347,15 +347,15 @@ So we may see that. And then the other side of it, the the the the definition of
 
 You're both thought leaders who have a lot of shared history. You're both signatories of the Agile Manifesto. And the way I think about it is Martin Fowler is like an anthropologist who's kind of going into all these places and being like, yeah what's everyone doing? I'm going to try and surface that information in all of its complexity. Whereas you seem to be more like you want a theory of everything. And you're thinking about how can i how can I get some really simple principles that explain a bunch of different things.
 
-**Bob**:Thank you.
+**Bob**: Thank you.
 
 **Jesse**: And I think about like Martin Fowler is kind of optimizing for precision, whereas you're optimizing for intuition, right? Because I'll read one of your blog posts and I'll think, you know, maybe programming is not so hard after all. And I mean, reading many of your blog posts, it actually does have that like aha moment. Whereas with Martin Fowler, I ah I'll appreciate the complexity, but I'll rarely come away from one of his blog posts thinking like, yeah, I've got this in the bag. It all makes sense now. I'm wondering, how do you respond to that, to that characterization?
 
-**Bob**:Well, he's telling you the truth and I'm lying.
+**Bob**: Well, he's telling you the truth and I'm lying.
 
 **Jesse**: Right.
 
-**Bob**:That was a very interesting characterization. I hadn't heard that one before. you I think you you nailed Martin, right? he he likes He likes to get down into it, study it, be precise, you knowll look at the way certain teams behave and then he'll get some guys to write about how they how they behave and he'll help them get that published and so on. And I think that's very valuable. ah some of Some of the best work Some of the best work that Martin did, I think came in the early 90s, mid to early 90s.
+**Bob**: That was a very interesting characterization. I hadn't heard that one before. you I think you you nailed Martin, right? he he likes He likes to get down into it, study it, be precise, you knowll look at the way certain teams behave and then he'll get some guys to write about how they how they behave and he'll help them get that published and so on. And I think that's very valuable. ah some of Some of the best work Some of the best work that Martin did, I think came in the early 90s, mid to early 90s.
 
 He wrote a book, which i is my favorite of his books is Analysis Patterns. And that's at a time when he was behaving more like me.
 
@@ -369,7 +369,7 @@ Now, he just recently did a ah second edition of Refactoring, which is good. He 
 
 **Jesse**: That's cool
 
-**Bob**:So yeah, i think I think the difference you've spotted is pretty good. you know Martin's a great guy. I love him to death. At some point, I'm going to have to go out and visit him and in the on the East Coast. I think he's made tremendous contributions.
+**Bob**: So yeah, i think I think the difference you've spotted is pretty good. you know Martin's a great guy. I love him to death. At some point, I'm going to have to go out and visit him and in the on the East Coast. I think he's made tremendous contributions.
 
 And everything he writes is gold.
 
@@ -377,7 +377,7 @@ And everything he writes is gold.
 
 So first, I want to start by asking, has AI changed how you program?
 
-**Bob**:Oh, has it changed how I program? No, no, not, not at all. Um, maybe in the slightest way I have used things like chat GPT to ask questions the way I would, I used to ask questions to stack overflow. Uh, and then I will get answers which are not as good as the answers I got on stack overflow, but at least their answers sometimes.
+**Bob**: Oh, has it changed how I program? No, no, not, not at all. Um, maybe in the slightest way I have used things like chat GPT to ask questions the way I would, I used to ask questions to stack overflow. Uh, and then I will get answers which are not as good as the answers I got on stack overflow, but at least their answers sometimes.
 
 Um, but that's probably the, the, the most that I have been affected in my pro my programming career.
 
@@ -385,7 +385,7 @@ Um, but that's probably the, the, the most that I have been affected in my pro m
 
 I do wonder if the if ah if having a lack of training data there might give it worse answers because I'm writing a lot of Ruby these days and a lot of Go. Actually, Go would be a counter example, wouldn't it? Because there wouldn't be that much Go code compared to other things. Yeah, it's interesting. ah Because I find it very, I find it's changed my process a lot. I'm always pacing stuff in a chat GPT because it just seems to speed things up quite a bit. But it sounds like you are not really seeing the games because it's just, it's not accurate enough, not reliable enough.
 
-**Bob**:Well, so I have used it in cases where I've got some API function from a framework. And it needs an argument. And I'm looking through the documents, and I can't find how what magic argument I have to give it.
+**Bob**: Well, so I have used it in cases where I've got some API function from a framework. And it needs an argument. And I'm looking through the documents, and I can't find how what magic argument I have to give it.
 
 There's some bit pattern I've got to put in there. And I can't find it in the docs anywhere. And looking around and going, OK, how do I call this? And I'll pose the question to chat TPT. And then like the answer will come back. And I'll try it, and it'll work. And I think, well, Okay, thanks chat GPT and then I'll ask chat GPT the question the question I really wanted answered Where did you find that information and it won't tell me? I don't know It's just something I know I don't know where I got that information from which I find very frustrating that that's kind of the limit now I've also done a few things like um
 and get ah I'll get a ah function working. In closure, I've done this. I've got a function working.
@@ -398,11 +398,11 @@ That's about the most I have done.
 
 **Jesse**: Do you think that developer jobs are threatened by AI in the near or distant future?
 
-**Bob**:No, no, no, not at all.
+**Bob**: No, no, no, not at all.
 
 **Jesse**: No. Why is that?
 
-**Bob**:Because the AIs are tools, and they're good tools, and they will help.
+**Bob**: Because the AIs are tools, and they're good tools, and they will help.
 
 And as they get better, they can help us write code a little better, and they can help us write tests a little better. and all All of this stuff will get easier. And all that means is that there will be more for us to do. We'll have to do more. The the first programmers to get worried that they were going to lose their jobs for the programmers in the 1950s who watched Grace Hopper come up with a very primitive compiler called A0, which is a horrible thing.
 
@@ -418,7 +418,7 @@ So yeah, I'm not worried about that at all. I think it'll make our jobs easier a
 
 But I suppose the next sensible question to ask is like, do you have any thoughts on the singularity or the idea that AI might become some self improving loop that then becomes like a super god AI that may or may not kill everyone? What's your thoughts on the singularity argument?
 
-**Bob**:Well, I think you know it's Kurtzweil's great dream. i'm not I don't buy into the singularity argument for a real simple reason. Larry Niven long ago wrote a series of stories called The Magic Goes Away.
+**Bob**: Well, I think you know it's Kurtzweil's great dream. i'm not I don't buy into the singularity argument for a real simple reason. Larry Niven long ago wrote a series of stories called The Magic Goes Away.
 
 And in it's a set set way in the past, maybe in some other universe. And there were wizards who had magic and they could cast spells and do really interesting things. And one of these wizards got an idea. He says, well, you know what? I'm an um' going to make a set of spells that feed back on each other. And so each one is going to make the next one stronger and the next one stronger. And any he set up a system like that with a disk spinning in the air. And he made the disk go faster and faster and let the spells just run. And the disk was spinning and spinning and spinning. And then all of a sudden it slowed down and stopped. And the reason it slowed down and stopped, he had to work out, was that all the magic had been pulled out of that region of space. And the spells had no power to work with.
 
@@ -434,19 +434,19 @@ They don't do that. They just sit there waiting for you to probe at them. So I t
 
 **Jesse**: That's a very strong case. So i'm I'm keen to know, in a world where a super intelligent AI was created, let's assume that theoretically it is possible and it's just like super, super smart. Do you think that it if it was writing code, it would care about modularity in the same way that humans do?
 
-**Bob**:But that's so wonderful. Yes, I believe it would care about it even more.
+**Bob**: But that's so wonderful. Yes, I believe it would care about it even more.
 
 **Jesse**: Really?
 
-**Bob**:If it's very, very smart, then things like modularity are going to be trivial. right It's just going to wash out. this that you know of A hyper-intelligent, super-intelligent computer writing code, all these principles that we have struggled for will be obvious. Oh, yeah, of course, single responsibility. I mean, why would you do it any other way? Of course. Oh Dependency inversion? Absolutely. you know why would all of that I'm going to go back to Larry Niven now. Have you ever read any of Larry Niven's protector series?
+**Bob**: If it's very, very smart, then things like modularity are going to be trivial. right It's just going to wash out. this that you know of A hyper-intelligent, super-intelligent computer writing code, all these principles that we have struggled for will be obvious. Oh, yeah, of course, single responsibility. I mean, why would you do it any other way? Of course. Oh Dependency inversion? Absolutely. you know why would all of that I'm going to go back to Larry Niven now. Have you ever read any of Larry Niven's protector series?
 
 **Jesse**: No.
 
-**Bob**:Okay, so, a little spoiler, a little spoiler.
+**Bob**: Okay, so, a little spoiler, a little spoiler.
 
 **Jesse**: I clearly, I need to. Sounds like a pretty s smart guy.
 
-**Bob**:Okay, so there's this planet out there somewhere in another galaxy and the the creatures on this planet are much like you know earth earth kind of biological creatures.
+**Bob**: Okay, so there's this planet out there somewhere in another galaxy and the the creatures on this planet are much like you know earth earth kind of biological creatures.
 
 And there's one species that's hyper intelligent, hyper intelligent. yeah they they When they become conscious, they intuitively understand general relativity.
 that's just It's just obvious, hyper intelligent.
@@ -455,31 +455,31 @@ But they become conscious from an earlier stage in their life when they were bre
 
 **Jesse**: This is fantastic. I clearly need to read this book.
 
-**Bob**:Oh, yeah no no you absolutely have to read just the the title of the first book is protector and You will love it and there you go this hyper intelligent being which does which the way Niven writes about it is that they are tinkerers and
+**Bob**: Oh, yeah no no you absolutely have to read just the the title of the first book is protector and You will love it and there you go this hyper intelligent being which does which the way Niven writes about it is that they are tinkerers and
 
 They just tinker things together. Oh, and you know, a faster than light drive? Sure, tinker that together in the afternoon. No problem. ah You know, I need a telescope that can see across the galaxy. Well, I'll just build a black hole out there. And that's a nice gravitational lens. And then I'll use that to see what's going on outside of the galaxy. Very interesting, you know, machine and very interesting creatures, hyper intelligent creatures.
 
 **Jesse**: That's really funny because I think it's, I've been thinking about, this is a weird thing to think about, but I've been thinking about puberty and how before puberty, I think about what the hell is puberty for, right? Like why not just from the get-go have fully matured sexual organs and so on. And I think about the mental effects and it seems like puberty is kind of there so that you have this period of just learning and just being purely like you're just absorbing information. It's all this intellectual stuff. And then you become self-conscious and you know you become an adult and all these things. And it's kind of like, to some extent, some of the best intellectuals are kind of childlike, if that makes sense. It's like they somehow maintain that childlike curiosity.
 
-**Bob**:Yes. Yes.
+**Bob**: Yes. Yes.
 
 **Jesse**: And it's funny how in in that story, you've got the breeders who are very, you start as the breeder, you're very uncurious, and then you eat the fruit. And it's like a puberty but in reverse, where it's like, okay, now I'm going to just focus on tinkering and curiosity. So that's really interesting.
 
-**Bob**:Well, now that you have said that, you absolutely must read the book.
+**Bob**: Well, now that you have said that, you absolutely must read the book.
 
 **Jesse**: Okay, maybe it's a maybe it's another plot twist.
 
 All right, cool. Well, that's basically that's basically an hour. And that's all the questions that I had for you, Bob.
 
-**Bob**:Oh, good.
+**Bob**: Oh, good.
 
 **Jesse**: So yeah, I want to thank you for coming on the podcast.
 
-**Bob**:Well, we fit that right in then. Of course.
+**Bob**: Well, we fit that right in then. Of course.
 
 **Jesse**: I want to recommend to my audience go and buy functional design. It was a fantastic book. I enjoyed reading it. And just as a closing thing, you know, where can people find you and what are you doing next?
 
-**Bob**:Um, so you can find me on Twitter. I'm at uncle Bob Martin. You can find me on the web. I'm a clean coder.com or clean coders.com. Both of those work.
+**Bob**: Um, so you can find me on Twitter. I'm at uncle Bob Martin. You can find me on the web. I'm a clean coder.com or clean coders.com. Both of those work.
 
 And the project that I am in the middle of right now is a book on software history. which goes all the way back to Charles Babbage and then crawls forward through Grace Hopper and people like Dykstra and all the way up to the guys who invented C, Dennis Ritchie and Ken Thompson and Brian Kernahan. and then goes through the things that I witnessed in my career and then a projection to the future.
 
@@ -489,6 +489,6 @@ I did all this historical research and I i wrote these lovely little narratives 
 
 **Jesse**: That sounds awesome. Well, I'm looking forward to reading that book. And yeah, thanks again for coming on. It's been great.
 
-**Bob**:My pleasure. Good fun.
+**Bob**: My pleasure. Good fun.
 
 **Jesse**: All right.
