@@ -17,10 +17,11 @@ In this interview I had the chance to ask Bob Martin various things that had bee
 - What are the differences between Bob Martin and Martin Fowler's approach to things
 - Does AI threaten programmer jobs
 - Will we have an AI singularity?
+- Would a super-intelligent AI programmer care about modularity?
 
 Below is the transcript. There's still some filler words in there so please forgive that.
 
-## Transcript:
+## Introduction
 
 **Jesse**: Okay, Bob Martin, aka Uncle Bob, it's great to have you on the podcast.
 
@@ -29,6 +30,8 @@ Below is the transcript. There's still some filler words in there so please forg
 **Jesse**: It's great to meet you finally in person, virtually in person. All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized popularized many important principles that are very salient to many programmers today. Author of many books, clean code, clean coder, clean agile, clean architecture, and most recently, Functional Design: Principles, Patterns and Practices.
 
 I've probably got the order of those three things wrong But I wanted to start a conversation on functional design I'm interested to know yeah you've You've been around in mostly in the object oriented space for a while But you've recently transitioned over to closure and it seems like you've fallen in love with that language From some of your blog posts. I'm keen to know. So what was the impetus behind writing this particular book?
+
+## Functional Design book
 
 **Bob**: Okay, well the impetus for writing that book was the last 12 to 15 years of investigating functional program I started this process a decade and a half ago because somebody told me I should read a book and the title of that book was structure and interpretation of computer programs, which is classical that I had not read.
 
@@ -54,6 +57,8 @@ All right. So, another question I had was you have some... So, I've read the boo
 
 **Bob**: thank you
 
+### Are there domains for which OO is better than FP?
+
 **Jesse**: So, you say that, you know, in mutable languages, behaviours flow through objects. Whereas in functional languages, objects flow through behaviors. And you give some examples in the book of showing side by side, like an honest comparison. Here's the object-oriented approach. Here's the functional programming approach. And there's one example where there's a tie, but in all the other examples, functional programming seems to come out ahead.
 
 And I'm wondering, Do you think there are domains for which object oriented programming is the superior a approach or is it that it's actually, it's not really domain specific. You can just pick either option in any case. Cause it seemed like by the end of the book, I was like, it sounds like what Bob Martin is saying is that functional programming is like pretty much just the better option.
@@ -76,6 +81,8 @@ I hope I succeeded in that. i What I don't want to see is anybody saying, well, 
 
 Any good programmer should use all of these techniques all of the time. It's a stew, and we mix the whole stew together. And there are part times when we're doing functional programming and times when we're doing OO programming and times when we're doing procedural structured programming in making a nice mixture of what a good program ought to be, a good system ought to be.
 
+### Could FP have been popular from the start?
+
 **Jesse**: Okay. Now, so my my final question on the functional design book is, could there have been an alternative history where we just kind of went way heavier on functional programming from the beginning? I know it was popular at the beginning, but it seemed like everyone was doing OO and now it's kind of the pendulum swung back into the direction. Was that contingent on something?
 
 **Bob**: Yes. Yeah, it was definitely contingent. To do functional programming well requires a lot of CPU cycles and a lot of memory. There's no escaping from that.
@@ -89,6 +96,10 @@ So that requires a lot of memory and it requires a lot of CPU cycles. And in the
 A few people tried and it didn't work out very well. You could do functional programming in ML or or Haskell or something like that, but it was mostly academic.
 
 It's only really become feasible in a a real engineering, real practical sense, because we've got just so damn much memory and so damn many CPU cycles that we can afford to spend a few for the convenience of living in this abstract functional world.
+
+## SOLID principles
+
+### Is the single responsibility principle supposed to be taken literally?
 
 **Jesse**: Yep, that makes complete sense. All right. Okay, so now I want to transition to talk about this the solid principles which you've helped to popularize.
 
@@ -111,6 +122,8 @@ I know those guys over there are not I can just feel that that's your crystal ba
 Okay, so I don't need to protect those guys so much. But those guys over there, I'm cutting them up. I'm going to chop them up into little pieces. So when they make a change, I can focus it down into one narrow little piece. But those guys over there, man, they're going to change this thing once a year. I can tolerate that. I'll just put all their stuff in one big basket. Now, that that's kind of an exaggeration of what we would do. But yeah, you look at it, the principle is single. And then you look at that and think, well, you know, single is really like two or four or something like that.
 
 Because they're not going to change very much. All the principles are that way. All the principles are that way. They're all guidelines. They're all stated as an ideal, and you barely ever get to the ideal.
+
+### Is the dependency inversion principle always useful?
 
 **Jesse**: Yeah, yeah, okay, okay. So I guess in that same light, I wanna touch on the another popular one, the dependency inversion principle.
 
@@ -150,7 +163,9 @@ I don't put the interfaces in until I need them.
 
 **Jesse**: Yeah, yeah, that's great. That's great. I'm glad to hear this. It means if someone comes comes up to me and says, hey, you know, Uncle Bob says you do this, I'm like, well, actually, I've talked to Uncle Bob and it's it's a bit more nuanced than that.
 
-Okay, so ah my next question is still kind of in in the realm of solid.
+### What is the most important principle that is not included in SOLID?
+
+**Jesse**: Okay, so ah my next question is still kind of in in the realm of solid.
 
 I want to know, what do you think is like the most important principle the program the board that you follow, but which is not in that solid mnemonic.
 
@@ -166,9 +181,13 @@ And then below that are things like so the solid principles and the law of demea
 
 **Jesse**: I like that. I like courage especially. I feel like i'm I'm often someone who's just like too scared to go and try and take on some scary refactoring because you're just scared of breaking things and it's it's important to know that like you can do it. It is possible.
 
-Okay, so so this I want to transition to talking about testing. Now, I'm not going to ask you about TDD, because I suspect that any time anyone gets you on a podcast, they only want to talk about TDD.
+## Testing
 
-What I do want to talk about is test coverage. So you ah have a tweet where you say that the only test coverage goal that makes any sense is 100%, but it's an asymptotic goal. You'll likely never get there.
+**Jesse**: Okay, so so this I want to transition to talking about testing. Now, I'm not going to ask you about TDD, because I suspect that any time anyone gets you on a podcast, they only want to talk about TDD.
+
+### Is a 100% test coverage goal a good idea?
+
+**Jesse**: What I do want to talk about is test coverage. So you ah have a tweet where you say that the only test coverage goal that makes any sense is 100%, but it's an asymptotic goal. You'll likely never get there.
 
 But then you also say it's a very bad management metric and it's kind of a, it's a reprehensible release criterion and so on. And I'm trying to understand like the thing about 100% is it's actually really achievable if you just enforce it in CI from day one. And so I don't think, I don't, I don't, I think I share that your intuition that you shouldn't do that. But I also feel that there's a contradiction there that it's like, if the asymptotic goal is achievable, then shouldn't you just try to achieve it?
 
@@ -180,6 +199,8 @@ There's also the problem of any any of the code that has to communicate across t
 
 And the best way to do that would be to set up a camera and have your test use the camera to look at the screen. But it's not particularly ah practical to do that.
 And so at some point, you have to look at look at this thin layer of code and go, I can't test that. Now then later on, you think, ooh, I've got an idea. I could test some of it this way. And then you add another test, and you you feel very clever. And you've pushed your coverage up by 0.01%. Oh yes, I'm getting closer to 100. But in those kinds of systems, I think you are unlikely to achieve 100% coverage as long as it's a complicated enough system where you've got lots of external flows.
+
+### Is it okay to sometimes test private methods directly
 
 **Jesse**: Okay, now I'm glad you mentioned the pixels on the screen thing because this this brings me to my next question about testing which is testing private methods. Now, I believe that you that you believe that you shouldn't directly test private methods and that you should do it through public methods. And I want to pitch to you my case for the opposite, which is that there is some time.
 
@@ -232,9 +253,15 @@ but You will write that, and you will be calling methods that are public to you,
 
 **Bob**: So, yeah, okay.
 
-**Jesse**: Yeah, I agree. Okay, okay, so that's good. All right, so I want to move now to professionalism, which is a completely different topic, and it's it's probably the most fun topic I think we could be talking about here.
+**Jesse**: Yeah, I agree. Okay, okay, so that's good.
+
+## Professionalism
+
+**Jesse**: All right, so I want to move now to professionalism, which is a completely different topic, and it's it's probably the most fun topic I think we could be talking about here.
 
 **Bob**: OK.
+
+### Why aren't software engineers interested in becoming a profession?
 
 **Jesse**: Okay, so why aren't software developers interested in becoming a profession akin to doctors and lawyers? Or do you do you refute the the the assumption of that claim?
 
@@ -290,6 +317,8 @@ right So I think you know let them do that. Squeeze the nanoseconds, guys. on th
 
 So I think that's how it's going to work out. At least I hope so.
 
+### What about people who aren't passionate about programming?
+
 **Jesse**: Okay. So another question on professionalism I have is some, so you have said that that to be a professional, you want to be spending maybe 20 hours of your week outside of your day job, just honing the craft. And my question is, what would you say to someone who just sees programming as a job and the They don't hate it, but it's just a job to them. And they, you know, they do their 40 hours. They're doing wholesome, completely unrelated things in their spare time, like baking. like what How do you feel about that person?
 
 **Bob**: but I think that person, there's there's certainly a place for that person. They can be a programmer. That's fine. Programming is not going to be, for them, programming is not going to be the kind of thing where they can climb a ladder and gain greater and greater responsibility and make more and more money and so on. They're not going to go up that ladder.
@@ -309,7 +338,9 @@ And, and that's going to take some of your time. outside of of work. Don't ever 
 
 So this was very much on the tail end. And you know how it is with academics where they're kind of always a bit behind on the languages. And I saw firsthand that it's like, With the smaller number of people I was working with, there was this feeling in the air of like, this language is is on the decline and we're kind of in trouble here. And it was just interesting where, you know, ah if you are the kind of person who has not tried to stay on top of things, it's to your own detriment.
 
-Um, but I also wonder about like, uh, the, the, the choice of, of having this label of professionalism where it's like this very emotionally laden thing where it's like, if you do this, you're a professional, but if you don't do this, you're not a professional. I worry that it's kind of like, it's a two-sided coin where it's like on one side, it's very inspirational. It's like a call to arms.
+### Are calls for professionalism a form of gatekeeping?
+
+**Jesse**: But I also wonder about like, uh, the, the, the choice of, of having this label of professionalism where it's like this very emotionally laden thing where it's like, if you do this, you're a professional, but if you don't do this, you're not a professional. I worry that it's kind of like, it's a two-sided coin where it's like on one side, it's very inspirational. It's like a call to arms.
 
 Let's be professionals. Let's, let's, you know, let's, let's rise as a, as a group. But on the on the other hand, if you don't fit that category, you might feel a bit excluded by that. And what what you just outlined was a kind of dependency injection for goals, where it's like if you want to become a team lead, then you should do XYZ, right? And when you communicate it in that way, it kind of ah makes it a bit less incendiary, but you also lose the inspirational side as well. And I'm wondering like, is that a trade-off that's, that's, that you've made consciously where you've got those two different options. One's going to piss some people off because they're getting mad because you're kind of like, Oh, he's gatekeeping professionalism. But then on the other hand, if you do more, if you do the more, more descriptive way, it's kind of like not as inspirational. You know what I mean?
 
@@ -333,16 +364,20 @@ And Kent Beck came up with another one a while ago. It was just test and commit 
 
 And what are the behaviors that don't? And then, then the exclusives line comes in and say, okay, we're going to say, this is the line below that line. No, sorry. That's below our discipline standard and above the line is above our discipline standard. And we're still not close to that.
 
+### Does professionalism come from individual choice or structural incentives?
+
 **Jesse**: Okay, so I'm also keen to understand how much of what you're saying is about like individual agency versus incentives, right? Like how much of it is like, you know, as an individual, I'm gonna swear an oath and every day when I wake up in the morning, I'm gonna repeat the program as oath and then I'm gonna not ship bugs versus just having the incentive structure of being like, oh, if I if i fall short on this oath, then I'm gonna lose my license.
 
 Does that make sense? Like how much of it's just like you want the individually better versus let's have an actual incentive to kind of in enforce these norms.
 
 **Bob**: Oh, yeah. So i think I think you need both for that. and So for example, doctors do take an oath like that. And of course, they don't recite it every day in in the mirror when they wake up in the morning. But but they do have an oath like that, which I hope the medical profession takes seriously. Sometimes I have my doubts. But OK, I hope they do. And they do have an incentive structure. It's usually punitive. if you If you don't rise to the standards, they'll kick you out. You won't be a doctor anymore.
 
-**Bob**: And usually there are legal consequences when you're a doctor as well. So there are those kinds of incentives. We as an industry have not faced that yet.
+And usually there are legal consequences when you're a doctor as well. So there are those kinds of incentives. We as an industry have not faced that yet.
 Well, not quite. There have been some programmers who have gone to jail for writing lying, cheating code, and that may increase the legal issues may start to increase more and more, as as society depends more and more on software.
 
 So we may see that. And then the other side of it, the the the the definition of the standards will probably follow as a result of it.
+
+## Bob Martin vs Martin Fowler
 
 **Jesse**: Okay, so now I want to talk about thought leadership. So I think a lot about you and in in comparison to Martin Fowler.
 
@@ -374,9 +409,15 @@ Now, he just recently did a ah second edition of Refactoring, which is good. He 
 
 And everything he writes is gold.
 
-**Jesse**: Yeah, yeah, that's that's great. All right, so now, I want to turn to artificial intelligence. And this is a topic for which I have no idea what your thoughts are on it, or even if you have thoughts on it. But I figured that someone like yourself who likes to think about things might have some things to say.
+**Jesse**: Yeah, yeah, that's that's great.
 
-So first, I want to start by asking, has AI changed how you program?
+## Artificial Intelligence
+
+**Jesse**: All right, so now, I want to turn to artificial intelligence. And this is a topic for which I have no idea what your thoughts are on it, or even if you have thoughts on it. But I figured that someone like yourself who likes to think about things might have some things to say.
+
+### Has AI changed how Bob programs?
+
+**Jesse**: So first, I want to start by asking, has AI changed how you program?
 
 **Bob**: Oh, has it changed how I program? No, no, not, not at all. Um, maybe in the slightest way I have used things like chat GPT to ask questions the way I would, I used to ask questions to stack overflow. Uh, and then I will get answers which are not as good as the answers I got on stack overflow, but at least their answers sometimes.
 
@@ -397,11 +438,13 @@ And sometimes it makes it better. Sometimes it makes it worse, in my view. But i
 
 That's about the most I have done.
 
+### Are developer jobs threatened by AI?
+
 **Jesse**: Do you think that developer jobs are threatened by AI in the near or distant future?
 
 **Bob**: No, no, no, not at all.
 
-**Jesse**: No. Why is that?
+**Jesse**: No? Why is that?
 
 **Bob**: Because the AIs are tools, and they're good tools, and they will help.
 
@@ -417,7 +460,9 @@ So yeah, I'm not worried about that at all. I think it'll make our jobs easier a
 
 **Jesse**: That's really interesting. i think I think I agree with you in the sense that there's a lot of cases where we thought it was going to go bad and that actually the opposite happened. But there are also times where like you know horses didn't have that much to do after the car was invented, right? There was plenty of horse employment before the car was invented. And then it's just like, well, actually, they're not that useful beyond horse racing. And so I wonder, I think that there'll be a certain level of intelligence, if we ever reach it for AI, or at that point we go, Oh, okay, now it's getting tricky, because this is equivalent to a very intelligent human. And maybe there's there's just so much work to be done. And it just doesn't make that big of a difference.
 
-But I suppose the next sensible question to ask is like, do you have any thoughts on the singularity or the idea that AI might become some self improving loop that then becomes like a super god AI that may or may not kill everyone? What's your thoughts on the singularity argument?
+### Will we achieve super-intelligent AI any time soon?
+
+**Jesse**: But I suppose the next sensible question to ask is like, do you have any thoughts on the singularity or the idea that AI might become some self improving loop that then becomes like a super god AI that may or may not kill everyone? What's your thoughts on the singularity argument?
 
 **Bob**: Well, I think you know it's Kurtzweil's great dream. i'm not I don't buy into the singularity argument for a real simple reason. Larry Niven long ago wrote a series of stories called The Magic Goes Away.
 
@@ -432,6 +477,8 @@ We look at it now and we think, these things are really smart. No, they aren't. 
 But these are not self-motivated, self-imagining things that can look out into space and wonder.
 
 They don't do that. They just sit there waiting for you to probe at them. So I think we're very far away from that. I could go through some more numbers if you want to do it, but but it
+
+### Would a super-intelligent AI programmer care about modularity?
 
 **Jesse**: That's a very strong case. So i'm I'm keen to know, in a world where a super intelligent AI was created, let's assume that theoretically it is possible and it's just like super, super smart. Do you think that it if it was writing code, it would care about modularity in the same way that humans do?
 
@@ -470,7 +517,9 @@ They just tinker things together. Oh, and you know, a faster than light drive? S
 
 **Jesse**: Okay, maybe it's a maybe it's another plot twist.
 
-All right, cool. Well, that's basically that's basically an hour. And that's all the questions that I had for you, Bob.
+## Wrapping up and what's next for Bob Martin
+
+**Jesse**: All right, cool. Well, that's basically that's basically an hour. And that's all the questions that I had for you, Bob.
 
 **Bob**: Oh, good.
 
