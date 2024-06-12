@@ -42,7 +42,7 @@ Below is the transcript. There's still some filler words in there so please forg
 
 **Bob**: Thank you so much.
 
-**Jesse**: It's great to meet you finally in person (virtually in person). All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized many important principles that are very salient to many programmers today. Author of many books: Clean Code, Clean Coder, clean Agile, Clean Architecture, and most recently, Functional Design: Principles, Patterns and Practices.
+**Jesse**: It's great to meet you finally in person (virtually in person). All right, so quick introduction for the audience. Uncle Bob has been around for a while now. He's popularized many important principles that are very salient to many programmers today. Author of many books: Clean Code, Clean Coder, Clean Agile, Clean Architecture, and most recently, Functional Design: Principles, Patterns and Practices.
 
 I've probably got the order of those three things wrong But I wanted to start a conversation on functional design. I'm interested to know: you've been around in mostly in the object oriented space for a while but you've recently transitioned over to Clojure and it seems like you've fallen in love with that language from some of your blog posts. I'm keen to know, what was the impetus behind writing this particular book?
 
