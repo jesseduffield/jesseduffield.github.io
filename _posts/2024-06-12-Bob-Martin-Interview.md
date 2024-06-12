@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I Interviewed 'Uncle' Bob Martin
+title: My interview with 'Uncle' Bob Martin
 ---
 
 See the interview on youtube [here](https://www.youtube.com/watch?feature=shared&v=qdcamTUcuAQ).
