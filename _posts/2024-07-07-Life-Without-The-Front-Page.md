@@ -3,7 +3,7 @@ layout: post
 title: Life without the front page
 ---
 
-I consider myself low on the spectrum of addict-ability: I don't smoke, I rarely drink, I don't gamble, I don't have a video game addiction, and I don't snack on sweets. Despite that, a couple years ago I did find myself compulsively checking the front page of Hacker News and various programming subreddits for the tech world's latest goss.
+I consider myself low on the spectrum of addict-ability: I don't smoke, I rarely drink, I don't gamble, I don't have a video game addiction, and I don't snack on sweets. But every man has his kryptonite, and a couple years ago I found myself compulsively checking the front page of Hacker News and various programming subreddits for the tech world's latest goss.
 
 We all tell ourselves that staying on top of tech developments is crucial to our fast-changing profession, but what does Sam Bankman Fried's sentencing, or Sam Altman's sacking and re-hiring have to do with that? Much front-page content is no more refined than what you can read about the royal family in a tabloid magazine. Even nitty-gritty discussions on the relative merits of programming languages are just glorified status contests for your monkey brain to fixate on.
 
