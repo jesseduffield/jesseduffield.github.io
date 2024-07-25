@@ -12,7 +12,7 @@ Building software is challenging, so us humans, endowed with brains better adapt
 
 It's easy to forget that heuristics _are_ heuristics: they are not the end-goal; they're just simple, imprecise rules that we can deploy in service toward our objective.
 
-In chess, we've discovered that the human heuristic to trade pieces when you're at a material advantage is not taken nearly as seriously by AI players as it is with human players:, AI players will more readily sacrifice a material advantage in order to close in on a check mate. The AI never forgets the objective: to win the game. If violating a a heuristic gets it closer to that objective, so be it.
+In chess, we've discovered that the human heuristic to trade pieces when you're at a material advantage is not taken nearly as seriously by AI players as it is with human players; AI players will more readily sacrifice a material advantage in order to close in on a check mate. The AI never forgets the objective: to win the game. If violating a a heuristic gets it closer to that objective, so be it.
 
 So, as software engineers, what is the underlying objective that all of our heuristics have been built atop? In the context of an ambitious startup, it might be to sell the company for a billion dollars. In the context of an open source project, it might be to make a product that is used by millions of people and lasts for decades.
 
