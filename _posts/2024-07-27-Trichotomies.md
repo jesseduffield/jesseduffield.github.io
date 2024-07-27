@@ -95,7 +95,7 @@ The Man (rationality), The lion (pride, etc), And Beast (base desires).
 
 You could argue this is two dichotomies (rational vs emotional, then noble vs ignoble emotions). But the lion/beast dichotomy seems sufficiently fuzzy that I think this fails the collectively-exhaustive test: if Plato had added a fourth part like 'The Child' (childlike inspiration/creativity), 'The Witness' (base consciousness), I don't think anybody would have objected.
 
-### Hegel's Dialectic
+### Hegel's dialectic
 
 The idea here is that there's thesis (some idea), antithesis (some conflicting idea), and synthesis (some resolution of the two ideas). This has a similar structure to past, present, future in that it's really just a dichotomy (thesis and antithesis) and a separate category for how they interact. So... this sounds fundamental to me. For the record, the dialectic has always struck me as being too general to be of any conceptual use to me, but there are lots of smart people who see everything through the dialectical lens so what do I know?
 
@@ -115,7 +115,7 @@ There are plenty of quadrichotomies that just encode two dichotomies: one that c
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/prometheus.png)
 
-### Religious trichotomies
+### Religious partitions
 
 George RR Martin's Game of Thrones books feature a religion that revolves around 'The Seven', a partitioning of a monotheistic deity into seven aspects, reminiscent of the Christian Trinity.
 
