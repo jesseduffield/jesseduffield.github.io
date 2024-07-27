@@ -74,6 +74,8 @@ Straight from the [wikipedia page](https://en.wikipedia.org/wiki/Id,_ego_and_sup
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/freud.png)
 
+Freud's trichotomising doesn't stop there: you'll notice he's also got unconscious, preconcious, and conscious in the above diagram, but that fails my contiuum test (just like how small, medium, and large fries from McDonalds are an arbitrary trichotomy). So I'd class that as arbitrary.
+
 ### Plato's tripartite soul
 
 The man (rationality), the lion (pride, etc), and the beast (base desires). This seems just arbirary to me: you could argue it's two dichotomies ('is it emotional?', 'is it noble emotions or not?') but I think it's fuzzier than that and I'd class this as simply arbitrary: you could easily fit more elements in like 'the child', or 'the witness'.
