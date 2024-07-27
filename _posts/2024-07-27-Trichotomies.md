@@ -63,3 +63,37 @@ My ultimate contention is this: _any trichotomy which doesn't break down into on
 To be clear, there's nothing wrong with an arbitrary trichotomy! Many trichotomies are useful despite being arbitrary: for example, the _Hungry, Humble, Smart_ trifecta is a great heuristic when hiring talent. But you should be _aware_ of the arbitrariness, so that you don't become dogmatic and end up wasting time arguing about how some edge case maps onto the trichotomy.
 
 So, next time somebody invokes a trichotomy, keep in mind that it's almost certainly arbitrary. Follow this advice and you are guaranteed to be happy, healthy, and whole.
+
+## Appendix: More examples
+
+I've left these out of the body of the post because it was already long enough but if you're interested, here's some more examples:
+
+### Freud's id, ego, and super-ego
+
+Straight from the [wikipedia page](https://en.wikipedia.org/wiki/Id,_ego_and_superego), look at this diagram and tell me that's not two dichotomies! Although I'd slice it the other way: seems like the two questions are 'are you bottom-up or top-down?' (with ego being top-down) and then 'are you positively or negatively valenced?' (with id being positively valenced and super-ego being negatively valenced)
+
+![]({{ site.baseurl }}/images/posts/trichotomies/freud.png)
+
+### Plato's tripartite soul
+
+The man (rationality), the lion (pride, etc), and the beast (base desires). This seems just arbirary to me: you could argue it's two dichotomies ('is it emotional?', 'is it noble emotions or not?') but I think it's fuzzier than that and I'd class this as simply arbitrary: you could easily fit more elements in like 'the child', or 'the witness'.
+
+### Hegel's Dialectic
+
+The idea here is that there's thesis (some idea), antithesis (some conflicting idea), and synthesis (some resolution of the two ideas). This has a similar structure to past, present, future in that it's really just two things (thesis and antithesis) and a separate category for how they interact. So... I would not class this as arbitrary. There are lots of smart people who see everything through the lens of this dialectic but it's always struck me as being so general that it's not useful.
+
+### The COM-B model of behavioural change
+
+I happen to know that this gets used in physio-therapy research. The idea is that behaviour is influenced by three factors: capability, motivation, and opportunity. I think this is a uniquely bad trichotomy: not only do they all interact in convoluted aways, but for very simple situations it's not clear how to categorise things: if somebody is clinically depressed and can't get out of bed, is that a motivation issue or a capability issue? If somebody loses their job and can't afford a treatment, is that an opportunity issue or a capability issue?
+
+![]({{ site.baseurl }}/images/posts/trichotomies/com-b.png)
+
+### Quadrichotomies
+
+I've confined this post to only talk about trichotomies but it only gets worse when you think about partitions of four or more elements. The example that inspired this post was actually a quadrichotomy on Eric Weinstein's podcast The Portal, with guest Agnes Callard. Eric suggested that to resolve a debate about truth, you could posit the following four elements: truth, meaning, fitness, and grace. Agnes [responded](https://moses.land/transcript-agnes-callard-and-eric-weinstein-on-the-portal-episode-23/):
+
+> Okay, so So first of all, like, I think anytime you divide things and like philosophers disagree about this, like some philosophers are fine with a certain thing I’m about to describe, but like, I think you can’t just divide things into four things. You’re like, here are the four things. These are the things I found. I’m like, well, what’s the principle of division? Like? Is that just something you made up? Like, what if we come up with a fifth one? So I want to understand it. I want to understand sort of how the whole is articulated into those things. Until I understand that I just don’t feel like I’ve, I’ve understood anything.
+
+There are plenty of quadrichotomies that just encode two dichotomies: one that comes to mind is the example from [Prometheus Rising](https://www.amazon.com.au/Prometheus-Rising-Robert-Anton-Wilson/dp/0692710604) that explains the four temperaments: The Eagle (I'm okay, you're not okay), The Lion (I'm okay, your okay), The Bull (I'm not okay, you're not okay) and The Angel (I'm not okay, you're okay).
+
+![]({{ site.baseurl }}/images/posts/trichotomies/prometheus.png)
