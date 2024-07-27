@@ -73,7 +73,7 @@ My ultimate contention is this: _any trichotomy which doesn't break down into on
 
 If you can think of a fundamental trichotomy which is not composed of dichotomies, let me know!
 
-To be clear, there's nothing wrong with an arbitrary trichotomy! Many trichotomies are useful despite being arbitrary: for example, the _Hungry, Humble, Smart_ trifecta is a great heuristic when hiring talent. But you should be _aware_ of the arbitrariness, so that you don't become dogmatic and end up wasting time arguing about how some edge case maps onto the trichotomy.
+To be clear, there's nothing wrong with an arbitrary trichotomy! Many trichotomies are useful despite being arbitrary: for example, the _Hungry, Humble, Smart_ trifecta is a great heuristic when hiring talent. The mistake to avoid is presupposing that an arbitrary trichotomy is in fact fundamental, and then get waste time arguing about which slice an edge-case belongs to.
 
 In closing, there are three kinds of people in this world: those who have never heard the word 'trichotomy before' (which includes myself before writing this post), those who have heard the word and who assume trichotomies are all fundamental, and those who assume trichotomies are arbitrary until proven fundamental. If you train yourself to be the third kind of person, I guarantee that you will become happy, healthy, and whole.
 
