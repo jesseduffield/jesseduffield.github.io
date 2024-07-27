@@ -54,7 +54,7 @@ Are there any trichotomies that actually hold water? Yes! Some examples
 - Win, lose, draw
 - The three horns of a triceratops
 
-What do these examples have in common? They each just break down into dichotomies. With past, present, and future you've got time split into two halves (past and future) and we designate the place that they meet in the middle to be deserving of its own category (the present). With the horns of a triceratops you're asking two yes/no questions: is the horn on the brow or the nose? And if it's on the brow, is the horn on the left or the right? With win, lose, draw the two yes/no questions are 'did you score higher than your opponent?' and 'did your opponent score higher than you?'.
+What do these examples have in common? They each just break down into dichotomies. With past, present, and future you've got time split into two halves (past and future) and we designate the place that they meet in the middle to be deserving of its own category (the present). With the horns of a triceratops you're asking two yes/no questions: is the horn on the brow or the nose? And if it's on the brow, is the horn on the left or the right? With win, lose, draw the two yes/no questions are 'did one of us beat the other?' and 'if so, who?'.
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/triceratops.png)
 
