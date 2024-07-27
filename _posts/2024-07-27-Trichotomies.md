@@ -14,7 +14,7 @@ If you've ever taken a class in persuasive language, or if you've ever joined a 
 - Live, Laugh, Love
 - Life, Liberty, and the pursuit of Happiness
 
-Why does the number three hold such a special place in the human heart? Well, with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
+Why does the number three hold such a special place in the human heart? Here's one theory: with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/rabbit.png)
 
@@ -22,7 +22,7 @@ Triangles are central to structural engineering: we use trusses (triangular stru
 
 Okay, so triangles are important in our three-dimensional world. Why, then, are humans so hypnotised by triplets in spoken language?
 
-The human psyche is heavily influenced by geometry after spending millions of years of evolution hurling spears at animals for our next meal. Even 3.7 billion years prior when we were amoeba, listlessly floating around in the ocean with impunity, we were still interacting with things in space. Comparatively, we've only had spoken language for about 2 million years, i.e. 0.05% of our evolutionary history. After all that time spent thinking in geometric terms, it's no wonder we try so hard nowadays to represent abstract concepts visually to help us make sense of them, hence the common phrase 'ummm... perhaps you could explain with a diagram?'.
+The human psyche is heavily influenced by geometry after spending millions of years of evolution hurling spears at animals for our next meal. Even 3.7 billion years prior when we were amoeba, listlessly floating around in the ocean with impunity, we were still interacting with things in physical space. Comparatively, we've only had spoken language for about 2 million years, i.e. 0.05% of our evolutionary history. After all that time spent thinking in geometric terms, it's no wonder we try so hard nowadays to represent abstract concepts visually to help us make sense of them, hence the common phrase 'ummm... perhaps you could explain with a diagram?'.
 
 Geometric metaphors abound in our everyday life. When the news reporter informs you that that Nvidia stock went up, the stock price didn't _actually_ go up or down, instead the stock price increased or decreased in value. You're probably thinking 'what's the difference?!' and that's because you've spent so long associating the word 'increase' with 'up' and 'decrease' with 'down' that you've forgotten that it's an arbitrary association which we only created in the first place to help us visualise numbers in our geometry-obsessed heads.
 
