@@ -14,9 +14,13 @@ If you've ever taken a class in persuasive language, or if you've ever joined a 
 - Live, Laugh, Love
 - Life, Liberty, and the pursuit of Happiness
 
-Why does the number three hold such a special place in the human heart? Here's one theory: with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
+Why does the number three hold such a special place in the human heart?
 
-![]({{ site.baseurl }}/images/posts/trichotomies/rabbit.png)
+## Why do humans love triplets?
+
+I believe our love ot triplets derives from geometry: with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
+
+![]({{ site.baseurl }}/images/posts/trichotomies/rabbit.png){:height="300px"}
 
 Triangles are central to structural engineering: we use trusses (triangular structures) in our tables, bridges, and roofs to prevent them from collapsing under force. MythBusters proclaimed that triangles are [the strongest shape](https://www.mathaware.org/why-are-triangles-the-strongest-shape-unveiling-the-secrets-of-structural-stability/).
 
@@ -26,15 +30,17 @@ The human psyche is heavily influenced by geometry after spending millions of ye
 
 Geometric metaphors abound in our everyday life. When the news reporter informs you that that Nvidia stock went up, the stock price didn't _actually_ go up, instead the stock price increased in value. You're probably thinking 'what's the difference?!' and that's because you've spent so long associating the word 'increase' with 'up' and 'decrease' with 'down' that you've forgotten that it's an arbitrary association which we only created in the first place to help us visualise numbers in our geometry-obsessed heads.
 
-![]({{ site.baseurl }}/images/posts/trichotomies/stocks.png)
+![]({{ site.baseurl }}/images/posts/trichotomies/stocks.png){:height="300px"}
 
 It should be no surprise then that although LLMs (Large Language Models, like ChatGPT) can outperform many humans on medical and legal tests, the one test where they hilariously under-perform compared to humans is the [ARC test](https://arcprize.org/) which is entirely composed of... wait for it... basic geometric puzzles:
 
-![]({{ site.baseurl }}/images/posts/trichotomies/arc.png)
+![]({{ site.baseurl }}/images/posts/trichotomies/arc.png){:height="300px"}
 
 Which brings us back to triplets. When you hear a triplet like 'Mind, Body, Spirit', it _feels_ stable and sound, because humans have a deep intuition that triangles comprised of three interconnected concepts are just as strong as the triangles that hold our bridges together in the real world.
 
 But is this intuition right? Are our triplets actually meaningful or are they just arbitrary?
+
+## Arbirary trichotomies
 
 I want to focus on a specific kind of triplet: a _trichotomy_, which means a breakdown of something into three parts (compared to a dichotomy which involves only two parts).
 
@@ -47,15 +53,25 @@ What do we want from our trichotomies? Here's what I want:
 
 If you can't satisfy all those criteria, I will declare your trichotomy as _arbitrary_. Otherwise, I'll consider it fundamental.
 
+### States of matter
+
 Let's take an example: In school I was told there are three states of matter: solid, liquid, and gas. Oh wait... except there's a fourth one called 'plasma', and if you look hard enough you'll also encounter '[Bose–Einstein condensates](https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate)' and '[Fermionic condensates](https://en.wikipedia.org/wiki/Fermionic_condensate "Fermionic condensate")'. This trichotomy is not collectively exhaustive, so I'm hereby declaring it _arbitrary_.
+
+### Branches of government
 
 Let's try another one: the three branches of government: legislative (writes laws), executive (enforces laws) and judiciary (interpret laws). There's no need to stop at three: we could include The People (votes representatives into power) and The Press (holds other branches accountable) but even if we believe the original trichotomy makes sense, notice that it's _by design_! There are many countries that make [no attempt](https://youtu.be/Ggz_gd--UO0?t=96) to separate the executive from the legislative, and there are some countries with no separation at all. So, not collectively exhaustive, and not globally true. Arbitrary.
 
+### Mind, Body, Spirit
+
 To use an earlier example, what about Mind, Body, and Spirit? Well, the atheists in the room take issue with the inclusion of 'Spirit', and the sociologists are wondering why 'Community' wasn't included. Arbitrary.
+
+### UX components
 
 Let's bring it a little closer to home. I remember at a previous company where for a time, Brad Frost's [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/) was all the rage. Atomic Design is a conceptual framework for organising system UX components into three elements: atoms, molecules and organisms. I remember disputes about whether a given component was an atom or a molecule and in the end it just didn't matter (The map is [not](https://slatestarcodex.com/2014/11/21/the-categories-were-made-for-man-not-man-for-the-categories/) the territory!). The level of abstraction in UX components (like all things) is a continuum, so Atomic Design fails the continuum test and is hereby dubbed arbitrary. Atomic Design has since been [revised](https://bradfrost.com/blog/post/extending-atomic-design/) to include 'ions' and 'quarks' so it also fails the collectively-exhaustive test.
 
-![]({{ site.baseurl }}/images/posts/trichotomies/atomic-design.png)
+![]({{ site.baseurl }}/images/posts/trichotomies/atomic-design.png){:height="300px"}
+
+## Fundamental trichotomies
 
 Are there any trichotomies that actually hold water? Yes! Some examples
 
@@ -65,33 +81,27 @@ Are there any trichotomies that actually hold water? Yes! Some examples
 
 What do these examples have in common? They each just break down into dichotomies. With time you've got the dichotomy of past vs future, with an extra category for where the meet in the middle (the present). You could argue time is a continuum so past/present/future must be an arbitrary trichotomy, but the fact that the present isn't really a slice of time so much as it is a point in time means that trichotomy is off the hook. With the horns of a triceratops you're asking two yes/no questions: is the horn on the brow or the nose? And if it's on the brow, is the horn on the left or the right? With win, lose, draw the two yes/no questions are 'did one of us beat the other?' and 'if so, who?'.
 
-![]({{ site.baseurl }}/images/posts/trichotomies/triceratops.png)
+![]({{ site.baseurl }}/images/posts/trichotomies/triceratops.png){:height="300px"}
 
 What's special about dichotomies? It's easy to state a dichotomy whose parts are mutually exclusive and collectively exhaustive just by saying one half is X and the other half is not-X. So if you combine multiple non-arbitrary dichotomies, you're likely to end up with a trichotomy (or quadrichotomy, etc) which is itself not arbitrary.
 
 My ultimate contention is this: _any trichotomy which doesn't break down into one or two dichotomies is almost certainly arbitrary and some guy just coined it years ago and nobody has questioned it since._
 
-If you can think of a fundamental trichotomy which is not composed of dichotomies, let me know!
+Let's test this contention against some more examples
 
-To be clear, there's nothing wrong with an arbitrary trichotomy! Many trichotomies are useful despite being arbitrary: for example, the _Hungry, Humble, Smart_ trifecta is a great heuristic when hiring talent. The mistake to avoid is presupposing that an arbitrary trichotomy is in fact fundamental, and then get waste time arguing about which slice an edge-case belongs to.
-
-In closing, there are three kinds of people in this world: those who have never heard the word 'trichotomy before' (which includes myself before writing this post), those who have heard the word and who assume trichotomies are all fundamental, and those who assume trichotomies are arbitrary until proven fundamental. If you train yourself to be the third kind of person, I guarantee that you will become happy, healthy, and whole.
-
-## Appendix: More examples
-
-I've left these out of the body of the post because it was already long enough but if you're interested, here's some more examples:
+## More trichotomy examples
 
 ### Freud's id, ego, and super-ego
 
 Straight from the [wikipedia page](https://en.wikipedia.org/wiki/Id,_ego_and_superego), look at this diagram and tell me that's not two dichotomies! Although I'd slice it the other way: seems like the two questions are 'are you bottom-up or top-down?' (with ego being top-down) and then 'are you positively or negatively valenced?' (with id being positively valenced and super-ego being negatively valenced)
 
-![]({{ site.baseurl }}/images/posts/trichotomies/freud.png)
+![]({{ site.baseurl }}/images/posts/trichotomies/freud.png){:height="300px"}
 
-Freud's impulsive trichotomising doesn't stop there: you'll notice he's also got unconscious, preconcious, and conscious in the above diagram, but that fails my contiuum test. So I'd class that as arbitrary.
+Freud's impulsive trichotomising doesn't stop there: you'll notice he's also got unconscious, preconcious, and conscious in the above diagram, but that fails the continuum test. So I'd class that as arbitrary.
 
 ### Plato's tripartite soul
 
-The Man (rationality), The lion (pride, etc), And Beast (base desires).
+Plato partitions man's soul into three parts: The Man (rationality), The Lion (pride, passion, etc), and The Beast (base desires).
 
 You could argue this is two dichotomies (rational vs emotional, then noble vs ignoble emotions). But the lion/beast dichotomy seems sufficiently fuzzy that I think this fails the collectively-exhaustive test: if Plato had added a fourth part like 'The Child' (childlike inspiration/creativity), 'The Witness' (base consciousness), I don't think anybody would have objected.
 
@@ -105,23 +115,11 @@ I happen to know that this gets used in physio-therapy research. The idea is tha
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/com-b.png)
 
-### Quadrichotomies
+### The Christian Trinity
 
-I've confined this post to only talk about trichotomies but it only gets worse when you think about partitions of four or more elements. The example that inspired this post was actually a quadrichotomy on Eric Weinstein's podcast The Portal, with guest Agnes Callard. Eric suggested that to resolve a debate about truth, you could posit the following four elements: truth, meaning, fitness, and grace. Agnes [responded](https://moses.land/transcript-agnes-callard-and-eric-weinstein-on-the-portal-episode-23/):
+Per my Christian upbringing and latent fear of God, I hesitate to openly describe the Christian Trinity of The Father, The Son, and The Holy Spirit as arbitrary. Instead I'll simply talk about an entirely separate partitioning of a monotheistic deity into distinct aspects: the Faith of The Seven from GRRM's Game of Thrones series.
 
-> Okay, so So first of all, like, I think anytime you divide things and like philosophers disagree about this, like some philosophers are fine with a certain thing I’m about to describe, but like, I think you can’t just divide things into four things. You’re like, here are the four things. These are the things I found. I’m like, well, what’s the principle of division? Like? Is that just something you made up? Like, what if we come up with a fifth one? So I want to understand it. I want to understand sort of how the whole is articulated into those things. Until I understand that I just don’t feel like I’ve, I’ve understood anything.
-
-There are plenty of quadrichotomies that just encode two dichotomies: one that comes to mind is the example from [Prometheus Rising](https://www.amazon.com.au/Prometheus-Rising-Robert-Anton-Wilson/dp/0692710604) that explains the four temperaments: The Eagle (I'm okay, you're not okay), The Lion (I'm okay, your okay), The Bull (I'm not okay, you're not okay) and The Angel (I'm not okay, you're okay).
-
-![]({{ site.baseurl }}/images/posts/trichotomies/prometheus.png)
-
-### Religious partitions
-
-George RR Martin's Game of Thrones books feature a religion that revolves around 'The Seven', a partitioning of a monotheistic deity into seven aspects, reminiscent of the Christian Trinity.
-
-When I read the 'Song of the Seven' in the fourth book (I think), it struck me that if I was raised in this faith, I would totally buy the partition (until stumbling across this blog post of course). It really made me reflect on the Christian Trinity in a way I hadn't previously.
-
-Here's the 'Song of the Seven' in full:
+The Seven comprises The Father, The Mother, The Smith, The Warrior, The Maiden, The Crone, and The Stranger. At a whopping seven aspects, you'd be forgiven for thinking there's just no way that this partitioning passes the mutual exclusion test or the collective exhaustion test, but the 'Song of the Seven' does a good job of making it feel fundamental and cohesive:
 
 > The Father's face is stern and strong,
 > he sits and judges right from wrong.
@@ -159,6 +157,37 @@ Here's the 'Song of the Seven' in full:
 > they see you, little children.
 > Just close your eyes, you shall not fall,
 > they see you, little children.
+
+Of course, in modern times I think it's missing the eighth fundamental entity: The Programmer:
+
+> The Programmer works into the night
+> on a laptop screen that burns so bright
+> he ships the code that runs your site
+> and inspires little children.
+
+So although I can totally get around the Faith of the Seven, it fails the collectively-exhaustive test and regrettably must be deemed arbitrary.
+
+## Conclusion
+
+To recap: my claim is that trichotomies which are not composed of one or two dichotomies are almost certainly arbitrary, and I think with the above examples that's been demonstrated.
+
+To be clear, there's nothing wrong with an arbitrary trichotomy! Many trichotomies are useful despite being arbitrary: for example, the _Hungry, Humble, Smart_ trifecta is a great heuristic when hiring talent. The mistake to avoid is presupposing that an arbitrary trichotomy is in fact fundamental, and then wasting time arguing about which slice an edge-case belongs to.
+
+In closing, there are three kinds of people in this world: those who have never heard the word 'trichotomy' before (which includes myself before writing this post), those who have heard the word and who assume trichotomies are all fundamental, and those who assume trichotomies are arbitrary until proven fundamental. If you train yourself to be the third kind of person, I guarantee that you will become happy, healthy, and whole.
+
+If you can think of a fundamental trichotomy which is not composed of dichotomies, let me know!
+
+### Appendix: Quadrichotomies
+
+I've confined this post to only talk about trichotomies but it only gets worse when you think about partitions of four or more elements. The example that inspired this post was actually a quadrichotomy on Eric Weinstein's podcast The Portal, with guest Agnes Callard. Eric suggested that to resolve a debate about truth, you could posit the following four elements: truth, meaning, fitness, and grace. Agnes [responded](https://moses.land/transcript-agnes-callard-and-eric-weinstein-on-the-portal-episode-23/):
+
+> Okay, so So first of all, like, I think anytime you divide things and like philosophers disagree about this, like some philosophers are fine with a certain thing I’m about to describe, but like, I think you can’t just divide things into four things. You’re like, here are the four things. These are the things I found. I’m like, well, what’s the principle of division? Like? Is that just something you made up? Like, what if we come up with a fifth one? So I want to understand it. I want to understand sort of how the whole is articulated into those things. Until I understand that I just don’t feel like I’ve, I’ve understood anything.
+
+I wonder what agnes thinks of my four criteria for a trichotomy to be fundmental: perhaps she thinks that is itself arbitrary!
+
+There are plenty of quadrichotomies that just encode two dichotomies: one that comes to mind is the example from [Prometheus Rising](https://www.amazon.com.au/Prometheus-Rising-Robert-Anton-Wilson/dp/0692710604) that explains the four temperaments: The Eagle (I'm okay, you're not okay), The Lion (I'm okay, you're okay), The Bull (I'm not okay, you're not okay) and The Angel (I'm not okay, you're okay).
+
+![]({{ site.baseurl }}/images/posts/trichotomies/prometheus.png)
 
 ## Footnotes
 
