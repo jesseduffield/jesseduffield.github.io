@@ -53,9 +53,11 @@ What do we want from our trichotomies? Here's what I want:
 
 If you can't satisfy all those criteria, I will declare your trichotomy as _arbitrary_. Otherwise, I'll consider it fundamental.
 
+Let's see how some well known trichotomies fare against our criteria.
+
 ### States of matter
 
-Let's take an example: In school I was told there are three states of matter: solid, liquid, and gas. Oh wait... except there's a fourth one called 'plasma', and if you look hard enough you'll also encounter '[Bose–Einstein condensates](https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate)' and '[Fermionic condensates](https://en.wikipedia.org/wiki/Fermionic_condensate "Fermionic condensate")'. This trichotomy is not collectively exhaustive, so I'm hereby declaring it _arbitrary_.
+In school I was told there are three states of matter: solid, liquid, and gas. Oh wait... except there's a fourth one called 'plasma', and if you look hard enough you'll also encounter '[Bose–Einstein condensates](https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate)' and '[Fermionic condensates](https://en.wikipedia.org/wiki/Fermionic_condensate "Fermionic condensate")'. This trichotomy is not collectively exhaustive, so I'm hereby declaring it _arbitrary_.
 
 ### Branches of government
 
