@@ -18,7 +18,7 @@ Why does the number three hold such a special place in the human heart?
 
 ## Why do humans love triplets?
 
-I believe our love ot triplets derives from geometry: with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
+I believe our love of triplets derives from geometry: with two points you can only form a line in one-dimension (boring and useless), but with _three_ points you get promoted into the second dimension with a triangle (exciting, and powerful). You might think that structures with four points (like squares) are the backbone of 3D environments. Nope! four points is overkill; zoom into any computer-generated 3D environment and you'll find it's all composed of little triangles.
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/rabbit.png){:height="300px"}
 
