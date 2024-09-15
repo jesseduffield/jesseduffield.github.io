@@ -11,7 +11,7 @@ Back in 1966, when the GOTO statement was not yet 'considered harmful' and still
 - Selection: If-statements, switch-statements
 - Iteration: Loops
 
-Nobody cares about Sequence because it's so simple. Some people care about Iteration, especially when there's nested loops involved. But _everybody_ cares about Selection. A single if-else statement can double the number of possible paths through your program, and it's in the permutational explosion of possible code paths where all the bugs lie dormant, waiting to rear their ugly heads when the time is ripe and they've surreptitiously made it past your test suite into production.
+Nobody cares about Sequence because it's so simple. Some people care about Iteration[^2], especially when there's nested loops involved. But _everybody_ cares about Selection. A single if-else statement can double the number of possible paths through your program, and it's in the permutational explosion of possible code paths where all the bugs lie dormant, waiting to rear their ugly heads when the time is ripe and they've surreptitiously made it past your test suite into production.
 
 So it's worth considering ways in which we can reduce the amount of Selection (i.e. conditional logic) going on in our programs.
 
@@ -174,11 +174,27 @@ There is a middle path, where you pass a function as an argument to the function
 
 The ideological part of my brain thinks that in reality this just isn't a real problem, or at least isn't as bad a problem as having the `create_user` method's signature becoming increasingly tortured as the three user types continue to diverge in their attributes. But the pragmatic part of my brain thinks... yep there's some valid cases where you just bite the bullet and permit the conditional logic.
 
-Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^2] it's almost always because the non-conditional approach simply hadn't been considered, rather than being chosen as the lesser of all evils.
+Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^3] it's almost always because the non-conditional approach simply hadn't been considered, rather than being chosen as the lesser of all evils.
 
 Next time you find yourself letting go of compile-time knowledge, ask yourself if there is a better way!
 
 ## Footnotes
 
 [^1]: The Böhm-Jacopini Theorem demonstrated that any computer program can be written using just three control structures: Sequence, Selection, and Iteration, eliminating the need for GOTO statements. It was two years later that Edsger Dijkstra published his famous 'Go To Statement Considered Harmful' essay.
-[^2]: Again, in the programming tradition of naming principles in three-letter acronyms, demanding that they never be violated, and then coyly admitting that in some cases they should indeed be violated
+[^2]:
+    One example of somebody really caring about Iteration is in John Carmack's [post](http://number-none.com/blow/john_carmack_on_inlined_code.html) on inlinining functions:
+
+    > The fly-by-wire flight software for the Saab Gripen (a lightweight
+    > fighter) went a step further. It disallowed both subroutine calls and
+    > backward branches, except for the one at the bottom of the main loop.
+    > Control flow went forward only. Sometimes one piece of code had to leave
+    > a note for a later piece telling it what to do, but this worked out well
+    > for testing: all data was allocated statically, and monitoring those
+    > variables gave a clear picture of most everything the software was doing.
+    > The software did only the bare essentials, and of course, they were
+    > serious about thorough ground testing.
+    >
+    > No bug has ever been found in the "released for flight" versions of that
+    > code.
+
+[^3]: Again, in the programming tradition of naming principles in three-letter acronyms, demanding that they never be violated, and then coyly admitting that in some cases they should indeed be violated
