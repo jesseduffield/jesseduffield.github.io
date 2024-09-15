@@ -3,6 +3,8 @@ layout: post
 title: "Don't Let Go (of compile-time knowledge)"
 ---
 
+![]({{ site.baseurl }}/images/posts/dont-let-go/image.webp)
+
 Back in 1966, when the GOTO statement was not yet 'considered harmful' and still enjoyed widespread usage with impunity, the Böhm-Jacopini Theorem[^1] hit the scene which said that at the end of the day, all software can be constructed as a glorified combo of:
 
 - Sequence: Executing one statement after another
@@ -175,6 +177,8 @@ The ideological part of my brain thinks that in reality this just isn't a real p
 Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^2] it's almost always because the non-conditional approach simply hadn't been considered, rather than being chosen as the lesser of all evils.
 
 Next time you find yourself letting go of compile-time knowledge, ask yourself if there is a better way!
+
+## Footnotes
 
 [^1]: The Böhm-Jacopini Theorem demonstrated that any computer program can be written using just three control structures: Sequence, Selection, and Iteration, eliminating the need for GOTO statements. It was two years later that Edsger Dijkstra published his famous 'Go To Statement Considered Harmful' essay.
 [^2]: Again, in the programming tradition of naming principles in three-letter acronyms, demanding that they never be violated, and then coyly admitting that in some cases they should indeed be violated
