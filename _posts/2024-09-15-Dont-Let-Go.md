@@ -60,7 +60,7 @@ end
 
 Just like that, the conditional logic is gone. The compile-time knowledge about what kind of user we want to create is no longer sacrificed to the whims of runtime logic. And if we're aiming for 100% code coverage, we no longer need to add a test for when an invalid user type is passed, because we've removed that code!
 
-_(For the record, we've also dismantled a Wrong Abstraction in that we should expect the creation of an admin and the creation of a customer to require different arguments over time, which would have led to an increasingly tortured signature for the `create_user` method, but this post is focused more on the conditional logic itself.)_
+_(For the record, we've also dismantled a [Wrong Abstraction](https://jesseduffield.com/Beginners-Guide-To-Abstraction/) in that we should expect the creation of an admin and the creation of a customer to require different arguments over time, which would have led to an increasingly tortured signature for the `create_user` method, but this post is focused more on the conditional logic itself.)_
 
 This is a contrived example, but I see things code like this all the time. Some other places I've seen this happen:
 
