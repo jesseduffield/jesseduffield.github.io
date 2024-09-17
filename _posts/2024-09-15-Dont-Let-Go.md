@@ -11,7 +11,7 @@ Back in 1966, when the GOTO statement was not yet 'considered harmful' and still
 - Selection: If-statements, switch-statements
 - Iteration: Loops
 
-Nobody cares about Sequence because it's so simple. Some people care about Iteration[^2], especially when there's nested loops involved. But _everybody_ cares about Selection. A single if-else statement can double the number of possible paths through your program, and it's in the permutational explosion of possible code paths where all the bugs lie dormant, waiting to rear their ugly heads when the time is ripe and they've surreptitiously made it past your test suite into production.
+Nobody cares about Sequence because it's so simple. Some people care about Iteration[^2], especially when there's nested loops involved. But _everybody_ cares about Selection. A single if-else statement can double the number of possible paths through your program, and it's in the combinatorial explosion of possible code paths where all the bugs lie dormant, waiting to rear their ugly heads when the time is ripe and they've surreptitiously made it past your test suite into production.
 
 So it's worth considering ways in which we can reduce the amount of Selection (i.e. conditional logic) going on in our programs.
 
@@ -27,8 +27,10 @@ end
 def create_user(name:, email:, type:)
   case type
   when "admin"
+    # pretend that actually creating an admin requires a few more lines than this
     Admin.create(name: name, email: email)
   when "customer"
+    # pretend that actually creating an customer requires a few more lines than this
     Customer.create(name: name, email: email)
   else
     raise("Unexpected type: #{type}")
@@ -57,6 +59,8 @@ end
 ```
 
 Just like that, the conditional logic is gone. The compile-time knowledge about what kind of user we want to create is no longer sacrificed to the whims of runtime logic. And if we're aiming for 100% code coverage, we no longer need to add a test for when an invalid user type is passed, because we've removed that code!
+
+_(For the record, we've also dismantled a Wrong Abstraction in that we should expect the creation of an admin and the creation of a customer to require different arguments over time, which would have led to an increasingly tortured signature for the `create_user` method, but this post is focused more on the conditional logic itself.)_
 
 This is a contrived example, but I see things code like this all the time. Some other places I've seen this happen:
 
@@ -103,7 +107,7 @@ class CsvImporter
   def import_users
     user_attributes = CSV.read("my_input.csv")
     user_attributes.each do |attributes|
-      create_user(
+      import_user(
         name: attributes["name"],
         email: attributes["email"],
         type: attributes["type"]
@@ -113,7 +117,9 @@ class CsvImporter
 
   private
 
-  def create_user(name:, email:, type:)
+  # Renamed to 'import_user' to emphasize the fact that we're dealing
+  # with serialized data
+  def import_user(name:, email:, type:)
     case type
     when "admin"
       create_admin(name: name, email: email)
@@ -151,12 +157,10 @@ My argument is not to capture compile-time knowledge in types, it's to avoid sto
 
 Are there counter-examples, where it is simply more readable, or more maintainable, to 'let go' of the compile-time knowledge?
 
-Things can get hairy when you want to enforce certain invariants, like running some code before or after doing something. Consider again the case of creating a user. Perhaps you want to ensure that you're always logging when a user of any type is created. That's easy to enforce if you have a a single `create_user` method:
+Things can get hairy when you want to enforce certain invariants, like running some code before or after doing something. Consider again the case of creating a user. Perhaps you want to ensure that you're always logging the total user count after a user of any type is created. That's easy to enforce if you have a a single `create_user` method:
 
 ```ruby
 def create_user(name:, email:, type:)
-  Logger.log("user of type #{type} created")
-
   case type
   when "admin"
     Admin.create(name: name, email: email)
@@ -165,16 +169,83 @@ def create_user(name:, email:, type:)
   else
     raise("Unexpected type: #{type}")
   end
+
+  Logger.log("There are now #{Admin.count + Customer.count} users in total")
 end
 ```
 
-If you were to add a third type of user (again in the spirit of contrived examples, let's call it `super_admin`), then you would add an extra case in the switch statement and you'd get the logging for free. On the other hand, if you had used standalone methods, you might forget to add the logging.
+If you were to add a third type of user (again in the spirit of contrived examples, let's call it `super_admin`), then you would add an extra case in the switch statement and you'd get the logging for free. On the other hand, if you had used standalone methods, you might forget to add the logging:
 
-There is a middle path, where you pass a function as an argument to the function that does the logging, but despite the lack of conditional logic, that has its own cognitive overhead. And, if both functions are public, it doesn't really protect you from a developer just ignoring the logging function and calling the creation function directly.
+```ruby
+def create_admin(name:, email:)
+  Admin.create(name: name, email: email)
 
-The ideological part of my brain thinks that in reality this just isn't a real problem, or at least isn't as bad a problem as having the `create_user` method's signature becoming increasingly tortured as the three user types continue to diverge in their attributes. But the pragmatic part of my brain thinks... yep there's some valid cases where you just bite the bullet and permit the conditional logic.
+  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+end
 
-Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^3] it's almost always because the non-conditional approach simply hadn't been considered, rather than being chosen as the lesser of all evils.
+def create_customer(name:, email:)
+  Customer.create(name: name, email: email)
+
+  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+end
+
+def create_super_admin(name:, email:)
+  SuperAdmin.create(name: name, email: email)
+
+  # Whoops, forgot to follow the implicit pattern of including a log statement.
+end
+```
+
+There is a middle path, where you pass a function as an argument to the function that does the logging:
+
+```ruby
+def create_user_and_log_count(create:)
+  create.call()
+
+  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+end
+
+...
+
+create_user_and_log_count(->() { Customer.create(name: name, email: email) }
+```
+
+But despite the lack of conditional logic, this approach has its own cognitive overhead: firstly because first-class functions are just hard for humans to get their heads around, and secondly because that `create` argument could do anything when called, so it's hard to know what's expected of it when viewed out of context, let alone enforce that it only creates a user. Furthermore, given that the callsite needs to pass in the creation function, nothing's stopping a user of the API from just ignoring the logging function and calling that creation function directly.
+
+There's another middle path where you still bite the bullet and use the `create_user` method in its all its conditional-logic glory but you make it private so that users of the API are oblivious to the use of the `type` argument and future refactoring becomes trivial:
+
+```ruby
+def create_admin(name:, email:)
+  create_user(name: name, email: email, type: "admin")
+end
+
+def create_customer(name:, email:)
+  create_admin(name: name, email: email, type: "customer")
+end
+
+private
+
+def create_user(name:, email:, type:)
+  case type
+  when "admin"
+    Admin.create(name: name, email: email)
+  when "customer"
+    Customer.create(name: name, email: email)
+  else
+    raise("Unexpected type: #{type}")
+  end
+
+  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+end
+```
+
+This approach, like the function argument approach, lets you keep the catch-all code (in this case, the log statement) but also minimises the blast radius as the create-admin and create-customer use cases diverge over time and start to require different arguments.
+
+## Conclusion
+
+The ideological part of my brain thinks that no matter how you slice it, conditional logic is the enemy and any any person who joins the crusade against it will be rewarded in the next life. But the pragmatic part of my brain thinks... yep, there are some valid cases where you just bite the bullet and permit the conditional logic.
+
+Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^3] it's almost always because the non-conditional approach simply hasn't been considered, rather than being chosen as the lesser of all evils.
 
 Next time you find yourself letting go of compile-time knowledge, ask yourself if there is a better way!
 
@@ -182,7 +253,7 @@ Next time you find yourself letting go of compile-time knowledge, ask yourself i
 
 [^1]: The Böhm-Jacopini Theorem demonstrated that any computer program can be written using just three control structures: Sequence, Selection, and Iteration, eliminating the need for GOTO statements. It was two years later that Edsger Dijkstra published his famous 'Go To Statement Considered Harmful' essay.
 [^2]:
-    One example of somebody really caring about Iteration is in John Carmack's [post](http://number-none.com/blow/john_carmack_on_inlined_code.html) on inlinining functions:
+    One example of somebody really caring about Iteration is in John Carmack's [post](http://number-none.com/blow/john_carmack_on_inlined_code.html) on inlining functions:
 
     > The fly-by-wire flight software for the Saab Gripen (a lightweight
     > fighter) went a step further. It disallowed both subroutine calls and
