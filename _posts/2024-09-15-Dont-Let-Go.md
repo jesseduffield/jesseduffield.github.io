@@ -170,7 +170,7 @@ def create_user(name:, email:, type:)
     raise("Unexpected type: #{type}")
   end
 
-  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+  Foo.log_total_user_count
 end
 ```
 
@@ -180,19 +180,19 @@ If you were to add a third type of user (again in the spirit of contrived exampl
 def create_admin(name:, email:)
   Admin.create(name: name, email: email)
 
-  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+  Foo.log_total_user_count
 end
 
 def create_customer(name:, email:)
   Customer.create(name: name, email: email)
 
-  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+  Foo.log_total_user_count
 end
 
 def create_super_admin(name:, email:)
   SuperAdmin.create(name: name, email: email)
 
-  # Whoops, forgot to follow the implicit pattern of including a log statement.
+  # Whoops, forgot to follow the implicit pattern of logging the total count
 end
 ```
 
@@ -202,7 +202,7 @@ There is a middle path, where you pass a function as an argument to the function
 def create_user_and_log_count(create:)
   create.call()
 
-  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+  Foo.log_total_user_count
 end
 
 ...
@@ -235,7 +235,7 @@ def create_user(name:, email:, type:)
     raise("Unexpected type: #{type}")
   end
 
-  Logger.log("There are now #{Admin.count + Customer.count} users in total")
+  Foo.log_total_user_count
 end
 ```
 
