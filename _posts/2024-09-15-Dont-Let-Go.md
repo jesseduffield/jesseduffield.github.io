@@ -243,9 +243,9 @@ This approach, like the function argument approach, lets you keep the catch-all 
 
 ## Conclusion
 
-The ideological part of my brain thinks that no matter how you slice it, conditional logic is the enemy and any any person who joins the crusade against it will be rewarded in the next life. But the pragmatic part of my brain thinks... yep, there are some valid cases where you just bite the bullet and permit the conditional logic.
+The ideological[^3] part of my brain thinks that no matter how you slice it, conditional logic is the enemy and any any person who joins the crusade against it will be rewarded in the next life. But the pragmatic part of my brain thinks... yep, there are some valid cases where you just bite the bullet and permit the conditional logic.
 
-Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^3] it's almost always because the non-conditional approach simply hasn't been considered, rather than being chosen as the lesser of all evils.
+Luckily for me, when I see somebody violating the Don't Let Go aka DLG principle[^4] it's almost always because the non-conditional approach simply hasn't been considered, rather than being chosen as the lesser of all evils.
 
 Next time you find yourself letting go of compile-time knowledge, ask yourself if there is a better way!
 
@@ -268,4 +268,5 @@ Next time you find yourself letting go of compile-time knowledge, ask yourself i
     > No bug has ever been found in the "released for flight" versions of that
     > code.
 
-[^3]: Again, in the programming tradition of naming principles in three-letter acronyms, demanding that they never be violated, and then coyly admitting that in some cases they should indeed be violated
+[^3]: I have written about this topic before [here](https://jesseduffield.com/Type-Keys/) (albeit with a different focus) and got crucified on Hacker News for it because I did not do enough bullet-biting. The purpose of this post is to make a more general argument than the original post, and with more tribute to counter examples.
+[^4]: Again, in the programming tradition of naming principles in three-letter acronyms, demanding that they never be violated, and then coyly admitting that in some cases they should indeed be violated
