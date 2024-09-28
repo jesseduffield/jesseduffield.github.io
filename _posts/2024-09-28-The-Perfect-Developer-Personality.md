@@ -104,7 +104,7 @@ Where introverts develop a strong capacity for independence and self-reliance, e
 
 Agreeable people are polite, compassionate, and care about harmony. Disagreeable people are more assertive, more likely to prioritise their needs over the needs of others, and more willing to engage in conflict.
 
-Disagreeable people are absolutely essential for the success of a business. You simply need to have somebody who will call a spade a spade and who will resolve tensions as they arise rather than sweeping them under the rug in the name of harmony.
+Disagreeable people are absolutely essential for the success of a business. You simply need to have somebody who will call a spade a spade and who will resolve tensions as they arise rather than sweeping them under the rug in the name of harmony. Linus Torvalds, a notoriously disagreeable leader, does not mince words, and despite some episodes of harsh language, he is still widely revered for direct and clear about his standards.
 
 Harmony is still important though, and a team works best when its members genuinely believe that their peers and superiors have their best interests at heart.
 
