@@ -132,13 +132,24 @@ The same neuroticism that can protect you from nasty bugs may hold you back from
 
 ## Diversity
 
-We set out at the beginning of this post to construct the perfect developer personality, but what we've found along the way is that for each facet of personality, there are benefits to being high and low on the spectrum. Although I think that industriousness, orderliness, and introversion are all useful traits for a developer, there are counter-examples, and with other traits like agreeableness and neuroticism, it's not clear how large a dose you'd want.
+If you twisted my arm and forced me to answer the original question of this post: 'What is the perfect developer personality?', without rejecting its framing, I'd tell you that the perfect personality involves:
 
-So perhaps we should not be trying to define the perfect personality, but rather the perfect _team_.
+- Openness: slightly above average
+- Industriousness: high
+- Orderliness: high
+- Introversion: high
+- Agreeableness: below average
+- Neuroticism: average
 
-Who is in our perfect team?
+Yet, you're not twisting my arm, and the original question's framing deserves some scrutiny.
 
-We need a down-to-earth, low-openness person who can content with the nitty-gritty details of the problem at hand and get shit done just as much as we need the blue-sky-thinking high-openness person who can think up clever solutions to hard problems.
+We've seen a pattern throughout this post: different problems call for different personality traits. If you're working in an open-ended problem space, it helps to up the creativity by dialling down orderliness and dialling up openness. Likewise, if you're working in safety-critical systems you'd want to dial up the neuroticism. The same is true of roles: if you're a team lead, some extraversion will come in handy.
+
+As somebody high in openness myself, it pains me to admit that the answer to the original question is: 'It depends'.
+
+So is there a better question we can ask instead, which takes all the above nuances into account? One question we could ask is: 'What combination of personalities do we want in an effective team that is going to be solving varied problems?'
+
+Well, we need a down-to-earth, low-openness person who can content with the nitty-gritty details of the problem at hand and get shit done just as much as we need the blue-sky-thinking high-openness person who can think up clever solutions to hard problems.
 
 We need the industrious hard-worker who will stop at nothing to get a job done, and we need the slightly less industrious worker who hates work so much that they'll come up with creative ways to automate their job.
 
@@ -150,7 +161,7 @@ We need an agreeable person who cares about harmony within the team, as well as 
 
 And finally, we need not just a stress-head who takes very seriously the chance of a data breach, but the cool head who makes bold decisions and takes risks when necessary.
 
-Different problem spaces will call for a different team makeup. If you're working on medical technology, it helps to be more cautious than if you're building a CRUD app. But with so many varied problems to solve, it helps to have the full range of traits covered.
+How to get all these different people to work together effectively? That's left as an exercise to the reader.
 
 Personality is a very broad topic and I've employed plenty of hand waving in this post, so I'd love to get your thoughts on the topic. How do you think personality influences a developer's output?
 
