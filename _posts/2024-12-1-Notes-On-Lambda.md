@@ -455,8 +455,8 @@ So there are various points to consider:
 ## Conclusion
 
 Like I said at the start of this post, I ended up deciding against AWS lambda, opting for docker containers on ECS with fargate instead. The main considerations were:
-1) Having an environment that I can run locally is very important to me for shortening the feedback loop and I just don't believe anybody who says that a remote dev env is preferable.
-2) My app would be very much IO-bound, which is a bad fit for lambda
-3) Cold starts would suck for users using my app in real-time
-4) I fundamentally reject the idea of a microservices architecture unless your dev team is so big that it's impossible to have everybody coordinate on a single monolith, and my dev team is small and will remain small for a while. Independently deployed lambdas are basically microservices.
-5) The technology is too new and most frameworks/libraries for producing web applications are associated with monolithic frameworks like django, rails, .NET, etc. Perhaps one day this lambda stuff will be so far along that it will enjoy the same ecosystem of tooling but for now it's just too bleeding edge.
+1. Having an environment that I can run locally is very important to me for shortening the feedback loop and I just don't believe anybody who says that a remote dev env is preferable.
+2. My app would be very much IO-bound, which is a bad fit for lambda
+3. Cold starts would suck for users using my app in real-time
+4. I fundamentally reject the idea of a microservices architecture unless your dev team is so big that it's impossible to have everybody coordinate on a single monolith, and my dev team is small and will remain small for a while. Independently deployed lambdas are basically microservices.
+5. The technology is too new and most frameworks/libraries for producing web applications are associated with monolithic frameworks like django, rails, .NET, etc. Perhaps one day this lambda stuff will be so far along that it will enjoy the same ecosystem of tooling but for now it's just too bleeding edge.
