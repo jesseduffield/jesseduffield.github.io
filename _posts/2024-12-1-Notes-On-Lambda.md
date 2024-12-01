@@ -348,7 +348,7 @@ Docker images can be up to [10gb](https://aws.amazon.com/blogs/compute/working-w
 
 ## Number crunching
 
-[AWS cost analysis comparing lambda, ec2, and fargate]()https://blogs.perficient.com/2021/06/17/aws-cost-analysis-comparing-lambda-ec2-fargate/
+[AWS cost analysis comparing lambda, ec2, and fargate](https://blogs.perficient.com/2021/06/17/aws-cost-analysis-comparing-lambda-ec2-fargate/)
 
 [Post comparing lambda to fargate and showing break-even point](https://nuvalence.io/insights/modeling-analyzing-lambda-vs-fargate-breakeven/)
 
