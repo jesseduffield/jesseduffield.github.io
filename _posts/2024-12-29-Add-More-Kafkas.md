@@ -3,16 +3,9 @@ layout: post
 title: "Add More Kafkas"
 ---
 
-Rome wasn't built in a day, but when it did eventually get completed, it had a striking resemblance to state of the art software architectural practices implemented by my own engineering team at [Clipbox](https://clipbox.carrd.co/):
+I knew from day one that if we didn't add Rust, Kafka, and Microservice to [Clipbox](https://clipbox.carrd.co/)'s architecture, we were _f\*cked_.
 
-* complex sewer system that carries material out from the core to various other places (think Microservice)
-* defensive structures to prevent infiltration from barbarians (Security)
-* use of complex but precise language (Rust)
-* competent, stoic emperors
-
-Software development is a competitive landscape, especially with the recent rise in AI coding assitants, so I knew from day one that if we didn't add Rust, Kafka, and Microservice to the architecture, we were _f\*cked_.
-
-So I got my engineering team in a room in the first week of development and said:
+In an increasingly competitive world of software engineering, accelerated by recent advances in AI coding assitants, we needed to stand apart from the crowd, so I got my engineering team in a room in the first week of development and said:
 
 > guys (and girls, obviously) we are going to really architect the sh\*t out of this product. It's going to be hard: some of you won't be able to endure the long hours, the random bugs, or (let's face it) my own occasional mood swings, but there is no greatness without sacrifice, and I promise you all that if we can pull this off, Clipbox is going to propel all of you into greatness, both in your careers, and your personal lives.
 
@@ -32,7 +25,14 @@ There was a brief silence in the room, followed by energised whispers among the 
 
 Fast-forward to today. 20 millions users, and a prospective big-tech buyer who's looking to purchase us for 2 billion (I'll give you a hint, his first name is 'Mark').
 
-We had some close calls: one night before a very important beta launch we were having issues with one of our core services: it wasn't able to keep up with the memory requirements of our core clipboard feature. The team told me that they had exhausted all options. I knew how important this launch was so there was no time for hesitation. 'Double the kafkas' I said. There was resistance, of course. 'I don't think any company has ever had that many', one of my senior devs protested. But then Jake, a junior frontender, chimed in:
+Rome wasn't built in a day, but when it did eventually get completed, it had a striking resemblance to architectural practices that my team implemented:
+
+* complex sewer system that carries material out from the core to various other places (think Microservice)
+* defensive structures to prevent infiltration from barbarians (Security)
+* use of complex but precise language (Rust)
+* competent, stoic emperors who pontificate on various topics
+
+It wasn't all smooth sailing; we had some very close calls. One night before a very important beta launch we were having issues with one of our core services: it wasn't able to keep up with the memory requirements of our core clipboard feature. The team told me that they had exhausted all options. I knew how important this launch was so there was no time for hesitation. 'Double the kafkas' I said. There was resistance, of course. 'I don't think any company has ever had that many', one of my senior devs protested. But then Jake, a junior frontender, chimed in:
 
 > We didn't make this company so that we could follow in the footsteps of our predecessors. If we need to double the kafkas, then let's do it
 
