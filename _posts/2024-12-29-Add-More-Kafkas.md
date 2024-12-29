@@ -8,7 +8,7 @@ Rome wasn't built in a day, but when it did eventually get completed, it had a s
 * complex sewer system that carries material out from the core to various other places (think Microservice)
 * defensive structures to prevent infiltration from barbarians (Security)
 * use of complex but precise language (Rust)
-* stoic emperor sharing great insights on various interesting topics (No comment)
+* competent, stoic emperors
 
 Software development is a competitive landscape, especially with the recent rise in AI coding assitants, so I knew from day one that if we didn't add Rust, Kafka, and Microservice to the architecture, we were _f\*cked_.
 
