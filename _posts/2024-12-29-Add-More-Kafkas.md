@@ -25,7 +25,7 @@ There was a brief silence in the room, followed by energised whispers among the 
 
 Fast-forward to today. 20 millions users, and a prospective big-tech buyer who's looking to purchase us for 2 billion (I'll give you a hint, his first name is 'Mark').
 
-Rome wasn't built in a day, but when it did eventually get completed, it had a striking resemblance to architectural practices that my team implemented:
+Rome wasn't built in a day, but when it did eventually get completed, it had a striking resemblance to Clipbox's own architecture:
 
 * complex sewer system that carries material out from the core to various other places (think Microservice)
 * defensive structures to prevent infiltration from barbarians (Security)
