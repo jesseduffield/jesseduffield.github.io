@@ -5,7 +5,7 @@ title: "1 million Lazygit downloads, one embarrassment at a time"
 
 ![]({{ site.baseurl }}/images/posts/embarrassment/1mil.png)
 
-Lazygit has cracked one million downloads (as far as the badge on github reports) and so I figured I'd use this opportunity to pontificate about software engineering and... embarrassment.
+[Lazygit](https://github.com/jesseduffield/lazygit) has cracked one million downloads (as far as the badge on github reports) and so I figured I'd use this opportunity to pontificate about software engineering and... embarrassment.
 
 There is a world of difference between `>` and `>>`. The first one replaces a file, and the other merely appends to it. This distinction proved especially [important](https://github.com/jesseduffield/lazygit/issues/7) when I launched Lazygit now seven years ago, when in the docs I told people to add an alias for Lazygit to their shell configuration file via `echo "alias lg=lazygit" > ~/.zshrc`. That one missing character meant that anybody who followed my instructions when installing Lazygit were irretrievable deleting the one file on your computer that you _really_ don't want to delete.
 
