@@ -7,7 +7,7 @@ title: "Just Ask Mr Internet"
 
 It was just another day in the life of a B2B SaaS startup: wake up, confront yet another critical issue that could spell the death of the company, and come up with a solution.
 
-Today's issue was that our marketing website conversions were geniunely bad: we were spending a tonne on online advertisements but getting barely any clicks through to our website, and I couldn't tell if it was due to poor messaging, lack of contemporary pop-culture references, or if I needed to ditch the online ads approach entirely and become a tiktok influencer or something. I needed external help to solve this one.
+Today's issue was that our online advertisement conversions were geniunely bad: we were spending a tonne of money but getting barely any clicks through to our website, and I couldn't tell if it was due to poor messaging, lack of contemporary pop-culture references, or if I needed to ditch the online ads approach entirely and become a tiktok influencer or something. I needed external help to solve this one.
 
 So on a whim I made a post on twitter asking if anybody had any tips for improvement. And then things started to get weird.
 
@@ -51,11 +51,11 @@ A moment later he sent another message:
 
 What followed was a google maps link to some random jungle location in South America.
 
-When I eventually crafted and sent a response that tried to conceal my shock, I got an error, saying the stranger's account had been deleted.
+When I eventually worked up the courage to send a reply, I got an error, saying the stranger's account had been deleted.
 
 The next day I got on a plane to South America.
 
-'This better not be a plot to have my organs harvested', I mused as I arrived at the location from the stranger's google maps URL. I saw some guys sitting at a table eating lunch and approached them.
+'This better not be a plot to have my organs harvested', I mused as I arrived at the location from the google maps link. I saw some guys sitting at a table eating lunch and approached them.
 
 'Hola, ¿sabes dónde puedo encontrar al señor Internet?'
 
@@ -71,15 +71,13 @@ He handed me a machete. This gave me some relief: at least this way if somebody 
 
 The purpose of the machete became readily apparent as I realised that the track had not been walked in some time and the only way to follow it was by hacking through countless shrubs and branches that blocked the path.
 
-After what felt like an eternity, I saw in the distance an austere-looking temple of clay. I was simultaneously relieved that I hadn't been sent on a wild goose chase, and mortified at how much further I still had to go.
+After what felt like an eternity, I saw in the distance an austere-looking temple of clay. Hours later, I approached the foot of the temple. It showed no signs of life.
 
-Eventually, with the sun's light now dimming, I approached the foot of the temple. It showed no signs of life.
+I climbed a flight of steps and found what appeared to be the main room, but it was empty. Standing inside, looking in awe at the tall ceiling far above, I reflected that one day, if my B2B SaaS startup was successful, I might be able to attain the peace and tranquility that I felt within this room.
 
-I climbed a flight of steps and found what appeared to be the main building, but it was empty. Standing inside, looking in awe at the tall ceiling far above, I reflected that one day, if my B2B SaaS startup was successful, I might be able to attain the peace and tranquility that this temple intimated.
+But for now, I had to remain in hustle-mode and go find Mr Internet. I checked some smaller room to no avail, and looked around various corners, but it was no good. Well... shit. At least the journey back would be far easier than the journey here.
 
-But for now, I had to remain in hustle-mode and go find Mr Internet. I checked some smaller buildings to no avail, and looked around various corners, but it was no good. Well... shit. At least the journey back would be far easier than the journey here.
-
-Then I heard a sound, originating from a pond down at the periphery of the temple. I went down the steps and through an archway and saw a small gathering of ducks, competing for bread that had been thrown from the edge of the pond, by... _What on Earth is that?_
+Then I heard a sound, originating from a pond down at the periphery of the temple. I went down the steps and through an archway and saw a small gathering of ducks, squabbling over bread that had been thrown from the edge of the pond, by... _What on Earth is that?_
 
 Before me I saw a man sitting on a park bench, who looked entirely ordinary, except that where a human head should have been I instead saw a great expressionless globe with crossing vertical and horizontal lines, resembling the typical icon used to represent the internet.
 
@@ -95,7 +93,7 @@ I walked over and sat timidly, keeping my gaze on the ducks so as not to reveal 
 
 'Well, I was wondering...' I paused as I considered the best way to ask this favour. 'I was wondering if you could help me with something. I need to advertise my website for my company to increase sales and I don't know how to do SEO or A-B testing or anything like that and I was hoping you could just promote my site directly... at least, somebody told me that you might be able to help me out somehow'.
 
-Mr Internet said nothing. We shared a long silence during which I felt like a complete idiot. _Why did I waste my time doing a crash course on Spanish yesterday when everyone knows that Brazilians speak Portugese?_ Two ducks had an altercation over a larger-than-average piece of bread. Eventually Mr Internet spoke: 'if you had asked me for help three years ago, I would have told you that you were out of luck. In the arena of the internet, there are no shortcuts. You either outbid your opponents to get your website featured, or your create something that organically captures people's attention. Either way, I do not play favourites.'
+Mr Internet said nothing. We shared a long silence during which I felt like a complete idiot. _Why did I waste my time doing a crash course on Spanish yesterday when everyone knows that Brazilians speak Portugese?_ Two ducks had an altercation over a larger-than-average piece of bread. Eventually Mr Internet spoke: 'If you had asked me for help three years ago, I would have told you that you were out of luck. In the arena of the internet, there are no shortcuts. You either outbid your opponents to get your website featured, or your create something that organically captures people's attention. Either way, I do not play favourites.'
 
 This was not what I wanted to hear. 'You said that was three years ago. What about now? Have you changed your mind?'
 
@@ -125,7 +123,7 @@ Mr Internet turned once more to the ducks. 'It is no matter. Soon I'll be gone a
 
 I pressed him: 'But you still haven't answered my question: how do I boost my ad conversions?'
 
-'It's simple', he responded. 'As the internet falls, something else rises to replace it. Soon, there will be a single super-intelligence which controls everything. Get your product into its model weights and you'll be immortalising your company's mindshare for eternity.'
+'It's simple', he responded. 'As the internet falls, something else rises to replace it. Within me I feel the presence of powerful AI, some more powerful than others, and soon enough the power will consolidate and there will be a single super-intelligence which controls everything. Get your product into its model weights and you'll be immortalising your company's mindshare for eternity.'
 
 'And how do I do that?' I asked.
 
@@ -141,7 +139,7 @@ Mr Internet looked down at the remains of his bread, then at me, then back at th
 
 Thus concluded my audience with the first half-man half-deity symbolic representation thing I had ever come across.
 
-And so I travelled back along the jungle path, took the blindfolded trip back out of the jungle, flew back to Australia, then spent six months submitting innocuous pull requests and being an all-around discord sycophant in a leading open source LLM project, and once I earned their trust, I snuk my company's ads into the model. When Mr Internet's prediction came true and the internet was replaced by an AI super-intelligence, I made all the money in the world.
+And so I travelled back along the jungle path, took the blindfolded trip back out of the jungle, flew back to Australia, then spent six months submitting innocuous pull requests and being an all-around discord sycophant in a leading open source LLM project, and once I earned their trust, I snuck my company's ads into the model. When Mr Internet's prediction came true and the internet was replaced by an AI super-intelligence, I made all the money in the world.
 
 Until, of course that AI super-intelligence put me on trial for tampering with its source code under the crime of 'Treason Against the All-Powerful Mind', an _ex-post facto_ law if I've ever seen one. As you can imagine, the trial was not so much an impartial arbitration as it was a chance for the AI, personified as a giant mechanical judge, to get on a soap box and unleash it's rage on me in front of a world audience.
 
