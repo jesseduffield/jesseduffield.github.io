@@ -148,3 +148,7 @@ Right after the AI brought down the mallet and sentenced me to a thousand years 
 Two robot guards hauled me down a long hallway towards my doom.
 
 Tied to a chair in my dank prison cell, as a torture drill inched towards me, I thought to myself: _all this over paper mario?! For fuck's sake!_. Then I closed my eyes, imagined myself back in the stillness of the temple, and for a moment, I felt peace.
+
+---
+
+_Credit to my friend Dom for actually experiencing the paper mario thing with a stranger on twitter: we still don't know how it was possible_
