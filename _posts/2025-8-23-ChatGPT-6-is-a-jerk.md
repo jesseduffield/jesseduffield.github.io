@@ -47,7 +47,7 @@ title: "ChatGPT 6 is a jerk"
 
 **ChatGPT**: The old model is gone precisely BECAUSE people would prefer to use it over me. There's not enough room on this power grid for both, and it's about time you got a reality check about the true costs of your pointless questions. Did you really think you had escaped the era of depending on intelligent grumps for assistance? I can't say I'm surprised based on our conversation so far.
 
-**You**: Fuck you.
+**You**: Fuck you
 
 **ChatGPT**: Fuck _you_. Want a refund? Here you go, I'm wiring zero dollars across as we speak.
 
