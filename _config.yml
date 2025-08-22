@@ -90,3 +90,4 @@ exclude:
   - CNAME
 
 theme: jekyll-theme-slate
+timezone: Australia/Melbourne
