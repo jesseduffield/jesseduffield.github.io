@@ -35,7 +35,7 @@ Some knowledge acquisition takes the form of a pull process: I come up with a qu
 
 The pull process is almost perfected, but the push process remains _sorely_ underpowered. And it's only the push process which can address unknown unknowns. If you're sick on the day of school that they teach you about the dangers of drinking methanol and years later you're out of alcohol and looking through your cupboards for a substitute, tough luck.
 
-What's more, the push process is too crude: it's not personalised. Although some advice, like tooth brushing, is fairly black and white, Scott Alexander's essay [Should you reverse any advice you here?](https://slatestarcodex.com/2014/03/24/should-you-reverse-any-advice-you-hear/) makes the case that in many domains, different people need to hear completely contradicting pieces of advice. For example:
+What's more, the push process is too crude: it's not personalised. Although some advice, like tooth brushing, is fairly black and white, Scott Alexander's essay [Should you reverse any advice you hear?](https://slatestarcodex.com/2014/03/24/should-you-reverse-any-advice-you-hear/) makes the case that in many domains, different people need to hear completely contradicting pieces of advice. For example:
 
 > “You need to be more conscious of how your actions in social situations can make other people uncomfortable and violate their boundaries” versus “You need to overcome your social phobia by realizing that most interactions go well and that probably talking to people won’t *always* make them hate you and cause you to be ostracized forever.”
 >
