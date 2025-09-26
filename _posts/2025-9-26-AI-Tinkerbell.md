@@ -11,6 +11,8 @@ My friend recently recommended me to a dentist who was 'the real deal'. This den
 
 Although I was relieved to have caught this issue before things got really bad, I was also indignant that I was in the situation in the first place. It's one thing to go your entire life choosing not to brush your teeth and then suffering the consequences for it. It's quite another to, day after day, spend at least ten minutes of your life draining your scarce motivation levels to do something you don't enjoy, _incorrectly_.
 
+![]({{ site.baseurl }}/images/posts/AI-Tinkerbell/image.png)
+
 Like all good people who make a mistake, I started looking for someone to blame.
 
 I could blame myself, but I was oblivious to the fact I was brushing my teeth wrong: it was an _unknown unknown_.
