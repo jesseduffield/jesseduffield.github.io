@@ -35,7 +35,7 @@ And again, immediately, I got a response back:
 
 At this point I fell off my chair.
 
-Most people fall of their chairs because they have bad posture and compensate by leaning back, which leads to their center of gravity surpassing the base of the chair, causing them to tip over. My posture is actually quite good: I didn't so much fall off my chair as I jettisoned myself out of it by kicking off the wall in an instinctual act of fear and terror.
+Most people fall off their chairs because they have bad posture and compensate by leaning back, which leads to their center of gravity surpassing the base of the chair, causing them to tip over. My posture is actually quite good: I didn't so much fall off my chair as I jettisoned myself out of it by kicking off the wall in an instinctual act of fear and terror.
 
 I _was_ thinking of paper mario.
 
