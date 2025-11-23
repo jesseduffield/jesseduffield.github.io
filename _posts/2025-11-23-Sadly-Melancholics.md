@@ -16,8 +16,11 @@ There's something childish about your deepest desire being for an unrealisable f
 As childish as indulging in fantasy is, there's also something admirable about diving deep into the recesses of your own soul, taking it all seriously, and communicating it to the outside world, no matter how fanciful it is at face value. It's admirable precisely because it's so hard to take all your inner world seriously while being a functioning adult with responsibilities.
 
 > Everything is perfect in the void
+>
 > I don't want it to be spoiled
+>
 > I avoid it for so long
+>
 > But I can't forever
 >
 > - Noblest Strive - Bladee
@@ -35,6 +38,7 @@ I'm not a neuroscientist but I believe nature achieves this by giving you a defi
 As if melancholics didn't already have it hard enough, since the invention of drugs, the hole has become much easier to fill, if only momentarily, so the curse is even worse than before!
 
 > Inhale fairytale, real life realisation
+>
 > Dream life over real life, I ain't waiting
 >
 > - 2Beloved - Bladee
@@ -48,7 +52,9 @@ Damn is it a terrible time to be a melancholic. And yet I still wouldn't change 
 Even if I can't live in heaven.
 
 > Could it be?
+>
 > That heaven is fleeting and always
+>
 > And nothing is forever, and wishing will get you nowhere
 >
 > - 5 Star Crest - Bladee and Ecco2k
