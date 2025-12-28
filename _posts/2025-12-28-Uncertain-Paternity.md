@@ -3,7 +3,7 @@ layout: post
 title: "Uncertain Paternity"
 ---
 
-Looking down at my baby son as he wriggles and twists in my arms I think about all the things that the typical parent _would_ be thinking: 'what a beautiful boy', 'so much potential', 'I can't wait until I no longer need to change his nappies'.
+Looking down at my baby son as he wriggles and twists in my arms I think about all the things that a normal parent _should_ be thinking: 'what a beautiful boy', 'so much potential', 'I can't wait until I no longer need to change his nappies'.
 
 But I'm not thinking any of those things. From the back of my head blasts a fear that drowns out any other thoughts, asking a single question: _Is this actually my kid?_
 
