@@ -3,7 +3,7 @@ layout: post
 title: "Escaping the Trifecta"
 ---
 
-So you've read simon willison's [post](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) about the lethal trifecta and how, like the infinity stones on Thanos' gauntlet, you really don't want them all to be present at once.
+So you've read Simon Willison's [post](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) about the lethal trifecta and how, like the infinity stones on Thanos' gauntlet, you really don't want them all to be present at once.
 
 ![The Lethal Trifecta](/images/posts/completing-trifecta/trifecta.png)
 
