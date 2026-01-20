@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="researchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="executionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="reviewGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="deployGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowheadFeedback" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  
+  <rect width="1000" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#1e293b">Agent Workflow with Phase Gating</text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="65" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#64748b">Keeping the lethal trifecta's legs from coexisting</text>
+  
+  <!-- Main flow arrows -->
+  <path d="M 230 250 L 310 250" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 470 250 L 550 250" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 710 250 L 790 250" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feedback loop -->
+  <path d="M 630 330 Q 630 420 390 420 Q 150 420 150 330" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrowheadFeedback)"/>
+  <text x="390" y="445" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#d97706" font-weight="500">Human feedback required</text>
+  <text x="390" y="460" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#92400e" font-style="italic">(context reviewed, privileges reset)</text>
+
+  <!-- Research Phase -->
+  <g filter="url(#shadow)">
+    <circle cx="150" cy="250" r="70" fill="url(#researchGrad)"/>
+  </g>
+  <text x="150" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Research</text>
+  <text x="150" y="263" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Phase</text>
+  
+  <!-- Research self-loop -->
+  <path d="M 100 195 Q 60 140 150 140 Q 240 140 200 195" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Research capability badge -->
+  <rect x="85" y="100" width="130" height="28" rx="14" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="119" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#1d4ed8" font-weight="500">🌐 Internet Access</text>
+  
+  <!-- Execution Phase -->
+  <g filter="url(#shadow)">
+    <circle cx="390" cy="250" r="70" fill="url(#executionGrad)"/>
+  </g>
+  <text x="390" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Execution</text>
+  <text x="390" y="263" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Phase</text>
+  
+  <!-- Execution self-loop -->
+  <path d="M 340 195 Q 300 140 390 140 Q 480 140 440 195" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Execution capability badges -->
+  <rect x="310" y="85" width="160" height="28" rx="14" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="390" y="104" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6d28d9" font-weight="500">🗄️ DB Access (read-only)</text>
+  
+  <rect x="325" y="118" width="130" height="28" rx="14" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="390" y="137" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6d28d9" font-weight="500">💻 Code Writing</text>
+  
+  <!-- No internet badge -->
+  <rect x="315" y="320" width="150" height="24" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="390" y="337" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#dc2626" font-weight="500">🚫 No Internet Access</text>
+  
+  <!-- Review Phase -->
+  <g filter="url(#shadow)">
+    <circle cx="630" cy="250" r="70" fill="url(#reviewGrad)"/>
+  </g>
+  <text x="630" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Review</text>
+  <text x="630" y="263" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Phase</text>
+  
+  <!-- Review badge -->
+  <rect x="565" y="155" width="130" height="28" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="630" y="174" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#d97706" font-weight="500">👤 Human Review</text>
+  
+  <!-- Deploy Phase -->
+  <g filter="url(#shadow)">
+    <circle cx="870" cy="250" r="70" fill="url(#deployGrad)"/>
+  </g>
+  <text x="870" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Code</text>
+  <text x="870" y="263" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="white">Deployed</text>
+  
+  <!-- Deploy badge -->
+  <rect x="815" y="155" width="110" height="28" rx="14" fill="#d1fae5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="870" y="174" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#059669" font-weight="500">✓ Production</text>
+
+</svg>
