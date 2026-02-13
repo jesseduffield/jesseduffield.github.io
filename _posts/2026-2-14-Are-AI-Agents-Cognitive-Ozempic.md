@@ -11,7 +11,7 @@ Once upon a time, if you wanted to make a living as a writer, you had to convinc
 
 Then Substack removed the gate entirely. A small number of writers with existing audiences and distinctive voices now earn seven figures. The long tail earns nothing. Access has been equalised (you can go and make a Substack right now!) but _outcomes_ have been amplified (nobody's going to read your Substack).
 
-The equalise-access, amplify-outcomes pattern is common to technology: the internet did it with music distribution, online courses did it with education, and Shopify did it to entrepreneurship. Every time, the gatekeepers are removed, the barrier to entry is reduced, but the underlying distribution of talent remains the same and is now exposed.
+The equalise-access, amplify-outcomes pattern is common to technology: the internet did it with music distribution, online courses did it with education, and Shopify did it to entrepreneurship. Every time, the gatekeepers are removed, the barrier to entry is reduced, but the underlying distribution of talent remains the same and is now acutely exposed.
 
 So why do some technologies equalise outcomes and others amplify?
 
