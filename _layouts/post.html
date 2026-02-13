@@ -15,11 +15,14 @@ layout: default
 
   {% if page.series %}{% include series-pager.html %}{% endif %}
 
+  {% assign post_age = site.time | date: "%s" | minus: page.date %}
+  {% if post_age >= 345600 %}
   <hr />
 
   <p>Shameless plug (which appears on every blog post, not just this one, so don't think that I'm opportunistically posting this specific post just for the sake of doing this plug): I recently quit my job to co-found Subble, a web app that helps you manage your company's SaaS software licences. Your company is almost certainly wasting time and money on shadow IT and unused/overprovisioned licences and Subble can fix that. Check it out at <a href="https://www.subble.com?utm_campaign=jesse-blog">subble.com</a> </p>
 
   <hr />
+  {% endif %}
 
   <br />
 
