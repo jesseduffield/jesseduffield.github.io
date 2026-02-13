@@ -21,7 +21,7 @@ Amplifiers have no ceiling. The returns to skill keep scaling indefinitely.
 
 Which brings us to agentic AI.
 
-Joe Blow can now build a fully deployed website with a single prompt. Access: equalised. But can Mr Blow build a software product with two million lines of code and thousands of paying customers, each pushing for conflicting features? I've been vibe-coding with Opus 4.6 and it is genuinely some next-level sci-fi shit. But once I've told Opus to go off and build me a feature, am I sitting there twiddling my thumbs? No, I'm opening up another tab and spinning up another agent to build another feature. And I continue enlisting agents into my army until I hit the limits of my cognitive ability; the thing which has always been the primary bottleneck in knowledge work.
+Joe Blow can now build a fully deployed website with a single prompt. Access: equalised. But can Mr Blow build a software product with two million lines of code and thousands of paying customers, each pushing for conflicting features? I've been vibe-coding with Opus 4.6 and it is genuinely some next-level sci-fi shit. But once I've told Opus to go off and build me a feature, am I sitting there twiddling my thumbs? No, I'm opening up another tab and spinning up another agent to build another feature. And I continue enlisting agents into my army until I hit the limits of my architectural, technical, product, and plain cognitive abilities; the things which have always been the primary bottleneck in knowledge work.
 
 Right now, AI looks like a classic amplifier. It handles the median-skill parts of knowledge work, and the remaining value accrues to the people with judgment, taste, and vision. Skills that are _less_ evenly distributed than the routine work AI replaces.
 
