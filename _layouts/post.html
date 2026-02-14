@@ -15,7 +15,9 @@ layout: default
 
   {% if page.series %}{% include series-pager.html %}{% endif %}
 
-  {% assign post_age = site.time | date: "%s" | minus: page.date %}
+  {% assign now = site.time | date: "%s" | plus: 0 %}
+  {% assign post_date = page.date | date: "%s" | plus: 0 %}
+  {% assign post_age = now | minus: post_date %}
   {% if post_age >= 345600 %}
   <hr />
 
