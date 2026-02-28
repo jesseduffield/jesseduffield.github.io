@@ -15,7 +15,7 @@ You know when you think you're on the same page as everybody else and then somet
 
 Or when you and a friend really enjoyed the Lord of the Rings trilogy but then when the Hobbit trilogy came out they ended up _preferring_ it over LOTR?? (Sorry, Annie)
 
-It's the same feeling of despair which I felt then that floods my soul now.
+That same feeling of despair floods my soul now.
 
 People really don't like the idea of AI taking everybody's jobs and I just can't relate. I can relate to the fear of you losing your individual job while most people keep theirs, but I can't relate to the fear of everybody losing their jobs.
 
