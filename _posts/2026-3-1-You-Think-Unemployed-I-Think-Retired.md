@@ -5,7 +5,7 @@ title: "You think unemployed, I think retired"
 
 > Work sucks, I know
 >
-> - blink-182
+> \- blink-182
 
 There are many smart people in the AI safety crowd that think AI is going to kill everyone and if they're right about that then this entire post is moot.
 
