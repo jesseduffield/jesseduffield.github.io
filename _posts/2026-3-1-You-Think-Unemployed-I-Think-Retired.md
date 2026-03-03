@@ -19,7 +19,7 @@ That same feeling of despair floods my soul now.
 
 People really don't like the idea of AI taking everybody's jobs and I just can't relate. I can relate to the fear of you losing your individual job while most people keep theirs, but I can't relate to the fear of everybody losing their jobs.
 
-I work my ass off. I studied like a madman in highschool, and I work like a dog now. I'm one of the very few people who has found their passion (programming) and gets to do it every day. I'm one of the _lucky_ ones, and I cannot wait until I no longer have to work.
+I'm one of the very few people who has found their passion (programming) and gets to do it every day. I'm one of the _lucky_ ones, and I cannot wait until I no longer have to work.
 
 The best times of my life have been when I'm not working. Highschool summer holidays were golden. You have enough time to unburden yourself from the mental shackles of intense study and you get to actually enjoy life without the nagging feeling that you're neglecting your obligations.
 
