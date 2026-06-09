@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part One (Bonus): Questionable Questionmarks"
 series: going-insane
 series-title: 'Part One (Bonus): Questionable Questionmarks'
+tag: Tech
 ---
 
 My [post on Go's error handling]({{ site.baseurl }}/Gos-Shortcomings-1) spurred some debate around rust's '?' operator and whether it would be a good idea to try and import it into Go. There are three main arguments against doing this:

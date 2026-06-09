@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Just Ask Mr Internet"
+tag: Short story
+pin: 1
 ---
 
 'Our ad conversions are absolutely terrible'

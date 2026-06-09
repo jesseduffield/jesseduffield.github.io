@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My interview with 'Uncle' Bob Martin
+tag: Tech
 ---
 
 See the interview on youtube [here](https://www.youtube.com/watch?feature=shared&v=qdcamTUcuAQ).

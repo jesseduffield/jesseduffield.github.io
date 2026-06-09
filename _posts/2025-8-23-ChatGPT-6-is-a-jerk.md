@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ChatGPT 6 is a jerk"
+tag: Short story
 ---
 
 **You**: Good morning ChatGPT 6! Nice to meet you.

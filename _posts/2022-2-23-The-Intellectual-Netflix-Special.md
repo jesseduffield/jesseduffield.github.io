@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Public Intellectual Netflix Special
+tag: Musings
 ---
 
 A while back I was listening to a podcast where a couple of comedians discussed the consequences of doing a Netflix special (as I type this I realise it was almost certainly Joe Rogan's podcast). The idea is that you spend all this time building an hour of golden comedy material and for any live audience you perform in front of it's completely novel and hilarious, but it's also the comedian's dream to capture that content in a Netflix special and have the whole world give you their attention (and indirectly their money) in return for that content.

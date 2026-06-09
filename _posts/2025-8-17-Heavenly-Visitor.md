@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Heavenly Visitor"
+tag: Short story
 ---
 
 As I walked through the lonesome park I felt a presence at my side. A white glow heralded the entrance of an Angel into the material world and I turned and stared in disbelief at the (reasonably tall) angelic-looking man standing before me.

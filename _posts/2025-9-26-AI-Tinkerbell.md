@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AI Tinkerbell"
+tag: Musings
 ---
 
 Some mistakes are years in the making.

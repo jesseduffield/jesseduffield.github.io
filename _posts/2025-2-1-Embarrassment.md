@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "1 million Lazygit downloads, one embarrassment at a time"
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/embarrassment/1mil.png)

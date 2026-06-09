@@ -2,12 +2,42 @@
 layout: default
 ---
 
+{% assign pinned = site.posts | where_exp: "post", "post.pin" | sort: "pin" %}
+{% assign unpinned = site.posts | where_exp: "post", "post.pin == nil" %}
+
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in pinned %}
+    {% if post.unlisted != true %}
+      <article class="post pinned">
+        <h1>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          <span class="pin-badge" title="Pinned">Pinned</span>
+          {% if post.tag %}
+            {% assign tag_slug = post.tag | slugify %}
+            <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-badge tag-badge--{{ tag_slug }}">{{ post.tag }}</a>
+          {% endif %}
+        </h1>
+
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+    {% endif %}
+  {% endfor %}
+
+  {% for post in unpinned %}
     {% if post.unlisted != true %}
       <article class="post">
 
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <h1>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          {% if post.tag %}
+            {% assign tag_slug = post.tag | slugify %}
+            <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-badge tag-badge--{{ tag_slug }}">{{ post.tag }}</a>
+          {% endif %}
+        </h1>
 
         <div class="entry">
           {{ post.excerpt }}

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Wisdom To Know The Difference"
+tag: Musings
 ---
 
 I'm not religious but The Serenity Prayer has to be most profound invocation I know. It's so concise that it can't even be summarised without effectively restating it.

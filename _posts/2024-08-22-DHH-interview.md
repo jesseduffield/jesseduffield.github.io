@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Interview with DHH (creator of rails)"
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/dhh/dhh.png)

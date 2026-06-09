@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "All I want for Christmas is 36K in Opus 4.5 credits"
+tag: Musings
 ---
 
 I don't want a lot for Christmas, there is just one thing I need...

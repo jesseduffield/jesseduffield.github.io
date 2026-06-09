@@ -2,6 +2,7 @@
 layout: post
 title: Golang Gotcha of the Day
 redirect_from: /golang-gotcha-of-the-day/
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/2020-2-26-Golang-Gotcha-Of-The-Day/1.png)

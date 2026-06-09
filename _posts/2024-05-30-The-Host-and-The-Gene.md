@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Host and The Gene
+tag: Musings
 ---
 
 Most things either perish with time or are so simple (like water) that their continued existence is completely un-noteworthy. Replicators are the things in the sweet spot: things which encode information and somehow manage to buck the trend and preserve themselves over long time periods. Replicators by definition are things which are good at burrowing themselves into the future in spite of various forces in nature acting against them.

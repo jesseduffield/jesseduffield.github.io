@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part One: Endless Error Handling"
 series: going-insane
 series-title: 'Part One: Endless Error Handling'
+tag: Tech
 ---
 
 I've been using Go for a few years now, mostly in my open source project Lazygit. In my day job I use Ruby and Typescript, and I've also spent some time with Rust. Each of those languages have design quirks that can grind a developer's gears, and although my own precious gears have been ground by every language I've used, Go is the only language that has made me feel _indignant_.

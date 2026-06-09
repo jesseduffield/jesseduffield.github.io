@@ -2,6 +2,7 @@
 layout: post
 title: (Nearly) Everything I Wish I Knew About JavaScript Scoping A Week Ago
 redirect_from: /everything-i-wish-i-knew-about-javascript-scoping-a-week-ago-the-video/
+tag: Tech
 ---
 
 <div class="videoWrapper">

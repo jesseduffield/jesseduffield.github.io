@@ -1,0 +1,15 @@
+{% assign tag_list = "Tech,Short story,Musings" | split: "," %}
+<aside class="sidebar">
+  <h3 class="sidebar-heading">Tags</h3>
+  <ul class="tag-list">
+    {% for tag in tag_list %}
+      {% assign tag_slug = tag | slugify %}
+      {% assign tag_count = site.posts | where: "tag", tag | size %}
+      <li>
+        <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/"{% if page.tag == tag %} class="active"{% endif %}>
+          {{ tag }} <span class="tag-count">({{ tag_count }})</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

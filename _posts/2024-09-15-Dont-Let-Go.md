@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Don't Let Go (of compile-time knowledge)"
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/dont-let-go/image.webp)

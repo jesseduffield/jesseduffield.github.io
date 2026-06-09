@@ -2,6 +2,7 @@
 layout: post
 title: 15 Lazygit Features In 15 Minutes
 redirect_from: /15-lazygit-features-in-15-minutes/
+tag: Tech
 ---
 
 <div class="videoWrapper">

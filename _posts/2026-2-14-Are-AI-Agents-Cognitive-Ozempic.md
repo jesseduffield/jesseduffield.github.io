@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Are AI agents cognitive Ozempic?"
+tag: Musings
 ---
 
 Ozempic is an equaliser. There's only so far you can go in the direction of a healthy weight. If you were overweight, Ozempic is great news. But if you were already at a healthy weight? Well, now you're less special. That's what equalisers do: they compress the range of outcomes.

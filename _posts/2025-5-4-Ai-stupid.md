@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AI is stupid, just like me"
+tag: Musings
 ---
 
 Everybody is fascinated with the many ways that modern-day AI differs from humans.

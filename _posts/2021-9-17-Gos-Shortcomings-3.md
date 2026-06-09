@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part Three: Imperfect Interfaces"
 series: going-insane
 series-title: 'Part Three: Imperfect Interfaces'
+tag: Tech
 ---
 
 _Standard preface: the purpose of this series is to put absolutely everything that bothers me about Go on the table to see who can relate. I'm not in the take-down business, I'm in the nitpicking business. So if you leave a comment saying 'This is just nitpicking' I will have no choice but to completely agree with you. I am not suggesting you will run into these issues on a daily basis, I am suggesting that when you do inevitably run into them, it will be frustrating. I don't expect Go to change and I appreciate why people don't want it to change._

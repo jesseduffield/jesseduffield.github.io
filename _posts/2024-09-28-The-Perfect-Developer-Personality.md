@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Perfect Developer Personality"
+tag: Musings
 ---
 
 > Mauro, SHUT THE FUCK UP!

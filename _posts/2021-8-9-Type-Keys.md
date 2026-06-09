@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Code Smell of the Day: Type Keys'
+tag: Tech
 ---
 
 _Note: On the back of some feedback I've created a [follow-up]({{ site.baseurl }}/Type-Keys-Revisited) of this post where I refine the thesis. I've left this post as-is for the sake of comparison_

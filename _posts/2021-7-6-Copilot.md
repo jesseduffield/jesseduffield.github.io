@@ -1,6 +1,7 @@
 ---
 layout: post
 title: No, Github Copilot Won't Take Your Job
+tag: Tech
 ---
 
 <div class="videoWrapper">

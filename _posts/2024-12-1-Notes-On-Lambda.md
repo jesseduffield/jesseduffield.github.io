@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My notes from deciding against AWS Lambda"
+tag: Tech
 ---
 
 At the start of the year I did a deep dive on AWS lambda to know whether it was worth using in a new codebase for a web app. These are the notes I wrote before making the decision against lambda, and I hope they can help somebody else with the same dilemma.

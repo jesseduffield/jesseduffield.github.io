@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "You think unemployed, I think retired"
+tag: Musings
 ---
 
 > Work sucks, I know

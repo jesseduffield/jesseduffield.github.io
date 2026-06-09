@@ -2,6 +2,7 @@
 layout: post
 title: Experiential Ownership
 tags: thinking-out-loud
+tag: Musings
 ---
 
 I haven't posted in a while so I'm going to lower my standards on this one and ramble about some loosely related ideas.

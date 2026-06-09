@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Coding Controversies: Hard Wrap vs Soft Wrap"
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/coding-controversies/logo.png)

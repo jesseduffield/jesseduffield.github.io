@@ -3,6 +3,7 @@ layout: post
 title: 'No Place for the Metaverse'
 date: '2022-02-19 04:50:16 +00:00'
 tags: thinking-out-loud
+tag: Musings
 ---
 
 _My own confidence in this post: 70%_

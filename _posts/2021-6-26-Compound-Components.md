@@ -2,6 +2,7 @@
 layout: post
 title: Four Approaches to Implicit State in Compound Components, Ranked
 image: ''
+tag: Tech
 ---
 
 Say we wanted to create an Accordion component that lets us expand and collapse sections within the Accordion, such that only one section can be expanded at a time. This is a good candidate for a Compound Component. Let's first create an Accordion with three sections, without trying to abstract out any logic.

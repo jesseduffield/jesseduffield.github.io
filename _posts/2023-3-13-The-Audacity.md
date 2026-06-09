@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Audacity (Uncorrupting an Audacity Project)
+tag: Tech
 ---
 
 _TLDR: The official [un-corruption guide](https://support.audacityteam.org/troubleshooting/recovering-corrupted-projects) doesn't support OSX, so I got around that with docker, and the guide's advice did not work for me: I had to export the project's individual sample files and concatenate them back together_

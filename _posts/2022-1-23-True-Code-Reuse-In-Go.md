@@ -1,6 +1,7 @@
 ---
 layout: post
 title: True Code Reuse In Go
+tag: Tech
 ---
 
 If you google 'Code Reuse In Go' and read through the first two pages of results, you'll see many of the same concepts come up:

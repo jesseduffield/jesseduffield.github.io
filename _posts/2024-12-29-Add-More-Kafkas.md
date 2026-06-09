@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Add More Kafkas"
+tag: Short story
 ---
 
 I knew from day one that if we didn't add Rust, Kafka, and Microservice to [Clipbox](https://clipbox.carrd.co/)'s architecture, we were _f\*cked_.

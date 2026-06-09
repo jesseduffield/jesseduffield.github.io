@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Docker: where to draw the line?"
+tag: Tech
 ---
 
 There are four approaches to using Docker in development:

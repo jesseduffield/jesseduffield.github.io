@@ -4,6 +4,7 @@ title: 'Why Is Tech So Fragmented?'
 image: /images/posts/2021-6-20-Fragmentation/dffl-og2.png
 redirect_from: /Fragmentation2
 tags: thinking-out-loud
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/2021-6-20-Fragmentation/dffl-og2.png)

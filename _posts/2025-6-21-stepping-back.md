@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Stepping back"
+tag: Tech
 ---
 
 Since I created [Lazygit](https://github.com/jesseduffield/lazygit) back in 2018, I've managed to find time for it outside my day job. I've had a blast spending countless afternoons, weekends, and most of my annual leave on the project, but since founding my own startup, [Subble](https://www.subble.com/), it's become ever harder to give Lazygit the time it deserves. So, in order to prevent myself from becoming a blocker on progress, I've decided to step back and hand over the reins to my co-maintainer Stefan Haller.

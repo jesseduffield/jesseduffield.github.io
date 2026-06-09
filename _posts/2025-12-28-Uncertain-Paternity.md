@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Uncertain Paternity"
+tag: Short story
+pin: 2
 ---
 
 Looking down at my baby son as he wriggles and twists in my arms I think about all the things that a normal parent _should_ be thinking: 'what a beautiful boy', 'so much potential', 'I can't wait until I no longer need to change his nappies'.

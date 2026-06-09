@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Stop selling me trichotomies!"
+tag: Musings
 ---
 
 ![]({{ site.baseurl }}/images/posts/trichotomies/mind-body-soul.png)

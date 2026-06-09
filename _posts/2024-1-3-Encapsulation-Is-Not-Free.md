@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Encapsulation Is Not Free"
+tag: Tech
 ---
 
 _TLDR: When you stick an explicit interface between two things, it may reduce the friction of changing the implementation but always at the cost of adding friction whenever you change the interface_

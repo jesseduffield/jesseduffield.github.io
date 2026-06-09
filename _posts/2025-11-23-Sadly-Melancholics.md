@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Sadly, Melancholics"
+tag: Musings
 ---
 
 > I wanna live in heaven

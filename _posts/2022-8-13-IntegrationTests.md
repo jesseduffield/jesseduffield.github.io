@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Lessons Learned Revamping Lazygit's Integration Tests
+tag: Tech
 ---
 
 Something I don't come across enough online is posts where the author walks through a feature they built along with all the dead-ends and refactors along the way. So this post is my attempt to add to that modest corpus with my most recent coding journey.

@@ -2,6 +2,7 @@
 layout: post
 title: Was The Red Wedding Ethical?
 image: /images/posts/2021-6-13-GOT-Honour/Roose-Bolton-Red-Wedding-1920x1080.jpeg
+tag: Musings
 ---
 
 _Spoilers below. For those who haven't read or watched the series by now, it's your own fault._

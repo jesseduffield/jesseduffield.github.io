@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Assorted things that annoy me"
+tag: Musings
 ---
 
 It's Sunday, and that means that in preparation for the week ahead, it's time to sit back, relax, and brood on all the things that annoy me.

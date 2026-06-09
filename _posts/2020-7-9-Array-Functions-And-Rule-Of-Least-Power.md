@@ -2,6 +2,7 @@
 layout: post
 title: Array Functions and the Rule of Least Power
 redirect_from: /array-functions-and-the-rule-of-least-power/
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/2020-7-9-Array-Functions-And-Rule-Of-Least-Power/1.png)

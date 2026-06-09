@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rebase Magic With Lazygit
+tag: Tech
 ---
 
 <div class="videoWrapper">

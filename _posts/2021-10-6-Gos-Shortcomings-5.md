@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part Five: Crazy Conventions"
 series: going-insane
 series-title: 'Part Five: Crazy Conventions'
+tag: Tech
 ---
 
 First off, let's get the standard caveats out of the way:

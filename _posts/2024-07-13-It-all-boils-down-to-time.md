@@ -1,6 +1,7 @@
 ---
 layout: post
 title: It all boils down to time
+tag: Tech
 ---
 
 Building software is challenging, so us humans, endowed with brains better adapted to climbing trees and eating bananas than reasoning about complex systems, develop heuristics to help us navigate:

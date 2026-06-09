@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Life without the front page
+tag: Musings
 ---
 
 I consider myself low on the spectrum of addict-ability: I don't smoke, I rarely drink, I don't gamble, I don't have a video game addiction, and I don't snack on sweets. But every man has his kryptonite, and a couple years ago I found myself compulsively checking the front page of Hacker News and various programming subreddits for the tech world's latest goss.

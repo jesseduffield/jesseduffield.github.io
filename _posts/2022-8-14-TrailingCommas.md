@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Trailing Commas Are Just The Beginning
+tag: Tech
 ---
 
 Trailing commas, also known as dangling commas, are a formatting strategy that's grown in popularity over time. Only 2 years ago did Prettier (a javascript formatter) start enforcing trailing commas by default, and if you read the associated GitHub [issue](https://github.com/prettier/prettier/issues/68) you'll see how hard-fought the change was. In this post I'm going to explain why trailing commas fix the problem of order-depedence and how order-dependence gets in our way in a bunch of other contexts too.

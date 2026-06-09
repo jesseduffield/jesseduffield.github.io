@@ -8,3 +8,4 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+/vendor/bundle/ruby/3.3.0

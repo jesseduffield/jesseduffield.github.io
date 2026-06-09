@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GPT dumped me
+tag: Musings
 ---
 
 Turns out that OpenAI's GPT playground is now in open [beta](https://beta.openai.com/playground), so I thought I'd prod it with some questions to see if I could learn something.

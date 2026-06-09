@@ -37,7 +37,12 @@
     </div>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+      <div class="main-with-sidebar">
+        <div class="main-content">
+          {{ content }}
+        </div>
+        {% include sidebar.html %}
+      </div>
     </div>
 
     <div class="wrapper-footer">

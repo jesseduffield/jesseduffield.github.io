@@ -2,6 +2,7 @@
 layout: post
 title: Golang IO Cookbook
 redirect_from: /golang-io-cookbook-2/
+tag: Tech
 ---
 
 ## Preamble:

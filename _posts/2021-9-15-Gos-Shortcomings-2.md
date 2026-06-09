@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part Two: Partial Privacy"
 series: going-insane
 series-title: 'Part Two: Partial Privacy'
+tag: Tech
 ---
 
 Before we start, let me make something clear on the back of the [comments](https://news.ycombinator.com/item?id=28522269) from the first post: this series is my attempt to put absolutely everything on the table that frustrates me when using Go. As such, I'll be doing some extreme nitpicking, much of which people will consider overblown or shortsighted. But my goal is not to do a take-down of the language (I'm stuck writing in it for now anyway), I really just want to get a feel for how many Go devs there are who share my grievances. If none of my grievances bother you, that's fine: we probably differ on values (or I've missed something obvious).

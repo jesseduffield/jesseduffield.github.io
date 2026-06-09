@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "God, I hate this f***ing Mac"
+tag: Musings
 ---
 
 Long ago (twenty-nineteen)  

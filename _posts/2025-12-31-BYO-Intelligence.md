@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "BYO Intelligence"
+tag: Musings
 ---
 
 > Copy-paste functionality removed from major operating systems by 2027 or I eat my dick on national television

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Too Much Wisdom
+tag: Musings
 ---
 
 I wonder if it's getting easier or harder to be effective in modern times. That is, to be productive and focused and move towards your goals. On one hand, we have endless learning resources at our fingertips thanks to the internet. Nearly every question we can think of has a clear and articulate answer waiting for us on the other side of a google search, and where yahoo answers once held monopoly over the Q&A space online, we now have more mature alternatives like Quora and Stack Overflow.

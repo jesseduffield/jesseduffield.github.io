@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lazygit Turns 5: Musings on Git, TUIs, and Open Source"
+tag: Tech
 ---
 
 ![]({{ site.baseurl }}/images/posts/lazygit-5/basic-gif.gif)

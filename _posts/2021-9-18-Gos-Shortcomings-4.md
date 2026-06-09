@@ -3,6 +3,7 @@ layout: post
 title: "Go'ing Insane Part Four: Mandatory Mutation"
 series: going-insane
 series-title: 'Part Four: Mandatory Mutation'
+tag: Tech
 ---
 
 First off, let's get the standard caveats out of the way:

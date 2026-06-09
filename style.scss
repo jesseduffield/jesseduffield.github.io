@@ -26,9 +26,133 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 1080px;
   padding: 0 10px;
   width: 100%;
+}
+
+.main-with-sidebar {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  position: sticky;
+  top: 20px;
+
+  @include mobile {
+    position: static;
+    width: 100%;
+    order: -1;
+    border-bottom: 1px solid $lightGray;
+    padding-bottom: 10px;
+  }
+}
+
+.sidebar-heading {
+  margin: 0 0 10px;
+  font-family: $siteHeading;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $gray;
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 0 6px;
+  }
+
+  a {
+    color: $darkGray;
+    font-size: 15px;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  .tag-count {
+    color: $gray;
+    font-size: 13px;
+  }
+}
+
+.pin-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  background: $lightGray;
+  color: $gray;
+  font-family: $siteHeading;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.tag-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-family: $siteHeading;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  background: transparent;
+
+  &.tag-badge--tech {
+    color: #2e7d57;
+  }
+
+  &.tag-badge--short-story {
+    color: #b06000;
+  }
+
+  &.tag-badge--musings {
+    color: $blue;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.tag-page-heading {
+  font-size: 18px;
+  color: $gray;
+  margin-bottom: -10px;
+  font-family: $siteHeading;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h1,

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Can't Be F*cked: Underrated Cause of Tech Debt"
+tag: Musings
 ---
 
 > _Can't Be Fucked_ 

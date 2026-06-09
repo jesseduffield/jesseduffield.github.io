@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Out Of The Box"
+tag: Short story
+pin: 3
 ---
 
 ![]({{ site.baseurl }}/images/posts/out-of-the-box/servo.jpg)

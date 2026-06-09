@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Beyond Coupling and Cohesion: Strategies For Un-F*cking Yourself'
+tag: Tech
 ---
 
 _This post belongs in the 'highly speculative' category. It contains ideas that I've yet to flesh out and properly pin down. Reader beware!_

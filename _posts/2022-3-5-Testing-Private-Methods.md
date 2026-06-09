@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Still No Consensus On Testing Private Methods'
+tag: Tech
 ---
 
 Yesterday, while running a session at work on Rust, I offhandedly remarked 'I think we can all agree that when writing unit tests, private methods shouldn't be directly tested except in some special situations' and to my suprise, I had thought wrong. A mini-debate erupted where various people argued mutually incompatible viewpoints. We quickly moved on from the debate but I was left a little embarrassed that I had misjudged the developer zeitgeist.

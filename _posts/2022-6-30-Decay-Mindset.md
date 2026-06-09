@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Decay Mindset
+tag: Musings
 ---
 
 As I sit here in my bed with something that might be the flu (hopefully not COVID again!) it strikes me that I never used to get sick this frequently. My younger self's immune system would kick my current immune system's ass.
