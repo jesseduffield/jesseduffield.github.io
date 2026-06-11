@@ -56,4 +56,4 @@ I don't particularly feel like sitting at the moment and am not in the mood for 
 
 ---
 
-This was posted to Hacker News and amazingly made the front page despite having nothing to do with tech! See comments [here](https://news.ycombinator.com/item?id=48469347). Thank you inatreecrown2 for posting it.
+This story was posted to Hacker News and amazingly made the front page despite having nothing to do with tech! See comments [here](https://news.ycombinator.com/item?id=48469347). Thank you inatreecrown2 for posting it.
