@@ -53,3 +53,7 @@ I look at the ground, a hard polished surface, and respond 'Got it.'
 'Alright, well it was nice meeting you, and yeah, enjoy.' The cloaked figure vanishes, leaving me alone in the blackness.
 
 I don't particularly feel like sitting at the moment and am not in the mood for internalising what's just happened to me, so for now I pick an arbitrary direction, and start walking.
+
+---
+
+This was posted to Hacker News and amazingly made the front page despite having nothing to do with tech! See comments [here](https://news.ycombinator.com/item?id=48469347). Thank you inatreecrown2 for posting it.
