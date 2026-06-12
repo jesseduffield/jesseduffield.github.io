@@ -16,7 +16,7 @@ In retrospect I should have seen this whole thing coming months ago. When every 
 
 Very few employees indulged in attempting to draw the sword. One day, while waiting at the top of the stairs for my uber eats guy to arrive I gripped the hilt and gave it a tug and felt absolutely zero give: the blade, assuming there even was a blade, must have been soldered in-place.
 
-And so, it was especially strange to me when on a couple of late nights with just Jared and I left in the office, I'd see him stand up from his chair, walk over to the sword, and wiggle, tug, and shake the hilt, all to no avail. We were both programmers; I figured his time working the sword was just to let off some steam after a long coding session
+And so, it was especially strange to me when on a couple of late nights with just Jared and I left in the office, I'd see him stand up from his chair, walk over to the sword, and wiggle, tug, and shake the hilt, all to no avail. We were both programmers; I figured his time working the sword was just to let off some steam after a long coding session.
 
 One night, after I stepped out of the office and realised I actually needed to use the toilet, I came back inside and found a cubicle. From the top of the stairwell I heard the unmistakeable sound of steel sliding on stone. Had Jared actually done it? By the time I came out, the sword was still in place and Jared was nowhere to be seen. I figured I was imagining things, and admittedly I was too lazy to climb the stairs to see if the sword had been loosened, so I just left and drove home.
 
