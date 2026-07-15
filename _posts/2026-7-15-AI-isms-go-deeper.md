@@ -4,7 +4,7 @@ title: "AI-isms go deeper than em-dashes and 'load-bearing'"
 tag: Tech
 ---
 
-Everybody is clueing on to how AI keeps using em-dashes, alien vocabulary like 'load-bearing', 'gated', 'belt-and-braces', and annoying phrase structure like 'It's not X, it's Y'.
+Everybody is clueing on to how AI keeps using em-dashes, alien vocabulary like 'load-bearing', 'gated', 'belt-and-braces', and annoying phrase structures like 'It's not X, it's Y'.
 
 What I haven't heard anybody talk about is AI's absurd insistence on imbuing quite powerless objects with agency that they don't have.
 
