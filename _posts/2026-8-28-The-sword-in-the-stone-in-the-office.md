@@ -4,7 +4,7 @@ title: "The sword in the stone in the office"
 tag: Short story
 ---
 
-Jared, our new CEO, is in a meeting room right next to my desk, talking with the notably older and more experienced CFO, John, about how best to communicate to the board the change in leadership. It was a shock to everybody; above all to Jared's predecessor Dave, who had been in the middle of a conference call when Jared walked through the glass door and, without ceremony, impaled him with a sword.
+Jared, our new CEO, is in a meeting room right next to my desk, talking with the notably older and more experienced CFO, John, about how best to communicate to the board the change in leadership. It was a shock to everybody; above all to Jared's predecessor Dave, who had been in the middle of a conference call when Jared walked into his office and, without ceremony, impaled him with a sword.
 
 When Jared emerged from that bloody scene holding the former CEO's severed head by the hair, I knew my stock options were toast.
 
