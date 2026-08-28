@@ -54,7 +54,7 @@ I immediately rise from my chair, turn around and with a smile say 'Sure I'll ta
 
 I walk into the room, introduce myself to the Swedes and walk past Jared to the TV at the end of the table. The HDMI cable's connected fine. I eye Jared's hilt sticking out from his chair.
 
-'TV connection is fine', I say. 'Let me check the other end'. I walk toward the center of the table and while passing Jared, I seize the opportunity and grab the sword with both hands and unsheath it to the shock and horror of everybody at the table; except for Jared who kicks back from the table, crushing me against the wall with his chair. I drop to my legs and pathetically swing the sword on my way down to no avail: he's easily dodged the blade. He rips the sword from my hand and says something Scandinavian before plunging the sword into my guts.
+'TV connection is fine', I say. 'Let me check the other end'. I walk toward the center of the table and while passing Jared, I seize the opportunity and grab the sword with both hands and unsheath it to the shock and horror of everybody at the table; except for Jared who kicks back from the table, crushing me against the wall with his chair. I drop to my knees and pathetically swing the sword on my way down to no avail: he's easily dodged the blade. He rips the sword from my hand and says something Scandinavian before plunging the sword into my guts.
 
 'Ow' I say and watch blood spray from my abdomen. In my final breath I see the Swedes exchanging looks of approval. It seems Jared's impromptu display of prowess is sufficient evidence for them. As for me...
 
@@ -68,7 +68,7 @@ _That_ is fucked.
 
 I approach one of the tables and ask 'Hey, do you guys speak English?' but my voice is drowned out in the banter and nobody pays me any mind. I tap one of the huge men on the shoulder and explicitly ask him 'Hi, do you speak English?' but he gives me a funny look, then cracks a joke (presumably in Swedish, presumably at my expense) and his circle of friends burst into even more raucous laughter. Then I am, again, forgotten.
 
-I end up walking down the hall looking for anybody who isn't enthralled by banter and come across none other than Dave, my former CEO. Dave is not only not participating in the banter, he's looking actively miserable, hunched over a goblet of ale with his eyes down, wedged between two enormous Scandinavian dudes.
+I end up walking down the hall looking for anybody who isn't enthralled by banter and come across none other than Dave, the former CEO. Dave is not only not participating in the banter, he's looking actively miserable, hunched over a goblet of ale with his eyes down, wedged between two enormous Scandinavian dudes.
 
 'Hey, Dave! You're somebody who knows English!' I yell and catch his attention.
 
@@ -76,7 +76,7 @@ I end up walking down the hall looking for anybody who isn't enthralled by bante
 
 'We both got clocked by the same guy, put 'er there.' I shake his hand. 'So what's the go here, is everybody speaking Swedish or something?'.
 
-'Yeah there's a few different languages but it's mostly Scandinavian. Not that it matters; it's impossible to talk to any of these guys, even the ones who speak English have been bantering in this hall for hundreds of years now and have no interest in conversing with somebody who is comparatively a pipsqueak in the banter game. I'm just waiting until the battle of Ragnarok happens and I can die for good.'
+'Yeah there's a few different languages but it's mostly Scandinavian. Not that it matters; it's impossible to talk to any of these guys, even the ones who speak English have been talking shit in this hall for hundreds of years now and have no interest in conversing with somebody who is comparatively a pipsqueak in the banter game. I'm just waiting until the battle of Ragnarok happens and I can die for good.'
 
 I realise I probably should have started the conversation by asking if he was okay. He is certainly not okay.
 
@@ -90,19 +90,19 @@ Changing the subject, I ask 'Do you think Jared's really an avatar of Odin?'
 
 'He managed to pull the sword from the stone though right?'
 
-'That was just a prop I bought thinking it would be cool to pull the sword out once we hit 20M of ARR. There's a button on the side that releases the sword. Regardless of that, what does that sword have to do with Norse mythology?'
+Dave shoots me a look that tells me he is not impressed by my reasoning. 'That was just a prop I bought thinking it would be cool to pull the sword out once we hit 20M of ARR. There's a button on the side that releases the sword. Regardless of that, what does that sword have to do with Norse mythology?'
 
 'Yeah, Alex said the same thing.'
 
 'I went and asked Odin about it but he wasn't interested in talking to me'
 
-'Was he too busy bantering?'
+'Too busy bantering?'
 
 'No he actually sits alone, at the end of the hall, but he wouldn't give me the time of day'.
 
 'Strange. I'll see if I have any better luck. I would like to know for sure'
 
-'Go ahead' Dave takes a gulp from his goblet, grimaced, hung his head in defeat, and remarked softly to himself 'Ale... is... disgusting.'
+'Go ahead' Dave takes a gulp from his goblet, grimaces, hangs his head in defeat, and remarks softly to himself 'Ale... is... disgusting.'
 
 I briefly consider consoling him over his loss, but to be honest I'm just not that empathetic of a person and I doubt I'd be able to console him in a way that didn't feel forced, so I start walking down the hall towards the huge figure seated at the end.
 
@@ -114,11 +114,11 @@ Relieved that Odin spoke English, I respond 'Hi Odin, I was wondering if you cou
 
 'I see, so he actually is full of shit'
 
-'Indeed'
+'Indeed' Odin responds, nodding deeply.
 
 'But Norse mythology is real?'
 
-Odin gestured at the hall and said 'Obviously'.
+Odin gestures at the hall and replies 'Evidently'.
 
 'So it was just a crazy coincidence that the God he invoked actually exists?'
 
@@ -162,7 +162,9 @@ Odin puts a hand on my shoulder and says 'Enough about myself. I'm sure you woul
 
 'Okay fair enough, thanks'
 
-I dash back to Dave and tell him 'There's not much time, I'm about to be resurrected, is there anything you want me to do for you once I'm back there?!'
+'Before you go, Joel', Odin says, 'You're welcome back here any time. What are stock options compared to the glory of battle?'.
+
+I contemplate that for a moment, then dash back to Dave and tell him 'There's not much time, I'm about to be resurrected, is there anything you want me to do for you once I'm back there?!'
 
 Dave looks up from his cup and replies 'Yeah, you can tell that motherfucker Jared that Dave said...'
 
@@ -192,7 +194,7 @@ Jared is stopped in his tracks. 'What kind of question is that?'
 
 The Swedes transition from suspicion to outright fury and begin shouting at Jared. Jared absentmindedly drops his sword to the ground and tries to reason with them, just in time to be spear tackled by a hospital security guard.
 
-I press for another morphine dose and proceed to pass out.
+Feeling much safer, I press for another morphine dose and proceed to pass out.
 
 Fast forward a bit and I'm in an uber to Dave's funeral, which his wife invited me to given that I was the one who put her husband's murderer away. Not that he was ever charged for murder; he was extradited to Sweden for divinity fraud which conveniently is such an ancient crime that the punishment is equally antiquated, to the extent that you'd be much better off sentenced for murder.
 
