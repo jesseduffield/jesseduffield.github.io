@@ -138,6 +138,8 @@ I looked around the hall and noticed that most men did have swords at their hips
 
 'Guess again. Technology is advancing rapidly and we are far behind. We need more men with smarts, who are good operators, even if they weren't built to fight on the front lines. If that means I need to enlist a random Chinese guy who died from Auto-erotic asphyxiation but who was great with math, so be it. All that matters is that we win.'
 
+_Oddly specific example, but okay._
+
 I look around the hall more closely and catch some groups of non-Scandinavians conversing with each other, including some clusters of Asians doing shots and laughing.
 
 'So why does almost everybody here still have a sword?'
